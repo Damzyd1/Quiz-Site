@@ -1,0 +1,10 @@
+*{
+  box-sizing: border-box;
+  background: red;
+}
+.circle{
+  background: blue;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}

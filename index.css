@@ -1,0 +1,20 @@
+.container{
+  flex-direction: column;
+  background-color: #c2edda;
+}
+.formCont{
+  display: flex;
+  flex-direction: column;
+}
+input{
+  margin-top: 2.4rem;
+  color: black;
+  border-radius: 0.6rem;
+}
+.displayBox{
+  width: 39.6rem;
+  height: 7.9rem;
+}
+.btn{
+  border-radius: 0.6rem;
+}
