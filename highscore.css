@@ -28,3 +28,9 @@ html{
 ul{
   text-align: center;
 }
+@media only screen and (max-width: 768px){
+  /* Styles for tablets and smaller devices */
+  body{
+    font-size: 16px;
+  }
+}
