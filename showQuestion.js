@@ -16,121 +16,89 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestion = [];
 */
- let questions = [
+ 
+  let questions = [
     {
-      question: "What is the primary goal of diversion programs in the criminal justice system?",
-      choice1: "To punish offenders for their actions",
-      choice2: "To divert offenders away from formal incarceration by offering rehabilitation services",
-      choice3: "To provide financial support to offenders",
-      choice4: "To ensure all offenders face a trial before punishment",
-      answer: "To divert offenders away from formal incarceration by offering rehabilitation services"
+      question: "What distinguishes white-collar crime from other types of crime?",
+      choice1: "It involves violence",
+      choice2: "It is committed by individuals in high social positions",
+      choice3: "It is always victimless",
+      choice4: "It is only punishable by fines",
+      answer: 2
     },
     {
-      question: "Diversion programs are most commonly used for which group of offenders?",
-      choice1: "Repeat Offenders",
-      choice2: "Violent Offenders",
-      choice3: "First-time or low-risk offenders",
-      choice4: "Offenders with serious criminal histories",
-      answer: "First-time or low-risk offenders"
+      question: "Which criminological theory explains crime as a result of learned behaviour within close social groups",
+      choice1: "Strain Theory",
+      choice2: "Social Learning Theory",
+      choice3: "Rational Choice Theory",
+      choice4: "Biological Theory",
+      answer: 2
     },
     {
-      question: "Which philosophy is most closely associated with diversion programs",
-      choice1: "Deterrence",
-      choice2: "Retribution",
-      choice3: "Restorative Justice",
-      choice4: "Utilitarianism",
-      answer: "Restorative Justice"
+      question: "Which of the following is a transnational crime?",
+      choice1: "Robbery in a local store",
+      choice2: "Money laundering through international banks",
+      choice3: "Domestic violence",
+      choice4: "Illegal parking",
+      answer: 2
     },
     {
-      question: "Which of the following diversion strategies would likely be used for a defendant with a substance abuse problem",
-      choice1: "Probation with regular drug testing",
-      choice2: "Pretrial detention in jail",
-      choice3: "Restitution payments to the victim",
-      choice4: "Banishment from the community",
-      answer: "Probation with regular drug testing"
+      question: "Which theory of crime focuses on how societal labeling cam reinforce criminal behaviour?",
+      choice1: "Differential Association Theory",
+      choice2: "Labeling Theory",
+      choice3: "Rational Choice Theory",
+      choice4: "Routine Activities Theory",
+      answer: 2
     },
     {
-      question: "Which of the following is NOT a fomr of pre-trial release",
-      choice1: "Bail",
-      choice2: "Release on own recognizance (ROR)",
-      choice3: "Incarceration until trial",
-      choice4: "House arrest with electronic monitoring",
-      answer: "Incarceration until trial",
+      question: "Which of the following crimes is classified as a crime against property?",
+      choice1: "Arson",
+      choice2: "Murder",
+      choice3: "Kidnapping",
+      choice4: "Assault",
+      answer: 1
     },
     {
-      question: "Which factor is NOT typically considered when determining pre-trial release?",
-      choice1: "The defendants's flight risk",
-      choice2: "The defendant's family background",
-      choice3: "The defendant's criminal history",
-      choice4: "The severity of the alleged crime",
-      answer: "The defendant's family background"
+      question: "A crime insider trading is an example of?",
+      choice1: "Violent crime",
+      choice2: "Property crime",
+      choice3: "White-collar crime",
+      choice4: "Organized crime",
+      answer: 3
     },
     {
-      question: "What is the purpose of electronic monitoring (e.g ankle bracelets) as a condition of pre-trial release?",
-      choice1: "To monitor the defendant's daily activities in real-time",
-      choice2: "To allow the defendant to continue the criminal activities",
-      choice3: "To allow the defendant to leave the jurisdiction",
-      choice4: "To ensure the defendant's complete freedom",
-      answer: "To monitor the defendant's daily activities in real-time"
+      question: "The term 'Mens Rea' refers to?",
+      choice1: "The physical act of committing a crime",
+      choice2: "The legal consequences of a crime",
+      choice3: "The mental intent or guilty mind behind a crime",
+      choice4: "The classification of crime types",
+      answer: 3
     },
     {
-      question: "Which of the following distinguishes diversion programs from pre-trial release?",
-      choice1: "Diversion programs focus on rehabilitation, while pre-trial release focuses on ensuring court attendance",
-      choice2: "Diversion programs guarantee a conviction, while pre-trial release does not",
-      choice3: "DIversion programs are for violent offenders only, while pre-trial release is for all offenders",
-      choice4: "There is no distinction between the two",
-      answer: "Diversion programs focus on rehabilitation, while pre-trial release focuses on ensuring court attendance"
+      question: "Strain theory suggests that crime occurs when?",
+      choice1: "Individuals lack self-control",
+      choice2: "Social norms are unclear or absent",
+      choice3: "There is a gap between goals and means to achieve them",
+      choice4: "Society rewards deviant behaviour",
+      answer: 3
     },
     {
-      question: "In what way are diversion programs and pre-trial release similar?",
-      choice1: "Both focus on immediate incarceration",
-      choice2: "Both aim to reduce recidivism and provide alternatives to prison",
-      choice3: "Both require defendants to plead guilty before participation",
-      choice4: "Both focus on punishing offenders",
-      answer: "Both aim to reduce recidivism and provide alternatives to prison"
+      question: "According to the psychological perspective, crime is often linked to?",
+      choice1: "Socioeconomic inequality",
+      choice2: "Deviant peer groups",
+      choice3: "Personality traits and mental health issues",
+      choice4: "Genetic predispositions",
+      answer: 3
     },
     {
-      question: "Which of the following would most likely be eligible for a diversion program?",
-      choice1: "A first-time offender charged with shoplifting",
-      choice2: "A defendant with a long criminal history",
-      choice3: "A person charged with a violent crime",
-      choice4: "A defendant who has failed to appear in court",
-      answer: "A first-time offender charged with shoplifting"
-    },
-    {
-      question: "Which of the following is a characteristic of pre-trial release programs?",
-      choice1: "They focus on providing rehabilitation and treatment",
-      choice2: "They are designed to ensure the defendant remains free until their trial",
-      choice3: "THey are only available to juveniles",
-      choice4: "They require the defendant to serve a sentence before trial",
-      answer: "They are designed to ensure the defendant remains free until their trial"
-    },
-    {
-      question: "Which of the following is true about the impact of diversion programs and pre-trial release on prison overcrowding?",
-      choice1: "Both help reduce the number of individuals incarcerated before trial",
-      choice2: "Both contribute to increased prison population",
-      choice3: "Diversion programs increase overcrowding, while pre-trial release does not",
-      choice4: "Educating citizens on British Values",
-      answer: "Both help reduce the number of individuals incarcerated before trial"
-    },
-    {
-      question: "Which is the primary purpose of pre-trial release?",
-      choice1: "To impose punishment before trial",
-      choice2: "To allow defendants to remain free while awaiting trial under certain conditions",
-      choice3: "To immediately incarcerate defendants before their trial",
-      choice4: "To provide bail funds for all defendants",
-      answer: "To allow defendants to remain free while awaiting trial under certain conditions"
-    },
-    {
-      question: "Which of the following diversion strategies would most likely used for a juvenile caught shoplifting?",
-      choice1: "Fines amd imprisonment",
-      choice2: "Community service and mentorship",
-      choice3: "Electronic monitoring",
-      choice4: "Immediate trial and sentencing",
-      answer: "Community service and mentorship"
+      question: "What is an example of a victimless crime?",
+      choice1: "Assault",
+      choice2: "Drug use",
+      choice3: "Robbery",
+      choice4: "Vandalism",
+      answer: 2
     }
   ];
-
 
 /*const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 4;
