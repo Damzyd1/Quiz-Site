@@ -12,11 +12,14 @@ html{
 body{
   margin: 0;
   padding: 0;
-  height: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url('quiz.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 h1{
@@ -41,7 +44,7 @@ h3{
 
 .container{
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,5 +107,11 @@ input{
 }
 input::placeholder{
   color: #aaa;
+}
+@media only screen and (max-width: 768px){
+  /* Styles for tablets and smaller devices */
+  body{
+    font-size: 16px;
+  }
 }
 
