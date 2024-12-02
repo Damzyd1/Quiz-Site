@@ -1,20 +1,55 @@
 .container{
   flex-direction: column;
-  background-color: #c2edda;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)),
+              url('quiz.jpeg') no-repeat center/cover;
 }
 .formCont{
   display: flex;
   flex-direction: column;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  text-align: center;
+  backdrop-filter: blur(10px);
 }
 input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
   margin-top: 2.4rem;
   color: black;
-  border-radius: 0.6rem;
+  border-radius: 5px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+input:focus{
+  border-color: cyan;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
 }
 .displayBox{
   width: 39.6rem;
   height: 7.9rem;
 }
 .btn{
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
   border-radius: 0.6rem;
+}
+.btn:hover{
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  background-color: #ccc;
+  transform: scale(1.05);
+}
+@media only screen and (max-width: 768px){
+  /* Styles for tablets and smaller devices */
+  body{
+    font-size: 16px;
+  }
 }
