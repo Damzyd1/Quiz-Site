@@ -1,12 +1,7 @@
 
 @media (max-width: 768px) {
-  .container{
-    text-align: center;
-    width: 100%;
-    padding: 0 10px;
-  }
   #question{
-    margin-left: 10px;
+    margin-left: 25px;
     font-size: 25px;
   }
 }
