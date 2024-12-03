@@ -1,6 +1,7 @@
 
 @media (max-width: 768px) {
   .container{
+    text-align: center;
     width: 100%;
     padding: 0 10px;
   }
