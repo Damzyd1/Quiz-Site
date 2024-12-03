@@ -1,21 +1,12 @@
-body{
-  width: 100%;
-  max-width: 1200px;
-  overflow-x: hidden;
-}
 
 @media (max-width: 768px) {
-  body{
-    width: 100%;
-    padding: 10px;
-  }
-
   .container{
     width: 100%;
     padding: 0 10px;
   }
   #question{
-    font-size: 12px;
+    margin-left: 10px;
+    font-size: 25px;
   }
 }
 
