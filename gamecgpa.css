@@ -1,9 +1,10 @@
-
-@media (max-width: 768px) {
-  #question{
-    margin-left: 25px;
-    font-size: 25px;
-  }
+.container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .choice-container:hover{
