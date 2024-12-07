@@ -52,7 +52,7 @@ h3{
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0 auto;
   padding: 2rem;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .flex-column{
   display: flex;
