@@ -12,6 +12,7 @@ html{
 body{
   margin: 0;
   padding: 0;
+  width:100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -52,7 +53,6 @@ h3{
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0 auto;
   padding: 2rem;
-  overflow-x: hidden;
 }
 .flex-column{
   display: flex;
