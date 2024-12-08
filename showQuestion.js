@@ -24,7 +24,7 @@ let availableQuestion = [];
       choice2: "It is committed by individuals in high social positions",
       choice3: "It is always victimless",
       choice4: "It is only punishable by fines",
-      answer: 2
+      answer: "It is committed by individuals in high social positions"
     },
     {
       question: "Which criminological theory explains crime as a result of learned behaviour within close social groups",
@@ -32,7 +32,7 @@ let availableQuestion = [];
       choice2: "Social Learning Theory",
       choice3: "Rational Choice Theory",
       choice4: "Biological Theory",
-      answer: 2
+      answer: "Social Learning Theory"
     },
     {
       question: "Which of the following is a transnational crime?",
@@ -40,15 +40,15 @@ let availableQuestion = [];
       choice2: "Money laundering through international banks",
       choice3: "Domestic violence",
       choice4: "Illegal parking",
-      answer: 2
+      answer: "Money laundering through international banks"
     },
     {
-      question: "Which theory of crime focuses on how societal labeling cam reinforce criminal behaviour?",
+      question: "Which theory of crime focuses on how societal labeling can reinforce criminal behaviour?",
       choice1: "Differential Association Theory",
       choice2: "Labeling Theory",
       choice3: "Rational Choice Theory",
       choice4: "Routine Activities Theory",
-      answer: 2
+      answer: "Labeling Theory <br> The theory suggests that being labeled as a criminal can make individuals internalize the label and continue engaging in crime"
     },
     {
       question: "Which of the following crimes is classified as a crime against property?",
@@ -56,7 +56,7 @@ let availableQuestion = [];
       choice2: "Murder",
       choice3: "Kidnapping",
       choice4: "Assault",
-      answer: 1
+      answer: "Arson"
     },
     {
       question: "A crime insider trading is an example of?",
@@ -64,7 +64,7 @@ let availableQuestion = [];
       choice2: "Property crime",
       choice3: "White-collar crime",
       choice4: "Organized crime",
-      answer: 3
+      answer: "White-collar crime <br> This is because it involves illegal financial gain through non-public information"
     },
     {
       question: "The term 'Mens Rea' refers to?",
@@ -72,7 +72,7 @@ let availableQuestion = [];
       choice2: "The legal consequences of a crime",
       choice3: "The mental intent or guilty mind behind a crime",
       choice4: "The classification of crime types",
-      answer: 3
+      answer: "The mental intent or guilty mind behind a crime"
     },
     {
       question: "Strain theory suggests that crime occurs when?",
@@ -80,7 +80,7 @@ let availableQuestion = [];
       choice2: "Social norms are unclear or absent",
       choice3: "There is a gap between goals and means to achieve them",
       choice4: "Society rewards deviant behaviour",
-      answer: 3
+      answer: "There is a gap between goals and means to achieve them"
     },
     {
       question: "According to the psychological perspective, crime is often linked to?",
@@ -88,7 +88,7 @@ let availableQuestion = [];
       choice2: "Deviant peer groups",
       choice3: "Personality traits and mental health issues",
       choice4: "Genetic predispositions",
-      answer: 3
+      answer: "Personality traits and mental health issues"
     },
     {
       question: "What is an example of a victimless crime?",
@@ -96,7 +96,7 @@ let availableQuestion = [];
       choice2: "Drug use",
       choice3: "Robbery",
       choice4: "Vandalism",
-      answer: 2
+      answer: "Drug use <br> This is because it does not directly harm others but is illegal due to societal and legal restrictions"
     }
   ];
 
