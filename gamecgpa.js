@@ -8,6 +8,15 @@ document.addEventListener("keydown", e => {
   }
 });
 
+const topic = "Css 301: <br> Nature and Causes of Crime";
+const topicId = document.getElementById("topic");
+topicId.innerHTML = topic;
+setTimeout(disappear, 10000);
+function disappear(){
+  topicId.style.opacity = 0;
+}
+
+
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
@@ -168,7 +177,7 @@ choices.forEach(choice => {
   });
 });
 
-let durationInMinutes = 10;
+let durationInMinutes = 3;
 let timeInSeconds = durationInMinutes * 60;
 const timerDisplay = document.getElementById("timer");
 
