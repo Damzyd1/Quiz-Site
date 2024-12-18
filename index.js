@@ -26,43 +26,52 @@ function goToNextPage(){
 
 */
 
-const validPasswords = ["Damilola", "Ayomide", "Shittu"];
-const passwordVersion = "v1";
-const sessionExpiryTime = 1 * 60  * 1000;
+const validPasswords = ["Damilola", "Ayomide", "Laerry"];
+const passwordVersion = "v2";
+const sessionExpiryTime = 1 * 60 * 60 * 1000; // 1 minute
 
-function login(){
-  const enteredPassword = password.value;
-  if(validPasswords.includes(enteredPassword)){
+// Login Function
+function login() {
+  const enteredPassword = document.getElementById("password").value; // Fixed: Correctly reference the password input field
+  const savedVersion = localStorage.getItem("passwordVersion") || passwordVersion;
+
+  if (validPasswords.includes(enteredPassword)) {
     const currentTime = new Date().getTime();
-    localStorage.setItem("isLoggedIn", true);
-    localStorage.setItem("passwordVersion",passwordVersion);
-    localStorage.setItem("loginTimeStamp",currentTime);
-    setTimeout(delay,3000);
-      function delay(){
+
+    // Save login details in localStorage
+    localStorage.setItem("isLoggedIn", "true");
+    localStorage.setItem("passwordVersion", savedVersion);
+    localStorage.setItem("loginTimeStamp", currentTime);
+
+    // Redirect after 3 seconds
+    setTimeout(() => {
       window.location.href = "cgpa.html";
-  }
-  
-  }else{
-    alert("Invalid password, Please try again.")
+    }, 3000);
+  } else {
+    alert("Invalid password. Please try again.");
   }
 }
 
+// Protect Page Function
+function protectPage() {
+  const passwordVersion = "v2";
+  const sessionExpiryTime = 1 * 60 * 60 * 1000; // 1 minute
 
-function protectPage(){
-  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true"; // Ensure type check
   const savedVersion = localStorage.getItem("passwordVersion");
-  const loginTimeStamp = localStorage.getItem("loginTimeStamp");
+  const loginTimeStamp = parseInt(localStorage.getItem("loginTimeStamp"), 10); // Parse timestamp as an integer
   const currentTime = new Date().getTime();
-  
-  if(
-      !isLoggedIn &
-      savedVersion !== passwordVersion &
-      (currentTime - loginTimeStamp) > sessionExpiryTime
-    ){
-      alert("Session expired or invalid. Please log in again.");
-      localStorage.clear();
-      window.location.href = "index.html";
-    }
+
+  // Validate session
+  if (
+    !isLoggedIn || // Not logged in
+    savedVersion !== passwordVersion || // Password version mismatch
+    (currentTime - loginTimeStamp) > sessionExpiryTime // Session expired
+  ) {
+    alert("Session expired or invalid. Please log in again.");
+    localStorage.clear();
+    window.location.href = "index.html";
+  }
 }
 /*document.addEventListener("keydown", e => {
   if(e.key = "Enter"){
