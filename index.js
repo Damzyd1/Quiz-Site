@@ -28,7 +28,7 @@ function goToNextPage(){
 
 const validPasswords = ["Damilola", "Ayomide", "Laerry"];
 const passwordVersion = "v2";
-const sessionExpiryTime = 1 * 60 * 60 * 1000; // 1 minute
+const sessionExpiryTime = 1 * 60 *  1000; // 1 minute
 
 // Login Function
 function login() {
