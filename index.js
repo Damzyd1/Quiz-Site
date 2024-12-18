@@ -55,8 +55,8 @@ function protectPage(){
   const currentTime = new Date().getTime();
   
   if(
-      !isloggedIn ||
-      savedVersion !== passwordVersion ||
+      !isloggedIn &
+      savedVersion !== passwordVersion &
       (currentTime - loginTimeStamp) > sessionExpiryTime
     ){
       alert("Session expired or invalid. Please log in again.");
