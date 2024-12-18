@@ -55,7 +55,7 @@ function protectPage(){
   const currentTime = new Date().getTime();
   
   if(
-      !isloggedIn &
+      !isLoggedIn &
       savedVersion !== passwordVersion &
       (currentTime - loginTimeStamp) > sessionExpiryTime
     ){
