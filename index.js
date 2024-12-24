@@ -26,7 +26,7 @@ function goToNextPage(){
 
 */
 
-const validPasswords = ["Ayomide", "Laerry", "Lola"];
+const validPasswords = ["Ayomide", "Lerry"];
 const passwordVersion = "v3";
 const sessionExpiryTime = 1 * 60 *  1000; // 1 minute
 
@@ -54,7 +54,7 @@ function login() {
 
 // Protect Page Function
 function protectPage() {
-  const passwordVersion = "v2";
+  const passwordVersion = "v3";
   const sessionExpiryTime = 1 * 60 * 60 * 1000; // 1 minute
 
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true"; // Ensure type check
