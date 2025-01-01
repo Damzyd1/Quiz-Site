@@ -29,6 +29,7 @@ function goToNextPage(){
 const validPasswords = ["300LevelUnilorites"];
 const passwordVersion = "v4";
 const sessionExpiryTime = 1 * 60 * 60 * 1000; // 1 minute
+const splashScreen = document.getElementById("splash-screen");
 
 // Login Function
 function login() {
@@ -42,7 +43,10 @@ function login() {
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("passwordVersion", savedVersion);
     localStorage.setItem("loginTimeStamp", currentTime);
-
+    splashScreen.style.display = "flex";
+    setTimeout(() => {
+      splashScreen.style.opacity = 1;
+    }, 10);
     // Redirect after 3 seconds
     setTimeout(() => {
       window.location.href = "cgpa.html";
