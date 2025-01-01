@@ -8,7 +8,7 @@ document.addEventListener("keydown", e => {
   }
 });
 
-const topic = "Css 301: <br> Nature and Causes of Crime";
+const topic = "GNS 311: <br> History and Philosophy of Science";
 const topicId = document.getElementById("topic");
 topicId.innerHTML = topic;
 setTimeout(disappear, 10000);
@@ -34,87 +34,166 @@ let questionCounter = 0;
 let availableQuestion = [];
 let questions = [
     {
-      question: "What distinguishes white-collar crime from other types of crime?",
-      choice1: "It involves violence",
-      choice2: "It is committed by individuals in high social positions",
-      choice3: "It is always victimless",
-      choice4: "It is only punishable by fines",
-      answer: 2
+        question: "Anything that occupies space, possesses mass of its own, offers resistance to change of inertia and may be felt by any of our sensory organs is ____.",
+        choice1: "Atom",
+        choice2: "Molecules",
+        choice3: "Matter",
+        choice4: "Kinetic",
+        answer: 3
     },
     {
-      question: "Which criminological theory explains crime as a result of learned behaviour within close social groups",
-      choice1: "Strain Theory",
-      choice2: "Social Learning Theory",
-      choice3: "Rational Choice Theory",
-      choice4: "Biological Theory",
-      answer: 2
+        question: "Matter exists as a ____ and ____",
+        choice1: "Abiotic and Biotic entity",
+        choice2: "Living and non-living entity",
+        choice3: "Living and non-living things",
+        choice4: "Biotic and abiotic things",
+        answer: 2
     },
     {
-      question: "Which of the following is a transnational crime?",
-      choice1: "Robbery in a local store",
-      choice2: "Money laundering through international banks",
-      choice3: "Domestic violence",
-      choice4: "Illegal parking",
-      answer: 2
+        question: "How does Growth in non-living matter come?",
+        choice1: "If there is an addition of the same or different matter by some processes to the matter",
+        choice2: "Properties of respiration, growth, movement, metabolism and reproduction",
+        choice3: "Eating and excretion",
+        choice4: "None of the above",
+        answer: 1
     },
     {
-      question: "Which theory of crime focuses on how societal labeling cam reinforce criminal behaviour?",
-      choice1: "Differential Association Theory",
-      choice2: "Labeling Theory",
-      choice3: "Rational Choice Theory",
-      choice4: "Routine Activities Theory",
-      answer: 2
+        question: "Living matter has the following properties except",
+        choice1: "Reproduction",
+        choice2: "Metabolism",
+        choice3: "Processes",
+        choice4: "Respiration",
+        answer: 3
     },
     {
-      question: "Which of the following crimes is classified as a crime against property?",
-      choice1: "Arson",
-      choice2: "Murder",
-      choice3: "Kidnapping",
-      choice4: "Assault",
-      answer: 1
+        question: "Matter is constituted means?____",
+        choice1: "Matter is a whole",
+        choice2: "Matter is made up of something else",
+        choice3: "Matter is dependent",
+        choice4: "Matter is independent",
+        answer: 2
     },
     {
-      question: "A crime insider trading is an example of?",
-      choice1: "Violent crime",
-      choice2: "Property crime",
-      choice3: "White-collar crime",
-      choice4: "Organized crime",
-      answer: 3
+        question: "Matter by its composition can be divided into?",
+        choice1: "Mixtures and change",
+        choice2: "Atom and molecules",
+        choice3: "Pure substances and Molecules",
+        choice4: "Pure substances and Mixtures",
+        answer: 4
     },
     {
-      question: "The term 'Mens Rea' refers to?",
-      choice1: "The physical act of committing a crime",
-      choice2: "The legal consequences of a crime",
-      choice3: "The mental intent or guilty mind behind a crime",
-      choice4: "The classification of crime types",
-      answer: 3
+        question: "How many states can matter exist in?",
+        choice1: "5",
+        choice2: "3",
+        choice3: "4",
+        choice4: "2",
+        answer: 2
     },
     {
-      question: "Strain theory suggests that crime occurs when?",
-      choice1: "Individuals lack self-control",
-      choice2: "Social norms are unclear or absent",
-      choice3: "There is a gap between goals and means to achieve them",
-      choice4: "Society rewards deviant behaviour",
-      answer: 3
+        question: "What are the states matter exists in?",
+        choice1: "Solid, liquid, plasma",
+        choice2: "Solid, Sulphur",
+        choice3: "Solid, liquid",
+        choice4: "Liquid and gas",
+        answer: 1
     },
     {
-      question: "According to the psychological perspective, crime is often linked to?",
-      choice1: "Socioeconomic inequality",
-      choice2: "Deviant peer groups",
-      choice3: "Personality traits and mental health issues",
-      choice4: "Genetic predispositions",
-      answer: 3
+        question: "___ is a statement of facts for understanding, explaining, and making predictions about an observable phenomenon?",
+        choice1: "Scientific law",
+        choice2: "Statement",
+        choice3: "Theory",
+        choice4: "Hypothesis",
+        answer: 3
     },
     {
-      question: "What is an example of a victimless crime?",
-      choice1: "Assault",
-      choice2: "Drug use",
-      choice3: "Robbery",
-      choice4: "Vandalism",
-      answer: 2
+        question: "A statement of facts that has been subjected to critical analysis, experimentation and found to correctly explain an observable phenomenon under conditions stated is?",
+        choice1: "Theory",
+        choice2: "Scientific law",
+        choice3: "Elements",
+        choice4: "Statement",
+        answer: 2
+    },
+    {
+        question: "___ elements exist in nature and are arranged into ___ periods of the periodic table.",
+        choice1: "218 elements, 18 periods",
+        choice2: "318 elements, 28 periods",
+        choice3: "118 elements, 8 periods",
+        choice4: "118 elements, 18 periods",
+        answer: 4
+    },
+    {
+        question: "An element has how many types of atom?",
+        choice1: "One",
+        choice2: "Three",
+        choice3: "Four",
+        choice4: "Eight",
+        answer: 1
+    },
+    {
+        question: "A compound can only be separated by ___",
+        choice1: "Physical therapy",
+        choice2: "Physical process",
+        choice3: "Chemical process",
+        choice4: "Chemical procedure",
+        answer: 3
+    },
+    {
+        question: "Where an element is made up of one atom, a compound is made up of more than one type of atom bonded together, a mixture is made up of _____",
+        choice1: "One element and one atom",
+        choice2: "More than one element or compound in a weak bond",
+        choice3: "More than one type of atom or compound in a weak bond",
+        choice4: "More than one type of element and atom in a weak bond",
+        answer: 2
+    },
+    {
+        question: "What does not require a chemical process to break but requires only a simple physical procedure?",
+        choice1: "Mixture",
+        choice2: "Compound",
+        choice3: "Elements",
+        choice4: "Atom",
+        answer: 1
+    },
+    {
+        question: "Mixture can be either __& __",
+        choice1: "Hydrogen and oxygen",
+        choice2: "Element and compound",
+        choice3: "Homogeneous and heterogeneous",
+        choice4: "Solution and compound",
+        answer: 3
+    },
+    {
+        question: "The word Kinetic stands for ____",
+        choice1: "Movement",
+        choice2: "Growth",
+        choice3: "Locomotion",
+        choice4: "Motion",
+        answer: 4
+    },
+    {
+        question: "___ conceptualized that if an attempt is made to continually subdivide matter, a smallest one will be attained that can exist on its own",
+        choice1: "Greeks",
+        choice2: "Romans",
+        choice3: "Italians",
+        choice4: "French",
+        answer: 1
+    },
+    {
+        question: "Kinetics theory states that ____",
+        choice1: "Matter is anything that occupies space",
+        choice2: "The behavior of matter can be explained by understanding its states or motional behavior",
+        choice3: "Particles have no sense of history between collision",
+        choice4: "Motion is random",
+        answer: 2
+    },
+    {
+        question: "The smallest division of a matter is _",
+        choice1: "Molecule",
+        choice2: "Atom",
+        choice3: "Particles of liquid",
+        choice4: "Entity",
+        answer: 2
     }
-  ];
-
+];
     
 
 const CORRECT_BONUS = 10;
