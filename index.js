@@ -26,9 +26,9 @@ function goToNextPage(){
 
 */
 
-const validPasswords = ["Ayomide", "Lerry"];
-const passwordVersion = "v3";
-const sessionExpiryTime = 1 * 60 *  1000; // 1 minute
+const validPasswords = ["300LevelUnilorites"];
+const passwordVersion = "v4";
+const sessionExpiryTime = 1 * 60 * 60 * 1000; // 1 minute
 
 // Login Function
 function login() {
@@ -54,7 +54,7 @@ function login() {
 
 // Protect Page Function
 function protectPage() {
-  const passwordVersion = "v3";
+  const passwordVersion = "v4";
   const sessionExpiryTime = 1 * 60 * 60 * 1000; // 1 minute
 
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true"; // Ensure type check
