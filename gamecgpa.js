@@ -193,7 +193,7 @@ let questions = [
         choice2: "3",
         choice3: "5",
         choice4: "1",
-        answer: 2
+        answer: 1
     },
     {
         question: "What is the motional behavior of particles of liquid?",
@@ -225,84 +225,86 @@ let questions = [
         answer: 4
     },
     {
-        question: "Which of the following is NOT a state of matter?",
-        choice1: "Solid",
-        choice2: "Liquid",
-        choice3: "Energy",
-        choice4: "Gas",
-        answer: 3
+        question: "The troposphere contains how many percent of the atmosphere’s mass?",
+        choice1: "25%",
+        choice2: "85%",
+        choice3: "65%",
+        choice4: "75%",
+        answer: 4
     },
     {
-        question: "Which state of matter has a definite shape and volume?",
-        choice1: "Solid",
-        choice2: "Liquid",
-        choice3: "Gas",
-        choice4: "Plasma",
-        answer: 1
-    },
-    {
-        question: "What happens to gas particles when the temperature increases?",
-        choice1: "They move slower",
-        choice2: "They move faster",
-        choice3: "They stop moving",
-        choice4: "They remain constant",
+        question: "Which layer of the atmosphere is closest to the Earth’s surface?",
+        choice1: "Stratosphere",
+        choice2: "Troposphere",
+        choice3: "Thermosphere",
+        choice4: "Exosphere",
         answer: 2
     },
     {
-        question: "Which process converts a solid directly into a gas?",
-        choice1: "Melting",
-        choice2: "Sublimation",
-        choice3: "Condensation",
-        choice4: "Vaporization",
-        answer: 2
-    },
-    {
-        question: "The change from gas to liquid is called:",
-        choice1: "Evaporation",
-        choice2: "Condensation",
-        choice3: "Freezing",
-        choice4: "Sublimation",
-        answer: 2
-    },
-    {
-        question: "What determines the state of matter of a substance?",
-        choice1: "The arrangement and motion of particles",
-        choice2: "The color of the substance",
-        choice3: "The taste of the substance",
-        choice4: "The weight of the particles",
+        question: "Which layer of the atmosphere lies directly above the troposphere and is 35km deep?",
+        choice1: "Stratosphere",
+        choice2: "Mesosphere",
+        choice3: "Exosphere",
+        choice4: "Thermosphere",
         answer: 1
     },
     {
-        question: "What state of matter has neither a definite shape nor a definite volume?",
-        choice1: "Solid",
-        choice2: "Liquid",
-        choice3: "Gas",
-        choice4: "Plasma",
+        question: "Example of primary pollutants include the following except:",
+        choice1: "CO",
+        choice2: "NO",
+        choice3: "HC",
+        choice4: "AR",
+        answer: 4
+    },
+    {
+        question: "Examples of secondary pollutants include the following except:",
+        choice1: "Peroxyacetyl nitrate (PAN)",
+        choice2: "Hydrogen peroxide",
+        choice3: "Carbonara",
+        choice4: "Ozone",
         answer: 3
     },
     {
-        question: "Plasma is often referred to as the ____ state of matter.",
-        choice1: "Fourth",
-        choice2: "Fifth",
-        choice3: "Third",
-        choice4: "First",
+        question: "Pollutants are classified according to:",
+        choice1: "Chemical reactions and state of matter",
+        choice2: "Chemical composition and state of matter",
+        choice3: "Chemical change and situation of matter",
+        choice4: "Chemical process and state of matter",
+        answer: 2
+    },
+    {
+        question: "Air pollution is made up of __ components.",
+        choice1: "4",
+        choice2: "5",
+        choice3: "3",
+        choice4: "6",
+        answer: 3
+    },
+    {
+        question: "The sources of pollutants are the following except:",
+        choice1: "Receptor",
+        choice2: "Chemical composition",
+        choice3: "Transporting medium",
+        choice4: "Structural facility",
+        answer: 2
+    },
+    {
+        question: "The chemical and photochemical reactions taking place in the atmosphere mostly depend upon:",
+        choice1: "Temperature, humidity, reaction and intensity of sunlight",
+        choice2: "Temperature, humidity, composition and intensity of sunlight",
+        choice3: "Temperature, pollution, composition and intensity of sunlight",
+        choice4: "Temperature, pollution, composition and humidity",
+        answer: 2
+    },
+    {
+        question: "How do photochemical reactions take place in the atmosphere?",
+        choice1: "By the absorption of solar radiation in the UV region",
+        choice2: "By the absorption of water during evaporation",
+        choice3: "By the absorption of sunlight during photosynthesis",
         answer: 1
-    },
-    {
-        question: "Which of the following is an example of plasma?",
-        choice1: "Ice",
-        choice2: "Water",
-        choice3: "Lightning",
-        choice4: "Air",
-        answer: 3
-    },
-    {
-        question: "Which state of matter can be compressed easily?",
-        choice1: "Solid",
-        choice2: "Liquid",
-        choice3: "Gas",
-        answer: 3
-    },
+    }
+];
+
     {
         question: "What is the key characteristic of liquids?",
         choice1: "Fixed volume, takes the shape of its container",
