@@ -39,7 +39,7 @@ let questions = [
         choice2: "Pasteurization",
         choice3: "Tyndallization",
         choice4: "Refrigeration",
-        answer: 1
+        answer: "Tyndallization"
     },
     {
         question: "What is the motional behavior of particles of liquid?",
@@ -193,7 +193,7 @@ let questions = [
         choice2: "3",
         choice3: "5",
         choice4: "1",
-        answer: 1
+        answer: 2
     },
     {
         question: "What is the motional behavior of particles of liquid?",
@@ -223,6 +223,114 @@ let questions = [
         choice3: "Particle dimension is much less than the distance between collisions",
         choice4: "Kinetic is a theory of statements of facts",
         answer: 4
+    },
+    {
+        question: "Which of the following is NOT a state of matter?",
+        choice1: "Solid",
+        choice2: "Liquid",
+        choice3: "Energy",
+        choice4: "Gas",
+        answer: 3
+    },
+    {
+        question: "Which state of matter has a definite shape and volume?",
+        choice1: "Solid",
+        choice2: "Liquid",
+        choice3: "Gas",
+        choice4: "Plasma",
+        answer: 1
+    },
+    {
+        question: "What happens to gas particles when the temperature increases?",
+        choice1: "They move slower",
+        choice2: "They move faster",
+        choice3: "They stop moving",
+        choice4: "They remain constant",
+        answer: 2
+    },
+    {
+        question: "Which process converts a solid directly into a gas?",
+        choice1: "Melting",
+        choice2: "Sublimation",
+        choice3: "Condensation",
+        choice4: "Vaporization",
+        answer: 2
+    },
+    {
+        question: "The change from gas to liquid is called:",
+        choice1: "Evaporation",
+        choice2: "Condensation",
+        choice3: "Freezing",
+        choice4: "Sublimation",
+        answer: 2
+    },
+    {
+        question: "What determines the state of matter of a substance?",
+        choice1: "The arrangement and motion of particles",
+        choice2: "The color of the substance",
+        choice3: "The taste of the substance",
+        choice4: "The weight of the particles",
+        answer: 1
+    },
+    {
+        question: "What state of matter has neither a definite shape nor a definite volume?",
+        choice1: "Solid",
+        choice2: "Liquid",
+        choice3: "Gas",
+        choice4: "Plasma",
+        answer: 3
+    },
+    {
+        question: "Plasma is often referred to as the ____ state of matter.",
+        choice1: "Fourth",
+        choice2: "Fifth",
+        choice3: "Third",
+        choice4: "First",
+        answer: 1
+    },
+    {
+        question: "Which of the following is an example of plasma?",
+        choice1: "Ice",
+        choice2: "Water",
+        choice3: "Lightning",
+        choice4: "Air",
+        answer: 3
+    },
+    {
+        question: "Which state of matter can be compressed easily?",
+        choice1: "Solid",
+        choice2: "Liquid",
+        choice3: "Gas",
+        answer: 3
+    },
+    {
+        question: "What is the key characteristic of liquids?",
+        choice1: "Fixed volume, takes the shape of its container",
+        choice2: "Fixed shape and volume",
+        choice3: "No fixed volume, takes the shape of its container",
+        answer: 1
+    },
+    {
+        question: "Which state of matter has the strongest intermolecular forces?",
+        choice1: "Solid",
+        choice2: "Liquid",
+        choice3: "Gas",
+        choice4: "Plasma",
+        answer: 1
+    },
+    {
+        question: "Preservation of controlled environment involves two method which are",
+        choice1: "Controlled Atmospheric Storage (CAS) And Modified Atmospheric Storage (MAS)",
+        choice2: "Metamorphic atmosphere storage (MAS) and Conducive Atmospheric Storage (CAS)",
+        choice3: "Conducting Atmospheric Storage (CAS) and Modified Atmospheric Storage (MAS)",
+        answer: "Controlled Atmospheric Storage (CAS) And Modified Atmospheric Storage (MAS)"
+    },
+    {
+        question: "What happens to a gas if the pressure increases at constant temperature?",
+        choice1: "Its volume decreases",
+        choice2: "Its volume increases",
+        choice3: "Its temperature decreases",
+        answer: 1
     },
     {
         question: "The troposphere contains how many percent of the atmosphere’s mass?",
@@ -304,121 +412,13 @@ let questions = [
         answer: 1
     },
     {
-        question: "What is the key characteristic of liquids?",
-        choice1: "Fixed volume, takes the shape of its container",
-        choice2: "Fixed shape and volume",
-        choice3: "No fixed volume, takes the shape of its container",
-        answer: 1
-    },
-    {
-        question: "Which state of matter has the strongest intermolecular forces?",
-        choice1: "Solid",
-        choice2: "Liquid",
-        choice3: "Gas",
-        choice4: "Plasma",
-        answer: 1
-    },
-    {
-        question: "Preservation of controlled environment involves two method which are",
-        choice1: "Controlled Atmospheric Storage (CAS) And Modified Atmospheric Storage (MAS)",
-        choice2: "Metamorphic atmosphere storage (MAS) and Conducive Atmospheric Storage (CAS)",
-        choice3: "Conducting Atmospheric Storage (CAS) and Modified Atmospheric Storage (MAS)",
-        answer: 1
-    },
-    {
-        question: "What happens to a gas if the pressure increases at constant temperature?",
-        choice1: "Its volume decreases",
-        choice2: "Its volume increases",
-        choice3: "Its temperature decreases",
-        answer: 1
-    },
-    {
-        question: "What happens to a liquid when it freezes?",
-        choice1: "Its particles stop moving",
-        choice2: "Its particles vibrate in place",
-        choice3: "Its particles spread out",
-        choice4: "Its particles move faster",
-        answer: 2
-    },
-    {
-        question: "Traditional method for preserving food include the following except",
-        choice1: "Dehydration",
-        choice2: "Smoking",
-        choice3: "Salting",
-        choice4: "Irradiation",
-        answer: 4
-    },
-    {
-        question: "Modern processes of preserving food include the following except",
-        choice1: "Pasteurization",
-        choice2: "Refrigeration",
-        choice3: "Pickling",
-        choice4: "Canning",
-        answer: 3
-    },
-    {
-        question: "Which are the various methods of high temperature treatment employed in food processing?",
-        choice1: "Blanching, pasteurization, tyndallization, sterilization",
-        choice2: "Blanching, drying, sterilization, freezing",
-        choice3: "Dehydration, blanching, tyndallization, freezing",
-        answer: 1
-    },
-    {
-        question: "Pasteurization is named after a French chemist named",
-        choice1: "Bohl Pasteur",
-        choice2: "Louis Pasteur",
-        choice3: "Donald Pasteur",
-        choice4: "David Pasteur",
-        answer: 2
-    },
-    {
-        question: "____is the cycle of process aimed at destroying the vegetative forms of microbes at a high temperature between 70-100°C followed by a cooling to 37°C by allowing the resistant spores to germinate and finally reheating at a high temperature to destroy the germinated spores.",
-        choice1: "Sterilization",
-        choice2: "Pasteurization",
-        choice3: "Tyndallization",
-        choice4: "Refrigeration",
-        answer: 3
-    },
-    {
-        question: "Temperature sterilization can be achieved in two ways and they are",
-        choice1: "Ultra high temperature and high temperature short time",
-        choice2: "Low temperature longer time and High temperature shorter time",
-        choice3: "Low- temperature shorter time and High temperature longer time",
-        answer: 1
-    },
-    {
-        question: "The types of commercially sterile processes include the following except",
-        choice1: "Canning",
-        choice2: "Bottling",
-        choice3: "Dehydration",
-        choice4: "Aseptic processing",
-        answer: 3
-    },
-    {
-        question: "Low temperature treatment include",
-        choice1: "Freezing and dehydration",
-        choice2: "Refrigerator and freezing",
-        choice3: "Refrigerator and microwave",
-        choice4: "Freezing and Pasteurization",
-        answer: 2
-    },
-    {
-        question: "___method of low temperature treatment involves the process of lowering the temperature and maintaining it in a given space for the purpose of chilling foods, preserving certain substances, or providing an atmosphere conducive to bodily comfort",
-        choice1: "Freezing",
-        choice2: "Evaporation",
-        choice3: "Dehydration",
-        choice4: "Refrigeration",
-        answer: 4
-    },
-    {
         question: "Processes of controlled Reduction in moisture content include",
         choice1: "Refrigeration, canning, dehydration, freezing, pasteurization, blanching",
         choice2: "Drying , refrigeration, pasteurization, irradiation, canning, controlled environment, sterilization",
         choice3: "Drying, dehydration, evaporation, smoking, pickling in vinegar, chemical preservatives, irradiation, canning, fermentation, controlled environment sugaring and salting",
         answer: 3
     }
-];
-const CORRECT_BONUS = 10;
+];const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = questions.length;
 const Total_Score = 10*MAX_QUESTIONS;
 
