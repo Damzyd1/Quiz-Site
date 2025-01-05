@@ -39,7 +39,7 @@ let questions = [
         choice2: "Pasteurization",
         choice3: "Tyndallization",
         choice4: "Refrigeration",
-        answer: "Tyndallization"
+        answer: 3
     },
     {
         question: "What is the motional behavior of particles of liquid?",
