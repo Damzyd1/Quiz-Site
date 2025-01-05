@@ -39,7 +39,7 @@ let questions = [
         choice2: "Pasteurization",
         choice3: "Tyndallization",
         choice4: "Refrigeration",
-        answer: "Tyndallization"
+        answer: 1
     },
     {
         question: "What is the motional behavior of particles of liquid?",
@@ -302,9 +302,7 @@ let questions = [
         choice2: "By the absorption of water during evaporation",
         choice3: "By the absorption of sunlight during photosynthesis",
         answer: 1
-    }
-];
-
+    },
     {
         question: "What is the key characteristic of liquids?",
         choice1: "Fixed volume, takes the shape of its container",
