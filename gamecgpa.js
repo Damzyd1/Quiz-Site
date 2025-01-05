@@ -193,7 +193,7 @@ let questions = [
         choice2: "3",
         choice3: "5",
         choice4: "1",
-        answer: 2
+        answer: 1
     },
     {
         question: "What is the motional behavior of particles of liquid?",
