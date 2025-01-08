@@ -661,7 +661,7 @@ let questionNo = 0;
 const questionBox = document.getElementById("questionBox");
 for (let i=0; i< questions.length; i++){
   questionNo++;
-  text+= questionNo+"."+" "+questions[i].question+'<br>'+"Answer:"+" "+questions[i].answer+'<br>'+'<br>';
+  text+= questionNo+"."+" "+questions[i].question+'<br>'+"Answer:"+" "+questions[i].answer+'<br>'+questions[i].rationale+'<br>'+'<br>';
 }
 
 questionBox.innerHTML = text;
