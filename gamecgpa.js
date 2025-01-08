@@ -8,7 +8,7 @@ document.addEventListener("keydown", e => {
   }
 });
 
-const topic = "GNS 311: Powered by DamzyNextGen & Giwa";
+const topic = "GNS 211: Powered by DamzyNextGen & Giwa";
 const topicId = document.getElementById("topic");
 topicId.innerHTML = topic;
 setTimeout(disappear, 500000);
@@ -584,7 +584,7 @@ choices.forEach(choice => {
   });
 });
 
-let durationInMinutes = 15;
+let durationInMinutes = 25;
 let timeInSeconds = durationInMinutes * 60;
 const timerDisplay = document.getElementById("timer");
 
