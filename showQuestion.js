@@ -19,552 +19,1028 @@ let availableQuestion = [];
  
   let questions = [
     {
-        question: "What is the primary purpose of dialogue in conflict resolution?",
-        choice1: "To impose one party's opinion.",
-        choice2: "To foster mutual understanding.",
-        choice3: "To end all communication.",
-        choice4: "To escalate conflict.",
-        answer: "To foster mutual understanding.",
-        rationale: "Dialogue aims to build understanding between conflicting parties to reach peaceful resolutions."
+        question: "What is the main difference between a pre-interrogation interview and an interrogation?",
+        choice1: "Pre-interrogation involves coercion, while interrogation does not.",
+        choice2: "Pre-interrogation focuses on gathering information, while interrogation aims for confessions.",
+        choice3: "Pre-interrogation is informal, while interrogation is legally binding.",
+        choice4: "Pre-interrogation assesses physical evidence, while interrogation assesses suspects.",
+        answer: "Pre-interrogation focuses on gathering information, while interrogation aims for confessions.",
+        rationale: "Pre-interrogation interviews are designed to collect information, whereas interrogations focus on obtaining confessions."
     },
     {
-        question: "Which of the following is a key feature of effective dialogue?",
-        choice1: "Listening actively.",
-        choice2: "Interrupting frequently.",
-        choice3: "Assuming superiority.",
-        choice4: "Criticizing harshly.",
-        answer: "Listening actively.",
-        rationale: "Active listening ensures that each party feels heard and respected, fostering a productive conversation."
+        question: "During a pre-interrogation interview, what type of questions is most effective?",
+        choice1: "Closed-ended questions to confirm facts",
+        choice2: "Leading questions to prompt specific answers",
+        choice3: "Open-ended questions to observe behavioral cues",
+        choice4: "Yes/no questions for quick responses",
+        answer: "Open-ended questions to observe behavioral cues",
+        rationale: "Open-ended questions allow suspects to speak freely, enabling investigators to analyze behavioral cues."
     },
     {
-        question: "Dialogue is most effective when it is:",
-        choice1: "One-sided.",
-        choice2: "Neutral and inclusive.",
-        choice3: "Aggressive.",
-        choice4: "Limited to one meeting.",
-        answer: "Neutral and inclusive.",
-        rationale: "Neutrality and inclusivity help all parties feel equally valued, promoting fair discussions."
+        question: "How does rapport-building benefit the pre-interrogation process?",
+        choice1: "It encourages suspects to confess immediately.",
+        choice2: "It reduces resistance during interrogation.",
+        choice3: "It eliminates the need for interrogation.",
+        choice4: "It confirms the suspect’s guilt.",
+        answer: "It reduces resistance during interrogation.",
+        rationale: "Building rapport makes suspects more comfortable and less resistant during subsequent interrogation phases."
     },
     {
-        question: "Which of these is a barrier to successful dialogue?",
-        choice1: "Empathy.",
-        choice2: "Cultural bias.",
-        choice3: "Mutual respect.",
-        choice4: "Open-mindedness.",
-        answer: "Cultural bias.",
-        rationale: "Cultural bias can distort understanding and lead to mistrust, hindering effective dialogue."
+        question: "Why might an investigator assess a suspect’s baseline behavior during a pre-interrogation interview?",
+        choice1: "To determine their level of intelligence",
+        choice2: "To establish a comparison point for detecting deception",
+        choice3: "To evaluate their likelihood of fleeing",
+        choice4: "To measure their legal knowledge",
+        answer: "To establish a comparison point for detecting deception",
+        rationale: "Baseline behavior provides a standard for identifying behavioral deviations that may indicate dishonesty."
     },
     {
-        question: "What type of communication is dialogue?",
-        choice1: "One-way.",
-        choice2: "Two-way.",
-        choice3: "Multi-way.",
-        choice4: "No communication at all.",
-        answer: "Two-way.",
-        rationale: "Dialogue requires two-way communication, where all parties share and listen actively."
+        question: "What psychological tactic is often used during pre-interrogation interviews?",
+        choice1: "Direct accusations",
+        choice2: "Sympathetic questioning",
+        choice3: "Physical intimidation",
+        choice4: "Threat of legal consequences",
+        answer: "Sympathetic questioning",
+        rationale: "Sympathetic questioning helps build trust and encourages suspects to open up."
     },
     {
-        question: "Which is NOT a benefit of dialogue?",
-        choice1: "Building trust.",
-        choice2: "Encouraging cooperation.",
-        choice3: "Resolving misunderstandings.",
-        choice4: "Promoting division.",
-        answer: "Promoting division.",
-        rationale: "Dialogue promotes unity, not division, by addressing misunderstandings and building trust."
+        question: "Which of the following is not a goal of a pre-interrogation interview?",
+        choice1: "Gathering biographical information",
+        choice2: "Evaluating the suspect’s credibility",
+        choice3: "Analyzing evidence with the suspect",
+        choice4: "Establishing rapport",
+        answer: "Analyzing evidence with the suspect",
+        rationale: "Evidence analysis typically occurs during formal interrogation, not in pre-interrogation interviews."
     },
     {
-        question: "Dialogue is crucial in which of these processes?",
-        choice1: "Escalating conflict.",
-        choice2: "Negotiating peace agreements.",
-        choice3: "Avoiding communication.",
-        choice4: "Withholding information.",
-        answer: "Negotiating peace agreements.",
-        rationale: "Dialogue facilitates discussions that lead to mutual agreements in peace negotiations."
+        question: "What role does cultural sensitivity play in pre-interrogation interviews?",
+        choice1: "It allows the interviewer to ignore inconsistencies.",
+        choice2: "It prevents ethical violations during questioning.",
+        choice3: "It ensures the suspect fully understands the process.",
+        choice4: "It helps in building rapport with diverse suspects.",
+        answer: "It helps in building rapport with diverse suspects.",
+        rationale: "Understanding cultural differences enhances rapport-building and reduces misunderstandings."
     },
     {
-        question: "The success of dialogue depends on:",
-        choice1: "Effective communication skills.",
-        choice2: "Using threats.",
-        choice3: "Avoiding difficult topics.",
-        choice4: "Dominating the conversation.",
-        answer: "Effective communication skills.",
-        rationale: "Good communication skills, such as clarity and empathy, are essential for successful dialogue."
+        question: "Why is active listening critical during pre-interrogation?",
+        choice1: "It allows investigators to dominate the conversation.",
+        choice2: "It prevents the suspect from detecting deception.",
+        choice3: "It reveals inconsistencies in the suspect’s story.",
+        choice4: "It helps minimize legal risks for the investigator.",
+        answer: "It reveals inconsistencies in the suspect’s story.",
+        rationale: "Active listening aids in identifying contradictions or omissions in the suspect’s narrative."
     },
     {
-        question: "Which is a principle of dialogue?",
-        choice1: "Winning arguments.",
-        choice2: "Respecting diverse perspectives.",
-        choice3: "Silencing others.",
-        choice4: "Imposing views.",
-        answer: "Respecting diverse perspectives.",
-        rationale: "Dialogue requires openness to diverse opinions to find common ground and mutual respect."
+        question: "What should an investigator avoid during a pre-interrogation interview?",
+        choice1: "Taking detailed notes",
+        choice2: "Building rapport",
+        choice3: "Presenting evidence prematurely",
+        choice4: "Assessing behavioral cues",
+        answer: "Presenting evidence prematurely",
+        rationale: "Presenting evidence too early can lead the suspect to tailor their responses to fit the evidence."
     },
     {
-        question: "What is the ultimate goal of dialogue?",
-        choice1: "Creating misunderstandings.",
-        choice2: "Fostering shared solutions.",
-        choice3: "Breaking communication.",
-        choice4: "Prolonging disputes.",
-        answer: "Fostering shared solutions.",
-        rationale: "Dialogue aims to create solutions that satisfy the needs of all parties involved."
+        question: "How does the non-confrontational approach during pre-interrogation interviews influence suspects?",
+        choice1: "It pressures them to confess.",
+        choice2: "It encourages truthful responses.",
+        choice3: "It delays the interrogation process.",
+        choice4: "It shifts focus to the legal aspects of the case.",
+        answer: "It encourages truthful responses.",
+        rationale: "Non-confrontational approaches create a more relaxed atmosphere, increasing the likelihood of truthfulness."
     },
     {
-        question: "What is the best definition of peace?",
-        choice1: "The absence of war.",
-        choice2: "A state of harmony and mutual understanding.",
-        choice3: "A temporary ceasefire.",
-        choice4: "A forced agreement between nations.",
-        answer: "A state of harmony and mutual understanding.",
-        rationale: "Peace is more than the absence of conflict; it involves sustained harmony and cooperation among groups or nations."
+        question: "Why is it difficult to rely on behavioral cues for detecting deception?",
+        choice1: "They are scientifically proven to be unreliable.",
+        choice2: "They vary widely among individuals and cultures.",
+        choice3: "They require advanced technology for observation.",
+        choice4: "They only apply to seasoned criminals.",
+        answer: "They vary widely among individuals and cultures.",
+        rationale: "Behavioral cues are subjective and can differ based on cultural and individual factors, making them unreliable."
     },
     {
-        question: "Which of the following is NOT a component of security?",
-        choice1: "Economic stability.",
-        choice2: "Access to basic needs.",
-        choice3: "Persistent conflict.",
-        choice4: "Political stability.",
-        answer: "Persistent conflict.",
-        rationale: "Security thrives on stability, not ongoing conflicts, which undermine both peace and safety."
+        question: "Which of the following technologies is commonly used to detect deception?",
+        choice1: "Surveillance cameras",
+        choice2: "Polygraph machines",
+        choice3: "DNA profiling",
+        choice4: "Forensic accounting",
+        answer: "Polygraph machines",
+        rationale: "Polygraph machines are often employed to detect physiological responses that may indicate deception."
     },
     {
-        question: "What is the relationship between peace and security?",
-        choice1: "They are unrelated concepts.",
-        choice2: "Peace leads to security, and security supports peace.",
-        choice3: "Security is irrelevant in times of peace.",
-        choice4: "Peace and security cannot coexist.",
-        answer: "Peace leads to security, and security supports peace.",
-        rationale: "The two are interconnected, with each reinforcing the other for sustained societal harmony."
+        question: "What is the main criticism of polygraph tests in the justice system?",
+        choice1: "They are time-consuming.",
+        choice2: "They rely on subjective analysis.",
+        choice3: "They produce inconsistent results.",
+        choice4: "They cannot detect emotions.",
+        answer: "They produce inconsistent results.",
+        rationale: "Polygraphs are criticized for their inconsistency and inability to definitively distinguish lies from truth."
     },
     {
-        question: "Which of these is a global threat to peace and security?",
-        choice1: "International cooperation.",
-        choice2: "Terrorism and armed conflict.",
-        choice3: "Trade agreements.",
-        choice4: "Cultural exchanges.",
-        answer: "Terrorism and armed conflict.",
-        rationale: "Such threats destabilize regions and create insecurity, undermining peace globally."
+        question: "What does the truth-default theory propose about human behavior?",
+        choice1: "Humans are naturally deceptive.",
+        choice2: "People default to trusting others unless evidence suggests otherwise.",
+        choice3: "Deceptive individuals are easily recognizable.",
+        choice4: "Detecting deception requires advanced training.",
+        answer: "People default to trusting others unless evidence suggests otherwise.",
+        rationale: "The truth-default theory suggests that humans instinctively trust others until deception is suspected."
     },
     {
-        question: "What is the primary goal of international peacekeeping efforts?",
-        choice1: "To enforce laws without consultation.",
-        choice2: "To foster dialogue and resolve conflicts.",
-        choice3: "To avoid communication with local leaders.",
-        choice4: "To ignore ongoing violence.",
-        answer: "To foster dialogue and resolve conflicts.",
-        rationale: "Peacekeeping aims to mediate disputes and build lasting resolutions to conflicts."
+        question: "How does deception affect the fairness of criminal trials?",
+        choice1: "It ensures the suspect receives fair treatment.",
+        choice2: "It hinders the ability to establish guilt beyond reasonable doubt.",
+        choice3: "It always leads to wrongful convictions.",
+        choice4: "It simplifies the investigative process.",
+        answer: "It hinders the ability to establish guilt beyond reasonable doubt.",
+        rationale: "Deception can cloud evidence and testimonies, making it difficult to determine guilt with certainty."
     },
     {
-        question: "Which of the following contributes to long-lasting peace?",
-        choice1: "Addressing root causes of conflict.",
-        choice2: "Temporary ceasefires.",
-        choice3: "Imposing strict military control.",
-        choice4: "Restricting freedoms.",
-        answer: "Addressing root causes of conflict.",
-        rationale: "Addressing underlying issues ensures that peace is sustainable, not temporary."
+        question: "Why is training in deception detection important for law enforcement officers?",
+        choice1: "To ensure suspects cannot lie during interrogation",
+        choice2: "To improve their ability to identify truthful accounts",
+        choice3: "To prevent coercive interrogation practices",
+        choice4: "To enhance their courtroom testimony",
+        answer: "To improve their ability to identify truthful accounts",
+        rationale: "Deception detection training enables officers to discern truthful statements more accurately."
     },
     {
-        question: "What does 'human security' prioritize?",
-        choice1: "Protection of state boundaries.",
-        choice2: "Safety and well-being of individuals.",
-        choice3: "Increasing military power.",
-        choice4: "Ignoring social development.",
-        answer: "Safety and well-being of individuals.",
-        rationale: "Human security focuses on people's protection from threats to their safety and livelihoods."
+        question: "What is the primary psychological burden of lying?",
+        choice1: "Physical exhaustion",
+        choice2: "Cognitive overload",
+        choice3: "Emotional numbness",
+        choice4: "Increased empathy",
+        answer: "Cognitive overload",
+        rationale: "Lying requires cognitive effort to fabricate and maintain false information, leading to cognitive overload."
     },
     {
-        question: "Which organization is most recognized for promoting global peace?",
-        choice1: "World Health Organization (WHO).",
-        choice2: "United Nations (UN).",
-        choice3: "International Olympic Committee.",
-        choice4: "World Trade Organization (WTO).",
-        answer: "United Nations (UN).",
-        rationale: "The UN plays a central role in resolving international conflicts and fostering global peace."
+        question: "Which method is most effective in detecting deception?",
+        choice1: "Lie detector tests",
+        choice2: "Micro-expression analysis",
+        choice3: "Long-term observation of behavior",
+        choice4: "Using leading questions",
+        answer: "Long-term observation of behavior",
+        rationale: "Long-term observation provides more reliable insights into behavioral patterns than instantaneous methods."
     },
     {
-        question: "Why is education essential to peace and security?",
-        choice1: "It promotes economic disparity.",
-        choice2: "It fosters understanding and reduces ignorance.",
-        choice3: "It leads to more conflict.",
-        choice4: "It discourages dialogue.",
-        answer: "It fosters understanding and reduces ignorance.",
-        rationale: "Education promotes critical thinking, tolerance, and understanding, reducing conflict triggers."
+        question: "What is a significant limitation of polygraph machines?",
+        choice1: "They can only be used on trained professionals.",
+        choice2: "They detect arousal, not specific lies.",
+        choice3: "They require a psychologist to interpret results.",
+        choice4: "They are ineffective in controlled settings.",
+        answer: "They detect arousal, not specific lies.",
+        rationale: "Polygraph machines detect physiological arousal, which may or may not be caused by deception."
     },
     {
-        question: "Which term refers to resolving conflicts without violence?",
-        choice1: "Peaceful resolution.",
-        choice2: "Aggressive diplomacy.",
-        choice3: "Military intervention.",
-        choice4: "Economic sanctions.",
-        answer: "Peaceful resolution.",
-        rationale: "This approach seeks to settle disputes through dialogue and compromise, avoiding violence."
+        question: "How does cultural bias potentially impact deception detection techniques?",
+        choice1: "It improves the accuracy of behavioral analysis.",
+        choice2: "It leads to misinterpretation of body language cues.",
+        choice3: "It prevents the use of technology like polygraphs.",
+        choice4: "It increases the reliability of interrogation techniques.",
+        answer: "It leads to misinterpretation of body language cues.",
+        rationale: "Cultural differences in behavior and expression can lead to incorrect assumptions in detecting deception."
     },
     {
-        question: "What is the primary purpose of announcing grief?",
-        choice1: "To draw attention.",
-        choice2: "To express loss and seek support.",
-        choice3: "To celebrate an event.",
-        choice4: "To create social media content.",
-        answer: "To express loss and seek support.",
-        rationale: "Announcing grief helps convey a sense of loss and invites emotional and practical support from others."
+        question: "What is the primary purpose of the Miranda Warning?",
+        choice1: "To inform suspects of their legal rights.",
+        choice2: "To prevent the police from conducting interrogations.",
+        choice3: "To ensure suspects are detained lawfully.",
+        choice4: "To facilitate faster confessions.",
+        answer: "To inform suspects of their legal rights.",
+        rationale: "The Miranda Warning ensures suspects are aware of their constitutional rights during custodial interrogations."
     },
     {
-        question: "Which of the following is the most appropriate way to announce grief?",
-        choice1: "Through an emotional outburst in public.",
-        choice2: "Using clear and respectful communication.",
-        choice3: "By avoiding communication altogether.",
-        choice4: "By exaggerating the circumstances.",
-        answer: "Using clear and respectful communication.",
-        rationale: "Clear communication ensures that the message is understood without causing unnecessary distress or confusion."
+        question: "In which U.S. Supreme Court case was the Miranda Warning established?",
+        choice1: "Gideon v. Wainwright",
+        choice2: "Miranda v. Arizona",
+        choice3: "Brown v. Board of Education",
+        choice4: "Escobedo v. Illinois",
+        answer: "Miranda v. Arizona",
+        rationale: "The landmark 1966 decision in Miranda v. Arizona established the requirement for law enforcement to inform suspects of their rights."
     },
     {
-        question: "Why is it important to choose the right words when announcing grief?",
-        choice1: "To avoid hurting others’ feelings.",
-        choice2: "To sound poetic.",
-        choice3: "To make the announcement vague.",
-        choice4: "To shift focus to unrelated issues.",
-        answer: "To avoid hurting others’ feelings.",
-        rationale: "Carefully chosen words can minimize emotional pain and show sensitivity toward the audience."
+        question: "When must a Miranda Warning be given?",
+        choice1: "During an arrest",
+        choice2: "Before an interrogation begins",
+        choice3: "After a suspect confesses",
+        choice4: "Only when the suspect requests it",
+        answer: "Before an interrogation begins",
+        rationale: "Miranda rights must be read before questioning begins if the suspect is in custody to ensure compliance with the Fifth Amendment."
     },
     {
-        question: "Who should ideally be informed first about grief?",
-        choice1: "Random acquaintances.",
-        choice2: "Immediate family and close friends.",
-        choice3: "Work colleagues.",
-        choice4: "Social media followers.",
-        answer: "Immediate family and close friends.",
-        rationale: "Close relationships require priority communication, as these individuals are directly affected by the loss."
+        question: "Which right is not included in the Miranda Warning?",
+        choice1: "The right to remain silent",
+        choice2: "The right to an attorney",
+        choice3: "The right to a fair trial",
+        choice4: "The right to have an attorney appointed if unable to afford one",
+        answer: "The right to a fair trial",
+        rationale: "The right to a fair trial is a constitutional right but is not part of the Miranda Warning."
     },
     {
-        question: "Which of the following is a cultural consideration when announcing grief?",
-        choice1: "Using humor in the announcement.",
-        choice2: "Following traditions and protocols.",
-        choice3: "Making it as brief as possible.",
-        choice4: "Ignoring cultural practices.",
-        answer: "Following traditions and protocols.",
-        rationale: "Respecting cultural norms shows sensitivity and ensures the announcement aligns with societal expectations."
+        question: "What happens if a suspect waives their Miranda rights?",
+        choice1: "Their statements can be used against them in court.",
+        choice2: "The police can interrogate them without restrictions.",
+        choice3: "They lose all legal protections.",
+        choice4: "They cannot request an attorney later.",
+        answer: "Their statements can be used against them in court.",
+        rationale: "A waiver of Miranda rights means the suspect’s statements can be admissible in court, provided the waiver was made voluntarily and knowingly."
     },
     {
-        question: "What is a key benefit of announcing grief in a timely manner?",
-        choice1: "It prevents misunderstandings.",
-        choice2: "It avoids dealing with emotions.",
-        choice3: "It allows for isolation.",
-        choice4: "It creates drama.",
-        answer: "It prevents misunderstandings.",
-        rationale: "Timely announcements provide clarity and ensure that those who need to know are informed promptly."
+        question: "Why might police delay giving the Miranda Warning?",
+        choice1: "To build rapport with the suspect",
+        choice2: "To avoid self-incrimination",
+        choice3: "To gather evidence before the suspect requests a lawyer",
+        choice4: "To increase the likelihood of a truthful confession",
+        answer: "To gather evidence before the suspect requests a lawyer",
+        rationale: "Police might delay reading Miranda rights to collect evidence during informal questioning before the suspect invokes their right to silence."
     },
     {
-        question: "Communication is said to be strategic when it?",
-        choice1: "When it is sent via email.",
-        choice2: "When it includes a company logo.",
-        choice3: "When it produces the effect intended on the consumer of the communication",
-        choice4: "When it is very long and detailed.",
-        answer: "When it produces the effect intended on the consumer of the communication",
-        rationale: "Strategic communication focuses on achieving specific outcomes by effectively influencing the target audience."
+        question: "If a suspect invokes their right to silence during questioning, what must the police do?",
+        choice1: "Stop questioning immediately.",
+        choice2: "Continue questioning to confirm their intention.",
+        choice3: "Proceed with questions unrelated to the crime.",
+        choice4: "Obtain written confirmation of the suspect’s decision.",
+        answer: "Stop questioning immediately.",
+        rationale: "Once a suspect invokes their right to silence, law enforcement must cease all questioning under Miranda rules."
     },
     {
-        question: "The following is the pre principles that govern strategic communication:",
-        choice1: "Appreciating the place of silence",
-        choice2: "Knowing the place of negotiation",
-        choice3: "Pre-empting possible counter arguments",
+        question: "Which of the following can render a Miranda waiver invalid?",
+        choice1: "The suspect is intoxicated.",
+        choice2: "The suspect changes their mind after waiving their rights.",
+        choice3: "The police provide legal advice.",
+        choice4: "The suspect refuses to sign a written waiver.",
+        answer: "The suspect is intoxicated.",
+        rationale: "A waiver must be made voluntarily, knowingly, and intelligently; intoxication can impair a suspect’s understanding of their rights."
+    },
+    {
+        question: "How does the Miranda Warning uphold the Fifth Amendment?",
+        choice1: "By preventing self-incrimination during custodial interrogations",
+        choice2: "By allowing suspects to confess under duress",
+        choice3: "By protecting suspects from double jeopardy",
+        choice4: "By guaranteeing due process",
+        answer: "By preventing self-incrimination during custodial interrogations",
+        rationale: "The Miranda Warning ensures suspects are informed of their right to remain silent, protecting against self-incrimination."
+    },
+    {
+        question: "What is the consequence if police fail to issue a Miranda Warning before questioning?",
+        choice1: "The case is automatically dismissed.",
+        choice2: "The suspect’s statements are inadmissible in court.",
+        choice3: "The police face legal penalties.",
+        choice4: "The suspect cannot be arrested.",
+        answer: "The suspect’s statements are inadmissible in court.",
+        rationale: "Failure to give a Miranda Warning renders any statements obtained during custodial interrogation inadmissible in court."
+    },
+    {
+        question: "What is the primary reason some innocent suspects waive their Miranda rights?",
+        choice1: "They are unaware of the consequences.",
+        choice2: "They believe cooperating will clear their name.",
+        choice3: "They do not understand the legal system.",
+        choice4: "They are pressured by law enforcement.",
+        answer: "They believe cooperating will clear their name.",
+        rationale: "Innocent suspects often waive their rights, thinking that cooperation will demonstrate their innocence and expedite their release."
+    },
+    {
+        question: "How can overconfidence contribute to innocent suspects waiving their rights?",
+        choice1: "They underestimate the severity of their situation.",
+        choice2: "They believe the interrogation is unlawful.",
+        choice3: "They think their legal knowledge surpasses the police.",
+        choice4: "They assume the case will be dismissed.",
+        answer: "They underestimate the severity of their situation.",
+        rationale: "Innocent suspects may overestimate their ability to prove their innocence and waive their rights prematurely."
+    },
+    {
+        question: "Which of the following factors increases the likelihood of innocent suspects waiving their rights?",
+        choice1: "Fatigue during interrogation",
+        choice2: "Familiarity with the justice system",
+        choice3: "Access to legal counsel",
+        choice4: "Media coverage of the case",
+        answer: "Fatigue during interrogation",
+        rationale: "Fatigue can impair judgment, making suspects more susceptible to waiving their rights without fully understanding the implications."
+    },
+    {
+        question: "What common psychological misconception leads innocent suspects to cooperate without legal counsel?",
+        choice1: "That silence implies guilt",
+        choice2: "That lawyers complicate the process",
+        choice3: "That police will stop the interrogation",
+        choice4: "That waiving rights is mandatory",
+        answer: "That silence implies guilt",
+        rationale: "Many suspects falsely believe remaining silent will make them look guilty, prompting them to speak without legal counsel."
+    },
+    {
+        question: "Why might social pressure influence innocent suspects to waive their rights?",
+        choice1: "Fear of being labeled uncooperative",
+        choice2: "Desire to please law enforcement",
+        choice3: "Avoidance of confrontation",
         choice4: "All of the above",
         answer: "All of the above",
-        rationale: "Each principle contributes to the effective delivery of messages in strategic communication."
+        rationale: "Social and psychological pressures can compel suspects to waive their rights, even when it is against their best interest."
     },
     {
-        question: "Grief is sometimes used interchangeably with?",
-        choice1: "Bereavement",
-        choice2: "Euphoria",
-        choice3: "Nostalgia",
-        choice4: "Anxiety",
-        answer: "Bereavement",
-        rationale: "Bereavement refers to the state of loss, often associated with the death of a loved one, making it closely related to grief."
+        question: "Which of the following best describes the underlying principle of psychoanalytic theory in relation to confessions?",
+        choice1: "Conscious guilt resolution",
+        choice2: "Unconscious conflict and stress relief",
+        choice3: "Rational cost-benefit analysis",
+        choice4: "Compliance with authority",
+        answer: "Unconscious conflict and stress relief"
     },
     {
-        question: "In technical terms, bereavement is the state or sense of loss while grief is the ______ to the loss.",
-        choice1: "Acceptance",
-        choice2: "Explanation",
-        choice3: "Anticipation",
-        choice4: "Reaction",
-        answer: "Reaction",
-        rationale: "Grief refers to the emotional response to a loss, while bereavement defines the state of experiencing the loss."
+        question: "A suspect confesses after experiencing recurring nightmares about the crime they committed. This is most aligned with:",
+        choice1: "Decision-making perspective",
+        choice2: "Social-psychological theory",
+        choice3: "Psychoanalytic theory",
+        choice4: "Cognitive-behavioural theory",
+        answer: "Psychoanalytic theory"
     },
     {
-        question: "The order of the grief phases given by Kubler-Ross are as follows:",
-        choice1: "Denial, Bargaining, Anger, Depression, Acceptance",
-        choice2: "Anger, Depression, Denial, Bargaining and Acceptance",
-        choice3: "Denial, Anger, Bargaining, Depression and Acceptance",
-        choice4: "Denial, Acceptance, Anger, Bargaining, and Depression",
-        answer: "Denial, Anger, Bargaining, Depression and Acceptance",
-        rationale: "These are the five stages of grief as proposed by Elisabeth Kubler-Ross, following this specific order."
+        question: "A suspect is interrogated for hours but does not confess, only to break down emotionally and confess days later in a private setting. Which theory applies?",
+        choice1: "Psychoanalytic theory",
+        choice2: "Decision-making perspective",
+        choice3: "Social-psychological theory",
+        choice4: "Cognitive-behavioural theory",
+        answer:  "Psychoanalytic theory"
     },
     {
-        question: "The following are causes of grief except:",
-        choice1: "Death",
-        choice2: "Separation",
-        choice3: "Accident",
-        choice4: "Celebration",
-        answer: "Celebration",
-        rationale: "Celebration is typically associated with joy rather than loss or sadness, making it an exception."
+        question: "The decision-making perspective on confessions assumes that suspects:",
+        choice1: "Confess under subconscious stress",
+        choice2: "Rationally weigh the costs and benefits of confessing",
+        choice3: "Succumb to intense external pressure",
+        choice4: "Act out of fear of losing familial support",
+        answer: "Rationally weigh the costs and benefits of confessing"
     },
     {
-        question: "______ is the opposite of peace.",
-        choice1: "Harmony",
-        choice2: "Serenity",
-        choice3: "Tranquility",
-        choice4: "Conflict",
-        answer: "Conflict",
-        rationale: "Conflict is the absence or opposite of peace, as it involves discord and disputes between individuals or groups."
+        question: "A suspect confesses after their lawyer advises them that cooperating could result in a plea deal with reduced charges. This reflects:",
+        choice1: "Psychoanalytic theory",
+        choice2: "Decision-making perspective",
+        choice3: "Cognitive-behavioural theory",
+        choice4: "Social-psychological theory",
+        answer: "Decision-making perspective"
     },
     {
-        question: "Unmanaged conflicts can lead to:",
-        choice1: "Division",
-        choice2: "Confusion",
-        choice3: "Wickedness",
-        choice4: "War",
-        answer: "War",
-        rationale: "When conflicts escalate and remain unresolved, they can lead to violent outcomes such as war."
+        question: "Which scenario would most challenge the validity of the decision-making perspective?",
+        choice1: "A suspect confesses to end a lengthy interrogation.",
+        choice2: "A suspect confesses to avoid feelings of guilt.",
+        choice3: "A suspect confesses believing it will reduce their sentence.",
+        choice4: "A suspect confesses after a lawyer’s advice.",
+        answer: "A suspect confesses to end a lengthy interrogation."
     },
     {
-        question: "Dialogue is a _____ communication.",
-        choice1: "Two-way",
-        choice2: "Three-way",
-        choice3: "One-way",
-        choice4: "No-way",
-        answer: "Two-way",
-        rationale: "Dialogue requires an exchange of ideas or communication between two parties, making it inherently two-way."
+        question: "Cognitive-behavioural theory suggests that a suspect’s confession is driven by:",
+        choice1: "Subconscious guilt and anxiety",
+        choice2: "Rational evaluation of benefits",
+        choice3: "Desire to maintain or repair relationships",
+        choice4: "External pressures like stress",
+        answer: "Desire to maintain or repair relationships"
     },
     {
-        question: "One of the causes of conflict except:",
-        choice1: "Resource control",
-        choice2: "Unmet demand",
-        choice3: "Ethnicity",
-        choice4: "Empathy",
-        answer: "Empathy",
-        rationale: "Empathy involves understanding and sharing others' feelings, which reduces conflict rather than causing it."
+        question: "A suspect confesses after seeing how their crime hurt their family and realizing that confessing might repair their bond. This scenario reflects:",
+        choice1: "Social-psychological theory",
+        choice2: "Cognitive-behavioural theory",
+        choice3: "Decision-making perspective",
+        choice4: "Psychoanalytic theory",
+        answer: "Cognitive-behavioural theory"
     },
     {
-        question: "_____ is the act of bringing about or contesting a lawsuit.",
-        choice1: "Mediation",
-        choice2: "Collaboration",
-        choice3: "Litigation",
-        choice4: "Negotiation",
-        answer: "Litigation",
-        rationale: "Litigation involves resolving disputes in court, typically through legal action or lawsuits."
+        question: "A suspect repeatedly rehearses their denial during interrogation but confesses when confronted with undeniable evidence. This most likely demonstrates:",
+        choice1: "Psychoanalytic theory",
+        choice2: "Decision-making perspective",
+        choice3: "Cognitive-behavioural theory",
+        choice4: "Social-psychological theory",
+        answer: "Decision-making perspective"
     },
     {
-        question: "______ involves the role of a third party to provide an enabling environment for the parties involved in a conflict to enter into dialogue.",
-        choice1: "Arbitration",
-        choice2: "Mediation",
-        choice3: "Collaboration",
-        choice4: "Alternative Dispute Resolution",
-        answer: "Mediation",
-        rationale: "Mediation allows a neutral third party to help conflicting parties negotiate and reach an agreement."
-    },
-
-    // Culture in a pluralist society
-    {
-        question: "The following are the characteristics of culture except:",
-        choice1: "It's universal",
-        choice2: "Culture is not genetically transferred",
-        choice3: "Culture is dynamic",
-        choice4: "Culture is in-born",
-        answer: "Culture is in-born",
-        rationale: "Culture is learned through social interaction, making it not in-born but acquired over time."
+        question: "Social-psychological theory emphasizes that confessions often result from:",
+        choice1: "Rational self-interest",
+        choice2: "Unconscious guilt",
+        choice3: "External pressures like stress and interrogation tactics",
+        choice4: "Emotional ties to family or society",
+        answer: "External pressures like stress and interrogation tactics"
     },
     {
-        question: "Which of the following differentiates material culture from non-material culture?",
-        choice1: "The material culture can be replaced and redesigned while the non-material cannot.",
-        choice2: "The material culture cannot be replaced while the non-material can be replaced.",
-        choice3: "There's no difference between the material and non-material culture.",
-        choice4: "None of the above.",
-        answer: "The material culture can be replaced and redesigned while the non-material cannot.",
-        rationale: "Material culture includes physical objects, which can be replaced, whereas non-material culture, like beliefs, cannot."
+        question: "Which of the following best describes the underlying principle of psychoanalytic theory in relation to confessions?",
+        choice1: "Conscious guilt resolution",
+        choice2: "Unconscious conflict and stress relief",
+        choice3: "Rational cost-benefit analysis",
+        choice4: "Compliance with authority",
+        answer: "Unconscious conflict and stress relief"
     },
     {
-        question: "Culture was used interchangeably with ______ in the eighteenth century.",
-        choice1: "Universalization",
-        choice2: "Enlightenment",
-        choice3: "Civilization",
-        choice4: "Education",
-        answer: "Civilization",
-        rationale: "In the eighteenth century, culture and civilization were often used synonymously to refer to societal progress."
+        question: "A suspect confesses after experiencing recurring nightmares about the crime they committed. This is most aligned with:",
+        choice1: "Decision-making perspective",
+        choice2: "Social-psychological theory",
+        choice3: "Psychoanalytic theory",
+        choice4: "Cognitive-behavioural theory",
+        answer: "Psychoanalytic theory"
     },
     {
-        question: "One of the features of Nigeria’s pluralism is:",
-        choice1: "Land",
-        choice2: "Shrine",
-        choice3: "Language",
-        choice4: "Greeting",
-        answer: "Language",
-        rationale: "Nigeria is characterized by its diverse languages, reflecting its pluralist nature."
+        question: "A suspect is interrogated for hours but does not confess, only to break down emotionally and confess days later in a private setting. Which theory applies?",
+        choice1: "Psychoanalytic theory",
+        choice2: "Decision-making perspective",
+        choice3: "Social-psychological theory",
+        choice4: "Cognitive-behavioural theory",
+        answer: "Psychoanalytic theory"
     },
     {
-        question: "_____ is a society of many nations, languages, and diverse beliefs and thoughts.",
-        choice1: "Pluralist",
-        choice2: "Monolingual",
-        choice3: "Monolithic",
-        choice4: "Global",
-        answer: "Pluralist",
-        rationale: "A pluralist society embraces diversity in culture, language, and beliefs, as opposed to being uniform."
+        question: "The decision-making perspective on confessions assumes that suspects:",
+        choice1: "Confess under subconscious stress",
+        choice2: "Rationally weigh the costs and benefits of confessing",
+        choice3: "Succumb to intense external pressure",
+        choice4: "Act out of fear of losing familial support",
+        answer: "Rationally weigh the costs and benefits of confessing"
     },
     {
-        question: "______ society is a group of people with common territory, interaction, and culture.",
-        choice1: "Monolingual",
-        choice2: "Monolithic",
-        choice3: "Monopoly",
-        choice4: "Pluralist",
-        answer: "Pluralist",
-        rationale: "A pluralist society reflects coexistence among different cultures and groups within a shared territory."
-    },
-
-    // Masquerade and the masquerade
-    {
-        question: "The masquerade for hunters is known as:",
-        choice1: "Igunnuko",
-        choice2: "Epa",
-        choice3: "Agemo",
-        choice4: "Layewu",
-        answer: "Epa",
-        rationale: "Epa masquerades are traditionally associated with hunters in Yoruba culture."
+        question: "A suspect confesses after their lawyer advises them that cooperating could result in a plea deal with reduced charges. This reflects:",
+        choice1: "Psychoanalytic theory",
+        choice2: "Decision-making perspective",
+        choice3: "Cognitive-behavioural theory",
+        choice4: "Social-psychological theory",
+        answer: "Decision-making perspective"
     },
     {
-        question: "Which masquerade is referred to as the foolish masquerade?",
-        choice1: "Egungun",
-        choice2: "Agemo",
-        choice3: "Elewe",
-        choice4: "Igunnuko",
-        answer: "Elewe",
-        rationale: "The Elewe masquerade is humorously referred to as the foolish masquerade in some contexts."
+        question: "Which scenario would most challenge the validity of the decision-making perspective?",
+        choice1: "A suspect confesses to end a lengthy interrogation.",
+        choice2: "A suspect confesses to avoid feelings of guilt.",
+        choice3: "A suspect confesses believing it will reduce their sentence.",
+        choice4: "A suspect confesses after a lawyer’s advice.",
+        answer: "A suspect confesses to end a lengthy interrogation."
     },
     {
-        question: "How does Igunnuko collect his gift?",
-        choice1: "Through a box",
-        choice2: "Through Atokun",
-        choice3: "Through the chief priest",
-        choice4: "By his hand",
-        answer: "Through Atokun",
-        rationale: "Igunnuko masquerades use Atokun (a long stick) to collect their gifts as part of the tradition."
+        question: "Cognitive-behavioural theory suggests that a suspect’s confession is driven by:",
+        choice1: "Subconscious guilt and anxiety",
+        choice2: "Rational evaluation of benefits",
+        choice3: "Desire to maintain or repair relationships",
+        choice4: "External pressures like stress",
+        answer: "Desire to maintain or repair relationships"
     },
     {
-        question: "______ is a person responsible for seeing to the organization and management of a festival.",
-        choice1: "King",
-        choice2: "Chief priest",
-        choice3: "Producer",
-        choice4: "Entrepreneur",
-        answer: "Chief priest",
-        rationale: "The chief priest often oversees traditional festivals, including their organization and rituals."
+        question: "A suspect confesses after seeing how their crime hurt their family and realizing that confessing might repair their bond. This scenario reflects:",
+        choice1: "Social-psychological theory",
+        choice2: "Cognitive-behavioural theory",
+        choice3: "Decision-making perspective",
+        choice4: "Psychoanalytic theory",
+        answer: "Cognitive-behavioural theory"
     },
     {
-        question: "_____ is the masquerade for children.",
-        choice1: "Ara orun",
-        choice2: "Egungun Alare",
-        choice3: "Egungun Olore",
-        choice4: "Tombolo",
-        answer: "Egungun Olore",
-        rationale: "Egungun Olore is a masquerade that entertains children during festivals."
+        question: "A suspect repeatedly rehearses their denial during interrogation but confesses when confronted with undeniable evidence. This most likely demonstrates:",
+        choice1: "Psychoanalytic theory",
+        choice2: "Decision-making perspective",
+        choice3: "Cognitive-behavioural theory",
+        choice4: "Social-psychological theory",
+        answer: 2
     },
     {
-        question: "The youngest of all masquerades is referred to as:",
-        choice1: "Alagbaa",
-        choice2: "Oloiko",
-        choice3: "Alapinni",
-        choice4: "Olojowon",
-        answer: "Olojowon",
-        rationale: "Olojowon is regarded as the youngest among the Yoruba masquerades due to its unique symbolism."
+        question: "Social-psychological theory emphasizes that confessions often result from:",
+        choice1: "Rational self-interest",
+        choice2: "Unconscious guilt",
+        choice3: "External pressures like stress and interrogation tactics",
+        choice4: "Emotional ties to family or society",
+        answer: 3
     },
     {
-        question: "In some cultural contexts, crime is viewed as a violation of?",
-        choice1: "Only laws.",
-        choice2: "Moral values and societal norms.",
-        choice3: "Political ideologies.",
-        choice4: "Religious institutions only.",
-        answer: "Moral values and societal norms.",
-        rationale: "In many cultures, crime is not just a breach of law but also a violation of the collective moral values and norms that sustain social harmony."
+        question: "After 12 hours of continuous questioning, a suspect confesses just to escape the stress. This confession aligns with:",
+        choice1: "Psychoanalytic theory",
+        choice2: "Decision-making perspective",
+        choice3: "Social-psychological theory",
+        choice4: "Cognitive-behavioural theory",
+        answer: 3
     },
     {
-        question: "Which of the following best describes the role of punishment in traditional African societies?",
-        choice1: "Punishment is intended solely for deterrence.",
-        choice2: "It aims at restoring social harmony and balance.",
-        choice3: "It is imposed to serve as revenge for victims.",
-        choice4: "Punishment is considered unnecessary in African cultures.",
-        answer: "It aims at restoring social harmony and balance.",
-        rationale: "In traditional African societies, the purpose of punishment often emphasizes reconciliation and the restoration of societal balance over mere deterrence or revenge."
+        question: "Which of these interrogation techniques would most likely lead to a confession under social-psychological theory?",
+        choice1: "Presenting evidence rationally",
+        choice2: "Encouraging self-reflection and guilt",
+        choice3: "Creating stress through isolation and time pressure",
+        choice4: "Offering emotional support to build trust",
+        answer: "Creating stress through isolation and time pressure"
     },
     {
-        question: "Restorative justice in cultural contexts focuses on:",
-        choice1: "Rehabilitation of offenders.",
-        choice2: "Reconciliation between offenders and victims.",
-        choice3: "Establishing the supremacy of the law.",
-        choice4: "Punishing offenders harshly.",
-        answer: "Reconciliation between offenders and victims.",
-        rationale: "Restorative justice prioritizes healing the relationship between offenders and victims rather than focusing solely on punishment or legal principles."
+        question: "A teenager confesses to shoplifting after being told that confessing will 'show maturity and responsibility.' Which theory best explains this confession?",
+        choice1: "Psychoanalytic theory",
+        choice2: "Decision-making perspective",
+        choice3: "Cognitive-behavioural theory",
+        choice4: "Social-psychological theory",
+        answer: "Cognitive-behavioural theory"
     },
     {
-        question: "What term is used for the crime of breaking social taboos in cultural contexts?",
-        choice1: "Misbehavior.",
-        choice2: "Sacrilege.",
-        choice3: "Breach of decorum.",
-        choice4: "Insubordination.",
-        answer: "Sacrilege.",
-        rationale: "Sacrilege refers to violations of sacred or highly valued societal norms, often carrying spiritual or cultural significance in many societies."
+        question: "A suspect confesses because they are physically and emotionally exhausted after 48 hours of isolation. Which theory applies?",
+        choice1: "Social-psychological theory",
+        choice2: "Decision-making perspective",
+        choice3: "Cognitive-behavioural theory",
+        choice4: "Psychoanalytic theory",
+        answer: "Social-psychological theory"
     },
     {
-        question: "An example of punishment in some cultural societies is:",
-        choice1: "Imprisonment.",
-        choice2: "Exile or banishment.",
-        choice3: "Probation.",
-        choice4: "Fines payable to the government.",
-        answer: "Exile or banishment.",
-        rationale: "Exile or banishment is a traditional form of punishment used in many cultural societies to remove disruptive individuals and maintain social order."
-    },
-
-    // Human Rights and Cultural Relativism
-    {
-        question: "Cultural relativism implies that human rights should be:",
-        choice1: "Applied universally, regardless of culture.",
-        choice2: "Interpreted within the context of each culture.",
-        choice3: "Revised completely to suit modern society.",
-        choice4: "Applied only to economically advanced nations.",
-        answer: "Interpreted within the context of each culture.",
-        rationale: "Cultural relativism suggests that human rights should account for cultural diversity and be interpreted in ways that align with specific cultural contexts."
+        question: "A suspect is offered leniency if they confess before their co-conspirator does. Their eventual confession reflects:",
+        choice1: "Psychoanalytic theory",
+        choice2: "Cognitive-behavioural theory",
+        choice3: "Decision-making perspective",
+        choice4: "Social-psychological theory",
+        answer: "Decision-making perspective"
     },
     {
-        question: "Which of the following is often debated as a human rights violation in some cultures?",
-        choice1: "Freedom of speech.",
-        choice2: "Harmful traditional practices like female genital mutilation.",
-        choice3: "Taxation policies.",
-        choice4: "Modern education systems.",
-        answer: "Harmful traditional practices like female genital mutilation.",
-        rationale: "Practices such as female genital mutilation are considered harmful and violate universal human rights, sparking debates about cultural relativism."
+        question: "A mother confesses to a minor theft after realizing her silence could lead to her children’s suffering. This demonstrates:",
+        choice1: "Social-psychological theory",
+        choice2: "Cognitive-behavioural theory",
+        choice3: "Decision-making perspective",
+        choice4: "Psychoanalytic theory",
+        answer: "Cognitive-behavioural theory"
     },
     {
-        question: "A challenge of cultural relativism to human rights is:",
-        choice1: "Difficulty in global acceptance of common laws.",
-        choice2: "Overreliance on technology.",
-        choice3: "Cultural erosion due to globalization.",
-        choice4: "The lack of legal institutions.",
-        answer: "Difficulty in global acceptance of common laws.",
-        rationale: "Cultural relativism often makes it challenging to implement universal human rights due to differing cultural interpretations and practices."
+        question: "Which theory would best explain a false confession elicited through manipulative questioning?",
+        choice1: "Decision-making perspective",
+        choice2: "Cognitive-behavioural theory",
+        choice3: "Psychoanalytic theory",
+        choice4: "Social-psychological theory",
+        answer: "Social-psychological theory"
     },
     {
-        question: "Which principle aligns with universal human rights?",
-        choice1: "Prioritizing cultural traditions over individual rights.",
-        choice2: "Balancing cultural practices with human dignity.",
-        choice3: "Rejecting all traditional practices.",
-        choice4: "Permitting total freedom for all individuals.",
-        answer: "Balancing cultural practices with human dignity.",
-        rationale: "Universal human rights advocate for respecting cultural diversity while ensuring that practices uphold human dignity."
+        question: "If a suspect’s confession is motivated by guilt and a subconscious need to restore moral balance, this aligns with:",
+        choice1: "Decision-making perspective",
+        choice2: "Psychoanalytic theory",
+        choice3: "Social-psychological theory",
+        choice4: "Cognitive-behavioural theory",
+        answer: "Psychoanalytic theory"
     },
     {
-        question: "The Universal Declaration of Human Rights was adopted by the United Nations in:",
-        choice1: "1945.",
-        choice2: "1948.",
-        choice3: "1950.",
-        choice4: "1951.",
-        answer: "1948.",
-        rationale: "The Universal Declaration of Human Rights, which established fundamental human rights principles, was adopted by the United Nations on December 10, 1948."
+        question: "Which theory offers the strongest explanation for confessions elicited under duress?",
+        choice1: "Psychoanalytic theory",
+        choice2: "Decision-making perspective",
+        choice3: "Social-psychological theory",
+        choice4: "Cognitive-behavioural theory",
+        answer: "Social-psychological theory"
+    },
+    {
+        question: "A suspect confesses to avoid legal battles and resolve the case quickly. This confession is best explained by:",
+        choice1: "Psychoanalytic theory",
+        choice2: "Social-psychological theory",
+        choice3: "Decision-making perspective",
+        choice4: "Cognitive-behavioural theory",
+        answer: "Decision-making perspective"
+    },
+    {
+        question: "Which of the following is a common strategy police use to delay issuing the Miranda warning?",
+        choice1: "Misrepresenting the law",
+        choice2: "Using non-custodial interviews",
+        choice3: "Coercing a confession",
+        choice4: "Offering leniency",
+        answer: "Using non-custodial interviews"
+    },
+    {
+        question: "A suspect voluntarily speaks to police at their home without being arrested or detained. This situation avoids Miranda warnings because:",
+        choice1: "The suspect initiated the interaction",
+        choice2: "The suspect is not in custody",
+        choice3: "Police did not have probable cause",
+        choice4: "The crime was not serious",
+        answer: "The suspect is not in custody"
+    },
+    {
+        question: "Police conducting a two-step interrogation intentionally delay giving a Miranda warning until after a confession is obtained. This practice is known as:",
+        choice1: "Non-custodial questioning",
+        choice2: "The Reid Technique",
+        choice3: "Question-first strategy",
+        choice4: "Custodial coercion",
+        answer: "Question-first strategy"
+    },
+    {
+        question: "Under the “public safety exception,” police may delay Miranda warnings when:",
+        choice1: "The suspect is uncooperative",
+        choice2: "Officers need to secure immediate evidence",
+        choice3: "There is an imminent threat to public safety",
+        choice4: "The interrogation is taking place in public",
+        answer: "There is an imminent threat to public safety"
+    },
+    {
+        question: "Which of the following techniques might police use to elicit incriminating statements without violating Miranda?",
+        choice1: "Threatening the suspect with harsher penalties",
+        choice2: "Engaging in casual conversation",
+        choice3: "Conducting an intense interrogation",
+        choice4: "Asking leading questions after the warning",
+        answer: "Engaging in casual conversation"
+    },
+    {
+        question: "In which of these scenarios is a Miranda warning not required?",
+        choice1: "A suspect is questioned at the scene of a crime.",
+        choice2: "A suspect is interrogated in custody.",
+        choice3: "A suspect provides a written statement in custody.",
+        choice4: "A suspect confesses during booking procedures.",
+        answer: "A suspect is questioned at the scene of a crime."
+    },
+    {
+        question: "Why might police intentionally fail to clarify if a suspect is under arrest during questioning?",
+        choice1: "To create confusion",
+        choice2: "To establish rapport",
+        choice3: "To avoid invoking Miranda warnings",
+        choice4: "To reduce the chance of legal challenges",
+        answer: "To avoid invoking Miranda warnings"
+    },
+    {
+        question: "Police may use an “off-the-record” approach to bypass Miranda warnings by:",
+        choice1: "Offering immunity for cooperation",
+        choice2: "Suggesting the conversation is informal",
+        choice3: "Questioning in the presence of a lawyer",
+        choice4: "Recording the confession secretly",
+        answer: "Suggesting the conversation is informal"
+    },
+    {
+        question: "Police often minimize the severity of Miranda warnings to suspects by saying:",
+        choice1: "This is just a formality.",
+        choice2: "You don’t need a lawyer here.",
+        choice3: "It’s better if you cooperate now.",
+        choice4: "You don’t have to sign anything.",
+        answer: "This is just a formality."
+    },
+    {
+        question: "Which court ruling restricted police from using a two-step interrogation strategy to avoid Miranda compliance?",
+        choice1: "Miranda v. Arizona",
+        choice2: "Missouri v. Seibert",
+        choice3: "Terry v. Ohio",
+        choice4: "Gideon v. Wainwright",
+        answer: "Missouri v. Seibert"
+    },
+    {
+        question: "For a suspect to waive their Miranda rights, the waiver must be:",
+        choice1: "Voluntary, informed, and intelligent",
+        choice2: "Coerced but documented",
+        choice3: "Signed by a lawyer",
+        choice4: "Verified by a judge",
+        answer: "Voluntary, informed, and intelligent"
+    },
+    {
+        question: "A juvenile suspect is unlikely to validly waive their Miranda rights if:",
+        choice1: "They are questioned in the presence of a parent",
+        choice2: "They lack the mental capacity to understand their rights",
+        choice3: "They are interrogated in a school setting",
+        choice4: "They initially decline to talk but later change their mind",
+        answer: "They lack the mental capacity to understand their rights"
+    },
+    {
+        question: "In determining the validity of a Miranda waiver, courts consider:",
+        choice1: "The suspect’s willingness to cooperate",
+        choice2: "The suspect’s understanding of the rights they are waiving",
+        choice3: "Whether the suspect has prior criminal history",
+        choice4: "The severity of the alleged crime",
+        answer: "The suspect’s understanding of the rights they are waiving"
+    },
+    {
+        question: "An intoxicated suspect waives their Miranda rights and confesses. Courts are likely to:",
+        choice1: "Accept the confession if the suspect showed some understanding of their rights",
+        choice2: "Automatically dismiss the confession",
+        choice3: "Require the suspect’s lawyer to validate the waiver",
+        choice4: "Consider the confession voluntary regardless of intoxication",
+        answer: "Accept the confession if the suspect showed some understanding of their rights"
+    },
+    {
+        question: "A suspect waives their Miranda rights after being misled about the consequences. The waiver is likely:",
+        choice1: "Valid because the suspect signed it",
+        choice2: "Invalid because it was not informed",
+        choice3: "Valid because police are not required to explain legal consequences",
+        choice4: "Invalid unless a lawyer was present",
+        answer: "Invalid because it was not informed"
+    },
+    {
+        question: "In which situation might a waiver of Miranda rights be considered invalid?",
+        choice1: "A suspect asks for clarification before waiving their rights.",
+        choice2: "A suspect is promised leniency for cooperation.",
+        choice3: "A suspect waives their rights in writing.",
+        choice4: "A suspect answers questions after hearing their rights.",
+        answer: "A suspect is promised leniency for cooperation."
+    },
+    {
+        question: "Which U.S. Supreme Court case emphasized the importance of understanding Miranda rights before waiving them?",
+        choice1: "Miranda v. Arizona",
+        choice2: "Berghuis v. Thompkins",
+        choice3: "Tinker v. Des Moines",
+        choice4: "Mapp v. Ohio",
+        answer: "Miranda v. Arizona"
+    },
+    {
+        question: "A waiver of Miranda rights is presumed invalid if the suspect:",
+        choice1: "Did not sign a waiver form",
+        choice2: "Lacked the mental capacity to understand the waiver",
+        choice3: "Requested a lawyer before waiving their rights",
+        choice4: "Was arrested without probable cause",
+        answer: "Lacked the mental capacity to understand the waiver"
+    },
+    {
+        question: "If a suspect initially waives their Miranda rights but later invokes them, police must:",
+        choice1: "Continue questioning unless the suspect explicitly refuses",
+        choice2: "Cease questioning immediately",
+        choice3: "Resume questioning after 24 hours",
+        choice4: "Confirm the waiver in writing",
+        answer: "Cease questioning immediately"
+    },
+    {
+        question: "Courts assess whether a suspect knowingly waived their rights by examining:",
+        choice1: "The duration of the interrogation",
+        choice2: "The suspect’s background, intelligence, and experience",
+        choice3: "The type of crime under investigation",
+        choice4: "The interrogation setting",
+        answer: "The suspect’s background, intelligence, and experience"
+    },
+    {
+        question: "Which of the following is required for a suspect to waive their Miranda rights?",
+        choice1: "Being informed of the consequences of the waiver",
+        choice2: "Voluntary consent to waive the rights",
+        choice3: "Having a lawyer present",
+        choice4: "None of the above",
+        answer: "Voluntary consent to waive the rights",
+        rationale: "A suspect must voluntarily consent to waive their Miranda rights. The waiver must be made knowingly, intelligently, and voluntarily, without coercion or duress."
+    },
+    {
+        question: "What factor is most critical in determining a suspect’s capacity to waive their Miranda rights?",
+        choice1: "The seriousness of the crime",
+        choice2: "The suspect’s mental state",
+        choice3: "The suspect’s prior criminal record",
+        choice4: "The length of the interrogation",
+        answer: "The suspect’s mental state",
+        rationale: "The most important factor in determining a suspect's capacity to waive their rights is their mental state. A person must be mentally competent to understand their rights and make an informed decision."
+    },
+    {
+        question: "A juvenile suspect is considered incapable of waiving their Miranda rights if they:",
+        choice1: "Are under the age of 18",
+        choice2: "Have an inadequate understanding of their rights",
+        choice3: "Have been arrested for a violent crime",
+        choice4: "Are alone without a parent or guardian present",
+        answer: "Have an inadequate understanding of their rights",
+        rationale: "A juvenile suspect is presumed incapable of waiving their Miranda rights if they do not understand their rights, which is often determined by their age, maturity, and comprehension."
+    },
+    {
+        question: "In cases where the suspect is intoxicated, courts evaluate whether they can waive their Miranda rights by considering:",
+        choice1: "The suspect's ability to understand the warnings and make an informed choice",
+        choice2: "Whether the intoxication was voluntary or involuntary",
+        choice3: "The suspect’s history with law enforcement",
+        choice4: "How long the suspect has been intoxicated",
+        answer: "The suspect's ability to understand the warnings and make an informed choice",
+        rationale: "The primary factor courts consider is whether the suspect is able to understand the warnings and make an informed choice about waiving their rights, regardless of the cause of intoxication."
+    },
+    {
+        question: "Which of the following scenarios may lead to the invalidation of a Miranda waiver?",
+        choice1: "The suspect was informed of their rights but did not immediately invoke them",
+        choice2: "The suspect has a mental impairment affecting their ability to understand their rights",
+        choice3: "The suspect is aware of the charges against them",
+        choice4: "The suspect signs a waiver but does not confess immediately",
+        answer: "The suspect has a mental impairment affecting their ability to understand their rights",
+        rationale: "If a suspect has a mental impairment that affects their ability to understand their rights, their waiver may be considered invalid."
+    },
+    {
+        question: "A suspect with an intellectual disability may be presumed incapable of waiving their Miranda rights if:",
+        choice1: "They fail to understand the warnings provided",
+        choice2: "They sign the waiver in front of a witness",
+        choice3: "They are questioned outside of a detention facility",
+        choice4: "They are informed of their rights in their native language",
+        answer: "They fail to understand the warnings provided",
+        rationale: "A person with an intellectual disability may be presumed incapable of waiving their rights if they cannot understand the rights that are being explained to them."
+    },
+    {
+        question: "What is the primary consideration in evaluating whether a suspect's waiver of Miranda rights is valid?",
+        choice1: "Whether the suspect made an informed decision based on their knowledge and experience",
+        choice2: "Whether the confession was voluntary",
+        choice3: "Whether the suspect is eligible for parole",
+        choice4: "Whether the waiver is written or verbal",
+        answer: "Whether the suspect made an informed decision based on their knowledge and experience",
+        rationale: "The primary consideration is whether the suspect made an informed decision, which depends on their understanding of the rights and the consequences of waiving them."
+    },
+    {
+        question: "For a waiver to be valid, it must be:",
+        choice1: "Documented on paper only",
+        choice2: "Made knowingly, voluntarily, and intelligently",
+        choice3: "Done after the suspect has been arrested",
+        choice4: "Done without a lawyer present",
+        answer: "Made knowingly, voluntarily, and intelligently",
+        rationale: "A Miranda waiver must be made knowingly, voluntarily, and intelligently. The suspect must understand the consequences of waiving their rights."
+    },
+    {
+        question: "Which scenario best demonstrates an invalid Miranda waiver?",
+        choice1: "A suspect with a mental health condition is informed of their rights and waives them",
+        choice2: "A suspect who has been previously convicted of similar crimes waives their rights",
+        choice3: "A suspect with an intellectual disability signs a waiver without fully understanding it",
+        choice4: "A suspect is read their rights by a police officer and agrees to speak without a lawyer",
+        answer: "A suspect with an intellectual disability signs a waiver without fully understanding it",
+        rationale: "If a suspect with an intellectual disability signs a waiver without understanding the rights they are waiving, the waiver is likely invalid."
+    },
+    {
+        question: "If a suspect is unable to understand the Miranda warnings due to a language barrier, they may not effectively waive their rights unless:",
+        choice1: "A qualified interpreter is provided",
+        choice2: "They have a lawyer present to clarify their rights",
+        choice3: "The officer speaks their language fluently",
+        choice4: "They are informed in writing",
+        answer: "A qualified interpreter is provided",
+        rationale: "If a suspect does not understand the Miranda warnings due to a language barrier, a qualified interpreter must be provided to ensure that the waiver is made knowingly and voluntarily."
+    },
+    {
+        question: "In determining the validity of a Miranda waiver, courts may consider all of the following EXCEPT:",
+        choice1: "The suspect’s age and education level",
+        choice2: "The suspect’s ability to recall the exact wording of the warning",
+        choice3: "The suspect’s mental and physical condition at the time of the waiver",
+        choice4: "The length of time since the suspect was read their rights",
+        answer: "The suspect’s ability to recall the exact wording of the warning",
+        rationale: "The ability to recall the exact wording is not as important as understanding the meaning and consequences of the warning, which courts focus on."
+    },
+    {
+        question: "Which factor is NOT a determinant of whether a suspect has the capacity to waive their Miranda rights?",
+        choice1: "The length of the interrogation",
+        choice2: "The emotional state of the suspect",
+        choice3: "The presence of a lawyer during the waiver",
+        choice4: "Whether the suspect has been previously arrested",
+        answer: "Whether the suspect has been previously arrested",
+        rationale: "The fact that a suspect has been previously arrested does not affect their capacity to waive Miranda rights. The focus is on their mental state, understanding, and the voluntariness of the waiver."
+    },
+    {
+        question: "If a suspect is under significant duress (e.g., being threatened with physical harm), their waiver of Miranda rights may be invalid because:",
+        choice1: "The waiver was not voluntary",
+        choice2: "The suspect lacked sufficient intelligence to understand their rights",
+        choice3: "The suspect did not sign the waiver form",
+        choice4: "The waiver was not signed by a lawyer",
+        answer: "The waiver was not voluntary",
+        rationale: "If a suspect is under duress or coercion, their waiver cannot be considered voluntary, and therefore may be invalid."
+    },
+    {
+        question: "Which of the following best demonstrates a suspect having the capacity to waive their Miranda rights?",
+        choice1: "A suspect signs a waiver without fully understanding the implications",
+        choice2: "A suspect refuses to sign the waiver but agrees to talk to officers",
+        choice3: "A suspect who has prior legal experience is read their rights and waives them knowingly",
+        choice4: "A suspect who is under the influence of drugs agrees to waive their rights",
+        answer: "A suspect who has prior legal experience is read their rights and waives them knowingly",
+        rationale: "A suspect who has prior legal experience is more likely to understand the implications of waiving their rights, making their waiver valid."
+    },
+    {
+        question: "A suspect waives their Miranda rights after being informed that they will be held in detention indefinitely. The waiver may be considered invalid if:",
+        choice1: "The suspect felt coerced into making the waiver",
+        choice2: "The suspect is later granted release on bail",
+        choice3: "The officer did not clarify the detention length",
+        choice4: "The waiver was not signed in front of a witness",
+        answer: "The suspect felt coerced into making the waiver",
+        rationale: "If the suspect felt coerced or under pressure to waive their rights, the waiver may be considered invalid."
+    },
+    {
+        question: "To determine whether a suspect is capable of waiving their Miranda rights, courts will review:",
+        choice1: "The suspect’s criminal history and prior arrests",
+        choice2: "The suspect’s understanding of the nature and consequences of their actions",
+        choice3: "The time of day the interrogation occurred",
+        choice4: "The location where the suspect was questioned",
+        answer: "The suspect’s understanding of the nature and consequences of their actions",
+        rationale: "Courts focus on whether the suspect understands the nature and consequences of their actions, which includes understanding their rights and the decision to waive them."
+    },
+    {
+        question: "A suspect who is too young to fully understand their Miranda rights may still waive them if:",
+        choice1: "They are questioned by a school resource officer",
+        choice2: "A parent or guardian is present to help explain the rights",
+        choice3: "They are not arrested but voluntarily speak to the police",
+        choice4: "They are read their rights in a language they understand",
+        answer: "A parent or guardian is present to help explain the rights",
+        rationale: "A juvenile suspect may waive their rights if a parent or guardian is present to help them understand the waiver and the implications of it."
+    },
+    {
+        question: "Which of the following is required for a suspect to waive their Miranda rights?",
+        choice1: "Being informed of the consequences of the waiver",
+        choice2: "Voluntary consent to waive the rights",
+        choice3: "Having a lawyer present",
+        choice4: "None of the above",
+        answer: "Voluntary consent to waive the rights",
+        rationale: "A suspect must voluntarily consent to waive their Miranda rights. The waiver must be made knowingly, intelligently, and voluntarily, without coercion or duress."
+    },
+    {
+        question: "What factor is most critical in determining a suspect’s capacity to waive their Miranda rights?",
+        choice1: "The seriousness of the crime",
+        choice2: "The suspect’s mental state",
+        choice3: "The suspect’s prior criminal record",
+        choice4: "The length of the interrogation",
+        answer: "The suspect’s mental state",
+        rationale: "The most important factor in determining a suspect's capacity to waive their rights is their mental state. A person must be mentally competent to understand their rights and make an informed decision."
+    },
+    {
+        question: "A juvenile suspect is considered incapable of waiving their Miranda rights if they:",
+        choice1: "Are under the age of 18",
+        choice2: "Have an inadequate understanding of their rights",
+        choice3: "Have been arrested for a violent crime",
+        choice4: "Are alone without a parent or guardian present",
+        answer: 2,
+        rationale: "A juvenile suspect is presumed incapable of waiving their Miranda rights if they do not understand their rights, which is often determined by their age, maturity, and comprehension."
+    },
+    {
+        question: "In cases where the suspect is intoxicated, courts evaluate whether they can waive their Miranda rights by considering:",
+        choice1: "The suspect's ability to understand the warnings and make an informed choice",
+        choice2: "Whether the intoxication was voluntary or involuntary",
+        choice3: "The suspect’s history with law enforcement",
+        choice4: "How long the suspect has been intoxicated",
+        answer: "The suspect's ability to understand the warnings and make an informed choice",
+        rationale: "The primary factor courts consider is whether the suspect is able to understand the warnings and make an informed choice about waiving their rights, regardless of the cause of intoxication."
+    },
+    {
+        question: "Which of the following scenarios may lead to the invalidation of a Miranda waiver?",
+        choice1: "The suspect was informed of their rights but did not immediately invoke them",
+        choice2: "The suspect has a mental impairment affecting their ability to understand their rights",
+        choice3: "The suspect is aware of the charges against them",
+        choice4: "The suspect signs a waiver but does not confess immediately",
+        answer: "The suspect has a mental impairment affecting their ability to understand their rights",
+        rationale: "If a suspect has a mental impairment that affects their ability to understand their rights, their waiver may be considered invalid."
+    },
+    {
+        question: "A suspect with an intellectual disability may be presumed incapable of waiving their Miranda rights if:",
+        choice1: "They fail to understand the warnings provided",
+        choice2: "They sign the waiver in front of a witness",
+        choice3: "They are questioned outside of a detention facility",
+        choice4: "They are informed of their rights in their native language",
+        answer: "They fail to understand the warnings provided",
+        rationale: "A person with an intellectual disability may be presumed incapable of waiving their rights if they cannot understand the rights that are being explained to them."
+    },
+    {
+        question: "What is the primary consideration in evaluating whether a suspect's waiver of Miranda rights is valid?",
+        choice1: "Whether the suspect made an informed decision based on their knowledge and experience",
+        choice2: "Whether the confession was voluntary",
+        choice3: "Whether the suspect is eligible for parole",
+        choice4: "Whether the waiver is written or verbal",
+        answer: "Whether the suspect made an informed decision based on their knowledge and experience",
+        rationale: "The primary consideration is whether the suspect made an informed decision, which depends on their understanding of the rights and the consequences of waiving them."
+    },
+    {
+        question: "For a waiver to be valid, it must be:",
+        choice1: "Documented on paper only",
+        choice2: "Made knowingly, voluntarily, and intelligently",
+        choice3: "Done after the suspect has been arrested",
+        choice4: "Done without a lawyer present",
+        answer: "Made knowingly, voluntarily, and intelligently",
+        rationale: "A Miranda waiver must be made knowingly, voluntarily, and intelligently. The suspect must understand the consequences of waiving their rights."
+    },
+    {
+        question: "Which scenario best demonstrates an invalid Miranda waiver?",
+        choice1: "A suspect with a mental health condition is informed of their rights and waives them",
+        choice2: "A suspect who has been previously convicted of similar crimes waives their rights",
+        choice3: "A suspect with an intellectual disability signs a waiver without fully understanding it",
+        choice4: "A suspect is read their rights by a police officer and agrees to speak without a lawyer",
+        answer: "A suspect with an intellectual disability signs a waiver without fully understanding it",
+        rationale: "If a suspect with an intellectual disability signs a waiver without understanding the rights they are waiving, the waiver is likely invalid."
+    },
+    {
+        question: "If a suspect is unable to understand the Miranda warnings due to a language barrier, they may not effectively waive their rights unless:",
+        choice1: "A qualified interpreter is provided",
+        choice2: "They have a lawyer present to clarify their rights",
+        choice3: "The officer speaks their language fluently",
+        choice4: "They are informed in writing",
+        answer: "A qualified interpreter is provided",
+        rationale: "If a suspect does not understand the Miranda warnings due to a language barrier, a qualified interpreter must be provided to ensure that the waiver is made knowingly and voluntarily."
+    },
+    {
+        question: "In determining the validity of a Miranda waiver, courts may consider all of the following EXCEPT:",
+        choice1: "The suspect’s age and education level",
+        choice2: "The suspect’s ability to recall the exact wording of the warning",
+        choice3: "The suspect’s mental and physical condition at the time of the waiver",
+        choice4: "The length of time since the suspect was read their rights",
+        answer: "The suspect’s ability to recall the exact wording of the warning",
+        rationale: "The ability to recall the exact wording is not as important as understanding the meaning and consequences of the warning, which courts focus on."
+    },
+    {
+        question: "Which factor is NOT a determinant of whether a suspect has the capacity to waive their Miranda rights?",
+        choice1: "The length of the interrogation",
+        choice2: "The emotional state of the suspect",
+        choice3: "The presence of a lawyer during the waiver",
+        choice4: "Whether the suspect has been previously arrested",
+        answer: "Whether the suspect has been previously arrested",
+        rationale: "The fact that a suspect has been previously arrested does not affect their capacity to waive Miranda rights. The focus is on their mental state, understanding, and the voluntariness of the waiver."
+    },
+    {
+        question: "If a suspect is under significant duress (e.g., being threatened with physical harm), their waiver of Miranda rights may be invalid because:",
+        choice1: "The waiver was not voluntary",
+        choice2: "The suspect lacked sufficient intelligence to understand their rights",
+        choice3: "The suspect did not sign the waiver form",
+        choice4: "The waiver was not signed by a lawyer",
+        answer: "The waiver was not voluntary",
+        rationale: "If a suspect is under duress or coercion, their waiver cannot be considered voluntary, and therefore may be invalid."
+    },
+    {
+        question: "Which of the following best demonstrates a suspect having the capacity to waive their Miranda rights?",
+        choice1: "A suspect signs a waiver without fully understanding the implications",
+        choice2: "A suspect refuses to sign the waiver but agrees to talk to officers",
+        choice3: "A suspect who has prior legal experience is read their rights and waives them knowingly",
+        choice4: "A suspect who is under the influence of drugs agrees to waive their rights",
+        answer: "A suspect who has prior legal experience is read their rights and waives them knowingly",
+        rationale: "A suspect who has prior legal experience is more likely to understand the implications of waiving their rights, making their waiver valid."
+    },
+    {
+        question: "A suspect waives their Miranda rights after being informed that they will be held in detention indefinitely. The waiver may be considered invalid if:",
+        choice1: "The suspect felt coerced into making the waiver",
+        choice2: "The suspect is later granted release on bail",
+        choice3: "The officer did not clarify the detention length",
+        choice4: "The waiver was not signed in front of a witness",
+        answer: "The suspect felt coerced into making the waiver",
+        rationale: "If the suspect felt coerced or under pressure to waive their rights, the waiver may be considered invalid."
+    },
+    {
+        question: "To determine whether a suspect is capable of waiving their Miranda rights, courts will review:",
+        choice1: "The suspect’s criminal history and prior arrests",
+        choice2: "The suspect’s understanding of the nature and consequences of their actions",
+        choice3: "The time of day the interrogation occurred",
+        choice4: "The location where the suspect was questioned",
+        answer: "The suspect’s understanding of the nature and consequences of their actions",
+        rationale: "Courts focus on whether the suspect understands the nature and consequences of their actions, which includes understanding their rights and the decision to waive them."
+    },
+    {
+        question: "A suspect who is too young to fully understand their Miranda rights may still waive them if:",
+        choice1: "They are questioned by a school resource officer",
+        choice2: "A parent or guardian is present to help explain the rights",
+        choice3: "They are not arrested but voluntarily speak to the police",
+        choice4: "They are read their rights in a language they understand",
+        answer: "A parent or guardian is present to help explain the rights",
+        rationale: "A juvenile suspect may waive their rights if a parent or guardian is present to help them understand the waiver and the implications of it."
     }
 ];
+
 /*const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 4;
 
