@@ -8,7 +8,7 @@ document.addEventListener("keydown", e => {
   }
 });
 
-const topic = "CSS 311: Powered by DamzyNextGen";
+const topic = "GST 111: Powered by DamzyNextGen & GIWA";
 const topicId = document.getElementById("topic");
 topicId.innerHTML = topic;
 setTimeout(disappear, 500000);
