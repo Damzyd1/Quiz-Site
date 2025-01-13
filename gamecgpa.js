@@ -32,514 +32,429 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestion = [];
-let questions = [
-    {
-        question: "What is the main difference between a pre-interrogation interview and an interrogation?",
-        choice1: "Pre-interrogation involves coercion, while interrogation does not.",
-        choice2: "Pre-interrogation focuses on gathering information, while interrogation aims for confessions.",
-        choice3: "Pre-interrogation is informal, while interrogation is legally binding.",
-        choice4: "Pre-interrogation assesses physical evidence, while interrogation assesses suspects.",
-        answer: 2,
-        rationale: "Pre-interrogation interviews are designed to collect information, whereas interrogations focus on obtaining confessions."
-    },
-    {
-        question: "During a pre-interrogation interview, what type of questions is most effective?",
-        choice1: "Closed-ended questions to confirm facts",
-        choice2: "Leading questions to prompt specific answers",
-        choice3: "Open-ended questions to observe behavioral cues",
-        choice4: "Yes/no questions for quick responses",
-        answer: 3,
-        rationale: "Open-ended questions allow suspects to speak freely, enabling investigators to analyze behavioral cues."
-    },
-    {
-        question: "How does rapport-building benefit the pre-interrogation process?",
-        choice1: "It encourages suspects to confess immediately.",
-        choice2: "It reduces resistance during interrogation.",
-        choice3: "It eliminates the need for interrogation.",
-        choice4: "It confirms the suspect’s guilt.",
-        answer: 2,
-        rationale: "Building rapport makes suspects more comfortable and less resistant during subsequent interrogation phases."
-    },
-    {
-        question: "What psychological tactic is often used during pre-interrogation interviews?",
-        choice1: "Direct accusations",
-        choice2: "Sympathetic questioning",
-        choice3: "Physical intimidation",
-        choice4: "Threat of legal consequences",
-        answer: 2,
-        rationale: "Sympathetic questioning helps build trust and encourages suspects to open up."
-    },
-    {
-        question: "Which of the following is not a goal of a pre-interrogation interview?",
-        choice1: "Gathering biographical information",
-        choice2: "Evaluating the suspect’s credibility",
-        choice3: "Analyzing evidence with the suspect",
-        choice4: "Establishing rapport",
-        answer: 3,
-        rationale: "Evidence analysis typically occurs during formal interrogation, not in pre-interrogation interviews."
-    },
-    {
-        question: "What role does cultural sensitivity play in pre-interrogation interviews?",
-        choice1: "It allows the interviewer to ignore inconsistencies.",
-        choice2: "It prevents ethical violations during questioning.",
-        choice3: "It ensures the suspect fully understands the process.",
-        choice4: "It helps in building rapport with diverse suspects.",
-        answer: 4,
-        rationale: "Understanding cultural differences enhances rapport-building and reduces misunderstandings."
-    },
-    {
-        question: "Why is active listening critical during pre-interrogation?",
-        choice1: "It allows investigators to dominate the conversation.",
-        choice2: "It prevents the suspect from detecting deception.",
-        choice3: "It reveals inconsistencies in the suspect’s story.",
-        choice4: "It helps minimize legal risks for the investigator.",
-        answer: 3,
-        rationale: "Active listening aids in identifying contradictions or omissions in the suspect’s narrative."
-    },
-    {
-        question: "What should an investigator avoid during a pre-interrogation interview?",
-        choice1: "Taking detailed notes",
-        choice2: "Building rapport",
-        choice3: "Presenting evidence prematurely",
-        choice4: "Assessing behavioral cues",
-        answer: 3,
-        rationale: "Presenting evidence too early can lead the suspect to tailor their responses to fit the evidence."
-    },
-    {
-        question: "Why is it difficult to rely on behavioral cues for detecting deception?",
-        choice1: "They are scientifically proven to be unreliable.",
-        choice2: "They vary widely among individuals and cultures.",
-        choice3: "They require advanced technology for observation.",
-        choice4: "They only apply to seasoned criminals.",
-        answer: 2,
-        rationale: "Behavioral cues are subjective and can differ based on cultural and individual factors, making them unreliable."
-    },
-    {
-        question: "What does the truth-default theory propose about human behavior?",
-        choice1: "Humans are naturally deceptive.",
-        choice2: "People default to trusting others unless evidence suggests otherwise.",
-        choice3: "Deceptive individuals are easily recognizable.",
-        choice4: "Detecting deception requires advanced training.",
-        answer: 2,
-        rationale: "The truth-default theory suggests that humans instinctively trust others until deception is suspected."
-    },
-    {
-        question: "How does deception affect the fairness of criminal trials?",
-        choice1: "It ensures the suspect receives fair treatment.",
-        choice2: "It hinders the ability to establish guilt beyond reasonable doubt.",
-        choice3: "It always leads to wrongful convictions.",
-        choice4: "It simplifies the investigative process.",
-        answer: 2,
-        rationale: "Deception can cloud evidence and testimonies, making it difficult to determine guilt with certainty."
-    },
-    {
-        question: "Why is training in deception detection important for law enforcement officers?",
-        choice1: "To ensure suspects cannot lie during interrogation",
-        choice2: "To improve their ability to identify truthful accounts",
-        choice3: "To prevent coercive interrogation practices",
-        choice4: "To enhance their courtroom testimony",
-        answer: 2,
-        rationale: "Deception detection training enables officers to discern truthful statements more accurately."
-    },
-    {
-        question: "What is the primary psychological burden of lying?",
-        choice1: "Physical exhaustion",
-        choice2: "Cognitive overload",
-        choice3: "Emotional numbness",
-        choice4: "Increased empathy",
-        answer: 2,
-        rationale: "Lying requires cognitive effort to fabricate and maintain false information, leading to cognitive overload."
-    },
-    {
-        question: "How does cultural bias potentially impact deception detection techniques?",
-        choice1: "It improves the accuracy of behavioral analysis.",
-        choice2: "It leads to misinterpretation of body language cues.",
-        choice3: "It prevents the use of technology like polygraphs.",
-        choice4: "It increases the reliability of interrogation techniques.",
-        answer: 2,
-        rationale: "Cultural differences in behavior and expression can lead to incorrect assumptions in detecting deception."
-    },
-    {
-        question: "What is the primary purpose of the Miranda Warning?",
-        choice1: "To inform suspects of their legal rights.",
-        choice2: "To prevent the police from conducting interrogations.",
-        choice3: "To ensure suspects are detained lawfully.",
-        choice4: "To facilitate faster confessions.",
-        answer: 1,
-        rationale: "The Miranda Warning ensures suspects are aware of their constitutional rights during custodial interrogations."
-    },
-    {
-        question: "When must a Miranda Warning be given?",
-        choice1: "During an arrest",
-        choice2: "Before an interrogation begins",
-        choice3: "After a suspect confesses",
-        choice4: "Only when the suspect requests it",
-        answer: 2,
-        rationale: "Miranda rights must be read before questioning begins if the suspect is in custody to ensure compliance with the Fifth Amendment."
-    },
-    {
-        question: "Which right is not included in the Miranda Warning?",
-        choice1: "The right to remain silent",
-        choice2: "The right to an attorney",
-        choice3: "The right to a fair trial",
-        choice4: "The right to have an attorney appointed if unable to afford one",
-        answer: 3,
-        rationale: "The right to a fair trial is a constitutional right but is not part of the Miranda Warning."
-    },
-    {
-        question: "What happens if a suspect waives their Miranda rights?",
-        choice1: "Their statements can be used against them in court.",
-        choice2: "The police can interrogate them without restrictions.",
-        choice3: "They lose all legal protections.",
-        choice4: "They cannot request an attorney later.",
-        answer: 1,
-        rationale: "A waiver of Miranda rights means the suspect’s statements can be admissible in court, provided the waiver was made voluntarily and knowingly."
-    },
-    {
-        question: "Why might police delay giving the Miranda Warning?",
-        choice1: "To build rapport with the suspect",
-        choice2: "To avoid self-incrimination",
-        choice3: "To gather evidence before the suspect requests a lawyer",
-        choice4: "To increase the likelihood of a truthful confession",
-        answer: 3,
-        rationale: "Police might delay reading Miranda rights to collect evidence during informal questioning before the suspect invokes their right to silence."
-    },
-    {
-        question: "If a suspect invokes their right to silence during questioning, what must the police do?",
-        choice1: "Stop questioning immediately.",
-        choice2: "Continue questioning to confirm their intention.",
-        choice3: "Proceed with questions unrelated to the crime.",
-        choice4: "Obtain written confirmation of the suspect’s decision.",
-        answer: 1,
-        rationale: "Once a suspect invokes their right to silence, law enforcement must cease all questioning under Miranda rules."
-    },
-    {
-        question: "Which of the following can render a Miranda waiver invalid?",
-        choice1: "The suspect is intoxicated.",
-        choice2: "The suspect changes their mind after waiving their rights.",
-        choice3: "The police provide legal advice.",
-        choice4: "The suspect refuses to sign a written waiver.",
-        answer: 1,
-        rationale: "A waiver must be made voluntarily, knowingly, and intelligently; intoxication can impair a suspect’s understanding of their rights."
-    },
-    {
-        question: "What common psychological misconception leads innocent suspects to cooperate without legal counsel?",
-        choice1: "That silence implies guilt",
-        choice2: "That lawyers complicate the process",
-        choice3: "That police will stop the interrogation",
-        choice4: "That waiving rights is mandatory",
-        answer: 1,
-        rationale: "Many suspects falsely believe remaining silent will make them look guilty, prompting them to speak without legal counsel."
-    },
-    {
-        question: "Why might social pressure influence innocent suspects to waive their rights?",
-        choice1: "Fear of being labeled uncooperative",
-        choice2: "Desire to please law enforcement",
-        choice3: "Avoidance of confrontation",
-        choice4: "All of the above",
-        answer: 4,
-        rationale: "Social and psychological pressures can compel suspects to waive their rights, even when it is against their best interest."
-    },
-    {
-        question: "Which of the following best describes the underlying principle of psychoanalytic theory in relation to confessions?",
-        choice1: "Conscious guilt resolution",
-        choice2: "Unconscious conflict and stress relief",
-        choice3: "Rational cost-benefit analysis",
-        choice4: "Compliance with authority",
-        answer: 2
-    },
-    {
-        question: "A suspect confesses after experiencing recurring nightmares about the crime they committed. This is most aligned with:",
-        choice1: "Decision-making perspective",
-        choice2: "Social-psychological theory",
-        choice3: "Psychoanalytic theory",
-        choice4: "Cognitive-behavioural theory",
-        answer: 3
-    },
-    {
-        question: "A suspect is interrogated for hours but does not confess, only to break down emotionally and confess days later in a private setting. Which theory applies?",
-        choice1: "Psychoanalytic theory",
-        choice2: "Decision-making perspective",
-        choice3: "Social-psychological theory",
-        choice4: "Cognitive-behavioural theory",
-        answer: 1
-    },
-    {
-        question: "The decision-making perspective on confessions assumes that suspects:",
-        choice1: "Confess under subconscious stress",
-        choice2: "Rationally weigh the costs and benefits of confessing",
-        choice3: "Succumb to intense external pressure",
-        choice4: "Act out of fear of losing familial support",
-        answer: 2
-    },
-    
-    {
-        question: "A teenager confesses to shoplifting after being told that confessing will 'show maturity and responsibility.' Which theory best explains this confession?",
-        choice1: "Psychoanalytic theory",
-        choice2: "Decision-making perspective",
-        choice3: "Cognitive-behavioural theory",
-        choice4: "Social-psychological theory",
-        answer: 3
-    },
-    {
-        question: "A suspect confesses because they are physically and emotionally exhausted after 48 hours of isolation. Which theory applies?",
-        choice1: "Social-psychological theory",
-        choice2: "Decision-making perspective",
-        choice3: "Cognitive-behavioural theory",
-        choice4: "Psychoanalytic theory",
-        answer: 1
-    },
-    {
-        question: "A suspect is offered leniency if they confess before their co-conspirator does. Their eventual confession reflects:",
-        choice1: "Psychoanalytic theory",
-        choice2: "Cognitive-behavioural theory",
-        choice3: "Decision-making perspective",
-        choice4: "Social-psychological theory",
-        answer: 3
-    },
-    {
-        question: "A mother confesses to a minor theft after realizing her silence could lead to her children’s suffering. This demonstrates:",
-        choice1: "Social-psychological theory",
-        choice2: "Cognitive-behavioural theory",
-        choice3: "Decision-making perspective",
-        choice4: "Psychoanalytic theory",
-        answer: 2
-    },
-    {
-        question: "Which theory would best explain a false confession elicited through manipulative questioning?",
-        choice1: "Decision-making perspective",
-        choice2: "Cognitive-behavioural theory",
-        choice3: "Psychoanalytic theory",
-        choice4: "Social-psychological theory",
-        answer: 4
-    },
-    {
-        question: "If a suspect’s confession is motivated by guilt and a subconscious need to restore moral balance, this aligns with:",
-        choice1: "Decision-making perspective",
-        choice2: "Psychoanalytic theory",
-        choice3: "Social-psychological theory",
-        choice4: "Cognitive-behavioural theory",
-        answer: 2
-    },
-    {
-        question: "Which theory offers the strongest explanation for confessions elicited under duress?",
-        choice1: "Psychoanalytic theory",
-        choice2: "Decision-making perspective",
-        choice3: "Social-psychological theory",
-        choice4: "Cognitive-behavioural theory",
-        answer: 3
-    },
-    {
-        question: "A suspect confesses to avoid legal battles and resolve the case quickly. This confession is best explained by:",
-        choice1: "Psychoanalytic theory",
-        choice2: "Social-psychological theory",
-        choice3: "Decision-making perspective",
-        choice4: "Cognitive-behavioural theory",
-        answer: 3
-    },
-    {
-        question: "Which of the following is a common strategy police use to delay issuing the Miranda warning?",
-        choice1: "Misrepresenting the law",
-        choice2: "Using non-custodial interviews",
-        choice3: "Coercing a confession",
-        choice4: "Offering leniency",
-        answer: 2
-    },
-    {
-        question: "A suspect voluntarily speaks to police at their home without being arrested or detained. This situation avoids Miranda warnings because:",
-        choice1: "The suspect initiated the interaction",
-        choice2: "The suspect is not in custody",
-        choice3: "Police did not have probable cause",
-        choice4: "The crime was not serious",
-        answer: 2
-    },
-    {
-        question: "Police conducting a two-step interrogation intentionally delay giving a Miranda warning until after a confession is obtained. This practice is known as:",
-        choice1: "Non-custodial questioning",
-        choice2: "The Reid Technique",
-        choice3: "Question-first strategy",
-        choice4: "Custodial coercion",
-        answer: 3
-    },
-    {
-        question: "Under the “public safety exception,” police may delay Miranda warnings when:",
-        choice1: "The suspect is uncooperative",
-        choice2: "Officers need to secure immediate evidence",
-        choice3: "There is an imminent threat to public safety",
-        choice4: "The interrogation is taking place in public",
-        answer: 3
-    },
-    {
-        question: "Which of the following techniques might police use to elicit incriminating statements without violating Miranda?",
-        choice1: "Threatening the suspect with harsher penalties",
-        choice2: "Engaging in casual conversation",
-        choice3: "Conducting an intense interrogation",
-        choice4: "Asking leading questions after the warning",
-        answer: 2
-    },
-    {
-        question: "In which of these scenarios is a Miranda warning not required?",
-        choice1: "A suspect is questioned at the scene of a crime.",
-        choice2: "A suspect is interrogated in custody.",
-        choice3: "A suspect provides a written statement in custody.",
-        choice4: "A suspect confesses during booking procedures.",
-        answer: 1
-    },
-    {
-        question: "For a suspect to waive their Miranda rights, the waiver must be:",
-        choice1: "Voluntary, informed, and intelligent",
-        choice2: "Coerced but documented",
-        choice3: "Signed by a lawyer",
-        choice4: "Verified by a judge",
-        answer: 1
-    },
-    {
-        question: "A juvenile suspect is unlikely to validly waive their Miranda rights if:",
-        choice1: "They are questioned in the presence of a parent",
-        choice2: "They lack the mental capacity to understand their rights",
-        choice3: "They are interrogated in a school setting",
-        choice4: "They initially decline to talk but later change their mind",
-        answer: 2
-    },
-    {
-        question: "In determining the validity of a Miranda waiver, courts consider:",
-        choice1: "The suspect’s willingness to cooperate",
-        choice2: "The suspect’s understanding of the rights they are waiving",
-        choice3: "Whether the suspect has prior criminal history",
-        choice4: "The severity of the alleged crime",
-        answer: 2
-    },
-    {
-        question: "An intoxicated suspect waives their Miranda rights and confesses. Courts are likely to:",
-        choice1: "Accept the confession if the suspect showed some understanding of their rights",
-        choice2: "Automatically dismiss the confession",
-        choice3: "Require the suspect’s lawyer to validate the waiver",
-        choice4: "Consider the confession voluntary regardless of intoxication",
-        answer: 1
-    },
-    {
-        question: "What factor is most critical in determining a suspect’s capacity to waive their Miranda rights?",
-        choice1: "The seriousness of the crime",
-        choice2: "The suspect’s mental state",
-        choice3: "The suspect’s prior criminal record",
-        choice4: "The length of the interrogation",
-        answer: 2
-    },
-    {
-        question: "A juvenile suspect is considered incapable of waiving their Miranda rights if they:",
-        choice1: "Are under the age of 18",
-        choice2: "Have an inadequate understanding of their rights",
-        choice3: "Have been arrested for a violent crime",
-        choice4: "Are alone without a parent or guardian present",
-        answer: 2
-    },
-    {
-        question: "In cases where the suspect is intoxicated, courts evaluate whether they can waive their Miranda rights by considering:",
-        choice1: "The suspect's ability to understand the warnings and make an informed choice",
-        choice2: "Whether the intoxication was voluntary or involuntary",
-        choice3: "The suspect’s history with law enforcement",
-        choice4: "How long the suspect has been intoxicated",
-        answer: 1
-    },
-    {
-        question: "Which of the following scenarios may lead to the invalidation of a Miranda waiver?",
-        choice1: "The suspect was informed of their rights but did not immediately invoke them",
-        choice2: "The suspect has a mental impairment affecting their ability to understand their rights",
-        choice3: "The suspect is aware of the charges against them",
-        choice4: "The suspect signs a waiver but does not confess immediately",
-        answer: 2
-    },
-    {
-        question: "A suspect with an intellectual disability may be presumed incapable of waiving their Miranda rights if:",
-        choice1: "They fail to understand the warnings provided",
-        choice2: "They sign the waiver in front of a witness",
-        choice3: "They are questioned outside of a detention facility",
-        choice4: "They are informed of their rights in their native language",
-        answer: 1
-    },
-    {
-        question: "What is the primary consideration in evaluating whether a suspect's waiver of Miranda rights is valid?",
-        choice1: "Whether the suspect made an informed decision based on their knowledge and experience",
-        choice2: "Whether the confession was voluntary",
-        choice3: "Whether the suspect is eligible for parole",
-        choice4: "Whether the waiver is written or verbal",
-        answer: 1
-    },
-    {
-        question: "For a waiver to be valid, it must be:",
-        choice1: "Documented on paper only",
-        choice2: "Made knowingly, voluntarily, and intelligently",
-        choice3: "Done after the suspect has been arrested",
-        choice4: "Done without a lawyer present",
-        answer: 2
-    },
-    {
-        question: "Which scenario best demonstrates an invalid Miranda waiver?",
-        choice1: "A suspect with a mental health condition is informed of their rights and waives them",
-        choice2: "A suspect who has been previously convicted of similar crimes waives their rights",
-        choice3: "A suspect with an intellectual disability signs a waiver without fully understanding it",
-        choice4: "A suspect is read their rights by a police officer and agrees to speak without a lawyer",
-        answer: 3
-    },
-    {
-        question: "If a suspect is unable to understand the Miranda warnings due to a language barrier, they may not effectively waive their rights unless:",
-        choice1: "A qualified interpreter is provided",
-        choice2: "They have a lawyer present to clarify their rights",
-        choice3: "The officer speaks their language fluently",
-        choice4: "They are informed in writing",
-        answer: 1
-    },
-    {
-        question: "Which factor is NOT a determinant of whether a suspect has the capacity to waive their Miranda rights?",
-        choice1: "The length of the interrogation",
-        choice2: "The emotional state of the suspect",
-        choice3: "The presence of a lawyer during the waiver",
-        choice4: "Whether the suspect has been previously arrested",
-        answer: 4
-    },
-    {
-        question: "If a suspect is under significant duress (e.g., being threatened with physical harm), their waiver of Miranda rights may be invalid because:",
-        choice1: "The waiver was not voluntary",
-        choice2: "The suspect lacked sufficient intelligence to understand their rights",
-        choice3: "The suspect did not sign the waiver form",
-        choice4: "The waiver was not signed by a lawyer",
-        answer: 1
-    },
-    {
-        question: "Which of the following best demonstrates a suspect having the capacity to waive their Miranda rights?",
-        choice1: "A suspect signs a waiver without fully understanding the implications",
-        choice2: "A suspect refuses to sign the waiver but agrees to talk to officers",
-        choice3: "A suspect who has prior legal experience is read their rights and waives them knowingly",
-        choice4: "A suspect who is under the influence of drugs agrees to waive their rights",
-        answer: 3
-    },
-    {
-        question: "A suspect waives their Miranda rights after being informed that they will be held in detention indefinitely. The waiver may be considered invalid if:",
-        choice1: "The suspect felt coerced into making the waiver",
-        choice2: "The suspect is later granted release on bail",
-        choice3: "The officer did not clarify the detention length",
-        choice4: "The waiver was not signed in front of a witness",
-        answer: 1
-    },
-    {
-        question: "To determine whether a suspect is capable of waiving their Miranda rights, courts will review:",
-        choice1: "The suspect’s criminal history and prior arrests",
-        choice2: "The suspect’s understanding of the nature and consequences of their actions",
-        choice3: "The time of day the interrogation occurred",
-        choice4: "The location where the suspect was questioned",
-        answer: 2
-    },
-    {
-        question: "A suspect who is too young to fully understand their Miranda rights may still waive them if:",
-        choice1: "They are questioned by a school resource officer",
-        choice2: "A parent or guardian is present to help explain the rights",
-        choice3: "They are not arrested but voluntarily speak to the police",
-        choice4: "They are read their rights in a language they understand",
-        answer: 2
-    }
-];const CORRECT_BONUS = 10;
+const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = questions.length;
 const Total_Score = 10*MAX_QUESTIONS;
+let questions = [
+    {
+        question: "Which aspect of sound pattern in English focuses on the variation in pitch to convey meaning?",
+        choice1: "Phonetics",
+        choice2: "Intonation",
+        choice3: "Phonology",
+        choice4: "Stress",
+        answer: 2
+    },
+    {
+        question: "What is the term for a group of words containing a subject and predicate, functioning as a unit in a sentence?",
+        choice1: "Phrase",
+        choice2: "Clause",
+        choice3: "Syntax",
+        choice4: "Morpheme",
+        answer: 2
+    },
+    {
+        question: "Which of the following writing activities is most effective for improving sentence construction skills?",
+        choice1: "Reading extensively",
+        choice2: "Summarizing texts",
+        choice3: "Sentence combining",
+        choice4: "Memorizing vocabulary",
+        answer: 3
+    },
+    {
+        question: "In comprehension strategies, what does the term 'inferencing' refer to?",
+        choice1: "Predicting the next event in a story",
+        choice2: "Decoding unfamiliar words",
+        choice3: "Drawing conclusions from implicit details",
+        choice4: "Summarizing the main idea",
+        answer: 3
+    },
+    {
+        question: "Which of these is NOT a characteristic of a complete sentence in English?",
+        choice1: "A subject",
+        choice2: "A predicate",
+        choice3: "A conjunction",
+        choice4: "A complete thought",
+        answer: 3
+    },
+    {
+        question: "What is the most appropriate ICT tool to enhance collaboration in writing activities?",
+        choice1: "Google Docs",
+        choice2: "Spreadsheet software",
+        choice3: "Image editing software",
+        choice4: "Audio recording apps",
+        answer: 1
+    },
+    {
+        question: "Which English word class modifies nouns or pronouns?",
+        choice1: "Adjective",
+        choice2: "Verb",
+        choice3: "Adverb",
+        choice4: "Pronoun",
+        answer: 1
+    },
+    {
+        question: "What is the function of stress in spoken English?",
+        choice1: "To differentiate word meanings",
+        choice2: "To lengthen speech sounds",
+        choice3: "To create rhyming patterns",
+        choice4: "To replace punctuation",
+        answer: 1
+    },
+    {
+        question: "Which of the following is an example of an imperative sentence?",
+        choice1: "What a beautiful day it is!",
+        choice2: "Are you going to the party?",
+        choice3: "Please close the door.",
+        choice4: "She ran quickly to the station.",
+        answer: 3
+    },
+    {
+        question: "What comprehension strategy is involved when a reader connects new information to their prior knowledge?",
+        choice1: "Inferring",
+        choice2: "Skimming",
+        choice3: "Predicting",
+        choice4: "Activating background knowledge",
+        answer: 4
+    },
+    {
+        question: "Which sentence contains an example of alliteration?",
+        choice1: "Peter Piper picked a peck of pickled peppers.",
+        choice2: "She sells seashells by the seashore.",
+        choice3: "The rain in Spain stays mainly in the plain.",
+        choice4: "None of the above",
+        answer: 1
+    },
+    {
+        question: "What word class does the word 'however' belong to?",
+        choice1: "Adverb",
+        choice2: "Conjunction",
+        choice3: "Preposition",
+        choice4: "Interjection",
+        answer: 1
+    },
+    {
+        question: "Which of these ICT tools is best suited for real-time collaboration in writing activities?",
+        choice1: "Slack",
+        choice2: "Google Docs",
+        choice3: "Microsoft Paint",
+        choice4: "Zoom",
+        answer: 2
+    },
+    {
+        question: "What role does an adverb play in a sentence?",
+        choice1: "Modifies a noun",
+        choice2: "Connects clauses",
+        choice3: "Modifies a verb, adjective, or another adverb",
+        choice4: "Expresses emotion",
+        answer: 3
+    },
+    {
+        question: "Which of the following is an example of a compound sentence?",
+        choice1: "Although she was tired, she kept working.",
+        choice2: "She finished her homework and went to bed.",
+        choice3: "He is tall.",
+        choice4: "To read is to learn.",
+        answer: 2
+    },
+    {
+        question: "What is the main purpose of paraphrasing in comprehension activities?",
+        choice1: "To memorize details",
+        choice2: "To rewrite the text in simpler terms",
+        choice3: "To eliminate difficult words",
+        choice4: "To mimic the author’s style",
+        answer: 2
+    },
+    {
+        question: "Which of the following is a key feature of ICT-supported writing tasks?",
+        choice1: "Immediate feedback",
+        choice2: "Delayed communication",
+        choice3: "Limited collaboration",
+        choice4: "Offline-only functionality",
+        answer: 1
+    },
+    {
+        question: "Identify the stressed syllable in the word 'pronunciation':",
+        choice1: "pro",
+        choice2: "nun",
+        choice3: "ci",
+        choice4: "a",
+        answer: 2
+    },
+    {
+        question: "What comprehension strategy involves quickly locating specific information in a text?",
+        choice1: "Skimming",
+        choice2: "Scanning",
+        choice3: "Summarizing",
+        choice4: "Inferencing",
+        answer: 2
+    },
+    {
+        question: "Which sentence demonstrates a correct use of punctuation in English?",
+        choice1: "Lets go to the park?",
+        choice2: "We’ll meet at 5 o’clock, won’t we?",
+        choice3: "Why dont we eat now.",
+        choice4: "I’m going home now;",
+        answer: 2
+    },
+    {
+        question: "How can ICT tools improve understanding of English word classes?",
+        choice1: "By translating words automatically",
+        choice2: "By using interactive games for word classification",
+        choice3: "By highlighting parts of speech in a PDF",
+        choice4: "By removing grammar rules",
+        answer: 2
+    },
+    {
+        question: "Which of these sentences best demonstrates the passive voice?",
+        choice1: "She completed the project on time.",
+        choice2: "The project was completed on time by her.",
+        choice3: "The project completes her schedule.",
+        choice4: "She was completing the project.",
+        answer: 2
+    },
+    {
+        question: "What comprehension strategy involves creating mental images to aid understanding?",
+        choice1: "Skimming",
+        choice2: "Visualization",
+        choice3: "Predicting",
+        choice4: "Inferencing",
+        answer: 2
+    },
+    {
+        question: "Which English word class includes words such as 'because,' 'although,' and 'since'?",
+        choice1: "Conjunctions",
+        choice2: "Adverbs",
+        choice3: "Pronouns",
+        choice4: "Prepositions",
+        answer: 1
+    },
+    {
+        question: "What does the concept of 'scaffolding' mean in writing activities?",
+        choice1: "Providing students with structured support",
+        choice2: "Encouraging students to work independently",
+        choice3: "Focusing on grammar exclusively",
+        choice4: "Ignoring student errors for creative freedom",
+        answer: 1
+    },
+    {
+        question: "In comprehension, which strategy is most effective for understanding unfamiliar vocabulary?",
+        choice1: "Using context clues",
+        choice2: "Memorizing word lists",
+        choice3: "Reading the dictionary",
+        choice4: "Guessing the meaning",
+        answer: 1
+    },
+    {
+        question: "Which of the following is an example of a simple sentence?",
+        choice1: "She enjoys reading and he enjoys writing.",
+        choice2: "Although it was raining, they went outside.",
+        choice3: "The dog barked loudly.",
+        choice4: "She ran to the store, but it was closed.",
+        answer: 3
+    },
+    {
+        question: "Which ICT tool is most suitable for creating multimedia presentations for writing tasks?",
+        choice1: "Microsoft Word",
+        choice2: "PowerPoint",
+        choice3: "Google Sheets",
+        choice4: "Zoom",
+        answer: 2
+    },
+    {
+        question: "What is the primary function of punctuation in English writing?",
+        choice1: "To add aesthetic value to text",
+        choice2: "To organize sentences for clarity",
+        choice3: "To replace certain words",
+        choice4: "To create sentence fragments",
+        answer: 2
+    },
+    {
+        question: "Which sentence demonstrates correct agreement between subject and verb?",
+        choice1: "The group of students are studying.",
+        choice2: "The team play well together.",
+        choice3: "The list of items is on the table.",
+        choice4: "The books on the shelf needs rearranging.",
+        answer: 3
+    },
+    {
+        question: "In sound patterns, what does 'alliteration' refer to?",
+        choice1: "The repetition of vowel sounds",
+        choice2: "The repetition of consonant sounds at the beginning of words",
+        choice3: "A pattern of rising and falling intonation",
+        choice4: "The stress on certain syllables",
+        answer: 2
+    },
+    {
+        question: "Which combination of comprehension strategies is most effective for analyzing complex texts?",
+        choice1: "Scanning and predicting",
+        choice2: "Inferring and summarizing",
+        choice3: "Skimming and memorizing",
+        choice4: "Guessing and paraphrasing",
+        answer: 2
+    },
+    {
+        question: "What is the primary purpose of a topic sentence in a paragraph?",
+        choice1: "To introduce the main idea",
+        choice2: "To summarize the paragraph",
+        choice3: "To conclude the argument",
+        choice4: "To transition between ideas",
+        answer: 1
+    },
+    {
+        question: "How can stress patterns in spoken English improve comprehension during listening tasks?",
+        choice1: "By focusing solely on vowels",
+        choice2: "By highlighting key information",
+        choice3: "By ensuring grammatical accuracy",
+        choice4: "By eliminating redundancies",
+        answer: 2
+    },
+    {
+        question: "What ICT tool can best aid students in collaborative editing of essays?",
+        choice1: "Google Drive",
+        choice2: "Google Docs",
+        choice3: "Canva",
+        choice4: "Adobe Acrobat",
+        answer: 2
+    },
+    {
+        question: "Which English word class typically conveys action or state of being?",
+        choice1: "Adverb",
+        choice2: "Verb",
+        choice3: "Noun",
+        choice4: "Pronoun",
+        answer: 2
+    },
+    {
+        question: "Which sentence uses proper punctuation for direct speech?",
+        choice1: "She asked, 'Are you coming?'",
+        choice2: "'She asked are you coming.'",
+        choice3: "She asked 'Are you coming.'",
+        choice4: "'She asked', Are you coming?",
+        answer: 1
+    },
+    {
+        question: "Which strategy combines comprehension and writing to improve critical thinking skills?",
+        choice1: "Highlighting key ideas",
+        choice2: "Summarizing arguments",
+        choice3: "Answering multiple-choice questions",
+        choice4: "Paraphrasing complex ideas",
+        answer: 4
+    },
+    {
+        question: "What is the primary purpose of skimming a text?",
+        choice1: "To analyze word classes",
+        choice2: "To locate specific information",
+        choice3: "To get a general idea of the content",
+        choice4: "To memorize key details",
+        answer: 3
+    },
+    {
+        question: "What is the grammatical function of the word 'but' in the sentence: 'She was tired but continued working'?",
+        choice1: "Adverb",
+        choice2: "Conjunction",
+        choice3: "Preposition",
+        choice4: "Noun",
+        answer: 2
+    },
+    {
+        question: "Which sound pattern involves the repetition of similar sounds at the end of words?",
+        choice1: "Alliteration",
+        choice2: "Rhyme",
+        choice3: "Consonance",
+        choice4: "Assonance",
+        answer: 2
+    },
+    {
+        question: "Which syllable is stressed in the word 'photograph'?",
+        choice1: "First syllable",
+        choice2: "Second syllable",
+        choice3: "Third syllable",
+        choice4: "None of the above",
+        answer: 1,
+        rationale: "In the word 'photograph,' the primary stress falls on the first syllable ('PHO-to-graph'), following the standard stress pattern for many three-syllable nouns in English."
+    },
+    {
+        question: "Which pair of words demonstrates a shift in stress between noun and verb forms?",
+        choice1: "Present (noun) and present (verb)",
+        choice2: "Conduct (noun) and conduct (verb)",
+        choice3: "Record (noun) and record (verb)",
+        choice4: "All of the above",
+        answer: 4,
+        rationale: "All options demonstrate a stress shift between noun (first syllable stress) and verb forms (second syllable stress), a common feature in English."
+    },
+    {
+        question: "In which word is the stress on the second syllable?",
+        choice1: "Teacher",
+        choice2: "Balloon",
+        choice3: "Garden",
+        choice4: "Cinema",
+        answer: 2,
+        rationale: "The word 'balloon' has stress on the second syllable ('ba-LOON'), unlike the other options where the stress is on the first syllable."
+    },
+    {
+        question: "What type of vowel is present in the word 'cat'?",
+        choice1: "Diphthong",
+        choice2: "Short vowel",
+        choice3: "Long vowel",
+        choice4: "Schwa",
+        answer: 2,
+        rationale: "The vowel sound in 'cat' ('æ') is a short vowel, produced with a quick and concise sound."
+    },
+    {
+        question: "Which of the following words contains a consonant cluster at the beginning?",
+        choice1: "Spring",
+        choice2: "Orange",
+        choice3: "Idea",
+        choice4: "Happy",
+        answer: 1,
+        rationale: "'Spring' begins with a consonant cluster ('spr'), a sequence of consonants without intervening vowels."
+    },
+    {
+        question: "What is the stress pattern of the word 'information'?",
+        choice1: "First syllable",
+        choice2: "Second syllable",
+        choice3: "Third syllable",
+        choice4: "Fourth syllable",
+        answer: 3,
+        rationale: "The stress in 'information' falls on the third syllable ('in-for-MA-tion'), typical for many four-syllable words ending in -tion."
+    },
+    {
+        question: "Which word has a schwa sound?",
+        choice1: "Banana",
+        choice2: "Dog",
+        choice3: "Book",
+        choice4: "Chair",
+        answer: 1,
+        rationale: "The word 'banana' contains two schwa sounds ('bə-NA-nə'), a weak vowel sound commonly found in unstressed syllables."
+    },
+    {
+        question: "In terms of stress patterns, which is a compound noun?",
+        choice1: "Blackbird",
+        choice2: "Black bird",
+        choice3: "Blackened",
+        choice4: "Birdhouse",
+        answer: 1,
+        rationale: "'Blackbird' (compound noun) has stress on the first syllable, while 'black bird' is a phrase with stress on both words."
+    },
+    {
+        question: "Which of the following pairs demonstrates minimal pairs based on vowels?",
+        choice1: "Cat and Bat",
+        choice2: "Hit and Heat",
+        choice3: "Spin and Spun",
+        choice4: "Map and Man",
+        answer: 2,
+        rationale: "'Hit' and 'Heat' differ only in vowel sounds ('ɪ' vs. 'i:'), making them minimal pairs. Other pairs differ in consonants or involve multiple sound changes."
+    },
+    {
+        question: "What is the phonetic term for the repeated sound at the end of 'buzz'?",
+        choice1: "Voiced consonant",
+        choice2: "Unvoiced consonant",
+        choice3: "Nasal sound",
+        choice4: "Aspirated sound",
+        answer: 1,
+        rationale: "The 'z' sound in 'buzz' is a voiced consonant produced by vibrating the vocal cords."
+    }
+];
 
 function startGame(){
   questionCounter = 0;
