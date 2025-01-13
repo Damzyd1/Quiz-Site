@@ -32,9 +32,6 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestion = [];
-const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = questions.length;
-const Total_Score = 10*MAX_QUESTIONS;
 let questions = [
     {
         question: "Which aspect of sound pattern in English focuses on the variation in pitch to convey meaning?",
