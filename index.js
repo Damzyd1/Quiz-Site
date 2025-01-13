@@ -26,7 +26,7 @@ function goToNextPage(){
 
 */
 
-const validPasswords = ["J@mes2025","Seyi#Pro21","Jola$Secure","Jemima@Work","Bashir#Biz","Master!2025","Raphael#Pro","Leroy$2025","Ys@Pro2025","Yusuf#Elite","Fikayo@Corp","Charles$Biz","Giwa#Exec","Adamu$Safe","Eniola@Prime21,Charles@Elite25","Damilola"];
+const validPasswords = ["J@mes2025", "GST111",Seyi#Pro21","Jola$Secure","Jemima@Work","Bashir#Biz","Master!2025","Raphael#Pro","Leroy$2025","Ys@Pro2025","Yusuf#Elite","Fikayo@Corp","Charles$Biz","Giwa#Exec","Adamu$Safe","Eniola@Prime21,Charles@Elite25","Damilola"];
 const passwordVersion = "v7";
 const sessionExpiryTime = 1 * 60 * 60 * 1000; // 1 minute
 const splashScreen = document.getElementById("splash-screen");
