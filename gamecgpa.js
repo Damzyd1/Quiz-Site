@@ -455,7 +455,9 @@ let questions = [
         rationale: "The 'z' sound in 'buzz' is a voiced consonant produced by vibrating the vocal cords."
     }
 ];
-
+const CORRECT_BONUS = 10;
+const MAX_QUESTIONS = questions.length;
+const Total_Score = 10*MAX_QUESTIONS;
 function startGame(){
   questionCounter = 0;
   score = 0;
