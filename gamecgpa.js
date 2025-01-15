@@ -34,184 +34,112 @@ let questionCounter = 0;
 let availableQuestion = [];
 let questions = [
     {
-        question: "What is the primary objective of research in criminology?",
-        choice1: "To create laws",
-        choice2: "To analyze and solve societal issues related to crime",
-        choice3: "To justify criminal behavior",
-        choice4: "To punish offenders",
+        question: "A young woman wearing brightly colored, unconventional clothing is frowned upon in her conservative community but not arrested. This is an example of:",
+        choice1: "Crime",
+        choice2: "Deviance",
+        choice3: "Both crime and deviance",
+        choice4: "Neither crime nor deviance",
         answer: 2,
-        rationale: "Research in criminology aims to study crime, its causes, and prevention strategies, helping policymakers and society address criminal behavior effectively."
+        rationale: "Deviance involves actions that violate societal norms but are not necessarily illegal."
     },
     {
-        question: "What is an independent variable in research?",
-        choice1: "A variable that remains constant",
-        choice2: "A variable that is observed for changes",
-        choice3: "A variable that is manipulated to observe its effect",
-        choice4: "A variable with no significance in the research",
-        answer: 3,
-        rationale: "An independent variable is manipulated to study its impact on the dependent variable. For example, studying how education affects crime rates would make education the independent variable."
-    },
-    {
-        question: "Which statement defines operationalization in research?",
-        choice1: "Defining how variables will be statistically analyzed",
-        choice2: "Describing abstract concepts in measurable terms",
-        choice3: "Generalizing findings to other populations",
-        choice4: "Using intuition to define variables",
-        answer: 2,
-        rationale: "Operationalization ensures that abstract concepts like 'fear of crime' or 'justice' are clearly defined and measurable, making the research process systematic."
-    },
-    {
-        question: "What is the role of a dependent variable in research?",
-        choice1: "It controls the outcome of the study",
-        choice2: "It is influenced by the independent variable",
-        choice3: "It is manipulated to produce results",
-        choice4: "It has no impact on the study’s findings",
-        answer: 2,
-        rationale: "The dependent variable is the outcome being measured. For example, in research on 'poverty and crime,' crime would be the dependent variable influenced by poverty."
-    },
-    {
-        question: "Why is a hypothesis crucial in research?",
-        choice1: "It provides a testable prediction of relationships between variables",
-        choice2: "It replaces the need for data collection",
-        choice3: "It simplifies the research process",
-        choice4: "It prevents ethical issues in studies",
+        question: "A behavior can be considered both deviant and criminal when:",
+        choice1: "It breaks a law and violates social norms.",
+        choice2: "It is accepted by law but not by society.",
+        choice3: "It is universally acknowledged as immoral.",
+        choice4: "It only receives societal disapproval.",
         answer: 1,
-        rationale: "A hypothesis is a researcher’s educated guess about the relationship between variables, guiding data collection and analysis."
+        rationale: "Acts like theft violate legal statutes and societal expectations."
     },
     {
-        question: "Which of the following is an example of qualitative data?",
-        choice1: "The number of crimes in a city",
-        choice2: "Interview transcripts with victims",
-        choice3: "The average age of offenders",
-        choice4: "A crime rate chart",
-        answer: 2,
-        rationale: "Qualitative data captures non-numerical insights, such as the experiences and perspectives of individuals, providing rich contextual information."
-    },
-    {
-        question: "What is the main goal of a literature review in research?",
-        choice1: "To prove the researcher’s opinion",
-        choice2: "To identify gaps and build on previous studies",
-        choice3: "To collect primary data",
-        choice4: "To publish the study findings",
-        answer: 2,
-        rationale: "A literature review examines past studies to avoid redundancy, identify research gaps, and lay the groundwork for new inquiries."
-    },
-    {
-        question: "What is a control variable?",
-        choice1: "The primary focus of the study",
-        choice2: "A variable manipulated for results",
-        choice3: "A variable held constant to reduce bias",
-        choice4: "A variable irrelevant to the study",
+        question: "In which scenario would an act be considered deviant but not criminal?",
+        choice1: "A person publicly criticizes the government.",
+        choice2: "A person jaywalks in a busy city street.",
+        choice3: "A person refuses to shake hands in a formal meeting.",
+        choice4: "A person drives under the influence of alcohol.",
         answer: 3,
-        rationale: "Control variables are kept constant to ensure they don’t influence the dependent variable, enhancing the validity of the study."
+        rationale: "Such behavior violates etiquette but does not break any laws."
     },
     {
-        question: "What distinguishes quantitative data from qualitative data?",
-        choice1: "Quantitative data is always accurate, while qualitative data is not",
-        choice2: "Quantitative data is numerical, while qualitative data is descriptive",
-        choice3: "Both involve descriptions of behaviors",
-        choice4: "Qualitative data is easier to analyze than quantitative data",
+        question: "Crime and deviance share which of the following characteristics?",
+        choice1: "Both are determined by the individual’s moral stance.",
+        choice2: "Both are socially constructed and vary by culture.",
+        choice3: "Both result in formal legal sanctions.",
+        choice4: "Both are universally defined across societies.",
         answer: 2,
-        rationale: "Quantitative data includes numbers and statistical information, while qualitative data involves detailed narratives and observations."
+        rationale: "Cultural norms and legal systems differ across societies."
     },
     {
-        question: "What does ethical research practice in criminology ensure?",
-        choice1: "The researcher’s bias is included",
-        choice2: "Participants’ privacy, safety, and informed consent",
-        choice3: "Data is manipulated for desired results",
-        choice4: "Research costs are minimized",
+        question: "A society legalizes same-sex marriage but certain religious groups continue to condemn it. How does this reflect the relationship between crime and deviance?",
+        choice1: "Deviance and crime always overlap.",
+        choice2: "Deviance can persist even when the law changes.",
+        choice3: "Crime becomes irrelevant in the presence of legal change.",
+        choice4: "Law shapes societal norms entirely.",
         answer: 2,
-        rationale: "Ethical practices prioritize the rights and safety of participants, ensuring the integrity and credibility of the research."
+        rationale: "Legal acceptance does not always eliminate societal disapproval."
     },
     {
-        question: "What is the primary objective of research in criminology?",
-        choice1: "To create laws",
-        choice2: "To analyze and solve societal issues related to crime",
-        choice3: "To justify criminal behavior",
-        choice4: "To punish offenders",
+        question: "Which of the following best illustrates the cultural relativity of deviance?",
+        choice1: "Stealing is considered wrong universally.",
+        choice2: "Drinking alcohol is prohibited in some countries but acceptable in others.",
+        choice3: "Murder is punishable everywhere.",
+        choice4: "Assault is universally deemed unacceptable.",
         answer: 2,
-        rationale: "Research in criminology aims to study crime, its causes, and prevention strategies, helping policymakers and society address criminal behavior effectively."
+        rationale: "What is deviant in one culture may not be deviant in another."
     },
     {
-        question: "What is an independent variable in research?",
-        choice1: "A variable that remains constant",
-        choice2: "A variable that is observed for changes",
-        choice3: "A variable that is manipulated to observe its effect",
-        choice4: "A variable with no significance in the research",
+        question: "The societal reaction to deviance differs from reactions to crime because:",
+        choice1: "Crime is always punished, but deviance is ignored.",
+        choice2: "Deviance often lacks formal sanctions.",
+        choice3: "Crime only affects individuals, while deviance affects society.",
+        choice4: "Deviance has legal consequences, while crime does not.",
+        answer: 2,
+        rationale: "Deviance usually attracts social disapproval rather than legal punishment."
+    },
+    {
+        question: "A behavior classified as a crime in one culture might only be considered deviant in another. This highlights:",
+        choice1: "The universal nature of deviance.",
+        choice2: "The static nature of criminal law.",
+        choice3: "The importance of local customs in defining norms.",
+        choice4: "The irrelevance of cultural differences in law.",
         answer: 3,
-        rationale: "An independent variable is manipulated to study its impact on the dependent variable. For example, studying how education affects crime rates would make education the independent variable."
+        rationale: "Cultural context shapes what is defined as deviant or criminal."
     },
     {
-        question: "Which statement defines operationalization in research?",
-        choice1: "Defining how variables will be statistically analyzed",
-        choice2: "Describing abstract concepts in measurable terms",
-        choice3: "Generalizing findings to other populations",
-        choice4: "Using intuition to define variables",
+        question: "How does the concept of 'victimless crimes' challenge the distinction between crime and deviance?",
+        choice1: "It implies that all crimes have victims.",
+        choice2: "It shows that crimes do not always harm others.",
+        choice3: "It proves that deviance and crime are identical.",
+        choice4: "It shows that societal norms are unimportant.",
         answer: 2,
-        rationale: "Operationalization ensures that abstract concepts like 'fear of crime' or 'justice' are clearly defined and measurable, making the research process systematic."
+        rationale: "Victimless crimes (e.g., drug use) may not harm others but are still illegal."
     },
     {
-        question: "What is the role of a dependent variable in research?",
-        choice1: "It controls the outcome of the study",
-        choice2: "It is influenced by the independent variable",
-        choice3: "It is manipulated to produce results",
-        choice4: "It has no impact on the study’s findings",
-        answer: 2,
-        rationale: "The dependent variable is the outcome being measured. For example, in research on 'poverty and crime,' crime would be the dependent variable influenced by poverty."
+        question: "In a highly traditional society, public displays of affection are met with harsh punishment, while in modern urban settings, such behavior is accepted. This demonstrates:",
+        choice1: "The rigidity of deviance across cultures.",
+        choice2: "The universality of criminal behavior.",
+        choice3: "The influence of cultural values on deviance.",
+        choice4: "The irrelevance of societal norms.",
+        answer: 3,
+        rationale: "Norms and perceptions of deviance change based on cultural values."
     },
     {
-        question: "Why is a hypothesis crucial in research?",
-        choice1: "It provides a testable prediction of relationships between variables",
-        choice2: "It replaces the need for data collection",
-        choice3: "It simplifies the research process",
-        choice4: "It prevents ethical issues in studies",
+        question: "Which of the following scenarios illustrates the fluid boundary between crime and deviance?",
+        choice1: "Same-sex relationships are legalized but still stigmatized in some communities.",
+        choice2: "Public protests are celebrated globally.",
+        choice3: "Tax fraud is socially acceptable everywhere.",
+        choice4: "Murder is universally celebrated.",
         answer: 1,
-        rationale: "A hypothesis is a researcher’s educated guess about the relationship between variables, guiding data collection and analysis."
+        rationale: "Legal acceptance does not guarantee societal approval."
     },
     {
-        question: "Which of the following is an example of qualitative data?",
-        choice1: "The number of crimes in a city",
-        choice2: "Interview transcripts with victims",
-        choice3: "The average age of offenders",
-        choice4: "A crime rate chart",
-        answer: 2,
-        rationale: "Qualitative data captures non-numerical insights, such as the experiences and perspectives of individuals, providing rich contextual information."
-    },
-    {
-        question: "What is the main goal of a literature review in research?",
-        choice1: "To prove the researcher’s opinion",
-        choice2: "To identify gaps and build on previous studies",
-        choice3: "To collect primary data",
-        choice4: "To publish the study findings",
-        answer: 2,
-        rationale: "A literature review examines past studies to avoid redundancy, identify research gaps, and lay the groundwork for new inquiries."
-    },
-    {
-        question: "What is a control variable?",
-        choice1: "The primary focus of the study",
-        choice2: "A variable manipulated for results",
-        choice3: "A variable held constant to reduce bias",
-        choice4: "A variable irrelevant to the study",
-        answer: 3,
-        rationale: "Control variables are kept constant to ensure they don’t influence the dependent variable, enhancing the validity of the study."
-    },
-    {
-        question: "What distinguishes quantitative data from qualitative data?",
-        choice1: "Quantitative data is always accurate, while qualitative data is not",
-        choice2: "Quantitative data is numerical, while qualitative data is descriptive",
-        choice3: "Both involve descriptions of behaviors",
-        choice4: "Qualitative data is easier to analyze than quantitative data",
-        answer: 2,
-        rationale: "Quantitative data includes numbers and statistical information, while qualitative data involves detailed narratives and observations."
-    },
-    {
-        question: "What does ethical research practice in criminology ensure?",
-        choice1: "The researcher’s bias is included",
-        choice2: "Participants’ privacy, safety, and informed consent",
-        choice3: "Data is manipulated for desired results",
-        choice4: "Research costs are minimized",
-        answer: 2,
-        rationale: "Ethical practices prioritize the rights and safety of participants, ensuring the integrity and credibility of the research."
+        question: "What term describes behaviors that are legal but considered morally deviant by a society?",
+        choice1: "Informal deviance",
+        choice2: "Formal deviance",
+        choice3: "Criminal behavior",
+        choice4: "Social anarchy",
+        answer: 1,
+        rationale: "Informal deviance violates social norms without breaking laws."
     }
 ];
 const CORRECT_BONUS = 10;
