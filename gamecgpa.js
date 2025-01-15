@@ -8,7 +8,7 @@ document.addEventListener("keydown", e => {
   }
 });
 
-const topic = "CSS 311: Introduction to Research";
+const topic = "CSS 305: Introduction to Crime and Deviance";
 const topicId = document.getElementById("topic");
 topicId.innerHTML = topic;
 setTimeout(disappear, 500000);
@@ -201,7 +201,7 @@ choices.forEach(choice => {
   });
 });
 
-let durationInMinutes = 25;
+let durationInMinutes = 15;
 let timeInSeconds = durationInMinutes * 60;
 const timerDisplay = document.getElementById("timer");
 
