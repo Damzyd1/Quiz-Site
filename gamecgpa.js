@@ -8,7 +8,7 @@ document.addEventListener("keydown", e => {
   }
 });
 
-const topic = "CSS 305: Introduction to Crime and Deviance";
+const topic = "CSS 307: Theories of Crime & Alternatives to Incarceration";
 const topicId = document.getElementById("topic");
 topicId.innerHTML = topic;
 setTimeout(disappear, 500000);
@@ -34,115 +34,276 @@ let questionCounter = 0;
 let availableQuestion = [];
 let questions = [
     {
-        question: "A young woman wearing brightly colored, unconventional clothing is frowned upon in her conservative community but not arrested. This is an example of:",
-        choice1: "Crime",
-        choice2: "Deviance",
-        choice3: "Both crime and deviance",
-        choice4: "Neither crime nor deviance",
-        answer: 2,
-        rationale: "Deviance involves actions that violate societal norms but are not necessarily illegal."
+        question: "Which of the following philosophers is most associated with the principle of deterrence in classical theories of punishment?",
+        choice1: "Jeremy Bentham",
+        choice2: "Jean-Jacques Rousseau",
+        choice3: "Immanuel Kant",
+        choice4: "Cesare Beccaria",
+        answer: 4,
+        rationale: "Cesare Beccaria emphasized deterrence as a core principle in his work *On Crimes and Punishments*, advocating for punishment to prevent crime rather than retribution."
     },
     {
-        question: "A behavior can be considered both deviant and criminal when:",
-        choice1: "It breaks a law and violates social norms.",
-        choice2: "It is accepted by law but not by society.",
-        choice3: "It is universally acknowledged as immoral.",
-        choice4: "It only receives societal disapproval.",
+        question: "What distinguishes retributive theories of punishment from utilitarian ones?",
+        choice1: "Retributive theories focus on the offender's past actions, while utilitarian theories focus on future societal benefits.",
+        choice2: "Retributive theories focus on deterrence, while utilitarian theories focus on retribution.",
+        choice3: "Retributive theories prioritize rehabilitation, while utilitarian theories emphasize incapacitation.",
+        choice4: "Retributive theories focus on the offender's remorse, while utilitarian theories disregard it.",
         answer: 1,
-        rationale: "Acts like theft violate legal statutes and societal expectations."
+        rationale: "Retributive theories are backward-looking, focusing on giving offenders their 'just deserts,' whereas utilitarian theories are forward-looking, prioritizing societal benefits like deterrence and rehabilitation."
     },
     {
-        question: "In which scenario would an act be considered deviant but not criminal?",
-        choice1: "A person publicly criticizes the government.",
-        choice2: "A person jaywalks in a busy city street.",
-        choice3: "A person refuses to shake hands in a formal meeting.",
-        choice4: "A person drives under the influence of alcohol.",
+        question: "In contemporary punishment theories, restorative justice primarily aims to:",
+        choice1: "Inflict proportionate punishment on the offender.",
+        choice2: "Rehabilitate the offender through mandatory programs.",
+        choice3: "Repair harm caused to victims and communities.",
+        choice4: "Reduce the costs of the penal system.",
         answer: 3,
-        rationale: "Such behavior violates etiquette but does not break any laws."
+        rationale: "Restorative justice focuses on repairing the harm caused by crime, emphasizing dialogue between the offender, the victim, and the community."
     },
     {
-        question: "Crime and deviance share which of the following characteristics?",
-        choice1: "Both are determined by the individual’s moral stance.",
-        choice2: "Both are socially constructed and vary by culture.",
-        choice3: "Both result in formal legal sanctions.",
-        choice4: "Both are universally defined across societies.",
-        answer: 2,
-        rationale: "Cultural norms and legal systems differ across societies."
-    },
-    {
-        question: "A society legalizes same-sex marriage but certain religious groups continue to condemn it. How does this reflect the relationship between crime and deviance?",
-        choice1: "Deviance and crime always overlap.",
-        choice2: "Deviance can persist even when the law changes.",
-        choice3: "Crime becomes irrelevant in the presence of legal change.",
-        choice4: "Law shapes societal norms entirely.",
-        answer: 2,
-        rationale: "Legal acceptance does not always eliminate societal disapproval."
-    },
-    {
-        question: "Which of the following best illustrates the cultural relativity of deviance?",
-        choice1: "Stealing is considered wrong universally.",
-        choice2: "Drinking alcohol is prohibited in some countries but acceptable in others.",
-        choice3: "Murder is punishable everywhere.",
-        choice4: "Assault is universally deemed unacceptable.",
-        answer: 2,
-        rationale: "What is deviant in one culture may not be deviant in another."
-    },
-    {
-        question: "The societal reaction to deviance differs from reactions to crime because:",
-        choice1: "Crime is always punished, but deviance is ignored.",
-        choice2: "Deviance often lacks formal sanctions.",
-        choice3: "Crime only affects individuals, while deviance affects society.",
-        choice4: "Deviance has legal consequences, while crime does not.",
-        answer: 2,
-        rationale: "Deviance usually attracts social disapproval rather than legal punishment."
-    },
-    {
-        question: "A behavior classified as a crime in one culture might only be considered deviant in another. This highlights:",
-        choice1: "The universal nature of deviance.",
-        choice2: "The static nature of criminal law.",
-        choice3: "The importance of local customs in defining norms.",
-        choice4: "The irrelevance of cultural differences in law.",
+        question: "Which classical theory of punishment assumes that humans are rational actors who weigh costs and benefits before committing a crime?",
+        choice1: "Biological determinism",
+        choice2: "Social contract theory",
+        choice3: "Rational choice theory",
+        choice4: "Psychological determinism",
         answer: 3,
-        rationale: "Cultural context shapes what is defined as deviant or criminal."
+        rationale: "Rational choice theory, rooted in classical criminology, argues that individuals are rational actors who calculate the potential costs and benefits of their actions."
     },
     {
-        question: "How does the concept of 'victimless crimes' challenge the distinction between crime and deviance?",
-        choice1: "It implies that all crimes have victims.",
-        choice2: "It shows that crimes do not always harm others.",
-        choice3: "It proves that deviance and crime are identical.",
-        choice4: "It shows that societal norms are unimportant.",
-        answer: 2,
-        rationale: "Victimless crimes (e.g., drug use) may not harm others but are still illegal."
-    },
-    {
-        question: "In a highly traditional society, public displays of affection are met with harsh punishment, while in modern urban settings, such behavior is accepted. This demonstrates:",
-        choice1: "The rigidity of deviance across cultures.",
-        choice2: "The universality of criminal behavior.",
-        choice3: "The influence of cultural values on deviance.",
-        choice4: "The irrelevance of societal norms.",
+        question: "According to Immanuel Kant, the primary justification for punishment is:",
+        choice1: "Deterrence of future crimes.",
+        choice2: "Restoration of societal order.",
+        choice3: "Moral retribution for wrongdoing.",
+        choice4: "Rehabilitation of the offender.",
         answer: 3,
-        rationale: "Norms and perceptions of deviance change based on cultural values."
+        rationale: "Kant believed in retributive justice, asserting that punishment is morally justified because it holds offenders accountable for their actions as a matter of justice."
     },
     {
-        question: "Which of the following scenarios illustrates the fluid boundary between crime and deviance?",
-        choice1: "Same-sex relationships are legalized but still stigmatized in some communities.",
-        choice2: "Public protests are celebrated globally.",
-        choice3: "Tax fraud is socially acceptable everywhere.",
-        choice4: "Murder is universally celebrated.",
+        question: "Which contemporary theory of punishment critiques the penal system for perpetuating systemic inequalities?",
+        choice1: "Feminist theory of punishment",
+        choice2: "Restorative justice theory",
+        choice3: "Marxist theory of punishment",
+        choice4: "Positivist criminology",
+        answer: 3,
+        rationale: "Marxist theories view punishment as a tool for maintaining class-based inequalities and perpetuating state power."
+    },
+    {
+        question: "The principle of proportionality in punishment is most aligned with which theory?",
+        choice1: "Retributive theory",
+        choice2: "Deterrence theory",
+        choice3: "Rehabilitation theory",
+        choice4: "Restorative justice",
         answer: 1,
-        rationale: "Legal acceptance does not guarantee societal approval."
+        rationale: "The principle of proportionality, where the punishment matches the gravity of the crime, is central to retributive theories of justice."
     },
     {
-        question: "What term describes behaviors that are legal but considered morally deviant by a society?",
-        choice1: "Informal deviance",
-        choice2: "Formal deviance",
-        choice3: "Criminal behavior",
-        choice4: "Social anarchy",
+        question: "In utilitarian theories of punishment, the primary focus is on:",
+        choice1: "Moral accountability.",
+        choice2: "Future societal benefits.",
+        choice3: "Retributive justice.",
+        choice4: "Equal application of law.",
+        answer: 2,
+        rationale: "Utilitarian theories prioritize outcomes like crime prevention, rehabilitation, and societal safety over retribution or moral accountability."
+    },
+    {
+        question: "Which punishment theory aligns with Cesare Beccaria's view that laws should only punish to the extent necessary to deter crime?",
+        choice1: "Retribution",
+        choice2: "Restorative justice",
+        choice3: "Deterrence",
+        choice4: "Rehabilitation",
+        answer: 3,
+        rationale: "Beccaria advocated for deterrence as the main justification for punishment, arguing for proportionate and necessary penalties to prevent crime."
+    },
+    {
+        question: "The shift from punitive to rehabilitative approaches in the mid-20th century reflects which broader societal trend?",
+        choice1: "An increase in crime rates.",
+        choice2: "A focus on offender reintegration.",
+        choice3: "Stronger public support for capital punishment.",
+        choice4: "Global economic recession.",
+        answer: 2,
+        rationale: "The rehabilitative approach emerged alongside a growing emphasis on offender reintegration and addressing root causes of criminal behavior."
+    },
+    {
+        question: "Which of the following challenges the ethical foundation of deterrence-based punishment?",
+        choice1: "It may punish the innocent to deter others.",
+        choice2: "It ignores the harm caused to victims.",
+        choice3: "It disproportionately targets certain offenders.",
+        choice4: "It prioritizes societal goals over individual rights.",
         answer: 1,
-        rationale: "Informal deviance violates social norms without breaking laws."
+        rationale: "One criticism of deterrence-based punishment is the possibility of punishing innocent individuals to achieve broader societal deterrence."
+    },
+    {
+        question: "In restorative justice frameworks, offenders are encouraged to:",
+        choice1: "Serve mandatory prison sentences.",
+        choice2: "Make amends directly to victims.",
+        choice3: "Focus solely on personal rehabilitation.",
+        choice4: "Avoid formal criminal proceedings.",
+        answer: 2,
+        rationale: "Restorative justice emphasizes direct offender accountability and making amends to victims, often through mediation and restitution."
+    },
+    {
+        question: "In contemporary punishment theories, the concept of 'incapacitation' is most closely related to:",
+        choice1: "Preventing future crimes by deterring others.",
+        choice2: "Removing offenders from society to ensure public safety.",
+        choice3: "Rehabilitating offenders to reduce recidivism.",
+        choice4: "Restoring community harmony.",
+        answer: 2,
+        rationale: "Incapacitation involves isolating offenders to protect society and prevent further crimes, often through imprisonment or other restrictive measures."
+    },
+    {
+        question: "Which punishment theory is least likely to support life imprisonment for a non-violent crime?",
+        choice1: "Retribution",
+        choice2: "Deterrence",
+        choice3: "Rehabilitation",
+        choice4: "Restorative justice",
+        answer: 4,
+        rationale: "Restorative justice seeks alternatives to incarceration, especially for non-violent crimes, focusing on repairing harm and community reintegration."
+    },
+    {
+        question: "The idea that punishment serves to reaffirm societal norms and values aligns with which sociological theory?",
+        choice1: "Conflict theory",
+        choice2: "Functionalism",
+        choice3: "Strain theory",
+        choice4: "Labeling theory",
+        answer: 2,
+        rationale: "Functionalist theories view punishment as a means of reinforcing social cohesion and reaffirming collective values."
+    },
+    {
+        question: "Which alternative to incarceration focuses on the offender’s ability to maintain employment and family ties while under supervision?",
+        choice1: "Electronic monitoring",
+        choice2: "Restorative justice programs",
+        choice3: "Probation",
+        choice4: "Halfway houses",
+        answer: 3,
+        rationale: "Probation allows offenders to serve their sentences in the community under supervision, enabling them to work and maintain social relationships."
+    },
+    {
+        question: "Restorative justice programs differ from traditional incarceration by prioritizing:",
+        choice1: "Punitive measures over reconciliation.",
+        choice2: "Deterrence over rehabilitation.",
+        choice3: "Community engagement and victim-offender dialogue.",
+        choice4: "Mandatory sentencing laws.",
+        answer: 3,
+        rationale: "Restorative justice programs emphasize repairing harm through dialogue, accountability, and active participation of victims, offenders, and the community."
+    },
+    {
+        question: "Electronic monitoring is most effective when combined with:",
+        choice1: "Daily in-person supervision.",
+        choice2: "Therapeutic and rehabilitative interventions.",
+        choice3: "Strict solitary confinement policies.",
+        choice4: "A zero-tolerance policy for violations.",
+        answer: 2,
+        rationale: "Electronic monitoring is enhanced when paired with programs that address underlying issues like substance abuse or mental health, supporting long-term rehabilitation."
+    },
+    {
+        question: "Which of the following is a criticism of community service as an alternative to incarceration?",
+        choice1: "It fails to address the root causes of criminal behavior.",
+        choice2: "It is costlier than traditional incarceration.",
+        choice3: "It leads to higher rates of recidivism compared to prison sentences.",
+        choice4: "It offers no opportunity for offender accountability.",
+        answer: 1,
+        rationale: "Community service is criticized for not addressing deeper issues like addiction or socioeconomic factors that contribute to criminal behavior."
+    },
+    {
+        question: "Which alternative to incarceration is most appropriate for non-violent offenders with substance abuse issues?",
+        choice1: "Probation",
+        choice2: "Drug courts",
+        choice3: "Restorative justice",
+        choice4: "Mandatory sentencing",
+        answer: 2,
+        rationale: "Drug courts provide treatment and close supervision for non-violent offenders with substance abuse issues, aiming to reduce recidivism and support recovery."
+    },
+    {
+        question: "In comparison to incarceration, diversion programs are designed to:",
+        choice1: "Shorten prison sentences for non-violent offenders.",
+        choice2: "Prevent offenders from entering the criminal justice system altogether.",
+        choice3: "Delay punishment until further investigations are completed.",
+        choice4: "Provide mandatory counseling sessions in prison.",
+        answer: 2,
+        rationale: "Diversion programs aim to keep offenders out of the formal criminal justice system by addressing their behavior through education, counseling, or community service."
+    },
+    {
+        question: "Halfway houses are designed primarily to:",
+        choice1: "Replace imprisonment for all offenders.",
+        choice2: "Provide transitional support for recently released prisoners.",
+        choice3: "Monitor offenders through electronic surveillance.",
+        choice4: "Offer alternatives to incarceration for violent criminals.",
+        answer: 2,
+        rationale: "Halfway houses provide transitional living arrangements and support services to help individuals reintegrate into society after incarceration."
+    },
+    {
+        question: "A significant advantage of alternative sentencing over incarceration is its ability to:",
+        choice1: "Completely eliminate recidivism.",
+        choice2: "Reduce the financial burden on the justice system.",
+        choice3: "Ensure uniform sentencing across jurisdictions.",
+        choice4: "Deter high-risk offenders from committing crimes.",
+        answer: 2,
+        rationale: "Alternative sentencing often costs less than incarceration, alleviating financial strain on the justice system while still holding offenders accountable."
+    },
+    {
+        question: "Why might restorative justice be considered a more ethical alternative to incarceration?",
+        choice1: "It eliminates the need for offender accountability.",
+        choice2: "It focuses on punishment rather than reconciliation.",
+        choice3: "It gives victims an active role in the justice process.",
+        choice4: "It removes all consequences for the offender.",
+        answer: 3,
+        rationale: "Restorative justice is ethical because it allows victims to express their needs, offenders to take accountability, and communities to heal collectively."
+    },
+    {
+        question: "Which of the following is a challenge associated with implementing alternatives to incarceration?",
+        choice1: "The lack of public trust in the efficacy of such programs.",
+        choice2: "Higher costs compared to traditional incarceration.",
+        choice3: "Increased risks of violent crime among participants.",
+        choice4: "Lower rates of offender accountability.",
+        answer: 1,
+        rationale: "Public skepticism about the effectiveness of alternatives to incarceration can hinder their implementation and widespread adoption."
+    },
+    {
+        question: "Day reporting centers primarily serve offenders by:",
+        choice1: "Providing a safe residential environment.",
+        choice2: "Allowing them to serve prison sentences remotely.",
+        choice3: "Requiring regular check-ins and participation in rehabilitative programs.",
+        choice4: "Eliminating the need for court appearances.",
+        answer: 3,
+        rationale: "Day reporting centers are non-residential facilities where offenders check in daily and participate in services such as job training, counseling, and substance abuse treatment."
+    },
+    {
+        question: "What is a potential drawback of relying on fines as an alternative to incarceration?",
+        choice1: "They are only applicable to repeat offenders.",
+        choice2: "They disproportionately affect low-income individuals.",
+        choice3: "They fail to generate revenue for the justice system.",
+        choice4: "They are rarely used for non-violent crimes.",
+        answer: 2,
+        rationale: "Fines can disproportionately burden low-income offenders, potentially leading to further financial hardship and inequality within the justice system."
+    },
+    {
+        question: "Why are mental health courts considered a viable alternative to incarceration?",
+        choice1: "They provide financial incentives for offenders to seek treatment.",
+        choice2: "They focus exclusively on violent crimes involving mental illness.",
+        choice3: "They address the underlying causes of criminal behavior related to mental health.",
+        choice4: "They reduce the need for victim participation in trials.",
+        answer: 3,
+        rationale: "Mental health courts aim to treat the root causes of criminal behavior in individuals with mental illnesses, reducing recidivism and promoting recovery."
+    },
+    {
+        question: "Home confinement is often combined with which other alternative to incarceration for maximum effectiveness?",
+        choice1: "Restorative justice programs",
+        choice2: "Community service requirements",
+        choice3: "Electronic monitoring",
+        choice4: "Halfway houses",
+        answer: 3,
+        rationale: "Home confinement is frequently paired with electronic monitoring to ensure compliance with sentencing conditions while allowing offenders to remain in the community."
+    },
+    {
+        question: "A restorative justice circle differs from traditional sentencing by:",
+        choice1: "Replacing the judge with an offender's attorney.",
+        choice2: "Removing all consequences for the offender.",
+        choice3: "Including victims, offenders, and community members in decision-making.",
+        choice4: "Eliminating any focus on the offender’s accountability.",
+        answer: 3,
+        rationale: "Restorative justice circles prioritize collaboration and accountability by including victims, offenders, and the community to find mutually agreeable resolutions."
     }
-];
-const CORRECT_BONUS = 10;
+];const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = questions.length;
 const Total_Score = 10*MAX_QUESTIONS;
 function startGame(){
