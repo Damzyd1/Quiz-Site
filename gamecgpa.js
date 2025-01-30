@@ -8,7 +8,7 @@ document.addEventListener("keydown", e => {
   }
 });
 
-const topic = "CSS 307: Custody-Based and Rehabilation-Based Prison System";
+const topic = "CSS 305 Exam Simulation";
 const topicId = document.getElementById("topic");
 topicId.innerHTML = topic;
 setTimeout(disappear, 500000);
@@ -34,166 +34,229 @@ let questionCounter = 0;
 let availableQuestion = [];
 let questions = [
     {
-        question: "What is the main philosophy of custody-based prisons?",
-        choice1: "Rehabilitation through therapy",
-        choice2: "Isolation and deterrence",
-        choice3: "Skill-building for societal reintegration",
-        choice4: "Restorative justice",
-        answer: 2
-        // Rationale: Custody-based prisons are designed to isolate offenders from society and deter future crimes through strict confinement and punitive measures.
+        question: "Which of the following is NOT part of the prelude in a research report?",
+        choice1: "Abstract",
+        choice2: "Acknowledgment",
+        choice3: "Literature Review",
+        choice4: "Table of Contents",
+        answer: 3,
+        rationale: "The literature review is not part of the prelude components. Instead, it is a main chapter that evaluates previous studies related to the research topic."
     },
     {
-        question: "Which of the following is a key feature of rehabilitation-based prisons?",
-        choice1: "Focus on retributive punishment",
-        choice2: "Educational and vocational training programs",
-        choice3: "Increased solitary confinement",
-        choice4: "Strict surveillance and monitoring",
-        answer: 2,
-         Rationale: "Rehabilitation-based prisons focus on equipping inmates with education and vocational skills to reintegrate successfully into society."
-    },
-    {
-        question: "What is the primary goal of custody-based prisons?",
-        choice1: "Ensuring public safety through isolation",
-        choice2: "Reducing recidivism rates",
-        choice3: "Promoting psychological rehabilitation",
-        choice4: "Creating a community-based justice system",
+        question: "What is the main purpose of an abstract in a research report?",
+        choice1: "To provide a summary of the research.",
+        choice2: "To acknowledge contributors to the research.",
+        choice3: "To list all the sections of the report.",
+        choice4: "To introduce the research problem.",
         answer: 1,
-         Rationale: "Custody-based prisons emphasize isolating offenders to protect society from immediate harm and maintain public safety."
+        rationale: "The abstract is a concise summary of the research, including objectives, methodology, findings, and conclusions, designed to give readers an overview of the entire study."
     },
     {
-        question: "Which of the following is an advantage of rehabilitation-based prisons?",
-        choice1: "Immediate reduction in crime rates",
-        choice2: "Lower cost of implementation",
-        choice3: "Long-term reduction in recidivism",
-        choice4: "Increased deterrence through stricter penalties",
+        question: "What is typically included in an acknowledgment section?",
+        choice1: "Research findings",
+        choice2: "References to previous studies",
+        choice3: "Gratitude to contributors and funders",
+        choice4: "Definition of terms",
         answer: 3,
-        Rationale: "Rehabilitation programs aim to address the root causes of crime, resulting in lower reoffending rates and societal benefits over time."
+        rationale: "Acknowledgments are used to express gratitude to individuals or organizations that provided support, funding, or assistance during the research."
     },
     {
-        question: "What is a common disadvantage of custody-based prisons?",
-        choice1: "Overemphasis on prisoner reintegration",
-        choice2: "High costs and overcrowding",
-        choice3: "Excessive focus on vocational training",
-        choice4: "Limited focus on public safety",
-        answer: 2,
-        Rationale: "Custody-based prisons are often criticized for their high operational costs and overcrowding issues, which affect prison effectiveness."
-    },
-    {
-        question: "Which of the following best describes the philosophy of rehabilitation-based prisons?",
-        choice1: "Punishment and deterrence",
-        choice2: "Reform through skill development",
-        choice3: "Isolation of offenders from society",
-        choice4: "Maximizing security measures",
-        answer: 2,
-        Rationale: "Rehabilitation-based prisons focus on reforming offenders by addressing the root causes of criminal behavior, such as lack of skills or education."
-    },
-    {
-        question: "What is a major criticism of rehabilitation-based prisons?",
-        choice1: "They are too punitive in nature",
-        choice2: "They fail to provide public safety",
-        choice3: "They are resource-intensive and expensive",
-        choice4: "They discourage community engagement",
+        question: "In what part of the research is the page numbering typically done with Roman numerals?",
+        choice1: "Chapters",
+        choice2: "Abstract",
+        choice3: "Prelude",
+        choice4: "Conclusion",
         answer: 3,
-        Rationale: "Rehabilitation-based systems require significant funding for training, education, and therapy programs, making them more expensive to sustain."
+        rationale: "Roman numerals are typically used for numbering pages in the prelude section, such as the abstract, acknowledgment, and table of contents."
     },
     {
-        question: "Which of the following is NOT a goal of custody-based prisons?",
-        choice1: "Ensuring public safety",
-        choice2: "Deterring future crimes",
-        choice3: "Promoting societal reintegration",
-        choice4: "Maintaining strict discipline",
+        question: "Which of the following is the correct sequence of prelude components?",
+        choice1: "Abstract, Table of Contents, Dedication, Acknowledgment",
+        choice2: "Dedication, Abstract, Table of Contents, Acknowledgment",
+        choice3: "Dedication, Acknowledgment, Abstract, Table of Contents",
+        choice4: "Abstract, Dedication, Acknowledgment, Table of Contents",
         answer: 3,
-        Rationale: "Custody-based prisons focus on containment, discipline, and deterrence, while societal reintegration is a goal of rehabilitation-based systems."
+        rationale: "The prelude components are typically arranged in this order: dedication, acknowledgment, abstract, and table of contents, following academic standards."
     },
     {
-        question: "How do custody-based prisons typically achieve their goals?",
-        choice1: "By reducing sentences for good behavior",
-        choice2: "Through strict surveillance and control",
-        choice3: "By offering community service alternatives",
-        choice4: "Through therapy and mental health programs",
+        question: "What is the primary function of the Table of Contents?",
+        choice1: "To summarize the research objectives",
+        choice2: "To list and organize all sections and subsections of the research",
+        choice3: "To introduce the research topic",
+        choice4: "To reference all sources used in the research",
         answer: 2,
-         Rationale: "Custody-based systems rely on tight surveillance and control to ensure inmates remain contained and deterred from reoffending."
+        rationale: "The Table of Contents organizes the structure of the research by listing all chapters, sections, and subsections with their corresponding page numbers."
     },
     {
-        question: "What is one advantage of custody-based prisons?",
-        choice1: "Quick isolation of offenders from society",
-        choice2: "Focus on reducing prison overcrowding",
-        choice3: "Emphasis on inmate rehabilitation",
-        choice4: "Provision of community-based services",
+        question: "Where should keywords be included in a research report?",
+        choice1: "Dedication",
+        choice2: "Table of Contents",
+        choice3: "Abstract",
+        choice4: "Literature Review",
+        answer: 3,
+        rationale: "Keywords are typically included in the abstract to help readers and researchers identify the main themes and topics of the study quickly."
+    },
+    {
+        question: "Which prelude component recognizes financial or emotional support provided by individuals?",
+        choice1: "Abstract",
+        choice2: "Acknowledgment",
+        choice3: "Preface",
+        choice4: "Methodology",
+        answer: 2,
+        rationale: "The acknowledgment section is used to formally thank individuals or organizations for their financial, emotional, or technical support during the research."
+    },
+    {
+        question: "What is the ideal word count for an abstract in most academic research?",
+        choice1: "50–100 words",
+        choice2: "150–250 words",
+        choice3: "300–500 words",
+        choice4: "500–700 words",
+        answer: 2,
+        rationale: "Most academic research guidelines recommend an abstract word count between 150 and 250 words to provide a concise but comprehensive overview."
+    },
+    {
+        question: "The dedication page is meant to:",
+        choice1: "Explain the research process.",
+        choice2: "Thank contributors to the research.",
+        choice3: "Express gratitude to specific individuals or groups.",
+        choice4: "Outline the research findings.",
+        answer: 3,
+        rationale: "The dedication page is used to express personal gratitude to specific individuals or groups, such as family, mentors, or friends, for their support."
+    },
+    {
+        question: "Which chapter introduces the research problem?",
+        choice1: "Literature Review",
+        choice2: "Introduction",
+        choice3: "Methodology",
+        choice4: "Conclusion",
+        answer: 2,
+        rationale: "The introduction chapter sets the stage for the research by presenting the research problem, objectives, and significance of the study."
+    },
+    {
+        question: "What section of a research report explains why the study is important?",
+        choice1: "Background of the Study",
+        choice2: "Literature Review",
+        choice3: "Methodology",
+        choice4: "Results",
         answer: 1,
-        Rationale: "Custody-based systems provide immediate public safety by isolating offenders from the community."
+        rationale: "The background of the study explains the context, relevance, and importance of the research to justify why the study was conducted."
     },
     {
-        question: "Which system is more likely to focus on reintegration programs?",
-        choice1: "Custody-based system",
-        choice2: "Rehabilitation-based system",
-        choice3: "Both systems equally",
-        choice4: "Neither system",
+        question: "What is the main focus of the Literature Review?",
+        choice1: "Defining the research problem",
+        choice2: "Summarizing previous studies related to the topic",
+        choice3: "Describing the data collection tools used",
+        choice4: "Discussing the findings",
         answer: 2,
-         Rationale: "Rehabilitation-based prisons aim to prepare inmates for reentry into society by offering reintegration programs."
+        rationale: "The literature review critically analyzes and summarizes existing studies, identifying gaps and how the current research addresses them."
     },
     {
-        question: "What is the primary disadvantage of custody-based prisons in addressing long-term crime rates?",
-        choice1: "They provide insufficient security measures",
-        choice2: "They lack programs to address the root causes of crime",
-        choice3: "They are too lenient on offenders",
-        choice4: "They discourage public trust in law enforcement",
-        answer: 2,
-        Rationale: "Custody-based prisons focus on punishment and isolation, often neglecting the factors that contribute to reoffending."
-    },
-    {
-        question: "How do rehabilitation-based prisons benefit society in the long term?",
-        choice1: "By increasing the length of prison sentences",
-        choice2: "By ensuring inmates remain isolated",
-        choice3: "By reducing recidivism rates",
-        choice4: "By prioritizing public safety over inmate rights",
+        question: "Which chapter typically contains the research questions?",
+        choice1: "Abstract",
+        choice2: "Literature Review",
+        choice3: "Introduction",
+        choice4: "Conclusion",
         answer: 3,
-        Rationale: "Rehabilitation programs reduce reoffending by equipping inmates with skills, education, and mental health support."
+        rationale: "Research questions are typically included in the introduction to guide the study and define its scope."
     },
     {
-        question: "What is a notable difference between custody-based and rehabilitation-based prisons?",
-        choice1: "Focus on long-term crime reduction",
-        choice2: "Level of security measures in place",
-        choice3: "Approach to addressing offender behavior",
-        choice4: "Severity of punishment for offenders",
-        answer: 3,
-        Rationale: "Custody-based systems focus on punishment, while rehabilitation-based systems focus on addressing and changing offender behavior."
-    },
-    {
-        question: "Why might a government opt for rehabilitation-based prisons over custody-based prisons?",
-        choice1: "To immediately reduce crime rates",
-        choice2: "To address systemic issues leading to crime",
-        choice3: "To save costs on prison operations",
-        choice4: "To increase the deterrent effect of incarceration",
-        answer: 2,
-        Rationale: "Rehabilitation-based prisons aim to address societal and individual factors, such as poverty or lack of education, that contribute to criminal activity."
-    },
-    {
-        question: "Which system is more effective at reducing prison overcrowding in the short term?",
-        choice1: "Custody-based system",
-        choice2: "Rehabilitation-based system",
-        choice3: "Both systems equally",
-        choice4: "Neither system",
+        question: "In which chapter is the research design discussed?",
+        choice1: "Methodology",
+        choice2: "Literature Review",
+        choice3: "Results",
+        choice4: "Conclusion",
         answer: 1,
-        Rationale: "Custody-based systems focus on removing offenders from society, often leading to overcrowded prisons without reducing crime rates long-term."
+        rationale: "The methodology chapter outlines the research design, data collection methods, and tools used to conduct the study."
     },
     {
-        question: "Which system offers therapy as a core part of its approach?",
-        choice1: "Custody-based system",
-        choice2: "Rehabilitation-based system",
-        choice3: "Both systems equally",
-        choice4: "Neither system",
-        answer: 2,
-        Rationale: "Rehabilitation-based prisons emphasize therapy and mental health support to address underlying issues contributing to criminal behavior."
+        question: "What is the purpose of the methodology chapter?",
+        choice1: "To describe how the research was conducted.",
+        choice2: "To review past studies.",
+        choice3: "To summarize the research findings.",
+        choice4: "To introduce the research topic.",
+        answer: 1,
+        rationale: "The methodology chapter explains the research process, including techniques, tools, and procedures used to collect and analyze data."
     },
     {
-        question: "What is an advantage of rehabilitation-based systems in terms of offender outcomes?",
-        choice1: "Reinforces punitive justice",
-        choice2: "Improves reentry preparedness",
-        choice3: "Ensures offenders are physically secured",
-        choice4: "Reduces the need for judicial oversight",
+        question: "The population and sampling are discussed in which chapter?",
+        choice1: "Literature Review",
+        choice2: "Methodology",
+        choice3: "Introduction",
+        choice4: "Conclusion",
         answer: 2,
-        Rationale: "Rehabilitation programs focus on preparing inmates for a productive and law-abiding life post-incarceration."
+        rationale: "The methodology chapter provides details about the research population, sampling techniques, and how participants were selected."
+    },
+    {
+        question: "Which chapter interprets the research findings?",
+        choice1: "Introduction",
+        choice2: "Results and Discussion",
+        choice3: "Literature Review",
+        choice4: "Methodology",
+        answer: 2,
+        rationale: "The results and discussion chapter presents the findings and interprets them in the context of the research questions and objectives."
+    },
+    {
+        question: "What is the main goal of the Conclusion chapter?",
+        choice1: "To summarize the findings and provide recommendations.",
+        choice2: "To present the data collection process.",
+        choice3: "To analyze the research problem.",
+        choice4: "To compare findings with previous studies.",
+        answer: 1,
+        rationale: "The conclusion chapter summarizes the research outcomes and provides actionable recommendations based on the findings."
+    },
+    {
+        question: "Which of the following is NOT included in the methodology chapter?",
+        choice1: "Data collection methods",
+        choice2: "Research instruments",
+        choice3: "Theoretical framework",
+        choice4: "Sampling techniques",
+        answer: 3,
+        rationale: "The theoretical framework is typically discussed in the literature review to provide a foundation for the research."
+    },
+    {
+        question: "Where are research objectives typically found?",
+        choice1: "Literature Review",
+        choice2: "Introduction",
+        choice3: "Abstract",
+        choice4: "Methodology",
+        answer: 2,
+        rationale: "Research objectives are presented in the introduction chapter, outlining the purpose and goals of the study."
+    },
+    {
+        question: "The literature review chapter should primarily:",
+        choice1: "Provide original findings.",
+        choice2: "Discuss the research’s methodology.",
+        choice3: "Critically evaluate existing studies on the topic.",
+        choice4: "Summarize the research’s conclusions.",
+        answer: 3,
+        rationale: "A literature review critically examines existing research to highlight gaps, contradictions, and the relevance of the current study."
+    },
+    {
+        question: "What type of data is typically discussed in the results chapter?",
+        choice1: "Primary data only",
+        choice2: "Secondary data only",
+        choice3: "Both primary and secondary data",
+        choice4: "Theoretical data",
+        answer: 3,
+        rationale: "The results chapter can include both primary (collected during the study) and secondary data (sourced from other studies)."
+    },
+    {
+        question: "Research hypotheses are commonly discussed in:",
+        choice1: "Abstract",
+        choice2: "Methodology",
+        choice3: "Results",
+        choice4: "Introduction",
+        answer: 4,
+        rationale: "Hypotheses are formulated in the introduction chapter as part of the research problem and objectives."
+    },
+    {
+        question: "In which chapter is the research gap typically identified?",
+        choice1: "Literature Review",
+        choice2: "Introduction",
+        choice3: "Methodology",
+        choice4: "Results",
+        answer: 1,
+        rationale: "The literature review identifies gaps in existing research to establish the need for the current study."
     }
 ];const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = questions.length;
