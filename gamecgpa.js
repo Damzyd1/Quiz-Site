@@ -257,6 +257,159 @@ let questions = [
         choice4: "Results",
         answer: 1,
         rationale: "The literature review identifies gaps in existing research to establish the need for the current study."
+    },
+    {
+        question: "A criminologist is studying the relationship between poverty and youth involvement in crime. They hypothesize that 'increased poverty levels lead to higher youth crime rates.' What type of hypothesis is this?",
+        choice1: "Null hypothesis",
+        choice2: "Alternative hypothesis",
+        choice3: "Statistical hypothesis",
+        choice4: "Descriptive hypothesis",
+        answer: 2,
+        rationale: "This statement predicts a specific relationship between two variables, which is characteristic of an alternative hypothesis."
+    },
+    {
+        question: "A researcher observes that areas with more CCTV cameras experience fewer property crimes. They form a hypothesis that 'CCTV installations reduce property crime by 20%.' What makes this hypothesis scientifically testable?",
+        choice1: "It is vague and qualitative.",
+        choice2: "It makes a clear, measurable prediction.",
+        choice3: "It is unrelated to criminological theories.",
+        choice4: "It focuses on ethical concerns only.",
+        answer: 2,
+        rationale: "Testable hypotheses must provide measurable criteria, such as the 20% reduction mentioned."
+    },
+    {
+        question: "During a study on sentencing disparities, a criminologist hypothesizes that 'female offenders are less likely to receive maximum sentences compared to male offenders for similar crimes.' What is the role of this hypothesis?",
+        choice1: "To outline research limitations.",
+        choice2: "To define variables for statistical testing.",
+        choice3: "To provide a philosophical argument.",
+        choice4: "To summarize existing theories.",
+        answer: 2,
+        rationale: "The hypothesis identifies gender as a variable for analyzing sentencing patterns."
+    },
+    {
+        question: "A criminologist is testing whether youth crime rates are higher during school vacations. The null hypothesis states:",
+        choice1: "Youth crime rates are unrelated to school vacations.",
+        choice2: "School vacations increase youth crime rates.",
+        choice3: "School vacations have no effect on youth crime rates.",
+        choice4: "Youth crime rates vary across different age groups.",
+        answer: 3,
+        rationale: "Null hypotheses assert no relationship or effect between variables."
+    },
+    {
+        question: "If a study finds evidence that supports the hypothesis 'Increased police patrols reduce violent crimes in urban areas,' what can the researcher conclude?",
+        choice1: "The null hypothesis is confirmed.",
+        choice2: "The null hypothesis is rejected.",
+        choice3: "The hypothesis is inconclusive.",
+        choice4: "The hypothesis is invalid.",
+        answer: 2,
+        rationale: "Supporting evidence for the hypothesis means rejecting the null hypothesis."
+    },
+    {
+        question: "A criminologist is studying the effect of drug decriminalization on drug-related arrests. They hypothesize, 'Decriminalization of certain drugs decreases arrest rates by 30%.' Which of the following would disprove this hypothesis?",
+        choice1: "A decrease of 10% in arrest rates.",
+        choice2: "A 40% decrease in arrest rates.",
+        choice3: "A 30% increase in arrest rates.",
+        choice4: "No change in arrest rates.",
+        answer: 3,
+        rationale: "An opposite trend disproves the hypothesis."
+    },
+    {
+        question: "A research project examining the relationship between neighborhood watch programs and burglary rates hypothesizes that 'neighborhood watch programs significantly lower burglary rates.' How should the researcher structure their analysis?",
+        choice1: "By studying a neighborhood with no burglary history.",
+        choice2: "By comparing burglary rates before and after program implementation.",
+        choice3: "By focusing solely on police reports.",
+        choice4: "By collecting anecdotal evidence from residents.",
+        answer: 2,
+        rationale: "This approach directly tests the impact of the program."
+    },
+    {
+        question: "Which of the following best defines a research hypothesis?",
+        choice1: "A proven fact about a subject",
+        choice2: "A testable statement about the relationship between variables",
+        choice3: "A personal opinion on a topic",
+        choice4: "A summary of past research findings",
+        answer: 2,
+        rationale: "A research hypothesis is a testable statement that predicts the relationship between two or more variables. It serves as the foundation for empirical research and can be confirmed or refuted through data collection and analysis."
+    },
+    {
+        question: "In criminology research, an independent variable is:",
+        choice1: "The variable that is measured as an outcome",
+        choice2: "The variable that influences or causes a change in another variable",
+        choice3: "A variable that remains constant",
+        choice4: "A variable that has no effect on the study",
+        answer: 2,
+        rationale: "An independent variable is the factor that is manipulated or categorized to observe its effect on a dependent variable. For example, in a study on crime rates, law enforcement policies could be an independent variable affecting crime levels."
+    },
+    {
+        question: "Which of the following is an example of qualitative research?",
+        choice1: "Surveying 500 people about their views on crime",
+        choice2: "Analyzing crime statistics over the past decade",
+        choice3: "Conducting in-depth interviews with ex-convicts about their experiences",
+        choice4: "Using an experimental design to test deterrence strategies",
+        answer: 3,
+        rationale: "Qualitative research focuses on non-numerical data such as interviews, observations, and open-ended surveys. Conducting in-depth interviews with ex-convicts allows researchers to explore personal experiences and perspectives."
+    },
+    {
+        question: "Which research method involves studying subjects in their natural environment without interference?",
+        choice1: "Experimental research",
+        choice2: "Survey research",
+        choice3: "Ethnographic research",
+        choice4: "Longitudinal research",
+        answer: 3,
+        rationale: "Ethnographic research involves immersing oneself in a particular social setting to observe and interact with participants in their natural environment. This method is commonly used in criminology to study criminal subcultures."
+    },
+    {
+        question: "What is the primary purpose of a literature review in research?",
+        choice1: "To summarize the entire study",
+        choice2: "To provide background information and identify gaps in existing research",
+        choice3: "To prove that the researcher's hypothesis is correct",
+        choice4: "To list all previous studies on a topic",
+        answer: 2,
+        rationale: "A literature review helps establish the foundation for a study by providing background information, identifying existing gaps, and demonstrating how the research fits into the broader academic context."
+    },
+    {
+        question: "Which type of data consists of numbers and can be analyzed statistically?",
+        choice1: "Qualitative data",
+        choice2: "Quantitative data",
+        choice3: "Subjective data",
+        choice4: "Descriptive data",
+        answer: 2,
+        rationale: "Quantitative data consists of numerical values that can be measured, counted, and analyzed statistically. Examples include crime rates, survey results, and experimental data."
+    },
+    {
+        question: "Operationalization in research refers to:",
+        choice1: "Choosing a research topic",
+        choice2: "Defining concepts in measurable terms",
+        choice3: "Conducting field research",
+        choice4: "Analyzing statistical data",
+        answer: 2,
+        rationale: "Operationalization is the process of defining abstract concepts in measurable terms. For example, if studying 'police effectiveness,' one might operationalize it using response time, arrest rates, or public satisfaction surveys."
+    },
+    {
+        question: "Which of the following best describes a cross-sectional research design?",
+        choice1: "Collecting data from the same group at multiple time points",
+        choice2: "Comparing multiple groups at a single point in time",
+        choice3: "Following a single individual over a long period",
+        choice4: "Using only historical data for analysis",
+        answer: 2,
+        rationale: "A cross-sectional research design involves collecting data from multiple groups at a single point in time to examine relationships and differences between them."
+    },
+    {
+        question: "Which sampling method gives every member of a population an equal chance of being selected?",
+        choice1: "Convenience sampling",
+        choice2: "Random sampling",
+        choice3: "Snowball sampling",
+        choice4: "Purposive sampling",
+        answer: 2,
+        rationale: "Random sampling ensures that every individual in the population has an equal chance of being selected, reducing selection bias and increasing the generalizability of the study."
+    },
+    {
+        question: "Why is it important to use a control group in experimental research?",
+        choice1: "To make sure the research hypothesis is correct",
+        choice2: "To compare outcomes and isolate the effect of the independent variable",
+        choice3: "To introduce bias into the study",
+        choice4: "To ensure all participants receive the treatment",
+        answer: 2,
+        rationale: "A control group allows researchers to compare results with and without the independent variable, helping to isolate its effect and ensure that observed changes are due to the variable being studied rather than other factors."
     }
 ];const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = questions.length;
