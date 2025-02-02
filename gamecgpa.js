@@ -8,7 +8,7 @@ document.addEventListener("keydown", e => {
   }
 });
 
-const topic = "CSS 305 Exam Simulation";
+const topic = " Exam Simulation";
 const topicId = document.getElementById("topic");
 topicId.innerHTML = topic;
 setTimeout(disappear, 500000);
