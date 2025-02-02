@@ -19,382 +19,319 @@ let availableQuestion = [];
  
   let questions = [
     {
-        question: "Which of the following is NOT part of the prelude in a research report?",
-        choice1: "Abstract",
-        choice2: "Acknowledgment",
-        choice3: "Literature Review",
-        choice4: "Table of Contents",
-        answer: "Literature Review",
-        rationale: "The literature review is not part of the prelude components. Instead, it is a main chapter that evaluates previous studies related to the research topic."
+        question: "What is the primary objective of studying the history of law enforcement in Nigeria?",
+        choice1: "To adopt English policing methods wholesale",
+        choice2: "To integrate traditional and colonial methods of policing",
+        choice3: "To eliminate traditional social control mechanisms",
+        choice4: "To promote colonial superiority",
+        answer: "To integrate traditional and colonial methods of policing", // Answer: B
+        rationale: "Understanding history ensures an integration of indigenous and colonial methods, rather than ignoring cultural context."
     },
     {
-        question: "What is the main purpose of an abstract in a research report?",
-        choice1: "To provide a summary of the research.",
-        choice2: "To acknowledge contributors to the research.",
-        choice3: "To list all the sections of the report.",
-        choice4: "To introduce the research problem.",
-        answer: "To provide a summary of the research.",
-        rationale: "The abstract is a concise summary of the research, including objectives, methodology, findings, and conclusions, designed to give readers an overview of the entire study."
+        question: "Which of the following scenarios best illustrates the objective of integrating traditional and English law enforcement systems?",
+        choice1: "Using local chiefs to manage community disputes while enforcing colonial laws",
+        choice2: "Replacing local chiefs with British administrators for law enforcement",
+        choice3: "Relying solely on customary laws to resolve modern disputes",
+        choice4: "Training British officers on Nigerian traditions without local participation",
+        answer: "Using local chiefs to manage community disputes while enforcing colonial laws", // Answer: A
+        rationale: "This reflects a balanced approach to law enforcement, combining indigenous authority with formal legal frameworks."
     },
     {
-        question: "What is typically included in an acknowledgment section?",
-        choice1: "Research findings",
-        choice2: "References to previous studies",
-        choice3: "Gratitude to contributors and funders",
-        choice4: "Definition of terms",
-        answer: "Gratitude to contributors and funders",
-        rationale: "Acknowledgments are used to express gratitude to individuals or organizations that provided support, funding, or assistance during the research."
+        question: "Why is it important to preserve traditional mediums of social control in modern Nigerian law enforcement?",
+        choice1: "They ensure compliance with British legal traditions.",
+        choice2: "They enhance community trust and cooperation.",
+        choice3: "They reduce the cost of law enforcement.",
+        choice4: "They eliminate the need for police training.",
+        answer: "They enhance community trust and cooperation.", // Answer: B
+        rationale: "Traditional methods are deeply rooted in community culture, fostering trust and effective conflict resolution."
     },
     {
-        question: "In what part of the research is the page numbering typically done with Roman numerals?",
-        choice1: "Chapters",
-        choice2: "Abstract",
-        choice3: "Prelude",
-        choice4: "Conclusion",
-        answer: "Prelude",
-        rationale: "Roman numerals are typically used for numbering pages in the prelude section, such as the abstract, acknowledgment, and table of contents."
+        question: "Critics argue that adopting colonial law enforcement weakened indigenous systems of social control. Do you agree or disagree, and why?",
+        choice1: "Agree, because colonial laws were rigid and disconnected from local customs.",
+        choice2: "Disagree, because colonial systems modernized law enforcement.",
+        choice3: "Agree, because indigenous systems were inferior to colonial methods.",
+        choice4: "Disagree, because colonial and indigenous systems were equally effective.",
+        answer: "Agree, because colonial laws were rigid and disconnected from local customs.", // Answer: A
+        rationale: "Colonial law enforcement often ignored cultural contexts, leading to weakened trust in local systems."
     },
     {
-        question: "Which of the following is the correct sequence of prelude components?",
-        choice1: "Abstract, Table of Contents, Dedication, Acknowledgment",
-        choice2: "Dedication, Abstract, Table of Contents, Acknowledgment",
-        choice3: "Dedication, Acknowledgment, Abstract, Table of Contents",
-        choice4: "Abstract, Dedication, Acknowledgment, Table of Contents",
-        answer: "Dedication, Acknowledgment, Abstract, Table of Contents",
-        rationale: "The prelude components are typically arranged in this order: dedication, acknowledgment, abstract, and table of contents, following academic standards."
+        question: "Which of the following best describes a traditional medium of social control in precolonial Nigeria?",
+        choice1: "Courtroom trials",
+        choice2: "Oath-taking before deities",
+        choice3: "Written codes of law",
+        choice4: "Police patrols",
+        answer: "Oath-taking before deities", // Answer: B
+        rationale: "Indigenous societies relied on spiritual and communal methods like oath-taking for dispute resolution."
     },
     {
-        question: "What is the primary function of the Table of Contents?",
-        choice1: "To summarize the research objectives",
-        choice2: "To list and organize all sections and subsections of the research",
-        choice3: "To introduce the research topic",
-        choice4: "To reference all sources used in the research",
-        answer: "To list and organize all sections and subsections of the research",
-        rationale: "The Table of Contents organizes the structure of the research by listing all chapters, sections, and subsections with their corresponding page numbers."
+        question: "In a multi-ethnic Nigerian community, what traditional method of social control could complement English law enforcement practices?",
+        choice1: "Imposing fines through written statutes",
+        choice2: "Mediation by elders within the community",
+        choice3: "Adopting British-style jury systems",
+        choice4: "Appointing only colonial officers for mediation",
+        answer: "Mediation by elders within the community", // Answer: B
+        rationale: "Elders hold cultural authority and are often trusted mediators, complementing formal law enforcement."
     },
     {
-        question: "Where should keywords be included in a research report?",
-        choice1: "Dedication",
-        choice2: "Table of Contents",
-        choice3: "Abstract",
-        choice4: "Literature Review",
-        answer: "Abstract",
-        rationale: "Keywords are typically included in the abstract to help readers and researchers identify the main themes and topics of the study quickly."
+        question: "How did the imposition of colonial law enforcement impact the role of traditional leaders in Nigeria?",
+        choice1: "It strengthened their authority.",
+        choice2: "It marginalized their roles in conflict resolution.",
+        choice3: "It allowed them to adopt colonial ranks.",
+        choice4: "It left their roles unchanged.",
+        answer: "It marginalized their roles in conflict resolution.", // Answer: B
+        rationale: "Colonial systems often reduced the authority of traditional leaders, centralizing power in the colonial government."
     },
     {
-        question: "Which prelude component recognizes financial or emotional support provided by individuals?",
-        choice1: "Abstract",
-        choice2: "Acknowledgment",
-        choice3: "Preface",
-        choice4: "Methodology",
-        answer: "Acknowledgment",
-        rationale: "The acknowledgment section is used to formally thank individuals or organizations for their financial, emotional, or technical support during the research."
+        question: "Which system is more effective for rural Nigerian communities: traditional social control or English policing methods? Justify your answer.",
+        choice1: "Traditional, because it is culturally relevant and accessible.",
+        choice2: "English, because it is modern and enforceable by law.",
+        choice3: "Traditional, because English systems lack rural infrastructure.",
+        choice4: "English, because traditional methods are outdated.",
+        answer: "Traditional, because it is culturally relevant and accessible.", // Answer: A
+        rationale: "Traditional systems often resonate better with rural communities due to cultural familiarity and accessibility."
     },
     {
-        question: "What is the ideal word count for an abstract in most academic research?",
-        choice1: "50–100 words",
-        choice2: "150–250 words",
-        choice3: "300–500 words",
-        choice4: "500–700 words",
-        answer: "150–250 words",
-        rationale: "Most academic research guidelines recommend an abstract word count between 150 and 250 words to provide a concise but comprehensive overview."
+        question: "What role did traditional religious institutions play in maintaining law and order in precolonial Nigeria?",
+        choice1: "Organizing police patrols",
+        choice2: "Prescribing punishments through spiritual guidance",
+        choice3: "Codifying laws in written form",
+        choice4: "Establishing colonial courts",
+        answer: "Prescribing punishments through spiritual guidance", // Answer: B
+        rationale: "Religious institutions enforced norms through spiritual authority and guided societal behavior."
     },
     {
-        question: "The dedication page is meant to:",
-        choice1: "Explain the research process.",
-        choice2: "Thank contributors to the research.",
-        choice3: "Express gratitude to specific individuals or groups.",
-        choice4: "Outline the research findings.",
-        answer: "Express gratitude to specific individuals or groups.",
-        rationale: "The dedication page is used to express personal gratitude to specific individuals or groups, such as family, mentors, or friends, for their support."
+        question: "If a community in modern Nigeria faces a resurgence of conflicts, what historical lesson from traditional law enforcement could be applied?",
+        choice1: "Involving spiritual leaders in conflict mediation",
+        choice2: "Enforcing only written statutes",
+        choice3: "Appointing colonial-style officers",
+        choice4: "Establishing foreign courts",
+        answer: "Involving spiritual leaders in conflict mediation", // Answer: A
+        rationale: "Involving spiritual leaders often resolves disputes effectively, respecting local beliefs and traditions."
     },
     {
-        question: "Which chapter introduces the research problem?",
-        choice1: "Literature Review",
-        choice2: "Introduction",
-        choice3: "Methodology",
-        choice4: "Conclusion",
-        answer: "Introduction",
-        rationale: "The introduction chapter sets the stage for the research by presenting the research problem, objectives, and significance of the study."
+        question: "What is the primary importance of law enforcement in Nigeria?",
+        choice1: "To intimidate citizens into compliance",
+        choice2: "To maintain peace and protect lives and property",
+        choice3: "To uphold colonial policies in modern society",
+        choice4: "To restrict traditional conflict resolution mechanisms",
+        answer: "To maintain peace and protect lives and property", // Answer: B
+        rationale: "Law enforcement is fundamentally about ensuring societal order and safeguarding citizens."
     },
     {
-        question: "What section of a research report explains why the study is important?",
-        choice1: "Background of the Study",
-        choice2: "Literature Review",
-        choice3: "Methodology",
-        choice4: "Results",
-        answer: "Background of the Study",
-        rationale: "The background of the study explains the context, relevance, and importance of the research to justify why the study was conducted."
+        question: "How can law enforcement officers address rising crime rates in Nigerian urban areas?",
+        choice1: "By adopting strategies that combine community policing and modern surveillance systems",
+        choice2: "By focusing only on punitive measures",
+        choice3: "By disregarding public opinion on police methods",
+        choice4: "By replicating precolonial methods in urban contexts",
+        answer: "By adopting strategies that combine community policing and modern surveillance systems", // Answer: A
+        rationale: "A hybrid approach fosters community trust while utilizing technology for efficiency."
     },
     {
-        question: "What is the main focus of the Literature Review?",
-        choice1: "Defining the research problem",
-        choice2: "Summarizing previous studies related to the topic",
-        choice3: "Describing the data collection tools used",
-        choice4: "Discussing the findings",
-        answer: "Summarizing previous studies related to the topic",
-        rationale: "The literature review critically analyzes and summarizes existing studies, identifying gaps and how the current research addresses them."
+        question: "Why is community involvement critical in Nigerian law enforcement?",
+        choice1: "It reduces the need for formal police training.",
+        choice2: "It fosters mutual trust between citizens and law enforcement.",
+        choice3: "It eliminates the use of force in all cases.",
+        choice4: "It ensures that only traditional methods are used.",
+        answer: "It fosters mutual trust between citizens and law enforcement.", // Answer: B
+        rationale: "Community collaboration enhances law enforcement’s effectiveness by improving trust and information flow."
     },
     {
-        question: "Which chapter typically contains the research questions?",
-        choice1: "Abstract",
-        choice2: "Literature Review",
-        choice3: "Introduction",
-        choice4: "Conclusion",
-        answer: "Introduction",
-        rationale: "Research questions are typically included in the introduction to guide the study and define its scope."
+        question: "Evaluate the effectiveness of Nigeria’s law enforcement in addressing corruption within its ranks.",
+        choice1: "Effective, as recent reforms have eliminated corruption.",
+        choice2: "Partially effective, with ongoing challenges in implementation.",
+        choice3: "Ineffective, as corruption remains widespread.",
+        choice4: "Neutral, as corruption does not affect law enforcement.",
+        answer: "Partially effective, with ongoing challenges in implementation.", // Answer: B
+        rationale: "Reforms are underway, but corruption continues to hinder the full potential of law enforcement."
     },
     {
-        question: "In which chapter is the research design discussed?",
-        choice1: "Methodology",
-        choice2: "Literature Review",
-        choice3: "Results",
-        choice4: "Conclusion",
-        answer: "Methodology",
-        rationale: "The methodology chapter outlines the research design, data collection methods, and tools used to conduct the study."
+        question: "Which institution is the central authority for law enforcement in Nigeria?",
+        choice1: "The National Assembly",
+        choice2: "The Nigeria Police Force",
+        choice3: "The Ministry of Defense",
+        choice4: "The Supreme Court",
+        answer: "The Nigeria Police Force", // Answer: B
+        rationale: "The Nigeria Police Force is constitutionally mandated to oversee law enforcement nationwide."
     },
     {
-        question: "What is the purpose of the methodology chapter?",
-        choice1: "To describe how the research was conducted.",
-        choice2: "To review past studies.",
-        choice3: "To summarize the research findings.",
-        choice4: "To introduce the research topic.",
-        answer: "To describe how the research was conducted.",
-        rationale: "The methodology chapter explains the research process, including techniques, tools, and procedures used to collect and analyze data."
+        question: "In addressing kidnapping in Nigeria, how can law enforcement agencies collaborate effectively?",
+        choice1: "By improving intelligence sharing across states",
+        choice2: "By limiting operations to urban areas",
+        choice3: "By focusing solely on punitive justice",
+        choice4: "By deploying only traditional leaders",
+        answer: "By improving intelligence sharing across states", // Answer: A
+        rationale: "Effective collaboration and intelligence sharing are essential for combating organized crime like kidnapping."
     },
     {
-        question: "The population and sampling are discussed in which chapter?",
-        choice1: "Literature Review",
-        choice2: "Methodology",
-        choice3: "Introduction",
-        choice4: "Conclusion",
-        answer: "Methodology",
-        rationale: "The methodology chapter provides details about the research population, sampling techniques, and how participants were selected."
+        question: "What factors undermine the importance of law enforcement in rural Nigerian communities?",
+        choice1: "High levels of illiteracy among residents",
+        choice2: "Corruption and lack of adequate resources",
+        choice3: "Excessive reliance on traditional systems",
+        choice4: "Strict adherence to colonial practices",
+        answer: "Corruption and lack of adequate resources", // Answer: B
+        rationale: "Corruption and inadequate resources hinder law enforcement’s ability to serve rural areas effectively."
     },
     {
-        question: "Which chapter interprets the research findings?",
-        choice1: "Introduction",
-        choice2: "Results and Discussion",
-        choice3: "Literature Review",
-        choice4: "Methodology",
-        answer: "Results and Discussion",
-        rationale: "The results and discussion chapter presents the findings and interprets them in the context of the research questions and objectives."
+        question: "What is one way law enforcement ensures the protection of fundamental human rights in Nigeria?",
+        choice1: "By training officers on constitutional provisions",
+        choice2: "By enforcing colonial-style laws",
+        choice3: "By delegating human rights issues to NGOs",
+        choice4: "By limiting public access to the judiciary",
+        answer: "By training officers on constitutional provisions",
+        rationale: "Training officers on human rights ensures they respect citizens’ rights during enforcement."
     },
     {
-        question: "What is the main goal of the Conclusion chapter?",
-        choice1: "To summarize the findings and provide recommendations.",
-        choice2: "To present the data collection process.",
-        choice3: "To analyze the research problem.",
-        choice4: "To compare findings with previous studies.",
-        answer: "To summarize the findings and provide recommendations.",
-        rationale: "The conclusion chapter summarizes the research outcomes and provides actionable recommendations based on the findings."
+        question: "If tasked with reforming law enforcement in Nigeria, which area should be addressed first to ensure its importance is upheld?",
+        choice1: "Public perception of law enforcement",
+        choice2: "Recruitment and training of officers",
+        choice3: "International collaboration on crime",
+        choice4: "Privatization of police services",
+        answer: "Recruitment and training of officers",
+        rationale: "Proper recruitment and training lay the foundation for professional and ethical law enforcement."
     },
     {
-        question: "Which of the following is NOT included in the methodology chapter?",
-        choice1: "Data collection methods",
-        choice2: "Research instruments",
-        choice3: "Theoretical framework",
-        choice4: "Sampling techniques",
-        answer: "Theoretical framework",
-        rationale: "The theoretical framework is typically discussed in the literature review to provide a foundation for the research."
+        question: "What was the primary feature of law enforcement during the precolonial era in Nigeria?",
+        choice1: "Centralized policing systems",
+        choice2: "Community-based dispute resolution mechanisms",
+        choice3: "Codified laws enforced by military personnel",
+        choice4: "Reliance on foreign systems for justice",
+        answer: "Community-based dispute resolution mechanisms",
+        rationale: "Precolonial law enforcement relied heavily on community-led mechanisms like elders and religious leaders."
     },
     {
-        question: "Where are research objectives typically found?",
-        choice1: "Literature Review",
-        choice2: "Introduction",
-        choice3: "Abstract",
-        choice4: "Methodology",
-        answer: "Introduction",
-        rationale: "Research objectives are presented in the introduction chapter, outlining the purpose and goals of the study."
+        question: "How can lessons from precolonial law enforcement systems enhance modern Nigerian policing?",
+        choice1: "By reintroducing communal leadership in rural areas",
+        choice2: "By abolishing modern policing systems",
+        choice3: "By rejecting any form of modernization in law enforcement",
+        choice4: "By limiting law enforcement to urban centers",
+        answer: "By reintroducing communal leadership in rural areas",
+        rationale: "Reintegrating communal leadership fosters localized trust and cooperation."
     },
     {
-        question: "The literature review chapter should primarily:",
-        choice1: "Provide original findings.",
-        choice2: "Discuss the research’s methodology.",
-        choice3: "Critically evaluate existing studies on the topic.",
-        choice4: "Summarize the research’s conclusions.",
-        answer: "Critically evaluate existing studies on the topic.",
-        rationale: "A literature review critically examines existing research to highlight gaps, contradictions, and the relevance of the current study."
+        question: "What was the role of age grades in law enforcement during the precolonial era in Nigeria?",
+        choice1: "They served as professional police officers.",
+        choice2: "They acted as informal enforcers of community norms.",
+        choice3: "They replaced elders in decision-making processes.",
+        choice4: "They formalized colonial law in villages.",
+        answer: "They acted as informal enforcers of community norms.",
+        rationale: "Age grades played a key role in enforcing community norms and maintaining order without formal structures."
     },
     {
-        question: "What type of data is typically discussed in the results chapter?",
-        choice1: "Primary data only",
-        choice2: "Secondary data only",
-        choice3: "Both primary and secondary data",
-        choice4: "Theoretical data",
-        answer: "Both primary and secondary data",
-        rationale: "The results chapter can include both primary (collected during the study) and secondary data (sourced from other studies)."
+        question: "Evaluate the effectiveness of spiritual sanctions (e.g., oaths, curses) as a form of law enforcement in precolonial Nigeria.",
+        choice1: "Highly effective, as they instilled fear and ensured compliance.",
+        choice2: "Moderately effective, as they depended on societal beliefs.",
+        choice3: "Ineffective, as they lacked enforceability.",
+        choice4: "Redundant, as formal methods were superior.",
+        answer: "Highly effective, as they instilled fear and ensured compliance.",
+        rationale: "Spiritual sanctions were deeply rooted in societal belief systems, making them a powerful tool for maintaining order."
     },
     {
-        question: "Research hypotheses are commonly discussed in:",
-        choice1: "Abstract",
-        choice2: "Methodology",
-        choice3: "Results",
-        choice4: "Introduction",
-        answer: "Introduction",
-        rationale: "Hypotheses are formulated in the introduction chapter as part of the research problem and objectives."
+        question: "In precolonial Nigeria, which group often mediated disputes and enforced communal laws?",
+        choice1: "Colonial administrators",
+        choice2: "Village elders and religious leaders",
+        choice3: "British missionaries",
+        choice4: "Military personnel",
+        answer: "Village elders and religious leaders",
+        rationale: "Elders and religious leaders were respected figures in precolonial societies, trusted for fair conflict resolution."
     },
     {
-        question: "In which chapter is the research gap typically identified?",
-        choice1: "Literature Review",
-        choice2: "Introduction",
-        choice3: "Methodology",
-        choice4: "Results",
-        answer: "Literature Review",
-        rationale: "The literature review identifies gaps in existing research to establish the need for the current study."
+        question: "Which modern scenario reflects the influence of precolonial law enforcement systems in Nigeria?",
+        choice1: "A community settling disputes through elders and traditional rulers",
+        choice2: "A police force adopting English-style investigative techniques",
+        choice3: "An urban neighborhood creating a written code of conduct",
+        choice4: "A court relying solely on forensic evidence in rural areas",
+        answer: "A community settling disputes through elders and traditional rulers",
+        rationale: "Community involvement in conflict resolution echoes precolonial methods of governance and law enforcement."
     },
     {
-        question: "A criminologist is studying the relationship between poverty and youth involvement in crime. They hypothesize that 'increased poverty levels lead to higher youth crime rates.' What type of hypothesis is this?",
-        choice1: "Null hypothesis",
-        choice2: "Alternative hypothesis",
-        choice3: "Statistical hypothesis",
-        choice4: "Descriptive hypothesis",
-        answer: "Alternative hypothesis",
-        rationale: "This statement predicts a specific relationship between two variables, which is characteristic of an alternative hypothesis."
+        question: "How did the absence of centralized policing in precolonial Nigeria affect societal organization?",
+        choice1: "It created chaos and lawlessness.",
+        choice2: "It strengthened communal bonds and accountability.",
+        choice3: "It led to overreliance on colonial intervention.",
+        choice4: "It rendered traditional institutions irrelevant.",
+        answer: "It strengthened communal bonds and accountability.",
+        rationale: "Decentralized systems promoted strong communal ties and local accountability, ensuring order."
     },
     {
-        question: "A researcher observes that areas with more CCTV cameras experience fewer property crimes. They form a hypothesis that 'CCTV installations reduce property crime by 20%.' What makes this hypothesis scientifically testable?",
-        choice1: "It is vague and qualitative.",
-        choice2: "It makes a clear, measurable prediction.",
-        choice3: "It is unrelated to criminological theories.",
-        choice4: "It focuses on ethical concerns only.",
-        answer: "It makes a clear, measurable prediction.",
-        rationale: "Testable hypotheses must provide measurable criteria, such as the 20% reduction mentioned."
+        question: "Should modern law enforcement in Nigeria reintroduce some aspects of precolonial methods? Why or why not?",
+        choice1: "Yes, because they enhance community participation.",
+        choice2: "No, because they are incompatible with modern systems.",
+        choice3: "Yes, because they are cheaper to implement.",
+        choice4: "No, because they lack professional standards.",
+        answer: "Yes, because they enhance community participation.",
+        rationale: "Precolonial methods foster trust and community involvement, essential for effective policing in diverse societies."
     },
     {
-        question: "During a study on sentencing disparities, a criminologist hypothesizes that 'female offenders are less likely to receive maximum sentences compared to male offenders for similar crimes.' What is the role of this hypothesis?",
-        choice1: "To outline research limitations.",
-        choice2: "To define variables for statistical testing.",
-        choice3: "To provide a philosophical argument.",
-        choice4: "To summarize existing theories.",
-        answer: "To define variables for statistical testing.",
-        rationale: "The hypothesis identifies gender as a variable for analyzing sentencing patterns."
+        question: "What was the primary enforcement mechanism in precolonial Nigerian communities?",
+        choice1: "Written laws enforced by courts",
+        choice2: "Communal participation and moral sanctions",
+        choice3: "Armed officers patrolling the streets",
+        choice4: "Foreign legal advisors monitoring compliance",
+        answer: "Communal participation and moral sanctions",
+        rationale: "Precolonial systems relied on collective responsibility and moral enforcement rather than formal policing."
     },
     {
-        question: "A criminologist is testing whether youth crime rates are higher during school vacations. The null hypothesis states:",
-        choice1: "Youth crime rates are unrelated to school vacations.",
-        choice2: "School vacations increase youth crime rates.",
-        choice3: "School vacations have no effect on youth crime rates.",
-        choice4: "Youth crime rates vary across different age groups.",
-        answer: "School vacations have no effect on youth crime rates.",
-        rationale: "Null hypotheses assert no relationship or effect between variables."
+        question: "How might precolonial communal enforcement practices be adapted to address modern issues like environmental crimes in rural areas?",
+        choice1: "Through communal fines and local monitoring committees",
+        choice2: "By establishing courts in every village",
+        choice3: "By replacing traditional systems with modern laws",
+        choice4: "By involving only national law enforcement agencies",
+        answer: "Through communal fines and local monitoring committees",
+        rationale: "Communal approaches align with local customs and ensure collective responsibility for environmental protection."
     },
     {
-        question: "If a study finds evidence that supports the hypothesis 'Increased police patrols reduce violent crimes in urban areas,' what can the researcher conclude?",
-        choice1: "The null hypothesis is confirmed.",
-        choice2: "The null hypothesis is rejected.",
-        choice3: "The hypothesis is inconclusive.",
-        choice4: "The hypothesis is invalid.",
-        answer: "The null hypothesis is rejected.",
-        rationale: "Supporting evidence for the hypothesis means rejecting the null hypothesis."
+        question: "When was the first formal police force established in Nigeria?",
+        choice1: "1861",
+        choice2: "1891",
+        choice3: "1901",
+        choice4: "1914",
+        answer: "1861",
+        rationale: "The first formal police force in Nigeria was established by the British colonial government in 1861."
     },
     {
-        question: "A criminologist is studying the effect of drug decriminalization on drug-related arrests. They hypothesize, 'Decriminalization of certain drugs decreases arrest rates by 30%.' Which of the following would disprove this hypothesis?",
-        choice1: "A decrease of 10% in arrest rates.",
-        choice2: "A 40% decrease in arrest rates.",
-        choice3: "A 30% increase in arrest rates.",
-        choice4: "No change in arrest rates.",
-        answer: "A 30% increase in arrest rates.",
-        rationale: "An opposite trend disproves the hypothesis."
+        question: "How did the colonial establishment of formal policing differ from precolonial systems in Nigeria?",
+        choice1: "It centralized authority and imposed foreign laws.",
+        choice2: "It strengthened traditional rulers’ authority.",
+        choice3: "It relied entirely on communal enforcement mechanisms.",
+        choice4: "It removed law enforcement duties from colonial administrators.",
+        answer: "It centralized authority and imposed foreign laws.",
+        rationale: "Formal policing centralized power under colonial rule, often disregarding local customs."
     },
     {
-        question: "A research project examining the relationship between neighborhood watch programs and burglary rates hypothesizes that 'neighborhood watch programs significantly lower burglary rates.' How should the researcher structure their analysis?",
-        choice1: "By studying a neighborhood with no burglary history.",
-        choice2: "By comparing burglary rates before and after program implementation.",
-        choice3: "By focusing solely on police reports.",
-        choice4: "By collecting anecdotal evidence from residents.",
-        answer: "By comparing burglary rates before and after program implementation.",
-        rationale: "This approach directly tests the impact of the program."
+        question: "What challenges arose from the establishment of formal policing in colonial Nigeria?",
+        choice1: "Resistance from local communities due to cultural alienation",
+        choice2: "Immediate acceptance of British systems by all regions",
+        choice3: "Replacement of colonial laws with indigenous norms",
+        choice4: "Elimination of community-led conflict resolution",
+        answer: "Resistance from local communities due to cultural alienation",
+        rationale: "The foreign nature of colonial policing methods alienated local communities, leading to resistance."
     },
     {
-        question: "Which of the following best defines a research hypothesis?",
-        choice1: "A proven fact about a subject",
-        choice2: "A testable statement about the relationship between variables",
-        choice3: "A personal opinion on a topic",
-        choice4: "A summary of past research findings",
-        answer: "A testable statement about the relationship between variables",
-        rationale: "A research hypothesis is a testable statement that predicts the relationship between two or more variables. It serves as the foundation for empirical research and can be confirmed or refuted through data collection and analysis."
+        question: "Was the establishment of formal policing in Nigeria necessary for modernization?",
+        choice1: "Yes, but it should have been adapted to local customs.",
+        choice2: "No, because traditional systems were sufficient.",
+        choice3: "Yes, as it introduced modern crime control methods.",
+        choice4: "No, because it disrupted communal harmony.",
+        answer: "Yes, but it should have been adapted to local customs.",
+        rationale: "While formal policing introduced modern systems, it would have been more effective if tailored to Nigeria’s cultural context."
     },
     {
-        question: "In criminology research, an independent variable is:",
-        choice1: "The variable that is measured as an outcome",
-        choice2: "The variable that influences or causes a change in another variable",
-        choice3: "A variable that remains constant",
-        choice4: "A variable that has no effect on the study",
-        answer: "The variable that influences or causes a change in another variable",
-        rationale: "An independent variable is the factor that is manipulated or categorized to observe its effect on a dependent variable. For example, in a study on crime rates, law enforcement policies could be an independent variable affecting crime levels."
+        question: "Which colonial administrative structure supported the creation of formal policing in Nigeria?",
+        choice1: "Indirect Rule",
+        choice2: "French Assimilation",
+        choice3: "Portuguese Mercantilism",
+        choice4: "Islamic Caliphates",
+        answer: "Indirect Rule",
+        rationale: "The British used indirect rule, blending colonial systems with traditional rulers to establish law enforcement."
     },
     {
-        question: "Which of the following is an example of qualitative research?",
-        choice1: "Surveying 500 people about their views on crime",
-        choice2: "Analyzing crime statistics over the past decade",
-        choice3: "Conducting in-depth interviews with ex-convicts about their experiences",
-        choice4: "Using an experimental design to test deterrence strategies",
-        answer: "Conducting in-depth interviews with ex-convicts about their experiences",
-        rationale: "Qualitative research focuses on non-numerical data such as interviews, observations, and open-ended surveys. Conducting in-depth interviews with ex-convicts allows researchers to explore personal experiences and perspectives."
-    },
-    {
-        question: "Which research method involves studying subjects in their natural environment without interference?",
-        choice1: "Experimental research",
-        choice2: "Survey research",
-        choice3: "Ethnographic research",
-        choice4: "Longitudinal research",
-        answer: "Ethnographic research",
-        rationale: "Ethnographic research involves immersing oneself in a particular social setting to observe and interact with participants in their natural environment. This method is commonly used in criminology to study criminal subcultures."
-    },
-    {
-        question: "What is the primary purpose of a literature review in research?",
-        choice1: "To summarize the entire study",
-        choice2: "To provide background information and identify gaps in existing research",
-        choice3: "To prove that the researcher's hypothesis is correct",
-        choice4: "To list all previous studies on a topic",
-        answer: "To provide background information and identify gaps in existing research",
-        rationale: "A literature review helps establish the foundation for a study by providing background information, identifying existing gaps, and demonstrating how the research fits into the broader academic context."
-    },
-    {
-        question: "Which type of data consists of numbers and can be analyzed statistically?",
-        choice1: "Qualitative data",
-        choice2: "Quantitative data",
-        choice3: "Subjective data",
-        choice4: "Descriptive data",
-        answer: "Quantitative data",
-        rationale: "Quantitative data consists of numerical values that can be measured, counted, and analyzed statistically. Examples include crime rates, survey results, and experimental data."
-    },
-    {
-        question: "Operationalization in research refers to:",
-        choice1: "Choosing a research topic",
-        choice2: "Defining concepts in measurable terms",
-        choice3: "Conducting field research",
-        choice4: "Analyzing statistical data",
-        answer: 2,
-        rationale: "Operationalization is the process of defining abstract concepts in measurable terms. For example, if studying 'police effectiveness,' one might operationalize it using response time, arrest rates, or public satisfaction surveys."
-    },
-    {
-        question: "Which of the following best describes a cross-sectional research design?",
-        choice1: "Collecting data from the same group at multiple time points",
-        choice2: "Comparing multiple groups at a single point in time",
-        choice3: "Following a single individual over a long period",
-        choice4: "Using only historical data for analysis",
-        answer: "Comparing multiple groups at a single point in time",
-        rationale: "A cross-sectional research design involves collecting data from multiple groups at a single point in time to examine relationships and differences between them."
-    },
-    {
-        question: "Which sampling method gives every member of a population an equal chance of being selected?",
-        choice1: "Convenience sampling",
-        choice2: "Random sampling",
-        choice3: "Snowball sampling",
-        choice4: "Purposive sampling",
-        answer: "Random sampling",
-        rationale: "Random sampling ensures that every individual in the population has an equal chance of being selected, reducing selection bias and increasing the generalizability of the study."
-    },
-    {
-        question: "Why is it important to use a control group in experimental research?",
-        choice1: "To make sure the research hypothesis is correct",
-        choice2: "To compare outcomes and isolate the effect of the independent variable",
-        choice3: "To introduce bias into the study",
-        choice4: "To ensure all participants receive the treatment",
-        answer: "To compare outcomes and isolate the effect of the independent variable",
-        rationale: "A control group allows researchers to compare results with and without the independent variable, helping to isolate its effect and ensure that observed changes are due to the variable being studied rather than other factors."
+        question: "How could the colonial policing framework have been improved to gain local acceptance?",
+        choice1: "By incorporating traditional leaders in law enforcement roles",
+        choice2: "By enforcing only colonial laws",
+        choice3: "By ignoring cultural differences in policy implementation",
+        choice4: "By replacing traditional rulers entirely",
+        answer: "By incorporating traditional leaders in law enforcement roles",
+        rationale: "Involving traditional leaders would have bridged the gap between colonial and local systems."
     }
 ];
 
