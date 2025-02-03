@@ -19,319 +19,444 @@ let availableQuestion = [];
  
   let questions = [
     {
-        question: "What is the primary objective of studying the history of law enforcement in Nigeria?",
-        choice1: "To adopt English policing methods wholesale",
-        choice2: "To integrate traditional and colonial methods of policing",
-        choice3: "To eliminate traditional social control mechanisms",
-        choice4: "To promote colonial superiority",
-        answer: "To integrate traditional and colonial methods of policing", // Answer: B
-        rationale: "Understanding history ensures an integration of indigenous and colonial methods, rather than ignoring cultural context."
+        question: "Which of the following legal systems had the earliest influence on Nigerian criminal law?",
+        choice1: "Common Law",
+        choice2: "Islamic Law",
+        choice3: "Customary Law",
+        choice4: "Civil Law",
+        answer: "Customary Law",
+        rationale: "Before colonial rule, indigenous customary laws governed criminal behavior in Nigerian communities. These laws varied across ethnic groups and were enforced by traditional rulers and elders."
     },
     {
-        question: "Which of the following scenarios best illustrates the objective of integrating traditional and English law enforcement systems?",
-        choice1: "Using local chiefs to manage community disputes while enforcing colonial laws",
-        choice2: "Replacing local chiefs with British administrators for law enforcement",
-        choice3: "Relying solely on customary laws to resolve modern disputes",
-        choice4: "Training British officers on Nigerian traditions without local participation",
-        answer: "Using local chiefs to manage community disputes while enforcing colonial laws", // Answer: A
-        rationale: "This reflects a balanced approach to law enforcement, combining indigenous authority with formal legal frameworks."
+        question: "The introduction of English Common Law into Nigeria was primarily a result of:",
+        choice1: "British colonization",
+        choice2: "The influence of trade with Portugal",
+        choice3: "The amalgamation of Northern and Southern Nigeria",
+        choice4: "The spread of Christianity",
+        answer: "British colonization",
+        rationale: "The British colonial administration introduced English Common Law into Nigeria, which later became one of the primary sources of Nigerian criminal law."
     },
     {
-        question: "Why is it important to preserve traditional mediums of social control in modern Nigerian law enforcement?",
-        choice1: "They ensure compliance with British legal traditions.",
-        choice2: "They enhance community trust and cooperation.",
-        choice3: "They reduce the cost of law enforcement.",
-        choice4: "They eliminate the need for police training.",
-        answer: "They enhance community trust and cooperation.", // Answer: B
-        rationale: "Traditional methods are deeply rooted in community culture, fostering trust and effective conflict resolution."
+        question: "In what year was the first criminal code formally enacted in Nigeria?",
+        choice1: "1863",
+        choice2: "1914",
+        choice3: "1945",
+        choice4: "1960",
+        answer: "1914",
+        rationale: "The Nigerian Criminal Code was enacted in 1914 for the Southern region based on the Queensland Criminal Code of Australia, while the Penal Code was later adopted for the Northern region in 1960."
     },
     {
-        question: "Critics argue that adopting colonial law enforcement weakened indigenous systems of social control. Do you agree or disagree, and why?",
-        choice1: "Agree, because colonial laws were rigid and disconnected from local customs.",
-        choice2: "Disagree, because colonial systems modernized law enforcement.",
-        choice3: "Agree, because indigenous systems were inferior to colonial methods.",
-        choice4: "Disagree, because colonial and indigenous systems were equally effective.",
-        answer: "Agree, because colonial laws were rigid and disconnected from local customs.", // Answer: A
-        rationale: "Colonial law enforcement often ignored cultural contexts, leading to weakened trust in local systems."
+        question: "The Penal Code of Northern Nigeria was primarily influenced by which of the following legal traditions?",
+        choice1: "French Civil Law",
+        choice2: "Islamic Law and Sudanese Criminal Code",
+        choice3: "Roman Law",
+        choice4: "American Legal System",
+        answer: "Islamic Law and Sudanese Criminal Code",
+        rationale: "The Penal Code, which applies to Northern Nigeria, was influenced by Islamic legal principles and the Sudanese Penal Code, which itself was based on Indian and Islamic legal traditions."
     },
     {
-        question: "Which of the following best describes a traditional medium of social control in precolonial Nigeria?",
-        choice1: "Courtroom trials",
-        choice2: "Oath-taking before deities",
-        choice3: "Written codes of law",
-        choice4: "Police patrols",
-        answer: "Oath-taking before deities", // Answer: B
-        rationale: "Indigenous societies relied on spiritual and communal methods like oath-taking for dispute resolution."
+        question: "Which of the following is NOT a recognized source of Nigerian criminal law?",
+        choice1: "Judicial Precedents",
+        choice2: "International Treaties",
+        choice3: "Military Decrees",
+        choice4: "Presidential Executive Orders",
+        answer: "Presidential Executive Orders",
+        rationale: "Nigerian criminal law is derived from statutes, common law, judicial precedents, customary law, and international treaties. Unlike in some other jurisdictions, executive orders do not serve as a direct source of criminal law in Nigeria."
     },
     {
-        question: "In a multi-ethnic Nigerian community, what traditional method of social control could complement English law enforcement practices?",
-        choice1: "Imposing fines through written statutes",
-        choice2: "Mediation by elders within the community",
-        choice3: "Adopting British-style jury systems",
-        choice4: "Appointing only colonial officers for mediation",
-        answer: "Mediation by elders within the community", // Answer: B
-        rationale: "Elders hold cultural authority and are often trusted mediators, complementing formal law enforcement."
+        question: "A judge in a Nigerian court refers to past Supreme Court decisions when deciding a case. This is an example of which source of law?",
+        choice1: "Legislation",
+        choice2: "Judicial Precedent",
+        choice3: "Customary Law",
+        choice4: "Natural Law",
+        answer: "Judicial Precedent",
+        rationale: "Judicial precedent (stare decisis) ensures consistency in legal decisions by requiring lower courts to follow the rulings of higher courts."
     },
     {
-        question: "How did the imposition of colonial law enforcement impact the role of traditional leaders in Nigeria?",
-        choice1: "It strengthened their authority.",
-        choice2: "It marginalized their roles in conflict resolution.",
-        choice3: "It allowed them to adopt colonial ranks.",
-        choice4: "It left their roles unchanged.",
-        answer: "It marginalized their roles in conflict resolution.", // Answer: B
-        rationale: "Colonial systems often reduced the authority of traditional leaders, centralizing power in the colonial government."
+        question: "A person in Northern Nigeria is arrested for drinking alcohol in public, which is illegal under Sharia law but not under the Penal Code. What legal principle is at play here?",
+        choice1: "Federal Supremacy",
+        choice2: "Legal Pluralism",
+        choice3: "Rule of Law",
+        choice4: "Separation of Powers",
+        answer: "Legal Pluralism",
+        rationale: "Legal pluralism refers to the coexistence of multiple legal systems within a state. In Nigeria, Sharia law applies to Muslims in the North alongside the Penal Code."
     },
     {
-        question: "Which system is more effective for rural Nigerian communities: traditional social control or English policing methods? Justify your answer.",
-        choice1: "Traditional, because it is culturally relevant and accessible.",
-        choice2: "English, because it is modern and enforceable by law.",
-        choice3: "Traditional, because English systems lack rural infrastructure.",
-        choice4: "English, because traditional methods are outdated.",
-        answer: "Traditional, because it is culturally relevant and accessible.", // Answer: A
-        rationale: "Traditional systems often resonate better with rural communities due to cultural familiarity and accessibility."
+        question: "How did the introduction of colonial laws impact pre-existing customary criminal laws in Nigeria?",
+        choice1: "It completely replaced them",
+        choice2: "It coexisted but overruled them in superior courts",
+        choice3: "It reinforced traditional legal systems",
+        choice4: "It was rejected by all Nigerian communities",
+        answer: "It coexisted but overruled them in superior courts",
+        rationale: "While customary law continued in local communities, colonial laws were supreme in courts. The courts applied customary law only if it was not repugnant to natural justice, equity, and good conscience."
     },
     {
-        question: "What role did traditional religious institutions play in maintaining law and order in precolonial Nigeria?",
-        choice1: "Organizing police patrols",
-        choice2: "Prescribing punishments through spiritual guidance",
-        choice3: "Codifying laws in written form",
-        choice4: "Establishing colonial courts",
-        answer: "Prescribing punishments through spiritual guidance", // Answer: B
-        rationale: "Religious institutions enforced norms through spiritual authority and guided societal behavior."
+        question: "The main difference between the Criminal Code and the Penal Code in Nigeria is that:",
+        choice1: "The Criminal Code applies in the North, while the Penal Code applies in the South",
+        choice2: "The Penal Code is based on Islamic law, while the Criminal Code follows common law principles",
+        choice3: "The Criminal Code was introduced after independence, while the Penal Code was colonial law",
+        choice4: "The Penal Code is harsher than the Criminal Code",
+        answer: "The Penal Code is based on Islamic law, while the Criminal Code follows common law principles",
+        rationale: "The Criminal Code (applicable in the South) is derived from English common law, while the Penal Code (applicable in the North) integrates Islamic principles with the Sudanese criminal law model."
     },
     {
-        question: "If a community in modern Nigeria faces a resurgence of conflicts, what historical lesson from traditional law enforcement could be applied?",
-        choice1: "Involving spiritual leaders in conflict mediation",
-        choice2: "Enforcing only written statutes",
-        choice3: "Appointing colonial-style officers",
-        choice4: "Establishing foreign courts",
-        answer: "Involving spiritual leaders in conflict mediation", // Answer: A
-        rationale: "Involving spiritual leaders often resolves disputes effectively, respecting local beliefs and traditions."
+        question: "In evaluating the effectiveness of Nigerian criminal law, which of the following is a major challenge?",
+        choice1: "Overreliance on international legal principles",
+        choice2: "Lack of separation between criminal and civil law",
+        choice3: "Inefficiency in law enforcement and judicial delays",
+        choice4: "The absence of legal education in Nigeria",
+        answer: "Inefficiency in law enforcement and judicial delays",
+        rationale: "A major challenge in Nigeria's criminal justice system is slow judicial processes, corruption, and inadequate law enforcement, which hinder effective implementation of criminal law."
     },
     {
-        question: "What is the primary importance of law enforcement in Nigeria?",
-        choice1: "To intimidate citizens into compliance",
-        choice2: "To maintain peace and protect lives and property",
-        choice3: "To uphold colonial policies in modern society",
-        choice4: "To restrict traditional conflict resolution mechanisms",
-        answer: "To maintain peace and protect lives and property", // Answer: B
-        rationale: "Law enforcement is fundamentally about ensuring societal order and safeguarding citizens."
+        question: "Which of the following is a significant factor influencing criminal behavior in Nigeria?",
+        choice1: "High literacy rates",
+        choice2: "Cultural tolerance for bribery and corruption",
+        choice3: "Lack of ancestral traditions",
+        choice4: "Over-reliance on Western justice systems",
+        answer: "Cultural tolerance for bribery and corruption",
+        rationale: "Societal acceptance of corrupt practices fosters a permissive environment for crime."
     },
     {
-        question: "How can law enforcement officers address rising crime rates in Nigerian urban areas?",
-        choice1: "By adopting strategies that combine community policing and modern surveillance systems",
-        choice2: "By focusing only on punitive measures",
-        choice3: "By disregarding public opinion on police methods",
-        choice4: "By replicating precolonial methods in urban contexts",
-        answer: "By adopting strategies that combine community policing and modern surveillance systems", // Answer: A
-        rationale: "A hybrid approach fosters community trust while utilizing technology for efficiency."
+        question: "A young man from a low-income community in Lagos engages in internet fraud, citing societal pressure for wealth. This behavior is best explained by:",
+        choice1: "Rational choice theory",
+        choice2: "Anomie theory",
+        choice3: "Biological determinism",
+        choice4: "Routine activity theory",
+        answer: "Anomie theory",
+        rationale: "Anomie theory links deviance to societal disintegration, where traditional norms fail to regulate behavior."
     },
     {
-        question: "Why is community involvement critical in Nigerian law enforcement?",
-        choice1: "It reduces the need for formal police training.",
-        choice2: "It fosters mutual trust between citizens and law enforcement.",
-        choice3: "It eliminates the use of force in all cases.",
-        choice4: "It ensures that only traditional methods are used.",
-        answer: "It fosters mutual trust between citizens and law enforcement.", // Answer: B
-        rationale: "Community collaboration enhances law enforcement’s effectiveness by improving trust and information flow."
+        question: "The practice of 'Juju' rituals in crimes such as fraud or theft reflects:",
+        choice1: "The rejection of cultural traditions",
+        choice2: "A blend of spiritual beliefs and criminal intent",
+        choice3: "Strict adherence to statutory laws",
+        choice4: "The decline of superstitious practices",
+        answer: "A blend of spiritual beliefs and criminal intent",
+        rationale: "Many criminals believe spiritual rituals offer protection or ensure success in illegal activities."
     },
     {
-        question: "Evaluate the effectiveness of Nigeria’s law enforcement in addressing corruption within its ranks.",
-        choice1: "Effective, as recent reforms have eliminated corruption.",
-        choice2: "Partially effective, with ongoing challenges in implementation.",
-        choice3: "Ineffective, as corruption remains widespread.",
-        choice4: "Neutral, as corruption does not affect law enforcement.",
-        answer: "Partially effective, with ongoing challenges in implementation.", // Answer: B
-        rationale: "Reforms are underway, but corruption continues to hinder the full potential of law enforcement."
+        question: "How does the concept of 'area boys' in Nigeria illustrate cultural factors in criminal behavior?",
+        choice1: "They represent organized religious groups",
+        choice2: "They are influenced by unemployment and urbanization",
+        choice3: "They are primarily a law enforcement initiative",
+        choice4: "They represent traditional vigilante systems",
+        answer: "They represent organized religious groups",
+        rationale: "'Area boys' reflect how socio-economic conditions drive criminal behavior in urban centers."
     },
     {
-        question: "Which institution is the central authority for law enforcement in Nigeria?",
-        choice1: "The National Assembly",
-        choice2: "The Nigeria Police Force",
-        choice3: "The Ministry of Defense",
-        choice4: "The Supreme Court",
-        answer: "The Nigeria Police Force", // Answer: B
-        rationale: "The Nigeria Police Force is constitutionally mandated to oversee law enforcement nationwide."
+        question: "A woman is accused of stealing to feed her children, citing extreme poverty. Her actions align most closely with:",
+        choice1: "Deterrence theory",
+        choice2: "Strain theory",
+        choice3: "Labeling theory",
+        choice4: "Conflict theory",
+        answer: "Strain theory",
+        rationale: "Strain theory posits that individuals resort to crime when they lack legitimate means to achieve societal goals."
     },
     {
-        question: "In addressing kidnapping in Nigeria, how can law enforcement agencies collaborate effectively?",
-        choice1: "By improving intelligence sharing across states",
-        choice2: "By limiting operations to urban areas",
-        choice3: "By focusing solely on punitive justice",
-        choice4: "By deploying only traditional leaders",
-        answer: "By improving intelligence sharing across states", // Answer: A
-        rationale: "Effective collaboration and intelligence sharing are essential for combating organized crime like kidnapping."
+        question: "What role does peer influence play in the criminal behavior of youths in Nigeria?",
+        choice1: "It is negligible in low-income communities",
+        choice2: "It reinforces cultural values that oppose deviance",
+        choice3: "It often leads to group-based criminal activities",
+        choice4: "It decreases the likelihood of committing crime",
+        answer: "It often leads to group-based criminal activities",
+        rationale: "Peer groups can provide support and encouragement for deviant behavior, especially among youths."
     },
     {
-        question: "What factors undermine the importance of law enforcement in rural Nigerian communities?",
-        choice1: "High levels of illiteracy among residents",
-        choice2: "Corruption and lack of adequate resources",
-        choice3: "Excessive reliance on traditional systems",
-        choice4: "Strict adherence to colonial practices",
-        answer: "Corruption and lack of adequate resources", // Answer: B
-        rationale: "Corruption and inadequate resources hinder law enforcement’s ability to serve rural areas effectively."
+        question: "The rise of cybercrime in Nigeria is often attributed to:",
+        choice1: "Traditional African values",
+        choice2: "Economic hardship and globalization",
+        choice3: "The prevalence of manual labor jobs",
+        choice4: "Strict internet monitoring laws",
+        answer: "Economic hardship and globalization",
+        rationale: "Poverty and access to global networks create opportunities and motives for cybercrime."
     },
     {
-        question: "What is one way law enforcement ensures the protection of fundamental human rights in Nigeria?",
-        choice1: "By training officers on constitutional provisions",
-        choice2: "By enforcing colonial-style laws",
-        choice3: "By delegating human rights issues to NGOs",
-        choice4: "By limiting public access to the judiciary",
-        answer: "By training officers on constitutional provisions",
-        rationale: "Training officers on human rights ensures they respect citizens’ rights during enforcement."
+        question: "A man commits violent crimes to avenge the death of a family member. His actions are most aligned with:",
+        choice1: "Conflict theory",
+        choice2: "Restorative justice principles",
+        choice3: "Cultural norms of retribution",
+        choice4: "Social learning theory",
+        answer: "Cultural norms of retribution",
+        rationale: "Some Nigerian communities uphold retribution as a traditional justice mechanism."
     },
     {
-        question: "If tasked with reforming law enforcement in Nigeria, which area should be addressed first to ensure its importance is upheld?",
-        choice1: "Public perception of law enforcement",
-        choice2: "Recruitment and training of officers",
-        choice3: "International collaboration on crime",
-        choice4: "Privatization of police services",
-        answer: "Recruitment and training of officers",
-        rationale: "Proper recruitment and training lay the foundation for professional and ethical law enforcement."
+        question: "Which of the following is a personal factor that contributes to criminal behavior?",
+        choice1: "Geographical location",
+        choice2: "Religious upbringing",
+        choice3: "Substance abuse",
+        choice4: "Socioeconomic status",
+        answer: "Substance abuse",
+        rationale: "Addiction can impair judgment and lead to criminal acts to sustain habits."
     },
     {
-        question: "What was the primary feature of law enforcement during the precolonial era in Nigeria?",
-        choice1: "Centralized policing systems",
-        choice2: "Community-based dispute resolution mechanisms",
-        choice3: "Codified laws enforced by military personnel",
-        choice4: "Reliance on foreign systems for justice",
-        answer: "Community-based dispute resolution mechanisms",
-        rationale: "Precolonial law enforcement relied heavily on community-led mechanisms like elders and religious leaders."
+        question: "In a tribal community, a person is ostracized after committing a crime but later reintegrated after showing remorse. This reflects:",
+        choice1: "Punitive justice",
+        choice2: "Transformative justice",
+        choice3: "Restorative justice",
+        choice4: "Deterrent justice",
+        answer: "Restorative justice",
+        rationale: "Restorative justice focuses on repairing harm and fostering reconciliation."
     },
     {
-        question: "How can lessons from precolonial law enforcement systems enhance modern Nigerian policing?",
-        choice1: "By reintroducing communal leadership in rural areas",
-        choice2: "By abolishing modern policing systems",
-        choice3: "By rejecting any form of modernization in law enforcement",
-        choice4: "By limiting law enforcement to urban centers",
-        answer: "By reintroducing communal leadership in rural areas",
-        rationale: "Reintegrating communal leadership fosters localized trust and cooperation."
+        question: "Which of the following cultural practices in Nigeria has been linked to ritual killings?",
+        choice1: "Festive masquerade dances",
+        choice2: "Juju or spiritual rituals",
+        choice3: "Traditional healing practices",
+        choice4: "Ancestral land disputes",
+        answer: "Juju or spiritual rituals",
+        rationale: "Ritual killings are often rooted in beliefs that spiritual rituals bring wealth, power, or protection."
     },
     {
-        question: "What was the role of age grades in law enforcement during the precolonial era in Nigeria?",
-        choice1: "They served as professional police officers.",
-        choice2: "They acted as informal enforcers of community norms.",
-        choice3: "They replaced elders in decision-making processes.",
-        choice4: "They formalized colonial law in villages.",
-        answer: "They acted as informal enforcers of community norms.",
-        rationale: "Age grades played a key role in enforcing community norms and maintaining order without formal structures."
+        question: "Case Scenario: A local community regularly uses ostracism as a punishment for theft. What criminological concept best explains this practice?",
+        choice1: "Retributive justice",
+        choice2: "Restorative justice",
+        choice3: "Traditional justice",
+        choice4: "Cultural deviance",
+        answer: "Restorative justice",
+        rationale: "Ostracism aligns with restorative justice as it seeks to address harm while maintaining social harmony."
     },
     {
-        question: "Evaluate the effectiveness of spiritual sanctions (e.g., oaths, curses) as a form of law enforcement in precolonial Nigeria.",
-        choice1: "Highly effective, as they instilled fear and ensured compliance.",
-        choice2: "Moderately effective, as they depended on societal beliefs.",
-        choice3: "Ineffective, as they lacked enforceability.",
-        choice4: "Redundant, as formal methods were superior.",
-        answer: "Highly effective, as they instilled fear and ensured compliance.",
-        rationale: "Spiritual sanctions were deeply rooted in societal belief systems, making them a powerful tool for maintaining order."
+        question: "What is a primary reason for the persistence of traditional crime control systems in rural Nigerian communities?",
+        choice1: "Lack of modern policing infrastructure",
+        choice2: "High levels of urban migration",
+        choice3: "Preference for Western legal systems",
+        choice4: "Increasing literacy rates",
+        answer: "Lack of modern policing infrastructure",
+        rationale: "Many rural areas lack access to formal legal systems, making traditional methods essential."
     },
     {
-        question: "In precolonial Nigeria, which group often mediated disputes and enforced communal laws?",
-        choice1: "Colonial administrators",
-        choice2: "Village elders and religious leaders",
-        choice3: "British missionaries",
-        choice4: "Military personnel",
-        answer: "Village elders and religious leaders",
-        rationale: "Elders and religious leaders were respected figures in precolonial societies, trusted for fair conflict resolution."
+        question: "Which of the following reflects the cultural deviance theory in the Nigerian context?",
+        choice1: "Urban youth adopting cybercrime due to peer influence",
+        choice2: "Farmers engaging in land disputes over scarce resources",
+        choice3: "The normalization of bribery in business transactions",
+        choice4: "The practice of street vending without permits",
+        answer: "The normalization of bribery in business transactions",
+        rationale: "Cultural deviance theory examines how societal norms can conflict with legal standards."
     },
     {
-        question: "Which modern scenario reflects the influence of precolonial law enforcement systems in Nigeria?",
-        choice1: "A community settling disputes through elders and traditional rulers",
-        choice2: "A police force adopting English-style investigative techniques",
-        choice3: "An urban neighborhood creating a written code of conduct",
-        choice4: "A court relying solely on forensic evidence in rural areas",
-        answer: "A community settling disputes through elders and traditional rulers",
-        rationale: "Community involvement in conflict resolution echoes precolonial methods of governance and law enforcement."
+        question: "Case Scenario: A man from a rural community is accused of witchcraft and lynched by his neighbors. This act demonstrates:",
+        choice1: "Restorative justice principles",
+        choice2: "Informal social control",
+        choice3: "Anomie in modern society",
+        choice4: "Rational choice theory",
+        answer: "Informal social control",
+        rationale: "The community uses extrajudicial measures to enforce traditional norms."
     },
     {
-        question: "How did the absence of centralized policing in precolonial Nigeria affect societal organization?",
-        choice1: "It created chaos and lawlessness.",
-        choice2: "It strengthened communal bonds and accountability.",
-        choice3: "It led to overreliance on colonial intervention.",
-        choice4: "It rendered traditional institutions irrelevant.",
-        answer: "It strengthened communal bonds and accountability.",
-        rationale: "Decentralized systems promoted strong communal ties and local accountability, ensuring order."
+        question: "What is a significant driver of internet fraud (Yahoo Yahoo) among Nigerian youths?",
+        choice1: "Limited exposure to international systems",
+        choice2: "Economic inequality and societal pressures",
+        choice3: "Overregulation of the banking system",
+        choice4: "Inability to access education loans",
+        answer: "Economic inequality and societal pressures",
+        rationale: "Economic hardship and cultural emphasis on wealth push many youths into cybercrime."
     },
     {
-        question: "Should modern law enforcement in Nigeria reintroduce some aspects of precolonial methods? Why or why not?",
-        choice1: "Yes, because they enhance community participation.",
-        choice2: "No, because they are incompatible with modern systems.",
-        choice3: "Yes, because they are cheaper to implement.",
-        choice4: "No, because they lack professional standards.",
-        answer: "Yes, because they enhance community participation.",
-        rationale: "Precolonial methods foster trust and community involvement, essential for effective policing in diverse societies."
+        question: "Case Scenario: A woman is arrested for stealing food for her children due to extreme poverty. Which criminological theory best explains her actions?",
+        choice1: "Conflict theory",
+        choice2: "Strain theory",
+        choice3: "Social disorganization theory",
+        choice4: "Routine activity theory",
+        answer: "Strain theory",
+        rationale: "Strain theory highlights the link between lack of resources and deviant behavior."
     },
     {
-        question: "What was the primary enforcement mechanism in precolonial Nigerian communities?",
-        choice1: "Written laws enforced by courts",
-        choice2: "Communal participation and moral sanctions",
-        choice3: "Armed officers patrolling the streets",
-        choice4: "Foreign legal advisors monitoring compliance",
-        answer: "Communal participation and moral sanctions",
-        rationale: "Precolonial systems relied on collective responsibility and moral enforcement rather than formal policing."
+        question: "Which personal factor is most likely to lead to criminal behavior in urban areas?",
+        choice1: "Cultural adherence to traditions",
+        choice2: "Substance abuse and addiction",
+        choice3: "High levels of literacy",
+        choice4: "Overcrowded public transport systems",
+        answer: "Substance abuse and addiction",
+        rationale: "Addiction often compels individuals to commit crimes to sustain their habits."
     },
     {
-        question: "How might precolonial communal enforcement practices be adapted to address modern issues like environmental crimes in rural areas?",
-        choice1: "Through communal fines and local monitoring committees",
-        choice2: "By establishing courts in every village",
-        choice3: "By replacing traditional systems with modern laws",
-        choice4: "By involving only national law enforcement agencies",
-        answer: "Through communal fines and local monitoring committees",
-        rationale: "Communal approaches align with local customs and ensure collective responsibility for environmental protection."
+        question: "Case Scenario: A young man involved in gang activity cites protection and belonging as his primary motives. His behavior aligns with:",
+        choice1: "Rational choice theory",
+        choice2: "Labeling theory",
+        choice3: "Social learning theory",
+        choice4: "Anomie theory",
+        answer: "Social learning theory",
+        rationale: "Gang activity often results from learned behavior and social reinforcement."
     },
     {
-        question: "When was the first formal police force established in Nigeria?",
-        choice1: "1861",
-        choice2: "1891",
-        choice3: "1901",
-        choice4: "1914",
-        answer: "1861",
-        rationale: "The first formal police force in Nigeria was established by the British colonial government in 1861."
+        question: "Which of the following best explains the rise of child trafficking in Nigeria?",
+        choice1: "Decline of community-based child-rearing systems",
+        choice2: "Cultural shift toward Western values",
+        choice3: "Socioeconomic desperation and weak legal enforcement",
+        choice4: "Overregulation of adoption processes",
+        answer: "Socioeconomic desperation and weak legal enforcement",
+        rationale: "Poverty and lack of accountability create conditions for trafficking to thrive."
     },
     {
-        question: "How did the colonial establishment of formal policing differ from precolonial systems in Nigeria?",
-        choice1: "It centralized authority and imposed foreign laws.",
-        choice2: "It strengthened traditional rulers’ authority.",
-        choice3: "It relied entirely on communal enforcement mechanisms.",
-        choice4: "It removed law enforcement duties from colonial administrators.",
-        answer: "It centralized authority and imposed foreign laws.",
-        rationale: "Formal policing centralized power under colonial rule, often disregarding local customs."
+        question: "A young woman wearing brightly colored, unconventional clothing is frowned upon in her conservative community but not arrested. This is an example of:",
+        choice1: "Crime",
+        choice2: "Deviance",
+        choice3: "Both crime and deviance",
+        choice4: "Neither crime nor deviance",
+        answer: "Deviance",
+        rationale: "Deviance involves actions that violate societal norms but are not necessarily illegal."
     },
     {
-        question: "What challenges arose from the establishment of formal policing in colonial Nigeria?",
-        choice1: "Resistance from local communities due to cultural alienation",
-        choice2: "Immediate acceptance of British systems by all regions",
-        choice3: "Replacement of colonial laws with indigenous norms",
-        choice4: "Elimination of community-led conflict resolution",
-        answer: "Resistance from local communities due to cultural alienation",
-        rationale: "The foreign nature of colonial policing methods alienated local communities, leading to resistance."
+        question: "A behavior can be considered both deviant and criminal when:",
+        choice1: "It breaks a law and violates social norms.",
+        choice2: "It is accepted by law but not by society.",
+        choice3: "It is universally acknowledged as immoral.",
+        choice4: "It only receives societal disapproval.",
+        answer: "It breaks a law and violates social norms.",
+        rationale: "Acts like theft violate legal statutes and societal expectations."
     },
     {
-        question: "Was the establishment of formal policing in Nigeria necessary for modernization?",
-        choice1: "Yes, but it should have been adapted to local customs.",
-        choice2: "No, because traditional systems were sufficient.",
-        choice3: "Yes, as it introduced modern crime control methods.",
-        choice4: "No, because it disrupted communal harmony.",
-        answer: "Yes, but it should have been adapted to local customs.",
-        rationale: "While formal policing introduced modern systems, it would have been more effective if tailored to Nigeria’s cultural context."
+        question: "In which scenario would an act be considered deviant but not criminal?",
+        choice1: "A person publicly criticizes the government.",
+        choice2: "A person jaywalks in a busy city street.",
+        choice3: "A person refuses to shake hands in a formal meeting.",
+        choice4: "A person drives under the influence of alcohol.",
+        answer: "A person refuses to shake hands in a formal meeting.",
+        rationale: "Such behavior violates etiquette but does not break any laws."
     },
     {
-        question: "Which colonial administrative structure supported the creation of formal policing in Nigeria?",
-        choice1: "Indirect Rule",
-        choice2: "French Assimilation",
-        choice3: "Portuguese Mercantilism",
-        choice4: "Islamic Caliphates",
-        answer: "Indirect Rule",
-        rationale: "The British used indirect rule, blending colonial systems with traditional rulers to establish law enforcement."
+        question: "Crime and deviance share which of the following characteristics?",
+        choice1: "Both are determined by the individual’s moral stance.",
+        choice2: "Both are socially constructed and vary by culture.",
+        choice3: "Both result in formal legal sanctions.",
+        choice4: "Both are universally defined across societies.",
+        answer: "Both are socially constructed and vary by culture.",
+        rationale: "Cultural norms and legal systems differ across societies."
     },
     {
-        question: "How could the colonial policing framework have been improved to gain local acceptance?",
-        choice1: "By incorporating traditional leaders in law enforcement roles",
-        choice2: "By enforcing only colonial laws",
-        choice3: "By ignoring cultural differences in policy implementation",
-        choice4: "By replacing traditional rulers entirely",
-        answer: "By incorporating traditional leaders in law enforcement roles",
-        rationale: "Involving traditional leaders would have bridged the gap between colonial and local systems."
+        question: "A society legalizes same-sex marriage, but certain religious groups continue to condemn it. How does this reflect the relationship between crime and deviance?",
+        choice1: "Deviance and crime always overlap.",
+        choice2: "Deviance can persist even when the law changes.",
+        choice3: "Crime becomes irrelevant in the presence of legal change.",
+        choice4: "Law shapes societal norms entirely.",
+        answer: "Deviance can persist even when the law changes.",
+        rationale: "Legal acceptance does not always eliminate societal disapproval."
+    },
+    {
+        question: "Which of the following best illustrates the cultural relativity of deviance?",
+        choice1: "Stealing is considered wrong universally.",
+        choice2: "Drinking alcohol is prohibited in some countries but acceptable in others.",
+        choice3: "Murder is punishable everywhere.",
+        choice4: "Assault is universally deemed unacceptable.",
+        answer:  "Drinking alcohol is prohibited in some countries but acceptable in others.",
+        rationale: "What is deviant in one culture may not be deviant in another."
+    },
+    {
+        question: "The societal reaction to deviance differs from reactions to crime because:",
+        choice1: "Crime is always punished, but deviance is ignored.",
+        choice2: "Deviance often lacks formal sanctions.",
+        choice3: "Crime only affects individuals, while deviance affects society.",
+        choice4: "Deviance has legal consequences, while crime does not.",
+        answer: "Deviance often lacks formal sanctions.",
+        rationale: "Deviance usually attracts social disapproval rather than legal punishment."
+    },
+    {
+        question: "A behavior classified as a crime in one culture might only be considered deviant in another. This highlights:",
+        choice1: "The universal nature of deviance.",
+        choice2: "The static nature of criminal law.",
+        choice3: "The importance of local customs in defining norms.",
+        choice4: "The irrelevance of cultural differences in law.",
+        answer: "The importance of local customs in defining norms.",
+        rationale: "Cultural context shapes what is defined as deviant or criminal."
+    },
+    {
+        question: "How does the concept of 'victimless crimes' challenge the distinction between crime and deviance?",
+        choice1: "It implies that all crimes have victims.",
+        choice2: "It shows that crimes do not always harm others.",
+        choice3: "It proves that deviance and crime are identical.",
+        choice4: "It shows that societal norms are unimportant.",
+        answer: "It shows that crimes do not always harm others.",
+        rationale: "Victimless crimes (e.g., drug use) may not harm others but are still illegal."
+    },
+    {
+        question: "In a highly traditional society, public displays of affection are met with harsh punishment, while in modern urban settings, such behavior is accepted. This demonstrates:",
+        choice1: "The rigidity of deviance across cultures.",
+        choice2: "The universality of criminal behavior.",
+        choice3: "The influence of cultural values on deviance.",
+        choice4: "The irrelevance of societal norms.",
+        answer: "The influence of cultural values on deviance.",
+        rationale: "Norms and perceptions of deviance change based on cultural values."
+    },
+    {
+      question: "What distinguishes white-collar crime from other types of crime?",
+      choice1: "It involves violence",
+      choice2: "It is committed by individuals in high social positions",
+      choice3: "It is always victimless",
+      choice4: "It is only punishable by fines",
+      answer: "It is committed by individuals in high social positions"
+    },
+    {
+      question: "Which criminological theory explains crime as a result of learned behaviour within close social groups",
+      choice1: "Strain Theory",
+      choice2: "Social Learning Theory",
+      choice3: "Rational Choice Theory",
+      choice4: "Biological Theory",
+      answer: "Social Learning Theory"
+    },
+    {
+      question: "Which of the following is a transnational crime?",
+      choice1: "Robbery in a local store",
+      choice2: "Money laundering through international banks",
+      choice3: "Domestic violence",
+      choice4: "Illegal parking",
+      answer: "Money laundering through international banks"
+    },
+    {
+      question: "Which theory of crime focuses on how societal labeling cam reinforce criminal behaviour?",
+      choice1: "Differential Association Theory",
+      choice2: "Labeling Theory",
+      choice3: "Rational Choice Theory",
+      choice4: "Routine Activities Theory",
+      answer: "Labeling Theory"
+    },
+    {
+      question: "Which of the following crimes is classified as a crime against property?",
+      choice1: "Arson",
+      choice2: "Murder",
+      choice3: "Kidnapping",
+      choice4: "Assault",
+      answer: "Arson"
+    },
+    {
+      question: "A crime insider trading is an example of?",
+      choice1: "Violent crime",
+      choice2: "Property crime",
+      choice3: "White-collar crime",
+      choice4: "Organized crime",
+      answer: "White-collar crime"
+    },
+    {
+      question: "The term 'Mens Rea' refers to?",
+      choice1: "The physical act of committing a crime",
+      choice2: "The legal consequences of a crime",
+      choice3: "The mental intent or guilty mind behind a crime",
+      choice4: "The classification of crime types",
+      answer: "The mental intent or guilty mind behind a crime"
+    },
+    {
+      question: "Strain theory suggests that crime occurs when?",
+      choice1: "Individuals lack self-control",
+      choice2: "Social norms are unclear or absent",
+      choice3: "There is a gap between goals and means to achieve them",
+      choice4: "Society rewards deviant behaviour",
+      answer: "There is a gap between goals and means to achieve them"
+    },
+    {
+      question: "According to the psychological perspective, crime is often linked to?",
+      choice1: "Socioeconomic inequality",
+      choice2: "Deviant peer groups",
+      choice3: "Personality traits and mental health issues",
+      choice4: "Genetic predispositions",
+      answer: "Personality traits and mental health issues"
+    },
+    {
+      question: "What is an example of a victimless crime?",
+      choice1: "Assault",
+      choice2: "Drug use",
+      choice3: "Robbery",
+      choice4: "Vandalism",
+      answer: "Drug use"
     }
 ];
 
