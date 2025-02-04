@@ -26,8 +26,8 @@ function goToNextPage(){
 
 */
 
-const validPasswords = ["Eniola@Prime21","Fati1","Damilola","Otal!2024","Sara#2024","Raphael#Pro","Ys@Pro2025","Yusuf#Elite","Fikayo@Corp""Adamu$Safe""J@mes2025""Bashir#Biz"];
-const passwordVersion = "v14";
+const validPasswords = ["Eniola@Prime21","Fati1","Damilola","Otal!2024","Sara#2024","Raphael#Pro","Ys@Pro2025","Yusuf#Elite","Ayoman1","Fikayo@Corp""Adamu$Safe""J@mes2025""Bashir#Biz"];
+const passwordVersion = "v15";
 const sessionExpiryTime = 1 * 60 * 60 * 1000; // 1 minute
 const splashScreen = document.getElementById("splash-screen");
 
@@ -58,7 +58,7 @@ function login() {
 
 // Protect Page Function
 function protectPage() {
-  const passwordVersion = "v14";
+  const passwordVersion = "v15";
   const sessionExpiryTime = 1 * 60 * 60 * 1000; // 1 minute
 
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true"; // Ensure type check
