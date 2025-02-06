@@ -34,534 +34,575 @@ let questionCounter = 0;
 let availableQuestion = [];
 let questions = [
     {
-        question: "Which of the following legal systems had the earliest influence on Nigerian criminal law?",
-        choice1: "Common Law",
-        choice2: "Islamic Law",
-        choice3: "Customary Law",
-        choice4: "Civil Law",
-        answer: 3,
-        rationale: "Before colonial rule, indigenous customary laws governed criminal behavior in Nigerian communities. These laws varied across ethnic groups and were enforced by traditional rulers and elders."
+        question: "In the context of the criminal justice system, what is the primary role of a confessor?",
+        choice1: "To provide evidence against the victim",
+        choice2: "To admit involvement in a crime",
+        choice3: "To assist in the defense's case preparation",
+        choice4: "To influence public opinion about the crime",
+        answer: 2,
+        rationale: "The primary role of a confessor is to admit involvement in a crime, which can serve as evidence in legal proceedings."
     },
     {
-        question: "The introduction of English Common Law into Nigeria was primarily a result of:",
-        choice1: "British colonization",
-        choice2: "The influence of trade with Portugal",
-        choice3: "The amalgamation of Northern and Southern Nigeria",
-        choice4: "The spread of Christianity",
+        question: "Which of the following is a key factor determining the credibility of a confessor's statement in the criminal justice system?",
+        choice1: "The social status of the confessor",
+        choice2: "The circumstances under which the confession was obtained",
+        choice3: "The relationship between the confessor and the victim",
+        choice4: "The length of time it took to obtain the confession",
+        answer: 2,
+        rationale: "The circumstances under which the confession was obtained are critical in determining its credibility and admissibility in court."
+    },
+    {
+        question: "What is the significance of corroborating evidence alongside a confession in criminal proceedings?",
+        choice1: "It confirms the confession's authenticity and reliability",
+        choice2: "It ensures the confessor receives leniency",
+        choice3: "It reduces the need for a trial",
+        choice4: "It simplifies the legal process for the prosecutor",
         answer: 1,
-        rationale: "The British colonial administration introduced English Common Law into Nigeria, which later became one of the primary sources of Nigerian criminal law."
+        rationale: "Corroborating evidence is essential to confirm the authenticity and reliability of a confession, preventing wrongful convictions."
     },
     {
-        question: "In what year was the first criminal code formally enacted in Nigeria?",
-        choice1: "1863",
-        choice2: "1914",
-        choice3: "1945",
-        choice4: "1960",
+        question: "What legal safeguard is essential to protect a confessor’s rights during interrogation?",
+        choice1: "Public access to the confession process",
+        choice2: "Access to a jury during interrogation",
+        choice3: "The presence of legal counsel",
+        choice4: "The option to provide anonymous testimony",
+        answer: 3,
+        rationale: "The presence of legal counsel ensures that the confessor's rights are protected during interrogation and prevents coercion."
+    },
+    {
+        question: "How does a confessor's mental state impact the admissibility of their confession in court?",
+        choice1: "It determines whether the confession can be broadcast to the public",
+        choice2: "It affects the court's decision to accept the confession as voluntary",
+        choice3: "It allows the confessor to withdraw their statement at any time",
+        choice4: "It influences the severity of the punishment",
         answer: 2,
-        rationale: "The Nigerian Criminal Code was enacted in 1914 for the Southern region based on the Queensland Criminal Code of Australia, while the Penal Code was later adopted for the Northern region in 1960."
+        rationale: "A confessor's mental state is crucial in assessing whether the confession was made voluntarily, a key requirement for admissibility."
     },
     {
-        question: "The Penal Code of Northern Nigeria was primarily influenced by which of the following legal traditions?",
-        choice1: "French Civil Law",
-        choice2: "Islamic Law and Sudanese Criminal Code",
-        choice3: "Roman Law",
-        choice4: "American Legal System",
+        question: "What is the primary characteristic of a forced confession?",
+        choice1: "It is obtained through persuasion",
+        choice2: "It is given willingly by the suspect",
+        choice3: "It is extracted using threats or coercion",
+        choice4: "It is provided anonymously",
+        answer: 3,
+        rationale: "A forced confession is characterized by its extraction through threats, coercion, or other forms of duress."
+    },
+    {
+        question: "Why are forced confessions often deemed inadmissible in court?",
+        choice1: "They are obtained without evidence",
+        choice2: "They do not comply with legal ethical standards",
+        choice3: "They take too long to obtain",
+        choice4: "They are always made in private",
         answer: 2,
-        rationale: "The Penal Code, which applies to Northern Nigeria, was influenced by Islamic legal principles and the Sudanese Penal Code, which itself was based on Indian and Islamic legal traditions."
+        rationale: "Forced confessions are inadmissible because they violate ethical standards and may not reflect the truth."
     },
     {
-        question: "Which of the following is NOT a recognized source of Nigerian criminal law?",
-        choice1: "Judicial Precedents",
-        choice2: "International Treaties",
-        choice3: "Military Decrees",
-        choice4: "Presidential Executive Orders",
+        question: "Which of the following is a common effect of obtaining a forced confession?",
+        choice1: "It ensures a fair trial",
+        choice2: "It undermines the integrity of the justice system",
+        choice3: "It guarantees the suspect’s cooperation",
+        choice4: "It eliminates the need for further investigation",
+        answer: 2,
+        rationale: "Forced confessions undermine the integrity of the justice system by prioritizing coercion over truth."
+    },
+    {
+        question: "What legal safeguard is designed to prevent forced confessions?",
+        choice1: "Recording interrogations",
+        choice2: "Allowing unlimited detention of suspects",
+        choice3: "Prohibiting the presence of legal counsel",
+        choice4: "Removing all rights to remain silent",
+        answer: 1,
+        rationale: "Recording interrogations ensures transparency and protects against coercive practices that lead to forced confessions."
+    },
+    {
+        question: "What is one major ethical issue associated with forced confessions?",
+        choice1: "They are obtained too quickly",
+        choice2: "They are not detailed enough",
+        choice3: "They can lead to wrongful convictions",
+        choice4: "They make suspects too cooperative",
+        answer: 3,
+        rationale: "Forced confessions are a major ethical concern because they can lead to wrongful convictions, harming innocent individuals."
+    },
+    {
+        question: "Which of the following is a primary cause of false confessions?",
+        choice1: "Effective legal representation",
+        choice2: "Physical and psychological coercion during interrogation",
+        choice3: "Access to all evidence by the suspect",
+        choice4: "Strict adherence to ethical interrogation techniques",
+        answer: 2,
+        rationale: "False confessions often result from coercive interrogation methods, such as physical intimidation or psychological pressure."
+    },
+    {
+        question: "What is a major consequence of false confessions in the criminal justice system?",
+        choice1: "Increased public trust in law enforcement",
+        choice2: "The conviction of the actual perpetrator",
+        choice3: "Wrongful convictions of innocent individuals",
+        choice4: "Faster resolution of cases",
+        answer: 3,
+        rationale: "False confessions can lead to the wrongful conviction of innocent people, undermining justice and public confidence."
+    },
+    {
+        question: "Which psychological factor can lead to a false confession?",
+        choice1: "A strong sense of self-esteem",
+        choice2: "An intellectual understanding of legal rights",
+        choice3: "High susceptibility to suggestion or compliance",
+        choice4: "Confidence in the judicial system",
+        answer: 3,
+        rationale: "Individuals who are highly suggestible or eager to comply with authority are more likely to provide false confessions."
+    },
+    {
+        question: "What is a common reason for an innocent person to provide a false confession?",
+        choice1: "The promise of reduced charges or lighter sentences",
+        choice2: "A deep understanding of interrogation strategies",
+        choice3: "A desire to expose the actual perpetrator",
+        choice4: "Access to legal counsel during interrogation",
+        answer: 1,
+        rationale: "Promises of leniency or reduced punishment often compel innocent individuals to falsely confess, hoping for a quick resolution."
+    },
+    {
+        question: "What is one systemic consequence of false confessions in the justice system?",
+        choice1: "Reduced case backlog",
+        choice2: "Improved interrogation standards",
+        choice3: "Erosion of trust in law enforcement and judicial processes",
+        choice4: "Increased accuracy of verdicts",
+        answer: 3,
+        rationale: "False confessions harm the justice system by eroding public trust in law enforcement and judicial fairness."
+    },
+    {
+        question: "What is a primary cause of forced confessions in interrogation practices?",
+        choice1: "A suspect's strong legal representation",
+        choice2: "Coercion through physical abuse or threats",
+        choice3: "Availability of video-recorded interrogations",
+        choice4: "Use of rapport-building techniques",
+        answer: 2,
+        rationale: "Physical abuse or threats are common coercive methods used to force confessions during interrogations."
+    },
+    {
+        question: "Which of the following is a significant consequence of forced confessions?",
+        choice1: "Higher rates of accurate convictions",
+        choice2: "The preservation of human rights",
+        choice3: "The wrongful conviction of innocent individuals",
+        choice4: "Strengthened trust in the justice system",
+        answer: 3,
+        rationale: "Forced confessions often lead to wrongful convictions, harming both the accused and the integrity of the justice system."
+    },
+    {
+        question: "How does fear play a role in forced confessions?",
+        choice1: "It motivates suspects to provide truthful statements",
+        choice2: "It compels suspects to fabricate confessions to avoid further harm",
+        choice3: "It ensures that suspects understand their legal rights",
+        choice4: "It encourages a collaborative relationship with interrogators",
+        answer: 2,
+        rationale: "Fear of harm or punishment can pressure suspects into falsely confessing, regardless of their guilt or innocence."
+    },
+    {
+        question: "What is a systemic cause that enables forced confessions to occur?",
+        choice1: "Strict enforcement of ethical interrogation practices",
+        choice2: "Lack of oversight or accountability during interrogations",
+        choice3: "Presence of a defense attorney during questioning",
+        choice4: "Mandatory recording of interrogation sessions",
+        answer: 2,
+        rationale: "A lack of oversight allows unethical practices, such as coercion, to occur during interrogations, leading to forced confessions."
+    },
+    {
+        question: "What is one long-term consequence of using forced confessions in the justice system?",
+        choice1: "Increased public confidence in law enforcement",
+        choice2: "Improved methods of evidence collection",
+        choice3: "Erosion of trust in legal and judicial institutions",
+        choice4: "More rapid resolution of criminal cases",
+        answer: 3,
+        rationale: "Forced confessions undermine public trust in the justice system by violating ethical standards and human rights."
+    },
+    {
+        question: "What is the primary purpose of testimony in the criminal justice system?",
+        choice1: "To provide physical evidence in a case",
+        choice2: "To offer a firsthand account of events relevant to a case",
+        choice3: "To ensure the defendant remains silent",
+        choice4: "To determine sentencing guidelines",
+        answer: 2,
+        rationale: "Testimony provides a firsthand account of events, which is crucial for establishing facts in a legal case."
+    },
+    {
+        question: "Which of the following types of testimony is considered most reliable in court?",
+        choice1: "Eyewitness testimony",
+        choice2: "Expert testimony",
+        choice3: "Hearsay testimony",
+        choice4: "Character testimony",
+        answer: 2,
+        rationale: "Expert testimony is often considered reliable because it is based on specialized knowledge and expertise."
+    },
+    {
+        question: "What is a common challenge associated with eyewitness testimony?",
+        choice1: "It requires no verification",
+        choice2: "It is often influenced by the witness's memory and perception",
+        choice3: "It is only admissible if corroborated by physical evidence",
+        choice4: "It is rarely used in criminal trials",
+        answer: 2,
+        rationale: "Eyewitness testimony can be unreliable due to the limitations of human memory and perception."
+    },
+    {
+        question: "Why is cross-examination a critical part of evaluating testimony in court?",
+        choice1: "It allows the witness to restate their testimony",
+        choice2: "It helps to verify the accuracy and credibility of the testimony",
+        choice3: "It prevents the defense from presenting their case",
+        choice4: "It ensures the witness remains neutral during questioning",
+        answer: 2,
+        rationale: "Cross-examination tests the accuracy and credibility of testimony, ensuring it stands up to scrutiny."
+    },
+    {
+        question: "What is one major factor that can affect the credibility of a witness’s testimony?",
+        choice1: "The age of the defendant",
+        choice2: "The witness’s bias or personal interest in the case",
+        choice3: "The type of crime being prosecuted",
+        choice4: "The presence of a jury during the testimony",
+        answer: 2,
+        rationale: "A witness's bias or personal interest in a case can undermine the credibility of their testimony."
+    },
+    {
+        question: "What is the main goal of criminal profiling in investigations?",
+        choice1: "To identify potential witnesses",
+        choice2: "To create a psychological and behavioral profile of an unknown offender",
+        choice3: "To analyze forensic evidence at a crime scene",
+        choice4: "To establish motive for the crime",
+        answer: 2,
+        rationale: "Criminal profiling aims to provide a psychological and behavioral description of the offender to aid in their identification."
+    },
+    {
+        question: "What is the primary purpose of a pre-interrogation interview?",
+        choice1: "To intimidate the suspect into confessing",
+        choice2: "To gather information and assess the suspect's credibility",
+        choice3: "To present evidence to the suspect",
+        choice4: "To record the suspect's confession",
+        answer: 2,
+        rationale: "A pre-interrogation interview is designed to gather preliminary information and evaluate the suspect's behavior and credibility."
+    },
+    {
+        question: "During a pre-interrogation interview, which of the following is typically analyzed?",
+        choice1: "The suspect's alibi and financial records",
+        choice2: "The suspect's body language and verbal responses",
+        choice3: "The suspect's relationship with witnesses",
+        choice4: "The suspect's education and employment history",
+        answer: 2,
+        rationale: "Body language and verbal responses are assessed to detect signs of deception or truthfulness during the pre-interrogation phase."
+    },
+    {
+        question: "What distinguishes a pre-interrogation interview from an interrogation?",
+        choice1: "The use of evidence during questioning",
+        choice2: "The presence of the suspect’s lawyer",
+        choice3: "The level of coercion involved",
+        choice4: "The goal of establishing rapport rather than eliciting a confession",
         answer: 4,
-        rationale: "Nigerian criminal law is derived from statutes, common law, judicial precedents, customary law, and international treaties. Unlike in some other jurisdictions, executive orders do not serve as a direct source of criminal law in Nigeria."
+        rationale: "Pre-interrogation interviews focus on building rapport and gathering information, whereas interrogations aim to elicit confessions."
     },
     {
-        question: "A judge in a Nigerian court refers to past Supreme Court decisions when deciding a case. This is an example of which source of law?",
-        choice1: "Legislation",
-        choice2: "Judicial Precedent",
-        choice3: "Customary Law",
-        choice4: "Natural Law",
-        answer: 2,
-        rationale: "Judicial precedent (stare decisis) ensures consistency in legal decisions by requiring lower courts to follow the rulings of higher courts."
-    },
-    {
-        question: "A person in Northern Nigeria is arrested for drinking alcohol in public, which is illegal under Sharia law but not under the Penal Code. What legal principle is at play here?",
-        choice1: "Federal Supremacy",
-        choice2: "Legal Pluralism",
-        choice3: "Rule of Law",
-        choice4: "Separation of Powers",
-        answer: 2,
-        rationale: "Legal pluralism refers to the coexistence of multiple legal systems within a state. In Nigeria, Sharia law applies to Muslims in the North alongside the Penal Code."
-    },
-    {
-        question: "How did the introduction of colonial laws impact pre-existing customary criminal laws in Nigeria?",
-        choice1: "It completely replaced them",
-        choice2: "It coexisted but overruled them in superior courts",
-        choice3: "It reinforced traditional legal systems",
-        choice4: "It was rejected by all Nigerian communities",
-        answer: 2,
-        rationale: "While customary law continued in local communities, colonial laws were supreme in courts. The courts applied customary law only if it was not repugnant to natural justice, equity, and good conscience."
-    },
-    {
-        question: "The main difference between the Criminal Code and the Penal Code in Nigeria is that:",
-        choice1: "The Criminal Code applies in the North, while the Penal Code applies in the South",
-        choice2: "The Penal Code is based on Islamic law, while the Criminal Code follows common law principles",
-        choice3: "The Criminal Code was introduced after independence, while the Penal Code was colonial law",
-        choice4: "The Penal Code is harsher than the Criminal Code",
-        answer: 2,
-        rationale: "The Criminal Code (applicable in the South) is derived from English common law, while the Penal Code (applicable in the North) integrates Islamic principles with the Sudanese criminal law model."
-    },
-    {
-        question: "In evaluating the effectiveness of Nigerian criminal law, which of the following is a major challenge?",
-        choice1: "Overreliance on international legal principles",
-        choice2: "Lack of separation between criminal and civil law",
-        choice3: "Inefficiency in law enforcement and judicial delays",
-        choice4: "The absence of legal education in Nigeria",
+        question: "Which technique is often used in a pre-interrogation interview to establish rapport with the suspect?",
+        choice1: "Presenting evidence to the suspect",
+        choice2: "Using aggressive questioning techniques",
+        choice3: "Engaging in casual conversation to build trust",
+        choice4: "Isolating the suspect from their surroundings",
         answer: 3,
-        rationale: "A major challenge in Nigeria's criminal justice system is slow judicial processes, corruption, and inadequate law enforcement, which hinder effective implementation of criminal law."
+        rationale: "Building rapport through casual conversation creates a more cooperative atmosphere for obtaining truthful information."
     },
     {
-        question: "Which of the following is a significant factor influencing criminal behavior in Nigeria?",
-        choice1: "High literacy rates",
-        choice2: "Cultural tolerance for bribery and corruption",
-        choice3: "Lack of ancestral traditions",
-        choice4: "Over-reliance on Western justice systems",
+        question: "Why is understanding the suspect's baseline behavior important during a pre-interrogation interview?",
+        choice1: "To confirm their motive for the crime",
+        choice2: "To identify deviations that may indicate deception",
+        choice3: "To ensure the suspect feels comfortable",
+        choice4: "To validate the evidence against the suspect",
         answer: 2,
-        rationale: "Societal acceptance of corrupt practices fosters a permissive environment for crime."
+        rationale: "Knowing the suspect's baseline behavior helps detect changes that may signal dishonesty or concealment."
     },
     {
-        question: "A young man from a low-income community in Lagos engages in internet fraud, citing societal pressure for wealth. This behavior is best explained by:",
-        choice1: "Rational choice theory",
-        choice2: "Anomie theory",
-        choice3: "Biological determinism",
-        choice4: "Routine activity theory",
-        answer: 2,
-        rationale: "Anomie theory links deviance to societal disintegration, where traditional norms fail to regulate behavior."
-    },
-    {
-        question: "The practice of 'Juju' rituals in crimes such as fraud or theft reflects:",
-        choice1: "The rejection of cultural traditions",
-        choice2: "A blend of spiritual beliefs and criminal intent",
-        choice3: "Strict adherence to statutory laws",
-        choice4: "The decline of superstitious practices",
-        answer: 2,
-        rationale: "Many criminals believe spiritual rituals offer protection or ensure success in illegal activities."
-    },
-    {
-        question: "How does the concept of 'area boys' in Nigeria illustrate cultural factors in criminal behavior?",
-        choice1: "They represent organized religious groups",
-        choice2: "They are influenced by unemployment and urbanization",
-        choice3: "They are primarily a law enforcement initiative",
-        choice4: "They represent traditional vigilante systems",
-        answer: 2,
-        rationale: "'Area boys' reflect how socio-economic conditions drive criminal behavior in urban centers."
-    },
-    {
-        question: "A woman is accused of stealing to feed her children, citing extreme poverty. Her actions align most closely with:",
-        choice1: "Deterrence theory",
-        choice2: "Strain theory",
-        choice3: "Labeling theory",
-        choice4: "Conflict theory",
-        answer: 2,
-        rationale: "Strain theory posits that individuals resort to crime when they lack legitimate means to achieve societal goals."
-    },
-    {
-        question: "What role does peer influence play in the criminal behavior of youths in Nigeria?",
-        choice1: "It is negligible in low-income communities",
-        choice2: "It reinforces cultural values that oppose deviance",
-        choice3: "It often leads to group-based criminal activities",
-        choice4: "It decreases the likelihood of committing crime",
-        answer: 3,
-        rationale: "Peer groups can provide support and encouragement for deviant behavior, especially among youths."
-    },
-    {
-        question: "The rise of cybercrime in Nigeria is often attributed to:",
-        choice1: "Traditional African values",
-        choice2: "Economic hardship and globalization",
-        choice3: "The prevalence of manual labor jobs",
-        choice4: "Strict internet monitoring laws",
-        answer: 2,
-        rationale: "Poverty and access to global networks create opportunities and motives for cybercrime."
-    },
-    {
-        question: "A man commits violent crimes to avenge the death of a family member. His actions are most aligned with:",
-        choice1: "Conflict theory",
-        choice2: "Restorative justice principles",
-        choice3: "Cultural norms of retribution",
-        choice4: "Social learning theory",
-        answer: 3,
-        rationale: "Some Nigerian communities uphold retribution as a traditional justice mechanism."
-    },
-    {
-        question: "Which of the following is a personal factor that contributes to criminal behavior?",
-        choice1: "Geographical location",
-        choice2: "Religious upbringing",
-        choice3: "Substance abuse",
-        choice4: "Socioeconomic status",
-        answer: 3,
-        rationale: "Addiction can impair judgment and lead to criminal acts to sustain habits."
-    },
-    {
-        question: "In a tribal community, a person is ostracized after committing a crime but later reintegrated after showing remorse. This reflects:",
-        choice1: "Punitive justice",
-        choice2: "Transformative justice",
-        choice3: "Restorative justice",
-        choice4: "Deterrent justice",
-        answer: 3,
-        rationale: "Restorative justice focuses on repairing harm and fostering reconciliation."
-    },
-    {
-        question: "Which of the following cultural practices in Nigeria has been linked to ritual killings?",
-        choice1: "Festive masquerade dances",
-        choice2: "Juju or spiritual rituals",
-        choice3: "Traditional healing practices",
-        choice4: "Ancestral land disputes",
-        answer: 2,
-        rationale: "Ritual killings are often rooted in beliefs that spiritual rituals bring wealth, power, or protection."
-    },
-    {
-        question: "Case Scenario: A local community regularly uses ostracism as a punishment for theft. What criminological concept best explains this practice?",
-        choice1: "Retributive justice",
-        choice2: "Restorative justice",
-        choice3: "Traditional justice",
-        choice4: "Cultural deviance",
-        answer: 2,
-        rationale: "Ostracism aligns with restorative justice as it seeks to address harm while maintaining social harmony."
-    },
-    {
-        question: "What is a primary reason for the persistence of traditional crime control systems in rural Nigerian communities?",
-        choice1: "Lack of modern policing infrastructure",
-        choice2: "High levels of urban migration",
-        choice3: "Preference for Western legal systems",
-        choice4: "Increasing literacy rates",
+        question: "What is the primary purpose of the Miranda warning?",
+        choice1: "To inform suspects of their rights during a criminal investigation",
+        choice2: "To force suspects to confess to their crimes",
+        choice3: "To determine the guilt of the suspect before interrogation",
+        choice4: "To ensure the suspect cooperates with law enforcement",
         answer: 1,
-        rationale: "Many rural areas lack access to formal legal systems, making traditional methods essential."
+        rationale: "The Miranda warning ensures suspects are aware of their rights, such as remaining silent and having legal representation, during a criminal investigation."
     },
     {
-        question: "Which of the following reflects the cultural deviance theory in the Nigerian context?",
-        choice1: "Urban youth adopting cybercrime due to peer influence",
-        choice2: "Farmers engaging in land disputes over scarce resources",
-        choice3: "The normalization of bribery in business transactions",
-        choice4: "The practice of street vending without permits",
+        question: "Which constitutional rights are emphasized in the Miranda warning?",
+        choice1: "Right to a fair trial and right to privacy",
+        choice2: "Right to remain silent and right to an attorney",
+        choice3: "Right to due process and right to free speech",
+        choice4: "Right to vote and right to legal counsel",
+        answer: 2,
+        rationale: "The Miranda warning highlights the suspect's right to remain silent and their right to an attorney during questioning to prevent self-incrimination."
+    },
+    {
+        question: "When must the Miranda warning be administered?",
+        choice1: "Immediately after a suspect is arrested",
+        choice2: "Before any custodial interrogation begins",
+        choice3: "At the time of the suspect's trial",
+        choice4: "Only if the suspect requests it",
+        answer: 2,
+        rationale: "The Miranda warning must be given before a custodial interrogation to ensure that any statements made are admissible in court."
+    },
+    {
+        question: "What happens if law enforcement fails to give a suspect the Miranda warning before interrogation?",
+        choice1: "The suspect's statements can still be used in court",
+        choice2: "The suspect is automatically released",
+        choice3: "The suspect's statements may be excluded from evidence",
+        choice4: "The suspect cannot be questioned further",
         answer: 3,
-        rationale: "Cultural deviance theory examines how societal norms can conflict with legal standards."
+        rationale: "If the Miranda warning is not provided, any statements made by the suspect may be inadmissible as evidence due to a violation of their rights."
     },
     {
-        question: "Case Scenario: A man from a rural community is accused of witchcraft and lynched by his neighbors. This act demonstrates:",
-        choice1: "Restorative justice principles",
-        choice2: "Informal social control",
-        choice3: "Anomie in modern society",
-        choice4: "Rational choice theory",
+        question: "Which of the following is NOT part of the Miranda warning?",
+        choice1: "You have the right to remain silent",
+        choice2: "You are entitled to a public defender",
+        choice3: "Anything you say can be used against you in court",
+        choice4: "You can choose to confess to the crime immediately",
+        answer: 4,
+        rationale: "The Miranda warning does not compel suspects to confess; instead, it informs them of their rights to avoid self-incrimination."
+    },
+    {
+        question: "What does it mean for a suspect to waive their Miranda rights?",
+        choice1: "They refuse to answer any questions during interrogation",
+        choice2: "They voluntarily give up their right to remain silent and to an attorney",
+        choice3: "They request the presence of a public defender",
+        choice4: "They decide to go to trial immediately",
         answer: 2,
-        rationale: "The community uses extrajudicial measures to enforce traditional norms."
+        rationale: "Waiving Miranda rights means the suspect knowingly and voluntarily relinquishes their rights to remain silent and to legal counsel."
     },
     {
-        question: "What is a significant driver of internet fraud (Yahoo Yahoo) among Nigerian youths?",
-        choice1: "Limited exposure to international systems",
-        choice2: "Economic inequality and societal pressures",
-        choice3: "Overregulation of the banking system",
-        choice4: "Inability to access education loans",
+        question: "Which factor is most important in determining whether a suspect can validly waive their Miranda rights?",
+        choice1: "The suspect's age and level of education",
+        choice2: "Whether the suspect was coerced into waiving their rights",
+        choice3: "The amount of evidence against the suspect",
+        choice4: "The length of the interrogation",
         answer: 2,
-        rationale: "Economic hardship and cultural emphasis on wealth push many youths into cybercrime."
+        rationale: "A valid waiver must be made voluntarily, without any coercion, and with full understanding of the rights being waived."
     },
     {
-        question: "Case Scenario: A woman is arrested for stealing food for her children due to extreme poverty. Which criminological theory best explains her actions?",
-        choice1: "Conflict theory",
-        choice2: "Strain theory",
-        choice3: "Social disorganization theory",
-        choice4: "Routine activity theory",
+        question: "How can law enforcement ensure that a suspect's waiver of Miranda rights is valid?",
+        choice1: "By forcing the suspect to sign a document",
+        choice2: "By explaining the rights clearly and confirming the suspect understands them",
+        choice3: "By recording the entire interrogation process",
+        choice4: "By making the suspect waive the rights before a lawyer",
         answer: 2,
-        rationale: "Strain theory highlights the link between lack of resources and deviant behavior."
+        rationale: "Law enforcement must clearly explain the Miranda rights and confirm the suspect understands them before accepting a waiver."
     },
     {
-        question: "Which personal factor is most likely to lead to criminal behavior in urban areas?",
-        choice1: "Cultural adherence to traditions",
-        choice2: "Substance abuse and addiction",
-        choice3: "High levels of literacy",
-        choice4: "Overcrowded public transport systems",
+        question: "Which of the following could invalidate a suspect’s waiver of Miranda rights?",
+        choice1: "The suspect was under emotional stress",
+        choice2: "The suspect was intoxicated or mentally impaired",
+        choice3: "The suspect was informed of their rights in a non-verbal manner",
+        choice4: "The suspect initially refused to waive their rights but later agreed",
         answer: 2,
-        rationale: "Addiction often compels individuals to commit crimes to sustain their habits."
+        rationale: "A waiver may be invalid if the suspect lacked the capacity to understand their rights due to intoxication, mental impairment, or other factors."
     },
     {
-        question: "Case Scenario: A young man involved in gang activity cites protection and belonging as his primary motives. His behavior aligns with:",
-        choice1: "Rational choice theory",
-        choice2: "Labeling theory",
-        choice3: "Social learning theory",
-        choice4: "Anomie theory",
+        question: "What legal standard is used to determine if a suspect knowingly waived their Miranda rights?",
+        choice1: "Reasonable person standard",
+        choice2: "Beyond a reasonable doubt",
+        choice3: "Preponderance of evidence",
+        choice4: "Totality of the circumstances",
+        answer: 4,
+        rationale: "Courts assess the totality of the circumstances, including the suspect’s age, intelligence, and conditions of the waiver, to determine if it was knowing and voluntary."
+    },
+    {
+        question: "Which fundamental assumption underlies the Psychoanalytical Theory of confession?",
+        choice1: "Confession is a rational choice made to reduce punishment",
+        choice2: "Confession arises from unconscious guilt and the need for psychological relief",
+        choice3: "Confession is solely influenced by external coercion",
+        choice4: "Confession is a result of social conditioning and reinforcement",
+        answer: 2,
+        rationale: "The Psychoanalytical Theory suggests that confessions stem from deep-seated guilt and an unconscious desire for punishment (Freud, 1923)."
+    },
+    {
+        question: "According to the Decision-Making Theory, why might an innocent suspect falsely confess?",
+        choice1: "Due to a pathological desire for notoriety",
+        choice2: "To align with internalized guilt and trauma",
+        choice3: "As a result of a cost-benefit analysis where confession seems like the best option",
+        choice4: "Because of social pressure from peers",
         answer: 3,
-        rationale: "Gang activity often results from learned behavior and social reinforcement."
+        rationale: "Decision-Making Theory posits that suspects weigh potential outcomes and may confess if they believe it minimizes harm (Kassin & Gudjonsson, 2004)."
     },
     {
-        question: "Which of the following best explains the rise of child trafficking in Nigeria?",
-        choice1: "Decline of community-based child-rearing systems",
-        choice2: "Cultural shift toward Western values",
-        choice3: "Socioeconomic desperation and weak legal enforcement",
-        choice4: "Overregulation of adoption processes",
-        answer: 3,
-        rationale: "Poverty and lack of accountability create conditions for trafficking to thrive."
-    },
-    {
-        question: "A young woman wearing brightly colored, unconventional clothing is frowned upon in her conservative community but not arrested. This is an example of:",
-        choice1: "Crime",
-        choice2: "Deviance",
-        choice3: "Both crime and deviance",
-        choice4: "Neither crime nor deviance",
-        answer: 2,
-        rationale: "Deviance involves actions that violate societal norms but are not necessarily illegal."
-    },
-    {
-        question: "A behavior can be considered both deviant and criminal when:",
-        choice1: "It breaks a law and violates social norms.",
-        choice2: "It is accepted by law but not by society.",
-        choice3: "It is universally acknowledged as immoral.",
-        choice4: "It only receives societal disapproval.",
+        question: "How does Cognitive-Behavioral Theory explain the process of confession?",
+        choice1: "Confession is conditioned through reinforcement and learned behaviors",
+        choice2: "Confession is an instinctive response to fear",
+        choice3: "Confession occurs due to internal moral conflicts",
+        choice4: "Confession is solely a legal construct with no psychological basis",
         answer: 1,
-        rationale: "Acts like theft violate legal statutes and societal expectations."
+        rationale: "Cognitive-Behavioral Theory argues that confession results from learned responses, where individuals associate confession with potential rewards or relief from stress (Bandura, 1977)."
     },
     {
-        question: "In which scenario would an act be considered deviant but not criminal?",
-        choice1: "A person publicly criticizes the government.",
-        choice2: "A person jaywalks in a busy city street.",
-        choice3: "A person refuses to shake hands in a formal meeting.",
-        choice4: "A person drives under the influence of alcohol.",
-        answer: 3,
-        rationale: "Such behavior violates etiquette but does not break any laws."
-    },
-    {
-        question: "Crime and deviance share which of the following characteristics?",
-        choice1: "Both are determined by the individual’s moral stance.",
-        choice2: "Both are socially constructed and vary by culture.",
-        choice3: "Both result in formal legal sanctions.",
-        choice4: "Both are universally defined across societies.",
-        answer: 2,
-        rationale: "Cultural norms and legal systems differ across societies."
-    },
-    {
-        question: "A society legalizes same-sex marriage, but certain religious groups continue to condemn it. How does this reflect the relationship between crime and deviance?",
-        choice1: "Deviance and crime always overlap.",
-        choice2: "Deviance can persist even when the law changes.",
-        choice3: "Crime becomes irrelevant in the presence of legal change.",
-        choice4: "Law shapes societal norms entirely.",
-        answer: 2,
-        rationale: "Legal acceptance does not always eliminate societal disapproval."
-    },
-    {
-        question: "Which of the following best illustrates the cultural relativity of deviance?",
-        choice1: "Stealing is considered wrong universally.",
-        choice2: "Drinking alcohol is prohibited in some countries but acceptable in others.",
-        choice3: "Murder is punishable everywhere.",
-        choice4: "Assault is universally deemed unacceptable.",
-        answer: 2,
-        rationale: "What is deviant in one culture may not be deviant in another."
-    },
-    {
-        question: "The societal reaction to deviance differs from reactions to crime because:",
-        choice1: "Crime is always punished, but deviance is ignored.",
-        choice2: "Deviance often lacks formal sanctions.",
-        choice3: "Crime only affects individuals, while deviance affects society.",
-        choice4: "Deviance has legal consequences, while crime does not.",
-        answer: 2,
-        rationale: "Deviance usually attracts social disapproval rather than legal punishment."
-    },
-    {
-        question: "A behavior classified as a crime in one culture might only be considered deviant in another. This highlights:",
-        choice1: "The universal nature of deviance.",
-        choice2: "The static nature of criminal law.",
-        choice3: "The importance of local customs in defining norms.",
-        choice4: "The irrelevance of cultural differences in law.",
-        answer: 3,
-        rationale: "Cultural context shapes what is defined as deviant or criminal."
-    },
-    {
-        question: "How does the concept of 'victimless crimes' challenge the distinction between crime and deviance?",
-        choice1: "It implies that all crimes have victims.",
-        choice2: "It shows that crimes do not always harm others.",
-        choice3: "It proves that deviance and crime are identical.",
-        choice4: "It shows that societal norms are unimportant.",
-        answer: 2,
-        rationale: "Victimless crimes (e.g., drug use) may not harm others but are still illegal."
-    },
-    {
-        question: "In a highly traditional society, public displays of affection are met with harsh punishment, while in modern urban settings, such behavior is accepted. This demonstrates:",
-        choice1: "The rigidity of deviance across cultures.",
-        choice2: "The universality of criminal behavior.",
-        choice3: "The influence of cultural values on deviance.",
-        choice4: "The irrelevance of societal norms.",
-        answer: 3,
-        rationale: "Norms and perceptions of deviance change based on cultural values."
-    },
-    {
-        question: "A young woman wearing brightly colored, unconventional clothing is frowned upon in her conservative community but not arrested. This is an example of:",
-        choice1: "Crime",
-        choice2: "Deviance",
-        choice3: "Both crime and deviance",
-        choice4: "Neither crime nor deviance",
-        answer: 2,
-        rationale: "Deviance involves actions that violate societal norms but are not necessarily illegal."
-    },
-    {
-        question: "A behavior can be considered both deviant and criminal when:",
-        choice1: "It breaks a law and violates social norms.",
-        choice2: "It is accepted by law but not by society.",
-        choice3: "It is universally acknowledged as immoral.",
-        choice4: "It only receives societal disapproval.",
+        question: "Which of the following best characterizes the Social-Psychological Theory of confession?",
+        choice1: "Confession is influenced by the individual’s need to maintain social relationships and avoid disapproval",
+        choice2: "Confession is primarily a result of cognitive dissonance",
+        choice3: "Confession is a product of rational calculations",
+        choice4: "Confession stems from an individual’s biological predisposition to honesty",
         answer: 1,
-        rationale: "Acts like theft violate legal statutes and societal expectations."
+        rationale: "Social-Psychological Theory suggests that social influence, pressure, and the need to maintain relationships play a crucial role in confessions (Asch, 1951)."
     },
     {
-        question: "In which scenario would an act be considered deviant but not criminal?",
-        choice1: "A person publicly criticizes the government.",
-        choice2: "A person jaywalks in a busy city street.",
-        choice3: "A person refuses to shake hands in a formal meeting.",
-        choice4: "A person drives under the influence of alcohol.",
-        answer: 3,
-        rationale: "Such behavior violates etiquette but does not break any laws."
-    },
-    {
-        question: "Crime and deviance share which of the following characteristics?",
-        choice1: "Both are determined by the individual’s moral stance.",
-        choice2: "Both are socially constructed and vary by culture.",
-        choice3: "Both result in formal legal sanctions.",
-        choice4: "Both are universally defined across societies.",
+        question: "What is a key limitation of the Decision-Making Theory of confession?",
+        choice1: "It does not consider the role of social influence",
+        choice2: "It assumes that all individuals are rational actors",
+        choice3: "It ignores the impact of psychological coercion",
+        choice4: "It overlooks the biological basis of confessions",
         answer: 2,
-        rationale: "Cultural norms and legal systems differ across societies."
+        rationale: "A major critique of Decision-Making Theory is that it assumes suspects make rational choices, which is not always true under duress (Kassin, 2012)."
     },
     {
-        question: "A society legalizes same-sex marriage, but certain religious groups continue to condemn it. How does this reflect the relationship between crime and deviance?",
-        choice1: "Deviance and crime always overlap.",
-        choice2: "Deviance can persist even when the law changes.",
-        choice3: "Crime becomes irrelevant in the presence of legal change.",
-        choice4: "Law shapes societal norms entirely.",
+        question: "Which theoretical framework best explains why juveniles are more susceptible to false confessions?",
+        choice1: "Psychoanalytical Theory",
+        choice2: "Decision-Making Theory",
+        choice3: "Cognitive-Behavioral Theory",
+        choice4: "Social-Psychological Theory",
+        answer: 4,
+        rationale: "Social-Psychological Theory suggests that juveniles are highly susceptible to peer pressure and authority influence, making them more vulnerable to false confessions (Drizin & Leo, 2004)."
+    },
+    {
+        question: "How does the Cognitive-Behavioral Theory relate to police interrogation tactics?",
+        choice1: "It explains how suspects can be conditioned to confess through reward and punishment",
+        choice2: "It suggests that suspects confess due to unconscious guilt",
+        choice3: "It argues that suspects make rational choices in high-pressure situations",
+        choice4: "It states that confessions are primarily influenced by legal knowledge",
+        answer: 1,
+        rationale: "Cognitive-Behavioral Theory indicates that suspects learn behaviors through reinforcement, making them more likely to confess under repeated psychological pressure (Skinner, 1953)."
+    },
+    {
+        question: "Which of the following is a primary critique of the Psychoanalytical Theory of confession?",
+        choice1: "It fails to explain coerced confessions",
+        choice2: "It does not account for individual agency in decision-making",
+        choice3: "It focuses too much on external social influences",
+        choice4: "It assumes all confessions stem from external coercion",
+        answer: 1,
+        rationale: "Psychoanalytical Theory is criticized for overlooking the impact of external coercion and interrogation tactics in false confessions (Gudjonsson, 2003)."
+    },
+    {
+        question: "How does Social-Psychological Theory explain the role of authority figures in eliciting confessions?",
+        choice1: "Authorities condition individuals through behavioral reinforcement",
+        choice2: "Authorities create social pressure that influences compliance and conformity",
+        choice3: "Authorities trigger unconscious desires for punishment",
+        choice4: "Authorities use legal incentives to secure confessions",
         answer: 2,
-        rationale: "Legal acceptance does not always eliminate societal disapproval."
+        rationale: "Social-Psychological Theory suggests that authority figures can manipulate social dynamics, leading individuals to conform and confess (Milgram, 1963)."
     },
     {
-        question: "Which of the following best illustrates the cultural relativity of deviance?",
-        choice1: "Stealing is considered wrong universally.",
-        choice2: "Drinking alcohol is prohibited in some countries but acceptable in others.",
-        choice3: "Murder is punishable everywhere.",
-        choice4: "Assault is universally deemed unacceptable.",
-        answer: 2,
-        rationale: "What is deviant in one culture may not be deviant in another."
+        question: "Which of the following theories would best explain why a suspect confesses even when presented with exculpatory evidence?",
+        choice1: "Psychoanalytical Theory",
+        choice2: "Decision-Making Theory",
+        choice3: "Cognitive-Behavioral Theory",
+        choice4: "Social-Psychological Theory",
+        answer: 4,
+        rationale: "Social-Psychological Theory accounts for how suspects may confess due to authority pressure, social expectations, or psychological manipulation despite evidence in their favor (Kassin & Wrightsman, 1985)."
     },
     {
-        question: "The societal reaction to deviance differs from reactions to crime because:",
-        choice1: "Crime is always punished, but deviance is ignored.",
-        choice2: "Deviance often lacks formal sanctions.",
-        choice3: "Crime only affects individuals, while deviance affects society.",
-        choice4: "Deviance has legal consequences, while crime does not.",
-        answer: 2,
-        rationale: "Deviance usually attracts social disapproval rather than legal punishment."
+        question: "Which of the following best describes the purpose of the 'Rapport Building' technique in interrogation?",
+        choice1: "To establish a trusting relationship with the suspect, making them more likely to talk.",
+        choice2: "To intimidate the suspect into confessing to a crime.",
+        choice3: "To ensure the suspect waives their right to remain silent.",
+        choice4: "To confuse the suspect and force an accidental confession.",
+        answer: 1
     },
     {
-        question: "A behavior classified as a crime in one culture might only be considered deviant in another. This highlights:",
-        choice1: "The universal nature of deviance.",
-        choice2: "The static nature of criminal law.",
-        choice3: "The importance of local customs in defining norms.",
-        choice4: "The irrelevance of cultural differences in law.",
-        answer: 3,
-        rationale: "Cultural context shapes what is defined as deviant or criminal."
+        question: "How does the 'Isolation' technique influence a suspect during interrogation?",
+        choice1: "It forces the suspect to feel lonely and guilty, ensuring they confess.",
+        choice2: "It creates a psychological environment where the suspect feels powerless, making them more likely to comply.",
+        choice3: "It gives the suspect time to think and prepare a strong legal defense.",
+        choice4: "It prevents the suspect from making any false statements under pressure.",
+        answer: 2
     },
     {
-        question: "How does the concept of 'victimless crimes' challenge the distinction between crime and deviance?",
-        choice1: "It implies that all crimes have victims.",
-        choice2: "It shows that crimes do not always harm others.",
-        choice3: "It proves that deviance and crime are identical.",
-        choice4: "It shows that societal norms are unimportant.",
-        answer: 2,
-        rationale: "Victimless crimes (e.g., drug use) may not harm others but are still illegal."
+        question: "Which interrogation technique involves falsely presenting fabricated evidence to convince a suspect of their guilt?",
+        choice1: "Accusation Strategy",
+        choice2: "False Evidence Ploy",
+        choice3: "Theme Development",
+        choice4: "Pretext Phone Call",
+        answer: 2
     },
     {
-        question: "In a highly traditional society, public displays of affection are met with harsh punishment, while in modern urban settings, such behavior is accepted. This demonstrates:",
-        choice1: "The rigidity of deviance across cultures.",
-        choice2: "The universality of criminal behavior.",
-        choice3: "The influence of cultural values on deviance.",
-        choice4: "The irrelevance of societal norms.",
-        answer: 3,
-        rationale: "Norms and perceptions of deviance change based on cultural values."
+        question: "What is the primary goal of using 'Open-Ended Questions' in interrogation?",
+        choice1: "To limit the suspect’s responses to simple 'yes' or 'no' answers.",
+        choice2: "To encourage the suspect to provide detailed explanations that can be analyzed for inconsistencies.",
+        choice3: "To pressure the suspect into confessing quickly.",
+        choice4: "To confuse the suspect and make them reveal hidden information unconsciously.",
+        answer: 2
     },
     {
-      question: "What distinguishes white-collar crime from other types of crime?",
-      choice1: "It involves violence",
-      choice2: "It is committed by individuals in high social positions",
-      choice3: "It is always victimless",
-      choice4: "It is only punishable by fines",
-      answer: 2
+        question: "Which of the following correctly defines the 'Theme Development' technique in interrogation?",
+        choice1: "The interrogator presents a moral or psychological justification for the suspect’s actions to make confession seem acceptable.",
+        choice2: "The interrogator aggressively accuses the suspect of committing the crime until they break down.",
+        choice3: "The interrogator isolates the suspect and prevents them from speaking until they confess.",
+        choice4: "The interrogator uses misleading statements to confuse the suspect into admitting guilt.",
+        answer: 1
     },
     {
-      question: "Which criminological theory explains crime as a result of learned behaviour within close social groups",
-      choice1: "Strain Theory",
-      choice2: "Social Learning Theory",
-      choice3: "Rational Choice Theory",
-      choice4: "Biological Theory",
-      answer: 2
+        question: "Which of the following is considered a primary source of confession in criminal investigations?",
+        choice1: "Hearsay statements from third parties",
+        choice2: "Direct verbal admission by the suspect",
+        choice3: "Speculative media reports",
+        choice4: "Psychological profiling of the suspect",
+        answer: 2
     },
     {
-      question: "Which of the following is a transnational crime?",
-      choice1: "Robbery in a local store",
-      choice2: "Money laundering through international banks",
-      choice3: "Domestic violence",
-      choice4: "Illegal parking",
-      answer: 2
+        question: "How do 'spontaneous confessions' differ from other sources of confession?",
+        choice1: "They are obtained through extensive interrogation techniques.",
+        choice2: "They occur voluntarily, without external pressure or questioning.",
+        choice3: "They require corroborating forensic evidence to be admissible in court.",
+        choice4: "They are always considered inadmissible due to lack of procedural formality.",
+        answer: 2
     },
     {
-      question: "Which theory of crime focuses on how societal labeling cam reinforce criminal behaviour?",
-      choice1: "Differential Association Theory",
-      choice2: "Labeling Theory",
-      choice3: "Rational Choice Theory",
-      choice4: "Routine Activities Theory",
-      answer: 2
+        question: "Which of the following is NOT a legally recognized source of confession?",
+        choice1: "Statements made to a police officer during an interrogation",
+        choice2: "Admissions recorded in a properly documented pretext phone call",
+        choice3: "A suspect's involuntary confession obtained through coercion",
+        choice4: "Voluntary written statements given at the police station",
+        answer: 3
     },
     {
-      question: "Which of the following crimes is classified as a crime against property?",
-      choice1: "Arson",
-      choice2: "Murder",
-      choice3: "Kidnapping",
-      choice4: "Assault",
-      answer: 1
+        question: "What role does a 'co-defendant confession' play in criminal investigations?",
+        choice1: "It is considered direct evidence and leads to an automatic conviction.",
+        choice2: "It can be used as evidence but requires corroboration to be admissible in court.",
+        choice3: "It is only valid if both defendants confess at the same time.",
+        choice4: "It is never admissible due to potential bias from the co-defendant.",
+        answer: 2
     },
     {
-      question: "A crime insider trading is an example of?",
-      choice1: "Violent crime",
-      choice2: "Property crime",
-      choice3: "White-collar crime",
-      choice4: "Organized crime",
-      answer: 3
+        question: "Why must 'confessions made to undercover officers' be carefully evaluated?",
+        choice1: "They are often given in informal settings and may not reflect the suspect’s true intentions.",
+        choice2: "They are automatically excluded from trial due to entrapment laws.",
+        choice3: "They are considered more reliable than confessions made under formal interrogation.",
+        choice4: "They are legally binding regardless of the suspect’s state of mind.",
+        answer: 1
     },
     {
-      question: "The term 'Mens Rea' refers to?",
-      choice1: "The physical act of committing a crime",
-      choice2: "The legal consequences of a crime",
-      choice3: "The mental intent or guilty mind behind a crime",
-      choice4: "The classification of crime types",
-      answer: 3
+        question: "Which of the following best explains the paradox of false confessions in relation to rational choice theory?",
+        choice1: "Suspects always make decisions that maximize their personal benefit, making false confessions unlikely.",
+        choice2: "Under psychological distress, suspects may perceive confessing—even falsely—as a rational means of reducing immediate suffering.",
+        choice3: "Rational actors in the justice system can always distinguish between false and genuine confessions.",
+        choice4: "False confessions only occur when an individual is mentally impaired, contradicting rational choice principles.",
+        answer: 2
     },
     {
-      question: "Strain theory suggests that crime occurs when?",
-      choice1: "Individuals lack self-control",
-      choice2: "Social norms are unclear or absent",
-      choice3: "There is a gap between goals and means to achieve them",
-      choice4: "Society rewards deviant behaviour",
-      answer: 3
+        question: "What is the primary critique of using behavioral analysis techniques (e.g., Reid Technique) in eliciting confessions?",
+        choice1: "They lack empirical validation and disproportionately lead to false confessions due to coercive tactics.",
+        choice2: "They are ineffective in high-stakes criminal investigations and are only useful in minor offenses.",
+        choice3: "They prioritize deception detection over information gathering, making them unreliable in the courtroom.",
+        choice4: "They are exclusively used in the United States and have no international application.",
+        answer: 1
     },
     {
-      question: "According to the psychological perspective, crime is often linked to?",
-      choice1: "Socioeconomic inequality",
-      choice2: "Deviant peer groups",
-      choice3: "Personality traits and mental health issues",
-      choice4: "Genetic predispositions",
-      answer: 3
+        question: "In psychological studies on false confession, what factor has been identified as the strongest predictor of a suspect falsely confessing?",
+        choice1: "The presence of corroborating physical evidence.",
+        choice2: "The suspect’s prior criminal history and exposure to law enforcement.",
+        choice3: "The length and intensity of the interrogation, particularly when exceeding recommended time limits.",
+        choice4: "The use of leading questions that suggest crime details not publicly available.",
+        answer: 3
     },
     {
-      question: "What is an example of a victimless crime?",
-      choice1: "Assault",
-      choice2: "Drug use",
-      choice3: "Robbery",
-      choice4: "Vandalism",
-      answer: 2
+        question: "Which of the following legal precedents set a framework for evaluating the admissibility of confessions in relation to coercion?",
+        choice1: "Miranda v. Arizona (1966)",
+        choice2: "Gideon v. Wainwright (1963)",
+        choice3: "Terry v. Ohio (1968)",
+        choice4: "Mapp v. Ohio (1961)",
+        answer: 1
     }
 ];const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = questions.length;
