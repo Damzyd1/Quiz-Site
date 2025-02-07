@@ -8,7 +8,7 @@ document.addEventListener("keydown", e => {
   }
 });
 
-const topic = "CSS 311 Exam Simulation";
+const topic = "CSS 309 Exam Simulation";
 const topicId = document.getElementById("topic");
 topicId.innerHTML = topic;
 setTimeout(disappear, 500000);
@@ -33,577 +33,486 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestion = [];
 let questions = [
-    {
-        question: "In the context of the criminal justice system, what is the primary role of a confessor?",
-        choice1: "To provide evidence against the victim",
-        choice2: "To admit involvement in a crime",
-        choice3: "To assist in the defense's case preparation",
-        choice4: "To influence public opinion about the crime",
-        answer: 2,
-        rationale: "The primary role of a confessor is to admit involvement in a crime, which can serve as evidence in legal proceedings."
-    },
-    {
-        question: "Which of the following is a key factor determining the credibility of a confessor's statement in the criminal justice system?",
-        choice1: "The social status of the confessor",
-        choice2: "The circumstances under which the confession was obtained",
-        choice3: "The relationship between the confessor and the victim",
-        choice4: "The length of time it took to obtain the confession",
-        answer: 2,
-        rationale: "The circumstances under which the confession was obtained are critical in determining its credibility and admissibility in court."
-    },
-    {
-        question: "What is the significance of corroborating evidence alongside a confession in criminal proceedings?",
-        choice1: "It confirms the confession's authenticity and reliability",
-        choice2: "It ensures the confessor receives leniency",
-        choice3: "It reduces the need for a trial",
-        choice4: "It simplifies the legal process for the prosecutor",
-        answer: 1,
-        rationale: "Corroborating evidence is essential to confirm the authenticity and reliability of a confession, preventing wrongful convictions."
-    },
-    {
-        question: "What legal safeguard is essential to protect a confessor’s rights during interrogation?",
-        choice1: "Public access to the confession process",
-        choice2: "Access to a jury during interrogation",
-        choice3: "The presence of legal counsel",
-        choice4: "The option to provide anonymous testimony",
-        answer: 3,
-        rationale: "The presence of legal counsel ensures that the confessor's rights are protected during interrogation and prevents coercion."
-    },
-    {
-        question: "How does a confessor's mental state impact the admissibility of their confession in court?",
-        choice1: "It determines whether the confession can be broadcast to the public",
-        choice2: "It affects the court's decision to accept the confession as voluntary",
-        choice3: "It allows the confessor to withdraw their statement at any time",
-        choice4: "It influences the severity of the punishment",
-        answer: 2,
-        rationale: "A confessor's mental state is crucial in assessing whether the confession was made voluntarily, a key requirement for admissibility."
-    },
-    {
-        question: "What is the primary characteristic of a forced confession?",
-        choice1: "It is obtained through persuasion",
-        choice2: "It is given willingly by the suspect",
-        choice3: "It is extracted using threats or coercion",
-        choice4: "It is provided anonymously",
-        answer: 3,
-        rationale: "A forced confession is characterized by its extraction through threats, coercion, or other forms of duress."
-    },
-    {
-        question: "Why are forced confessions often deemed inadmissible in court?",
-        choice1: "They are obtained without evidence",
-        choice2: "They do not comply with legal ethical standards",
-        choice3: "They take too long to obtain",
-        choice4: "They are always made in private",
-        answer: 2,
-        rationale: "Forced confessions are inadmissible because they violate ethical standards and may not reflect the truth."
-    },
-    {
-        question: "Which of the following is a common effect of obtaining a forced confession?",
-        choice1: "It ensures a fair trial",
-        choice2: "It undermines the integrity of the justice system",
-        choice3: "It guarantees the suspect’s cooperation",
-        choice4: "It eliminates the need for further investigation",
-        answer: 2,
-        rationale: "Forced confessions undermine the integrity of the justice system by prioritizing coercion over truth."
-    },
-    {
-        question: "What legal safeguard is designed to prevent forced confessions?",
-        choice1: "Recording interrogations",
-        choice2: "Allowing unlimited detention of suspects",
-        choice3: "Prohibiting the presence of legal counsel",
-        choice4: "Removing all rights to remain silent",
-        answer: 1,
-        rationale: "Recording interrogations ensures transparency and protects against coercive practices that lead to forced confessions."
-    },
-    {
-        question: "What is one major ethical issue associated with forced confessions?",
-        choice1: "They are obtained too quickly",
-        choice2: "They are not detailed enough",
-        choice3: "They can lead to wrongful convictions",
-        choice4: "They make suspects too cooperative",
-        answer: 3,
-        rationale: "Forced confessions are a major ethical concern because they can lead to wrongful convictions, harming innocent individuals."
-    },
-    {
-        question: "Which of the following is a primary cause of false confessions?",
-        choice1: "Effective legal representation",
-        choice2: "Physical and psychological coercion during interrogation",
-        choice3: "Access to all evidence by the suspect",
-        choice4: "Strict adherence to ethical interrogation techniques",
-        answer: 2,
-        rationale: "False confessions often result from coercive interrogation methods, such as physical intimidation or psychological pressure."
-    },
-    {
-        question: "What is a major consequence of false confessions in the criminal justice system?",
-        choice1: "Increased public trust in law enforcement",
-        choice2: "The conviction of the actual perpetrator",
-        choice3: "Wrongful convictions of innocent individuals",
-        choice4: "Faster resolution of cases",
-        answer: 3,
-        rationale: "False confessions can lead to the wrongful conviction of innocent people, undermining justice and public confidence."
-    },
-    {
-        question: "Which psychological factor can lead to a false confession?",
-        choice1: "A strong sense of self-esteem",
-        choice2: "An intellectual understanding of legal rights",
-        choice3: "High susceptibility to suggestion or compliance",
-        choice4: "Confidence in the judicial system",
-        answer: 3,
-        rationale: "Individuals who are highly suggestible or eager to comply with authority are more likely to provide false confessions."
-    },
-    {
-        question: "What is a common reason for an innocent person to provide a false confession?",
-        choice1: "The promise of reduced charges or lighter sentences",
-        choice2: "A deep understanding of interrogation strategies",
-        choice3: "A desire to expose the actual perpetrator",
-        choice4: "Access to legal counsel during interrogation",
-        answer: 1,
-        rationale: "Promises of leniency or reduced punishment often compel innocent individuals to falsely confess, hoping for a quick resolution."
-    },
-    {
-        question: "What is one systemic consequence of false confessions in the justice system?",
-        choice1: "Reduced case backlog",
-        choice2: "Improved interrogation standards",
-        choice3: "Erosion of trust in law enforcement and judicial processes",
-        choice4: "Increased accuracy of verdicts",
-        answer: 3,
-        rationale: "False confessions harm the justice system by eroding public trust in law enforcement and judicial fairness."
-    },
-    {
-        question: "What is a primary cause of forced confessions in interrogation practices?",
-        choice1: "A suspect's strong legal representation",
-        choice2: "Coercion through physical abuse or threats",
-        choice3: "Availability of video-recorded interrogations",
-        choice4: "Use of rapport-building techniques",
-        answer: 2,
-        rationale: "Physical abuse or threats are common coercive methods used to force confessions during interrogations."
-    },
-    {
-        question: "Which of the following is a significant consequence of forced confessions?",
-        choice1: "Higher rates of accurate convictions",
-        choice2: "The preservation of human rights",
-        choice3: "The wrongful conviction of innocent individuals",
-        choice4: "Strengthened trust in the justice system",
-        answer: 3,
-        rationale: "Forced confessions often lead to wrongful convictions, harming both the accused and the integrity of the justice system."
-    },
-    {
-        question: "How does fear play a role in forced confessions?",
-        choice1: "It motivates suspects to provide truthful statements",
-        choice2: "It compels suspects to fabricate confessions to avoid further harm",
-        choice3: "It ensures that suspects understand their legal rights",
-        choice4: "It encourages a collaborative relationship with interrogators",
-        answer: 2,
-        rationale: "Fear of harm or punishment can pressure suspects into falsely confessing, regardless of their guilt or innocence."
-    },
-    {
-        question: "What is a systemic cause that enables forced confessions to occur?",
-        choice1: "Strict enforcement of ethical interrogation practices",
-        choice2: "Lack of oversight or accountability during interrogations",
-        choice3: "Presence of a defense attorney during questioning",
-        choice4: "Mandatory recording of interrogation sessions",
-        answer: 2,
-        rationale: "A lack of oversight allows unethical practices, such as coercion, to occur during interrogations, leading to forced confessions."
-    },
-    {
-        question: "What is one long-term consequence of using forced confessions in the justice system?",
-        choice1: "Increased public confidence in law enforcement",
-        choice2: "Improved methods of evidence collection",
-        choice3: "Erosion of trust in legal and judicial institutions",
-        choice4: "More rapid resolution of criminal cases",
-        answer: 3,
-        rationale: "Forced confessions undermine public trust in the justice system by violating ethical standards and human rights."
-    },
-    {
-        question: "What is the primary purpose of testimony in the criminal justice system?",
-        choice1: "To provide physical evidence in a case",
-        choice2: "To offer a firsthand account of events relevant to a case",
-        choice3: "To ensure the defendant remains silent",
-        choice4: "To determine sentencing guidelines",
-        answer: 2,
-        rationale: "Testimony provides a firsthand account of events, which is crucial for establishing facts in a legal case."
-    },
-    {
-        question: "Which of the following types of testimony is considered most reliable in court?",
-        choice1: "Eyewitness testimony",
-        choice2: "Expert testimony",
-        choice3: "Hearsay testimony",
-        choice4: "Character testimony",
-        answer: 2,
-        rationale: "Expert testimony is often considered reliable because it is based on specialized knowledge and expertise."
-    },
-    {
-        question: "What is a common challenge associated with eyewitness testimony?",
-        choice1: "It requires no verification",
-        choice2: "It is often influenced by the witness's memory and perception",
-        choice3: "It is only admissible if corroborated by physical evidence",
-        choice4: "It is rarely used in criminal trials",
-        answer: 2,
-        rationale: "Eyewitness testimony can be unreliable due to the limitations of human memory and perception."
-    },
-    {
-        question: "Why is cross-examination a critical part of evaluating testimony in court?",
-        choice1: "It allows the witness to restate their testimony",
-        choice2: "It helps to verify the accuracy and credibility of the testimony",
-        choice3: "It prevents the defense from presenting their case",
-        choice4: "It ensures the witness remains neutral during questioning",
-        answer: 2,
-        rationale: "Cross-examination tests the accuracy and credibility of testimony, ensuring it stands up to scrutiny."
-    },
-    {
-        question: "What is one major factor that can affect the credibility of a witness’s testimony?",
-        choice1: "The age of the defendant",
-        choice2: "The witness’s bias or personal interest in the case",
-        choice3: "The type of crime being prosecuted",
-        choice4: "The presence of a jury during the testimony",
-        answer: 2,
-        rationale: "A witness's bias or personal interest in a case can undermine the credibility of their testimony."
-    },
-    {
-        question: "What is the main goal of criminal profiling in investigations?",
-        choice1: "To identify potential witnesses",
-        choice2: "To create a psychological and behavioral profile of an unknown offender",
-        choice3: "To analyze forensic evidence at a crime scene",
-        choice4: "To establish motive for the crime",
-        answer: 2,
-        rationale: "Criminal profiling aims to provide a psychological and behavioral description of the offender to aid in their identification."
-    },
-    {
-        question: "What is the primary purpose of a pre-interrogation interview?",
-        choice1: "To intimidate the suspect into confessing",
-        choice2: "To gather information and assess the suspect's credibility",
-        choice3: "To present evidence to the suspect",
-        choice4: "To record the suspect's confession",
-        answer: 2,
-        rationale: "A pre-interrogation interview is designed to gather preliminary information and evaluate the suspect's behavior and credibility."
-    },
-    {
-        question: "During a pre-interrogation interview, which of the following is typically analyzed?",
-        choice1: "The suspect's alibi and financial records",
-        choice2: "The suspect's body language and verbal responses",
-        choice3: "The suspect's relationship with witnesses",
-        choice4: "The suspect's education and employment history",
-        answer: 2,
-        rationale: "Body language and verbal responses are assessed to detect signs of deception or truthfulness during the pre-interrogation phase."
-    },
-    {
-        question: "What distinguishes a pre-interrogation interview from an interrogation?",
-        choice1: "The use of evidence during questioning",
-        choice2: "The presence of the suspect’s lawyer",
-        choice3: "The level of coercion involved",
-        choice4: "The goal of establishing rapport rather than eliciting a confession",
-        answer: 4,
-        rationale: "Pre-interrogation interviews focus on building rapport and gathering information, whereas interrogations aim to elicit confessions."
-    },
-    {
-        question: "Which technique is often used in a pre-interrogation interview to establish rapport with the suspect?",
-        choice1: "Presenting evidence to the suspect",
-        choice2: "Using aggressive questioning techniques",
-        choice3: "Engaging in casual conversation to build trust",
-        choice4: "Isolating the suspect from their surroundings",
-        answer: 3,
-        rationale: "Building rapport through casual conversation creates a more cooperative atmosphere for obtaining truthful information."
-    },
-    {
-        question: "Why is understanding the suspect's baseline behavior important during a pre-interrogation interview?",
-        choice1: "To confirm their motive for the crime",
-        choice2: "To identify deviations that may indicate deception",
-        choice3: "To ensure the suspect feels comfortable",
-        choice4: "To validate the evidence against the suspect",
-        answer: 2,
-        rationale: "Knowing the suspect's baseline behavior helps detect changes that may signal dishonesty or concealment."
-    },
-    {
-        question: "What is the primary purpose of the Miranda warning?",
-        choice1: "To inform suspects of their rights during a criminal investigation",
-        choice2: "To force suspects to confess to their crimes",
-        choice3: "To determine the guilt of the suspect before interrogation",
-        choice4: "To ensure the suspect cooperates with law enforcement",
-        answer: 1,
-        rationale: "The Miranda warning ensures suspects are aware of their rights, such as remaining silent and having legal representation, during a criminal investigation."
-    },
-    {
-        question: "Which constitutional rights are emphasized in the Miranda warning?",
-        choice1: "Right to a fair trial and right to privacy",
-        choice2: "Right to remain silent and right to an attorney",
-        choice3: "Right to due process and right to free speech",
-        choice4: "Right to vote and right to legal counsel",
-        answer: 2,
-        rationale: "The Miranda warning highlights the suspect's right to remain silent and their right to an attorney during questioning to prevent self-incrimination."
-    },
-    {
-        question: "When must the Miranda warning be administered?",
-        choice1: "Immediately after a suspect is arrested",
-        choice2: "Before any custodial interrogation begins",
-        choice3: "At the time of the suspect's trial",
-        choice4: "Only if the suspect requests it",
-        answer: 2,
-        rationale: "The Miranda warning must be given before a custodial interrogation to ensure that any statements made are admissible in court."
-    },
-    {
-        question: "What happens if law enforcement fails to give a suspect the Miranda warning before interrogation?",
-        choice1: "The suspect's statements can still be used in court",
-        choice2: "The suspect is automatically released",
-        choice3: "The suspect's statements may be excluded from evidence",
-        choice4: "The suspect cannot be questioned further",
-        answer: 3,
-        rationale: "If the Miranda warning is not provided, any statements made by the suspect may be inadmissible as evidence due to a violation of their rights."
-    },
-    {
-        question: "Which of the following is NOT part of the Miranda warning?",
-        choice1: "You have the right to remain silent",
-        choice2: "You are entitled to a public defender",
-        choice3: "Anything you say can be used against you in court",
-        choice4: "You can choose to confess to the crime immediately",
-        answer: 4,
-        rationale: "The Miranda warning does not compel suspects to confess; instead, it informs them of their rights to avoid self-incrimination."
-    },
-    {
-        question: "What does it mean for a suspect to waive their Miranda rights?",
-        choice1: "They refuse to answer any questions during interrogation",
-        choice2: "They voluntarily give up their right to remain silent and to an attorney",
-        choice3: "They request the presence of a public defender",
-        choice4: "They decide to go to trial immediately",
-        answer: 2,
-        rationale: "Waiving Miranda rights means the suspect knowingly and voluntarily relinquishes their rights to remain silent and to legal counsel."
-    },
-    {
-        question: "Which factor is most important in determining whether a suspect can validly waive their Miranda rights?",
-        choice1: "The suspect's age and level of education",
-        choice2: "Whether the suspect was coerced into waiving their rights",
-        choice3: "The amount of evidence against the suspect",
-        choice4: "The length of the interrogation",
-        answer: 2,
-        rationale: "A valid waiver must be made voluntarily, without any coercion, and with full understanding of the rights being waived."
-    },
-    {
-        question: "How can law enforcement ensure that a suspect's waiver of Miranda rights is valid?",
-        choice1: "By forcing the suspect to sign a document",
-        choice2: "By explaining the rights clearly and confirming the suspect understands them",
-        choice3: "By recording the entire interrogation process",
-        choice4: "By making the suspect waive the rights before a lawyer",
-        answer: 2,
-        rationale: "Law enforcement must clearly explain the Miranda rights and confirm the suspect understands them before accepting a waiver."
-    },
-    {
-        question: "Which of the following could invalidate a suspect’s waiver of Miranda rights?",
-        choice1: "The suspect was under emotional stress",
-        choice2: "The suspect was intoxicated or mentally impaired",
-        choice3: "The suspect was informed of their rights in a non-verbal manner",
-        choice4: "The suspect initially refused to waive their rights but later agreed",
-        answer: 2,
-        rationale: "A waiver may be invalid if the suspect lacked the capacity to understand their rights due to intoxication, mental impairment, or other factors."
-    },
-    {
-        question: "What legal standard is used to determine if a suspect knowingly waived their Miranda rights?",
-        choice1: "Reasonable person standard",
-        choice2: "Beyond a reasonable doubt",
-        choice3: "Preponderance of evidence",
-        choice4: "Totality of the circumstances",
-        answer: 4,
-        rationale: "Courts assess the totality of the circumstances, including the suspect’s age, intelligence, and conditions of the waiver, to determine if it was knowing and voluntary."
-    },
-    {
-        question: "Which fundamental assumption underlies the Psychoanalytical Theory of confession?",
-        choice1: "Confession is a rational choice made to reduce punishment",
-        choice2: "Confession arises from unconscious guilt and the need for psychological relief",
-        choice3: "Confession is solely influenced by external coercion",
-        choice4: "Confession is a result of social conditioning and reinforcement",
-        answer: 2,
-        rationale: "The Psychoanalytical Theory suggests that confessions stem from deep-seated guilt and an unconscious desire for punishment (Freud, 1923)."
-    },
-    {
-        question: "According to the Decision-Making Theory, why might an innocent suspect falsely confess?",
-        choice1: "Due to a pathological desire for notoriety",
-        choice2: "To align with internalized guilt and trauma",
-        choice3: "As a result of a cost-benefit analysis where confession seems like the best option",
-        choice4: "Because of social pressure from peers",
-        answer: 3,
-        rationale: "Decision-Making Theory posits that suspects weigh potential outcomes and may confess if they believe it minimizes harm (Kassin & Gudjonsson, 2004)."
-    },
-    {
-        question: "How does Cognitive-Behavioral Theory explain the process of confession?",
-        choice1: "Confession is conditioned through reinforcement and learned behaviors",
-        choice2: "Confession is an instinctive response to fear",
-        choice3: "Confession occurs due to internal moral conflicts",
-        choice4: "Confession is solely a legal construct with no psychological basis",
-        answer: 1,
-        rationale: "Cognitive-Behavioral Theory argues that confession results from learned responses, where individuals associate confession with potential rewards or relief from stress (Bandura, 1977)."
-    },
-    {
-        question: "Which of the following best characterizes the Social-Psychological Theory of confession?",
-        choice1: "Confession is influenced by the individual’s need to maintain social relationships and avoid disapproval",
-        choice2: "Confession is primarily a result of cognitive dissonance",
-        choice3: "Confession is a product of rational calculations",
-        choice4: "Confession stems from an individual’s biological predisposition to honesty",
-        answer: 1,
-        rationale: "Social-Psychological Theory suggests that social influence, pressure, and the need to maintain relationships play a crucial role in confessions (Asch, 1951)."
-    },
-    {
-        question: "What is a key limitation of the Decision-Making Theory of confession?",
-        choice1: "It does not consider the role of social influence",
-        choice2: "It assumes that all individuals are rational actors",
-        choice3: "It ignores the impact of psychological coercion",
-        choice4: "It overlooks the biological basis of confessions",
-        answer: 2,
-        rationale: "A major critique of Decision-Making Theory is that it assumes suspects make rational choices, which is not always true under duress (Kassin, 2012)."
-    },
-    {
-        question: "Which theoretical framework best explains why juveniles are more susceptible to false confessions?",
-        choice1: "Psychoanalytical Theory",
-        choice2: "Decision-Making Theory",
-        choice3: "Cognitive-Behavioral Theory",
-        choice4: "Social-Psychological Theory",
-        answer: 4,
-        rationale: "Social-Psychological Theory suggests that juveniles are highly susceptible to peer pressure and authority influence, making them more vulnerable to false confessions (Drizin & Leo, 2004)."
-    },
-    {
-        question: "How does the Cognitive-Behavioral Theory relate to police interrogation tactics?",
-        choice1: "It explains how suspects can be conditioned to confess through reward and punishment",
-        choice2: "It suggests that suspects confess due to unconscious guilt",
-        choice3: "It argues that suspects make rational choices in high-pressure situations",
-        choice4: "It states that confessions are primarily influenced by legal knowledge",
-        answer: 1,
-        rationale: "Cognitive-Behavioral Theory indicates that suspects learn behaviors through reinforcement, making them more likely to confess under repeated psychological pressure (Skinner, 1953)."
-    },
-    {
-        question: "Which of the following is a primary critique of the Psychoanalytical Theory of confession?",
-        choice1: "It fails to explain coerced confessions",
-        choice2: "It does not account for individual agency in decision-making",
-        choice3: "It focuses too much on external social influences",
-        choice4: "It assumes all confessions stem from external coercion",
-        answer: 1,
-        rationale: "Psychoanalytical Theory is criticized for overlooking the impact of external coercion and interrogation tactics in false confessions (Gudjonsson, 2003)."
-    },
-    {
-        question: "How does Social-Psychological Theory explain the role of authority figures in eliciting confessions?",
-        choice1: "Authorities condition individuals through behavioral reinforcement",
-        choice2: "Authorities create social pressure that influences compliance and conformity",
-        choice3: "Authorities trigger unconscious desires for punishment",
-        choice4: "Authorities use legal incentives to secure confessions",
-        answer: 2,
-        rationale: "Social-Psychological Theory suggests that authority figures can manipulate social dynamics, leading individuals to conform and confess (Milgram, 1963)."
-    },
-    {
-        question: "Which of the following theories would best explain why a suspect confesses even when presented with exculpatory evidence?",
-        choice1: "Psychoanalytical Theory",
-        choice2: "Decision-Making Theory",
-        choice3: "Cognitive-Behavioral Theory",
-        choice4: "Social-Psychological Theory",
-        answer: 4,
-        rationale: "Social-Psychological Theory accounts for how suspects may confess due to authority pressure, social expectations, or psychological manipulation despite evidence in their favor (Kassin & Wrightsman, 1985)."
-    },
-    {
-        question: "Which of the following best describes the purpose of the 'Rapport Building' technique in interrogation?",
-        choice1: "To establish a trusting relationship with the suspect, making them more likely to talk.",
-        choice2: "To intimidate the suspect into confessing to a crime.",
-        choice3: "To ensure the suspect waives their right to remain silent.",
-        choice4: "To confuse the suspect and force an accidental confession.",
-        answer: 1
-    },
-    {
-        question: "How does the 'Isolation' technique influence a suspect during interrogation?",
-        choice1: "It forces the suspect to feel lonely and guilty, ensuring they confess.",
-        choice2: "It creates a psychological environment where the suspect feels powerless, making them more likely to comply.",
-        choice3: "It gives the suspect time to think and prepare a strong legal defense.",
-        choice4: "It prevents the suspect from making any false statements under pressure.",
-        answer: 2
-    },
-    {
-        question: "Which interrogation technique involves falsely presenting fabricated evidence to convince a suspect of their guilt?",
-        choice1: "Accusation Strategy",
-        choice2: "False Evidence Ploy",
-        choice3: "Theme Development",
-        choice4: "Pretext Phone Call",
-        answer: 2
-    },
-    {
-        question: "What is the primary goal of using 'Open-Ended Questions' in interrogation?",
-        choice1: "To limit the suspect’s responses to simple 'yes' or 'no' answers.",
-        choice2: "To encourage the suspect to provide detailed explanations that can be analyzed for inconsistencies.",
-        choice3: "To pressure the suspect into confessing quickly.",
-        choice4: "To confuse the suspect and make them reveal hidden information unconsciously.",
-        answer: 2
-    },
-    {
-        question: "Which of the following correctly defines the 'Theme Development' technique in interrogation?",
-        choice1: "The interrogator presents a moral or psychological justification for the suspect’s actions to make confession seem acceptable.",
-        choice2: "The interrogator aggressively accuses the suspect of committing the crime until they break down.",
-        choice3: "The interrogator isolates the suspect and prevents them from speaking until they confess.",
-        choice4: "The interrogator uses misleading statements to confuse the suspect into admitting guilt.",
-        answer: 1
-    },
-    {
-        question: "Which of the following is considered a primary source of confession in criminal investigations?",
-        choice1: "Hearsay statements from third parties",
-        choice2: "Direct verbal admission by the suspect",
-        choice3: "Speculative media reports",
-        choice4: "Psychological profiling of the suspect",
-        answer: 2
-    },
-    {
-        question: "How do 'spontaneous confessions' differ from other sources of confession?",
-        choice1: "They are obtained through extensive interrogation techniques.",
-        choice2: "They occur voluntarily, without external pressure or questioning.",
-        choice3: "They require corroborating forensic evidence to be admissible in court.",
-        choice4: "They are always considered inadmissible due to lack of procedural formality.",
-        answer: 2
-    },
-    {
-        question: "Which of the following is NOT a legally recognized source of confession?",
-        choice1: "Statements made to a police officer during an interrogation",
-        choice2: "Admissions recorded in a properly documented pretext phone call",
-        choice3: "A suspect's involuntary confession obtained through coercion",
-        choice4: "Voluntary written statements given at the police station",
-        answer: 3
-    },
-    {
-        question: "What role does a 'co-defendant confession' play in criminal investigations?",
-        choice1: "It is considered direct evidence and leads to an automatic conviction.",
-        choice2: "It can be used as evidence but requires corroboration to be admissible in court.",
-        choice3: "It is only valid if both defendants confess at the same time.",
-        choice4: "It is never admissible due to potential bias from the co-defendant.",
-        answer: 2
-    },
-    {
-        question: "Why must 'confessions made to undercover officers' be carefully evaluated?",
-        choice1: "They are often given in informal settings and may not reflect the suspect’s true intentions.",
-        choice2: "They are automatically excluded from trial due to entrapment laws.",
-        choice3: "They are considered more reliable than confessions made under formal interrogation.",
-        choice4: "They are legally binding regardless of the suspect’s state of mind.",
-        answer: 1
-    },
-    {
-        question: "Which of the following best explains the paradox of false confessions in relation to rational choice theory?",
-        choice1: "Suspects always make decisions that maximize their personal benefit, making false confessions unlikely.",
-        choice2: "Under psychological distress, suspects may perceive confessing—even falsely—as a rational means of reducing immediate suffering.",
-        choice3: "Rational actors in the justice system can always distinguish between false and genuine confessions.",
-        choice4: "False confessions only occur when an individual is mentally impaired, contradicting rational choice principles.",
-        answer: 2
-    },
-    {
-        question: "What is the primary critique of using behavioral analysis techniques (e.g., Reid Technique) in eliciting confessions?",
-        choice1: "They lack empirical validation and disproportionately lead to false confessions due to coercive tactics.",
-        choice2: "They are ineffective in high-stakes criminal investigations and are only useful in minor offenses.",
-        choice3: "They prioritize deception detection over information gathering, making them unreliable in the courtroom.",
-        choice4: "They are exclusively used in the United States and have no international application.",
-        answer: 1
-    },
-    {
-        question: "In psychological studies on false confession, what factor has been identified as the strongest predictor of a suspect falsely confessing?",
-        choice1: "The presence of corroborating physical evidence.",
-        choice2: "The suspect’s prior criminal history and exposure to law enforcement.",
-        choice3: "The length and intensity of the interrogation, particularly when exceeding recommended time limits.",
-        choice4: "The use of leading questions that suggest crime details not publicly available.",
-        answer: 3
-    },
-    {
-        question: "Which of the following legal precedents set a framework for evaluating the admissibility of confessions in relation to coercion?",
-        choice1: "Miranda v. Arizona (1966)",
-        choice2: "Gideon v. Wainwright (1963)",
-        choice3: "Terry v. Ohio (1968)",
-        choice4: "Mapp v. Ohio (1961)",
-        answer: 1
-    }
+{
+question: "What is the primary role of the media in Nigeria’s justice administration?",
+choice1: "To determine judicial rulings",
+choice2: "To inform the public and act as a watchdog",
+choice3: "To prosecute offenders",
+choice4: "To create laws for legal proceedings",
+answer: 2,
+rationale: "The media serves as a watchdog, ensuring transparency, informing the public, and holding justice actors accountable."
+},
+
+{
+question: "Which media-related challenge most significantly affects justice administration in Nigeria?",
+choice1: "Excessive judicial independence",
+choice2: "Limited media ownership",
+choice3: "Media sensationalism",
+choice4: "Strict government regulation of press freedom",
+answer: 3,
+rationale: "Sensationalism distorts facts, influences public perception, and can pressure justice actors into biased decisions."
+},
+
+{
+question: "How does media coverage impact public confidence in the Nigerian justice system?",
+choice1: "It has no impact on public trust",
+choice2: "It always strengthens public trust in the system",
+choice3: "It can either strengthen or weaken trust depending on how cases are reported",
+choice4: "It replaces the judiciary’s role in delivering justice",
+answer: 3,
+rationale: "Media can enhance trust by exposing corruption or reduce confidence through biased or inaccurate reporting."
+},
+
+{
+question: "Which of the following is a major ethical concern in media reporting of court cases?",
+choice1: "Ensuring public interest is maintained",
+choice2: "Balancing press freedom with fair trial rights",
+choice3: "Maximizing viewership through dramatic storytelling",
+choice4: "Supporting only the government’s stance on legal matters",
+answer: 2,
+rationale: "While press freedom is essential, it must be balanced against the accused’s right to a fair trial to avoid prejudicial reporting."
+},
+
+{
+question: "What legal framework in Nigeria regulates media freedom in justice administration?",
+choice1: "Freedom of Information Act (2011)",
+choice2: "Nigerian Criminal Code",
+choice3: "National Broadcasting Commission Act",
+choice4: "Electoral Act",
+answer: 1,
+rationale: "The FOI Act (2011) grants journalists access to public records, enhancing media oversight of justice administration."
+},
+{
+question: "Which of the following best describes the primary distinction between traditional and new media?",
+choice1: "Traditional media is more interactive than new media",
+choice2: "New media allows instant two-way communication, while traditional media is one-directional",
+choice3: "Traditional media is exclusively digital, whereas new media relies on print",
+choice4: "New media does not require technological advancements",
+answer: 2,
+rationale: "New media (social media, blogs, digital platforms) facilitates real-time, two-way communication, unlike traditional media (TV, newspapers) which delivers content one-directionally."
+},
+
+{
+question: "How has social media transformed political engagement in contemporary society?",
+choice1: "By eliminating the need for traditional media in political discourse",
+choice2: "By enabling direct citizen participation and rapid mobilization",
+choice3: "By ensuring that all online political information is accurate",
+choice4: "By restricting freedom of expression",
+answer: 2,
+rationale: "Social media enhances political engagement by allowing real-time interaction, mobilization for protests, and direct communication between politicians and citizens."
+},
+
+{
+question: "Which form of media is most effective in combating misinformation in today’s digital era?",
+choice1: "Television",
+choice2: "Newspapers",
+choice3: "Fact-checking digital platforms",
+choice4: "Billboards",
+answer: 3,
+rationale: "Fact-checking platforms (e.g., Full Fact, Africa Check) play a crucial role in verifying online claims and countering misinformation."
+},
+
+{
+question: "In what way does broadcast media remain relevant despite the rise of digital media?",
+choice1: "It provides real-time reporting and remains accessible to audiences without internet access",
+choice2: "It is the only credible form of news dissemination",
+choice3: "It completely replaced print media",
+choice4: "It is more affordable than digital media",
+answer: 1,
+rationale: "Broadcast media, such as radio and television, remains crucial for reaching remote areas, offering real-time news, and providing authoritative reporting."
+},
+
+{
+question: "Which of the following is a key advantage of digital media over print media in contemporary society?",
+choice1: "Lower risk of misinformation",
+choice2: "Greater audience interactivity and real-time updates",
+choice3: "It is always more credible than print media",
+choice4: "It operates independently of technology",
+answer: 2,
+rationale: "Digital media enables dynamic engagement through social platforms, immediate updates, and a broader reach compared to static print media."
+},
+{
+question: "Which of the following is a fundamental role of the media in a democratic society?",
+choice1: "To control government decision-making",
+choice2: "To act as a watchdog and hold power accountable",
+choice3: "To replace the judiciary in interpreting laws",
+choice4: "To dictate public policies directly",
+answer: 2,
+rationale: "Media serves as a watchdog, exposing corruption, holding government accountable, and ensuring transparency in democratic societies."
+},
+
+{
+question: "How does media contribute to political participation in a democracy?",
+choice1: "By suppressing opposition voices to maintain order",
+choice2: "By providing unbiased information that informs voter decisions",
+choice3: "By determining election outcomes through selective reporting",
+choice4: "By preventing public access to political debates",
+answer: 2,
+rationale: "Media informs citizens about political issues, debates, and candidates, helping them make informed voting decisions."
+},
+
+{
+question: "Which media-related principle is essential for sustaining democracy?",
+choice1: "Government control over media content",
+choice2: "Press freedom and independence",
+choice3: "State funding of all media outlets",
+choice4: "Banning of investigative journalism",
+answer: 2,
+rationale: "A free and independent press ensures unbiased reporting, prevents government overreach, and promotes transparency in democratic governance."
+},
+
+{
+question: "What is a major way in which media influences public opinion in a democracy?",
+choice1: "By distorting facts to align with state propaganda",
+choice2: "By shaping discourse through agenda-setting and framing",
+choice3: "By ensuring that all political actors receive equal coverage",
+choice4: "By preventing critical journalism to avoid social unrest",
+answer: 2,
+rationale: "Media influences public perception by selecting issues to highlight (agenda-setting) and presenting them in a way that shapes public interpretation (framing)."
+},
+
+{
+question: "Why is access to diverse media sources important in a democratic society?",
+choice1: "To reinforce government narratives",
+choice2: "To provide citizens with multiple perspectives for informed decision-making",
+choice3: "To ensure state media dominates public discourse",
+choice4: "To reduce media competition",
+answer: 2,
+rationale: "A diversity of media sources exposes citizens to multiple viewpoints, fostering critical thinking and informed decision-making in a democracy."
+},
+{
+question: "Which of the following best describes the role of media in shaping political discourse in Nigeria?",
+choice1: "It serves as a mouthpiece for the ruling government only",
+choice2: "It provides a platform for diverse political opinions and accountability",
+choice3: "It operates independently without any influence from political actors",
+choice4: "It functions solely as an entertainment and advertisement platform",
+answer: 2,
+rationale: "The media in Nigeria plays a crucial role in fostering democratic participation by offering diverse perspectives, holding government accountable, and shaping public discourse."
+},
+
+{
+question: "How has social media influenced political participation in Nigeria?",
+choice1: "It has led to increased civic engagement and political mobilization",
+choice2: "It has reduced the interest of citizens in governance",
+choice3: "It has completely replaced traditional media as a political tool",
+choice4: "It has been ineffective in shaping political opinions",
+answer: 1,
+rationale: "Social media has revolutionized political activism in Nigeria, allowing for real-time discourse, mobilization of protests, and increased youth participation in elections."
+},
+
+{
+question: "What is a major challenge faced by Nigerian media in reporting political issues?",
+choice1: "Excessive press freedom leading to misinformation",
+choice2: "Government censorship and harassment of journalists",
+choice3: "Lack of interest from the public in political affairs",
+choice4: "Over-reliance on international media for political news",
+answer: 2,
+rationale: "Journalists in Nigeria often face threats, censorship, and arrests when reporting on sensitive political issues, limiting press freedom."
+},
+
+{
+question: "Which of the following is an effect of media ownership on political reporting in Nigeria?",
+choice1: "It ensures completely unbiased coverage of political events",
+choice2: "It leads to editorial bias depending on the owner's political affiliation",
+choice3: "It has no impact on how political news is reported",
+choice4: "It prevents political interference in journalism",
+answer: 2,
+rationale: "Many media houses in Nigeria are owned by politicians or business elites, leading to biased reporting that aligns with the interests of their owners."
+},
+
+{
+question: "What impact did the #EndSARS movement have on the relationship between media and politics in Nigeria?",
+choice1: "It demonstrated the power of social media in shaping political narratives",
+choice2: "It showed that traditional media is more influential than digital platforms",
+choice3: "It reduced media influence on political activism",
+choice4: "It had no significant effect on Nigerian politics",
+answer: 1,
+rationale: "The #EndSARS movement highlighted how social media could mobilize protests, influence policy discussions, and challenge state narratives, reshaping political discourse in Nigeria."
+},
+{
+question: "How has social media transformed interpersonal relationships in contemporary society?",
+choice1: "By enabling instant communication and global networking",
+choice2: "By making traditional face-to-face interaction obsolete",
+choice3: "By preventing misinformation and online conflicts",
+choice4: "By restricting interactions to personal and private networks",
+answer: 1,
+rationale: "Social media has revolutionized interpersonal communication by allowing real-time interactions, relationship-building, and cross-cultural engagements."
+},
+
+{
+question: "What is a significant negative impact of media on social relationships?",
+choice1: "It fosters emotional intelligence and deepens empathy",
+choice2: "It can lead to reduced face-to-face interactions and social isolation",
+choice3: "It completely eradicates traditional means of communication",
+choice4: "It ensures absolute transparency in online communication",
+answer: 2,
+rationale: "Over-reliance on digital media for communication can weaken real-life social bonds, leading to reduced emotional connection and social alienation."
+},
+
+{
+question: "Which theoretical perspective explains the media’s influence on shaping social norms and relationships?",
+choice1: "Cultivation Theory",
+choice2: "Strain Theory",
+choice3: "Labeling Theory",
+choice4: "Rational Choice Theory",
+answer: 1,
+rationale: "Cultivation Theory suggests that long-term exposure to media content gradually shapes an individual's perceptions, attitudes, and social expectations."
+},
+
+{
+question: "How has media influenced the concept of identity in modern social relationships?",
+choice1: "It has allowed individuals to construct and negotiate multiple identities",
+choice2: "It has eliminated the influence of cultural norms on identity formation",
+choice3: "It has restricted identity formation to traditional societal expectations",
+choice4: "It has had no significant impact on self-perception and identity",
+answer: 1,
+rationale: "Digital and social media provide platforms where individuals can present curated identities, negotiate social roles, and engage in identity experimentation."
+},
+{
+question: "How does media influence social identity formation?",
+choice1: "By exposing individuals to diverse cultures and perspectives",
+choice2: "By limiting self-expression to traditional values",
+choice3: "By preventing people from engaging with global trends",
+choice4: "By reinforcing a single, unchanging identity for everyone",
+answer: 1,
+rationale: "Media plays a critical role in shaping social identity by exposing individuals to different cultures, ideas, and perspectives, influencing how they see themselves."
+},
+
+{
+question: "Which of the following is a major concern regarding media’s influence on social identity?",
+choice1: "Media encourages absolute uniformity in identity",
+choice2: "Media creates unrealistic beauty and lifestyle standards",
+choice3: "Media prevents individuals from forming group identities",
+choice4: "Media eliminates the need for personal experiences in identity formation",
+answer: 2,
+rationale: "Media often promotes idealized images of beauty and success, leading to self-esteem issues and distorted perceptions of social identity."
+},
+
+{
+question: "Which of these media platforms has the most significant impact on youth identity formation today?",
+choice1: "Newspapers",
+choice2: "Television",
+choice3: "Social media",
+choice4: "Radio",
+answer: 3,
+rationale: "Social media allows for active participation, self-expression, and engagement with peers, making it highly influential in shaping youth identity."
+},
+
+{
+question: "What role does media representation play in shaping social identity?",
+choice1: "It helps marginalized groups gain visibility and recognition",
+choice2: "It eliminates stereotypes and biases completely",
+choice3: "It ensures equal representation for all identities at all times",
+choice4: "It has no impact on identity formation",
+answer: 1,
+rationale: "Media representation gives marginalized groups a voice and helps shape public perceptions, but it can also reinforce stereotypes if misrepresented."
+},
+
+{
+question: "Which theory explains how media exposure influences people's perception of social identity?",
+choice1: "Cultivation Theory",
+choice2: "Routine Activity Theory",
+choice3: "Broken Windows Theory",
+choice4: "Strain Theory",
+answer: 1,
+rationale: "Cultivation Theory suggests that prolonged exposure to media content influences individuals' worldviews and social identity over time."
+},
+{
+question: "Which criminological theory best explains the media’s role in amplifying moral panics about crime?",
+choice1: "Routine Activity Theory",
+choice2: "Labeling Theory",
+choice3: "Social Learning Theory",
+choice4: "Broken Windows Theory",
+answer: 2,
+rationale: "Labeling Theory suggests that media can stigmatize certain groups, reinforcing public fear and moral panic, which in turn influences crime control policies."
+},
+
+{
+question: "How does the concept of 'agenda-setting' apply to media coverage of crime?",
+choice1: "Media dictates public opinion by directly telling people what to think",
+choice2: "Media shapes what issues people consider important without dictating opinions",
+choice3: "Media ensures balanced coverage of all crimes to avoid bias",
+choice4: "Media coverage has no impact on crime perception",
+answer: 2,
+rationale: "The agenda-setting function of the media influences which crimes receive public attention, shaping discourse without explicitly dictating opinions."
+},
+
+{
+question: "Which of the following is an example of 'crime news framing' in media?",
+choice1: "Using terms like 'thug' or 'predator' to describe suspects",
+choice2: "Providing only factual, neutral descriptions of criminal events",
+choice3: "Reporting crime statistics without contextual analysis",
+choice4: "Ignoring crime stories to focus on political events",
+answer: 1,
+rationale: "Crime news framing involves the use of language, imagery, and selective reporting to shape public perception of crime and criminals."
+},
+
+{
+question: "What is a primary criticism of the media’s representation of crime?",
+choice1: "It accurately reflects actual crime trends",
+choice2: "It often focuses disproportionately on violent and sensational crimes",
+choice3: "It completely ignores crimes committed by marginalized groups",
+choice4: "It promotes restorative justice approaches over punitive measures",
+answer: 2,
+rationale: "Media coverage tends to overrepresent violent crimes, creating a distorted perception of crime rates and public safety."
+},
+
+{
+question: "How does media sensationalism influence criminal justice policies?",
+choice1: "It leads to evidence-based policymaking that reduces crime",
+choice2: "It increases public fear, often resulting in harsher sentencing laws",
+choice3: "It encourages decriminalization of non-violent offenses",
+choice4: "It has no measurable impact on criminal justice policies",
+answer: 2,
+rationale: "Media-driven moral panics can pressure lawmakers to adopt punitive measures, such as 'three-strikes' laws, regardless of actual crime trends."
+},
+{
+question: "Which journalistic principle is most critical when reporting crime to ensure ethical and responsible coverage?",
+choice1: "Maximizing audience engagement",
+choice2: "Preserving presumption of innocence",
+choice3: "Using sensational headlines for impact",
+choice4: "Avoiding coverage of controversial cases",
+answer: 2,
+rationale: "The presumption of innocence is a fundamental legal principle, and responsible journalism must avoid prejudicing public opinion before a fair trial."
+},
+
+{
+question: "Which of the following is a major criticism of media coverage of crime?",
+choice1: "It frequently provides excessive legal analysis",
+choice2: "It often exaggerates or distorts crime prevalence",
+choice3: "It completely ignores violent crimes",
+choice4: "It focuses only on corporate and white-collar crimes",
+answer: 2,
+rationale: "Media coverage tends to overrepresent violent and rare crimes, creating a 'crime wave' perception that does not reflect statistical realities."
+},
+
+{
+question: "What role does crime reporting play in shaping public fear of crime?",
+choice1: "It accurately reflects crime trends with no bias",
+choice2: "It reduces fear by educating the public on crime prevention",
+choice3: "It can amplify fear by focusing on rare but violent crimes",
+choice4: "It eliminates misinformation by presenting balanced coverage",
+answer: 3,
+rationale: "Media tends to focus on sensational crimes, contributing to moral panics and public fear disproportionate to actual crime rates."
+},
+
+{
+question: "Which of these reporting practices can lead to 'trial by media'?",
+choice1: "Balanced reporting with multiple perspectives",
+choice2: "Sensationalist coverage that assumes guilt before trial",
+choice3: "Minimal reporting to respect privacy laws",
+choice4: "Providing only factual updates on a case",
+answer: 2,
+rationale: "When media outlets imply a suspect's guilt before trial, it influences public perception and can compromise the fairness of judicial proceedings."
+},
+
+{
+question: "What is the primary concern regarding the media’s influence on criminal justice policy?",
+choice1: "Media ensures that only factual crime data informs policies",
+choice2: "Media-driven moral panics can pressure policymakers into reactionary laws",
+choice3: "Media has no influence on crime legislation or enforcement",
+choice4: "Media promotes exclusively rehabilitative justice measures",
+answer: 2,
+rationale: "Intense media coverage of specific crimes can lead to public outcry, pressuring policymakers into adopting punitive laws, sometimes without sufficient evidence."
+},
+{
+question: "Which pattern of crime reporting is most likely to contribute to moral panic?",
+choice1: "Contextual reporting with expert analysis",
+choice2: "Sensationalist reporting with exaggerated headlines",
+choice3: "Data-driven reporting using verified statistics",
+choice4: "Balanced reporting with multiple sources",
+answer: 2,
+rationale: "Sensationalist reporting amplifies fear and anxiety among the public by exaggerating crime trends, often leading to moral panic."
+},
+
+{
+question: "What is the primary characteristic of episodic crime reporting?",
+choice1: "It focuses on individual crime incidents without broader context",
+choice2: "It examines crime trends over time and their root causes",
+choice3: "It provides a critical analysis of law enforcement strategies",
+choice4: "It only reports on corporate and white-collar crimes",
+answer: 1,
+rationale: "Episodic reporting isolates crimes as individual events rather than situating them within broader social, economic, or policy contexts."
+},
+
+{
+question: "Which crime reporting pattern is most effective in educating the public on systemic issues?",
+choice1: "Episodic crime reporting",
+choice2: "Thematic crime reporting",
+choice3: "Breaking news crime updates",
+choice4: "Crime scene reporting",
+answer: 2,
+rationale: "Thematic reporting connects individual crime incidents to larger trends, policies, and systemic issues, promoting deeper public understanding."
+},
+
+{
+question: "How does 'if it bleeds, it leads' influence crime reporting patterns?",
+choice1: "It prioritizes violent crimes for maximum audience engagement",
+choice2: "It ensures a balanced approach to crime journalism",
+choice3: "It focuses only on crime prevention strategies",
+choice4: "It reduces the media’s focus on crime to minimize fear",
+answer: 1,
+rationale: "This media principle prioritizes violent and shocking crimes because they attract more viewers, often at the expense of balanced reporting."
+},
+
+{
+question: "What is a major criticism of crime reporting patterns in mainstream media?",
+choice1: "They rely too much on criminal justice statistics",
+choice2: "They often reinforce stereotypes and racial biases",
+choice3: "They focus exclusively on white-collar crimes",
+choice4: "They prioritize accuracy over sensationalism",
+answer: 2,
+rationale: "Crime reporting often disproportionately portrays certain groups as criminals, reinforcing biases and shaping public perceptions negatively."
+},
+{
+question: "Which of the following best describes the watchdog role of the media in crime reporting?",
+choice1: "Sensationalizing crime stories to attract viewership",
+choice2: "Monitoring law enforcement and judicial processes for accountability",
+choice3: "Focusing only on high-profile criminal cases",
+choice4: "Reporting crimes based solely on police press releases",
+answer: 2,
+rationale: "The watchdog role ensures transparency and accountability in the criminal justice system by critically examining law enforcement and judicial actions."
+},
+
+{
+question: "How does media framing influence public perception of crime?",
+choice1: "By shaping narratives that emphasize certain aspects while downplaying others",
+choice2: "By objectively presenting crime statistics without bias",
+choice3: "By only reporting crime cases verified by government sources",
+choice4: "By ensuring crime news is completely neutral and unfiltered",
+answer: 1,
+rationale: "Media framing influences how audiences interpret crime by selecting, emphasizing, or omitting certain details, shaping public opinion accordingly."
+},
+
+{
+question: "What is the main ethical dilemma faced by journalists in crime reporting?",
+choice1: "Balancing the public's right to know with privacy and fair trial rights",
+choice2: "Ensuring crime reports are as dramatic as possible",
+choice3: "Protecting the identity of all criminals regardless of their crime",
+choice4: "Relying solely on eyewitness accounts for reporting",
+answer: 1,
+rationale: "Journalists must balance transparency with ethical considerations, such as avoiding harm to victims, suspects, and ongoing legal proceedings."
+},
+
+{
+question: "Which of the following is a negative consequence of media sensationalism in crime reporting?",
+choice1: "It increases public awareness of crime trends",
+choice2: "It fosters critical thinking about crime policies",
+choice3: "It distorts reality and creates unnecessary fear",
+choice4: "It promotes balanced discourse on criminal justice reforms",
+answer: 3,
+rationale: "Sensationalist crime reporting often exaggerates crime prevalence, leading to fear, moral panic, and sometimes punitive criminal justice policies."
+},
+
+{
+question: "Why is investigative journalism important in crime reporting?",
+choice1: "It exposes corruption, misconduct, and systemic failures in the justice system",
+choice2: "It ensures all news is presented in an entertaining format",
+choice3: "It replaces law enforcement’s role in crime-solving",
+choice4: "It focuses only on reporting official statements from authorities",
+answer: 1,
+rationale: "Investigative journalism uncovers hidden truths about crime, corruption, and justice system failures, promoting transparency and accountability."
+}
 ];const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = questions.length;
 const Total_Score = 10*MAX_QUESTIONS;
