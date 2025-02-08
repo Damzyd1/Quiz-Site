@@ -18,486 +18,280 @@ let availableQuestion = [];
 */
  
   let questions = [
-{
-question: "What is the primary role of the media in Nigeria’s justice administration?",
-choice1: "To determine judicial rulings",
-choice2: "To inform the public and act as a watchdog",
-choice3: "To prosecute offenders",
-choice4: "To create laws for legal proceedings",
-answer: "To inform the public and act as a watchdog",
-rationale: "The media serves as a watchdog, ensuring transparency, informing the public, and holding justice actors accountable."
-},
-
-{
-question: "Which media-related challenge most significantly affects justice administration in Nigeria?",
-choice1: "Excessive judicial independence",
-choice2: "Limited media ownership",
-choice3: "Media sensationalism",
-choice4: "Strict government regulation of press freedom",
-answer: "Media sensationalism",
-rationale: "Sensationalism distorts facts, influences public perception, and can pressure justice actors into biased decisions."
-},
-
-{
-question: "How does media coverage impact public confidence in the Nigerian justice system?",
-choice1: "It has no impact on public trust",
-choice2: "It always strengthens public trust in the system",
-choice3: "It can either strengthen or weaken trust depending on how cases are reported",
-choice4: "It replaces the judiciary’s role in delivering justice",
-answer: "It can either strengthen or weaken trust depending on how cases are reported",
-rationale: "Media can enhance trust by exposing corruption or reduce confidence through biased or inaccurate reporting."
-},
-
-{
-question: "Which of the following is a major ethical concern in media reporting of court cases?",
-choice1: "Ensuring public interest is maintained",
-choice2: "Balancing press freedom with fair trial rights",
-choice3: "Maximizing viewership through dramatic storytelling",
-choice4: "Supporting only the government’s stance on legal matters",
-answer: "Balancing press freedom with fair trial rights",
-rationale: "While press freedom is essential, it must be balanced against the accused’s right to a fair trial to avoid prejudicial reporting."
-},
-
-{
-question: "What legal framework in Nigeria regulates media freedom in justice administration?",
-choice1: "Freedom of Information Act (2011)",
-choice2: "Nigerian Criminal Code",
-choice3: "National Broadcasting Commission Act",
-choice4: "Electoral Act",
-answer: "Freedom of Information Act (2011)",
-rationale: "The FOI Act (2011) grants journalists access to public records, enhancing media oversight of justice administration."
-},
-{
-question: "Which of the following best describes the primary distinction between traditional and new media?",
-choice1: "Traditional media is more interactive than new media",
-choice2: "New media allows instant two-way communication, while traditional media is one-directional",
-choice3: "Traditional media is exclusively digital, whereas new media relies on print",
-choice4: "New media does not require technological advancements",
-answer: "New media allows instant two-way communication, while traditional media is one-directional",
-rationale: "New media (social media, blogs, digital platforms) facilitates real-time, two-way communication, unlike traditional media (TV, newspapers) which delivers content one-directionally."
-},
-
-{
-question: "How has social media transformed political engagement in contemporary society?",
-choice1: "By eliminating the need for traditional media in political discourse",
-choice2: "By enabling direct citizen participation and rapid mobilization",
-choice3: "By ensuring that all online political information is accurate",
-choice4: "By restricting freedom of expression",
-answer: "By enabling direct citizen participation and rapid mobilization",
-rationale: "Social media enhances political engagement by allowing real-time interaction, mobilization for protests, and direct communication between politicians and citizens."
-},
-
-{
-question: "Which form of media is most effective in combating misinformation in today’s digital era?",
-choice1: "Television",
-choice2: "Newspapers",
-choice3: "Fact-checking digital platforms",
-choice4: "Billboards",
-answer: "Fact-checking digital platforms",
-rationale: "Fact-checking platforms (e.g., Full Fact, Africa Check) play a crucial role in verifying online claims and countering misinformation."
-},
-
-{
-question: "In what way does broadcast media remain relevant despite the rise of digital media?",
-choice1: "It provides real-time reporting and remains accessible to audiences without internet access",
-choice2: "It is the only credible form of news dissemination",
-choice3: "It completely replaced print media",
-choice4: "It is more affordable than digital media",
-answer: "It provides real-time reporting and remains accessible to audiences without internet access",
-rationale: "Broadcast media, such as radio and television, remains crucial for reaching remote areas, offering real-time news, and providing authoritative reporting."
-},
-
-{
-question: "Which of the following is a key advantage of digital media over print media in contemporary society?",
-choice1: "Lower risk of misinformation",
-choice2: "Greater audience interactivity and real-time updates",
-choice3: "It is always more credible than print media",
-choice4: "It operates independently of technology",
-answer: "Greater audience interactivity and real-time updates",
-rationale: "Digital media enables dynamic engagement through social platforms, immediate updates, and a broader reach compared to static print media."
-},
-{
-question: "Which of the following is a fundamental role of the media in a democratic society?",
-choice1: "To control government decision-making",
-choice2: "To act as a watchdog and hold power accountable",
-choice3: "To replace the judiciary in interpreting laws",
-choice4: "To dictate public policies directly",
-answer: "To act as a watchdog and hold power accountable",
-rationale: "Media serves as a watchdog, exposing corruption, holding government accountable, and ensuring transparency in democratic societies."
-},
-
-{
-question: "How does media contribute to political participation in a democracy?",
-choice1: "By suppressing opposition voices to maintain order",
-choice2: "By providing unbiased information that informs voter decisions",
-choice3: "By determining election outcomes through selective reporting",
-choice4: "By preventing public access to political debates",
-answer: "By providing unbiased information that informs voter decisions",
-rationale: "Media informs citizens about political issues, debates, and candidates, helping them make informed voting decisions."
-},
-
-{
-question: "Which media-related principle is essential for sustaining democracy?",
-choice1: "Government control over media content",
-choice2: "Press freedom and independence",
-choice3: "State funding of all media outlets",
-choice4: "Banning of investigative journalism",
-answer: "Press freedom and independence",
-rationale: "A free and independent press ensures unbiased reporting, prevents government overreach, and promotes transparency in democratic governance."
-},
-
-{
-question: "What is a major way in which media influences public opinion in a democracy?",
-choice1: "By distorting facts to align with state propaganda",
-choice2: "By shaping discourse through agenda-setting and framing",
-choice3: "By ensuring that all political actors receive equal coverage",
-choice4: "By preventing critical journalism to avoid social unrest",
-answer: "By shaping discourse through agenda-setting and framing",
-rationale: "Media influences public perception by selecting issues to highlight (agenda-setting) and presenting them in a way that shapes public interpretation (framing)."
-},
-
-{
-question: "Why is access to diverse media sources important in a democratic society?",
-choice1: "To reinforce government narratives",
-choice2: "To provide citizens with multiple perspectives for informed decision-making",
-choice3: "To ensure state media dominates public discourse",
-choice4: "To reduce media competition",
-answer: "To provide citizens with multiple perspectives for informed decision-making",
-rationale: "A diversity of media sources exposes citizens to multiple viewpoints, fostering critical thinking and informed decision-making in a democracy."
-},
-{
-question: "Which of the following best describes the role of media in shaping political discourse in Nigeria?",
-choice1: "It serves as a mouthpiece for the ruling government only",
-choice2: "It provides a platform for diverse political opinions and accountability",
-choice3: "It operates independently without any influence from political actors",
-choice4: "It functions solely as an entertainment and advertisement platform",
-answer: "It provides a platform for diverse political opinions and accountability",
-rationale: "The media in Nigeria plays a crucial role in fostering democratic participation by offering diverse perspectives, holding government accountable, and shaping public discourse."
-},
-
-{
-question: "How has social media influenced political participation in Nigeria?",
-choice1: "It has led to increased civic engagement and political mobilization",
-choice2: "It has reduced the interest of citizens in governance",
-choice3: "It has completely replaced traditional media as a political tool",
-choice4: "It has been ineffective in shaping political opinions",
-answer: "It has led to increased civic engagement and political mobilization",
-rationale: "Social media has revolutionized political activism in Nigeria, allowing for real-time discourse, mobilization of protests, and increased youth participation in elections."
-},
-
-{
-question: "What is a major challenge faced by Nigerian media in reporting political issues?",
-choice1: "Excessive press freedom leading to misinformation",
-choice2: "Government censorship and harassment of journalists",
-choice3: "Lack of interest from the public in political affairs",
-choice4: "Over-reliance on international media for political news",
-answer: "Government censorship and harassment of journalists",
-rationale: "Journalists in Nigeria often face threats, censorship, and arrests when reporting on sensitive political issues, limiting press freedom."
-},
-
-{
-question: "Which of the following is an effect of media ownership on political reporting in Nigeria?",
-choice1: "It ensures completely unbiased coverage of political events",
-choice2: "It leads to editorial bias depending on the owner's political affiliation",
-choice3: "It has no impact on how political news is reported",
-choice4: "It prevents political interference in journalism",
-answer: "It leads to editorial bias depending on the owner's political affiliation",
-rationale: "Many media houses in Nigeria are owned by politicians or business elites, leading to biased reporting that aligns with the interests of their owners."
-},
-
-{
-question: "What impact did the #EndSARS movement have on the relationship between media and politics in Nigeria?",
-choice1: "It demonstrated the power of social media in shaping political narratives",
-choice2: "It showed that traditional media is more influential than digital platforms",
-choice3: "It reduced media influence on political activism",
-choice4: "It had no significant effect on Nigerian politics",
-answer: "It demonstrated the power of social media in shaping political narratives",
-rationale: "The #EndSARS movement highlighted how social media could mobilize protests, influence policy discussions, and challenge state narratives, reshaping political discourse in Nigeria."
-},
-{
-question: "How has social media transformed interpersonal relationships in contemporary society?",
-choice1: "By enabling instant communication and global networking",
-choice2: "By making traditional face-to-face interaction obsolete",
-choice3: "By preventing misinformation and online conflicts",
-choice4: "By restricting interactions to personal and private networks",
-answer: "By enabling instant communication and global networking",
-rationale: "Social media has revolutionized interpersonal communication by allowing real-time interactions, relationship-building, and cross-cultural engagements."
-},
-
-{
-question: "What is a significant negative impact of media on social relationships?",
-choice1: "It fosters emotional intelligence and deepens empathy",
-choice2: "It can lead to reduced face-to-face interactions and social isolation",
-choice3: "It completely eradicates traditional means of communication",
-choice4: "It ensures absolute transparency in online communication",
-answer: "It can lead to reduced face-to-face interactions and social isolation",
-rationale: "Over-reliance on digital media for communication can weaken real-life social bonds, leading to reduced emotional connection and social alienation."
-},
-
-{
-question: "Which theoretical perspective explains the media’s influence on shaping social norms and relationships?",
-choice1: "Cultivation Theory",
-choice2: "Strain Theory",
-choice3: "Labeling Theory",
-choice4: "Rational Choice Theory",
-answer: "Cultivation Theory",
-rationale: "Cultivation Theory suggests that long-term exposure to media content gradually shapes an individual's perceptions, attitudes, and social expectations."
-},
-
-{
-question: "How has media influenced the concept of identity in modern social relationships?",
-choice1: "It has allowed individuals to construct and negotiate multiple identities",
-choice2: "It has eliminated the influence of cultural norms on identity formation",
-choice3: "It has restricted identity formation to traditional societal expectations",
-choice4: "It has had no significant impact on self-perception and identity",
-answer: "It has allowed individuals to construct and negotiate multiple identities",
-rationale: "Digital and social media provide platforms where individuals can present curated identities, negotiate social roles, and engage in identity experimentation."
-},
-{
-question: "How does media influence social identity formation?",
-choice1: "By exposing individuals to diverse cultures and perspectives",
-choice2: "By limiting self-expression to traditional values",
-choice3: "By preventing people from engaging with global trends",
-choice4: "By reinforcing a single, unchanging identity for everyone",
-answer: "By exposing individuals to diverse cultures and perspectives",
-rationale: "Media plays a critical role in shaping social identity by exposing individuals to different cultures, ideas, and perspectives, influencing how they see themselves."
-},
-
-{
-question: "Which of the following is a major concern regarding media’s influence on social identity?",
-choice1: "Media encourages absolute uniformity in identity",
-choice2: "Media creates unrealistic beauty and lifestyle standards",
-choice3: "Media prevents individuals from forming group identities",
-choice4: "Media eliminates the need for personal experiences in identity formation",
-answer: "Media creates unrealistic beauty and lifestyle standards",
-rationale: "Media often promotes idealized images of beauty and success, leading to self-esteem issues and distorted perceptions of social identity."
-},
-
-{
-question: "Which of these media platforms has the most significant impact on youth identity formation today?",
-choice1: "Newspapers",
-choice2: "Television",
-choice3: "Social media",
-choice4: "Radio",
-answer: "Social media",
-rationale: "Social media allows for active participation, self-expression, and engagement with peers, making it highly influential in shaping youth identity."
-},
-
-{
-question: "What role does media representation play in shaping social identity?",
-choice1: "It helps marginalized groups gain visibility and recognition",
-choice2: "It eliminates stereotypes and biases completely",
-choice3: "It ensures equal representation for all identities at all times",
-choice4: "It has no impact on identity formation",
-answer: "It helps marginalized groups gain visibility and recognition",
-rationale: "Media representation gives marginalized groups a voice and helps shape public perceptions, but it can also reinforce stereotypes if misrepresented."
-},
-
-{
-question: "Which theory explains how media exposure influences people's perception of social identity?",
-choice1: "Cultivation Theory",
-choice2: "Routine Activity Theory",
-choice3: "Broken Windows Theory",
-choice4: "Strain Theory",
-answer: "Cultivation Theory",
-rationale: "Cultivation Theory suggests that prolonged exposure to media content influences individuals' worldviews and social identity over time."
-},
-{
-question: "Which criminological theory best explains the media’s role in amplifying moral panics about crime?",
-choice1: "Routine Activity Theory",
-choice2: "Labeling Theory",
-choice3: "Social Learning Theory",
-choice4: "Broken Windows Theory",
-answer: "Labeling Theory",
-rationale: "Labeling Theory suggests that media can stigmatize certain groups, reinforcing public fear and moral panic, which in turn influences crime control policies."
-},
-
-{
-question: "How does the concept of 'agenda-setting' apply to media coverage of crime?",
-choice1: "Media dictates public opinion by directly telling people what to think",
-choice2: "Media shapes what issues people consider important without dictating opinions",
-choice3: "Media ensures balanced coverage of all crimes to avoid bias",
-choice4: "Media coverage has no impact on crime perception",
-answer: "Media shapes what issues people consider important without dictating opinions",
-rationale: "The agenda-setting function of the media influences which crimes receive public attention, shaping discourse without explicitly dictating opinions."
-},
-
-{
-question: "Which of the following is an example of 'crime news framing' in media?",
-choice1: "Using terms like 'thug' or 'predator' to describe suspects",
-choice2: "Providing only factual, neutral descriptions of criminal events",
-choice3: "Reporting crime statistics without contextual analysis",
-choice4: "Ignoring crime stories to focus on political events",
-answer: "Using terms like 'thug' or 'predator' to describe suspects",
-rationale: "Crime news framing involves the use of language, imagery, and selective reporting to shape public perception of crime and criminals."
-},
-
-{
-question: "What is a primary criticism of the media’s representation of crime?",
-choice1: "It accurately reflects actual crime trends",
-choice2: "It often focuses disproportionately on violent and sensational crimes",
-choice3: "It completely ignores crimes committed by marginalized groups",
-choice4: "It promotes restorative justice approaches over punitive measures",
-answer: "It often focuses disproportionately on violent and sensational crimes",
-rationale: "Media coverage tends to overrepresent violent crimes, creating a distorted perception of crime rates and public safety."
-},
-
-{
-question: "How does media sensationalism influence criminal justice policies?",
-choice1: "It leads to evidence-based policymaking that reduces crime",
-choice2: "It increases public fear, often resulting in harsher sentencing laws",
-choice3: "It encourages decriminalization of non-violent offenses",
-choice4: "It has no measurable impact on criminal justice policies",
-answer: "It increases public fear, often resulting in harsher sentencing laws",
-rationale: "Media-driven moral panics can pressure lawmakers to adopt punitive measures, such as 'three-strikes' laws, regardless of actual crime trends."
-},
-{
-question: "Which journalistic principle is most critical when reporting crime to ensure ethical and responsible coverage?",
-choice1: "Maximizing audience engagement",
-choice2: "Preserving presumption of innocence",
-choice3: "Using sensational headlines for impact",
-choice4: "Avoiding coverage of controversial cases",
-answer: "Preserving presumption of innocence",
-rationale: "The presumption of innocence is a fundamental legal principle, and responsible journalism must avoid prejudicing public opinion before a fair trial."
-},
-
-{
-question: "Which of the following is a major criticism of media coverage of crime?",
-choice1: "It frequently provides excessive legal analysis",
-choice2: "It often exaggerates or distorts crime prevalence",
-choice3: "It completely ignores violent crimes",
-choice4: "It focuses only on corporate and white-collar crimes",
-answer: "It often exaggerates or distorts crime prevalence",
-rationale: "Media coverage tends to overrepresent violent and rare crimes, creating a 'crime wave' perception that does not reflect statistical realities."
-},
-
-{
-question: "What role does crime reporting play in shaping public fear of crime?",
-choice1: "It accurately reflects crime trends with no bias",
-choice2: "It reduces fear by educating the public on crime prevention",
-choice3: "It can amplify fear by focusing on rare but violent crimes",
-choice4: "It eliminates misinformation by presenting balanced coverage",
-answer: "It can amplify fear by focusing on rare but violent crimes",
-rationale: "Media tends to focus on sensational crimes, contributing to moral panics and public fear disproportionate to actual crime rates."
-},
-
-{
-question: "Which of these reporting practices can lead to 'trial by media'?",
-choice1: "Balanced reporting with multiple perspectives",
-choice2: "Sensationalist coverage that assumes guilt before trial",
-choice3: "Minimal reporting to respect privacy laws",
-choice4: "Providing only factual updates on a case",
-answer: "Sensationalist coverage that assumes guilt before trial",
-rationale: "When media outlets imply a suspect's guilt before trial, it influences public perception and can compromise the fairness of judicial proceedings."
-},
-
-{
-question: "What is the primary concern regarding the media’s influence on criminal justice policy?",
-choice1: "Media ensures that only factual crime data informs policies",
-choice2: "Media-driven moral panics can pressure policymakers into reactionary laws",
-choice3: "Media has no influence on crime legislation or enforcement",
-choice4: "Media promotes exclusively rehabilitative justice measures",
-answer: "Media-driven moral panics can pressure policymakers into reactionary laws",
-rationale: "Intense media coverage of specific crimes can lead to public outcry, pressuring policymakers into adopting punitive laws, sometimes without sufficient evidence."
-},
-{
-question: "Which pattern of crime reporting is most likely to contribute to moral panic?",
-choice1: "Contextual reporting with expert analysis",
-choice2: "Sensationalist reporting with exaggerated headlines",
-choice3: "Data-driven reporting using verified statistics",
-choice4: "Balanced reporting with multiple sources",
-answer: "Sensationalist reporting with exaggerated headlines",
-rationale: "Sensationalist reporting amplifies fear and anxiety among the public by exaggerating crime trends, often leading to moral panic."
-},
-
-{
-question: "What is the primary characteristic of episodic crime reporting?",
-choice1: "It focuses on individual crime incidents without broader context",
-choice2: "It examines crime trends over time and their root causes",
-choice3: "It provides a critical analysis of law enforcement strategies",
-choice4: "It only reports on corporate and white-collar crimes",
-answer: "It focuses on individual crime incidents without broader context",
-rationale: "Episodic reporting isolates crimes as individual events rather than situating them within broader social, economic, or policy contexts."
-},
-
-{
-question: "Which crime reporting pattern is most effective in educating the public on systemic issues?",
-choice1: "Episodic crime reporting",
-choice2: "Thematic crime reporting",
-choice3: "Breaking news crime updates",
-choice4: "Crime scene reporting",
-answer: "Thematic crime reporting",
-rationale: "Thematic reporting connects individual crime incidents to larger trends, policies, and systemic issues, promoting deeper public understanding."
-},
-
-{
-question: "How does 'if it bleeds, it leads' influence crime reporting patterns?",
-choice1: "It prioritizes violent crimes for maximum audience engagement",
-choice2: "It ensures a balanced approach to crime journalism",
-choice3: "It focuses only on crime prevention strategies",
-choice4: "It reduces the media’s focus on crime to minimize fear",
-answer: "It prioritizes violent crimes for maximum audience engagement",
-rationale: "This media principle prioritizes violent and shocking crimes because they attract more viewers, often at the expense of balanced reporting."
-},
-
-{
-question: "What is a major criticism of crime reporting patterns in mainstream media?",
-choice1: "They rely too much on criminal justice statistics",
-choice2: "They often reinforce stereotypes and racial biases",
-choice3: "They focus exclusively on white-collar crimes",
-choice4: "They prioritize accuracy over sensationalism",
-answer: "They often reinforce stereotypes and racial biases",
-rationale: "Crime reporting often disproportionately portrays certain groups as criminals, reinforcing biases and shaping public perceptions negatively."
-},
-{
-question: "Which of the following best describes the watchdog role of the media in crime reporting?",
-choice1: "Sensationalizing crime stories to attract viewership",
-choice2: "Monitoring law enforcement and judicial processes for accountability",
-choice3: "Focusing only on high-profile criminal cases",
-choice4: "Reporting crimes based solely on police press releases",
-answer: "Monitoring law enforcement and judicial processes for accountability",
-rationale: "The watchdog role ensures transparency and accountability in the criminal justice system by critically examining law enforcement and judicial actions."
-},
-
-{
-question: "How does media framing influence public perception of crime?",
-choice1: "By shaping narratives that emphasize certain aspects while downplaying others",
-choice2: "By objectively presenting crime statistics without bias",
-choice3: "By only reporting crime cases verified by government sources",
-choice4: "By ensuring crime news is completely neutral and unfiltered",
-answer: "By shaping narratives that emphasize certain aspects while downplaying others",
-rationale: "Media framing influences how audiences interpret crime by selecting, emphasizing, or omitting certain details, shaping public opinion accordingly."
-},
-
-{
-question: "What is the main ethical dilemma faced by journalists in crime reporting?",
-choice1: "Balancing the public's right to know with privacy and fair trial rights",
-choice2: "Ensuring crime reports are as dramatic as possible",
-choice3: "Protecting the identity of all criminals regardless of their crime",
-choice4: "Relying solely on eyewitness accounts for reporting",
-answer: "Balancing the public's right to know with privacy and fair trial rights",
-rationale: "Journalists must balance transparency with ethical considerations, such as avoiding harm to victims, suspects, and ongoing legal proceedings."
-},
-
-{
-question: "Which of the following is a negative consequence of media sensationalism in crime reporting?",
-choice1: "It increases public awareness of crime trends",
-choice2: "It fosters critical thinking about crime policies",
-choice3: "It distorts reality and creates unnecessary fear",
-choice4: "It promotes balanced discourse on criminal justice reforms",
-answer: "It distorts reality and creates unnecessary fear",
-rationale: "Sensationalist crime reporting often exaggerates crime prevalence, leading to fear, moral panic, and sometimes punitive criminal justice policies."
-},
-
-{
-question: "Why is investigative journalism important in crime reporting?",
-choice1: "It exposes corruption, misconduct, and systemic failures in the justice system",
-choice2: "It ensures all news is presented in an entertaining format",
-choice3: "It replaces law enforcement’s role in crime-solving",
-choice4: "It focuses only on reporting official statements from authorities",
-answer: "It exposes corruption, misconduct, and systemic failures in the justice system",
-rationale: "Investigative journalism uncovers hidden truths about crime, corruption, and justice system failures, promoting transparency and accountability."
-}
+    {
+        question: "What is the main philosophy of custody-based prisons?",
+        choice1: "Rehabilitation through therapy",
+        choice2: "Isolation and deterrence",
+        choice3: "Skill-building for societal reintegration",
+        choice4: "Restorative justice",
+        answer: "Isolation and deterrence"
+        // Rationale: Custody-based prisons are designed to isolate offenders from society and deter future crimes through strict confinement and punitive measures.
+    },
+    {
+        question: "Which of the following is a key feature of rehabilitation-based prisons?",
+        choice1: "Focus on retributive punishment",
+        choice2: "Educational and vocational training programs",
+        choice3: "Increased solitary confinement",
+        choice4: "Strict surveillance and monitoring",
+        answer: "Educational and vocational training programs",
+         Rationale: "Rehabilitation-based prisons focus on equipping inmates with education and vocational skills to reintegrate successfully into society."
+    },
+    {
+        question: "What is the primary goal of custody-based prisons?",
+        choice1: "Ensuring public safety through isolation",
+        choice2: "Reducing recidivism rates",
+        choice3: "Promoting psychological rehabilitation",
+        choice4: "Creating a community-based justice system",
+        answer: "Ensuring public safety through isolation",
+         Rationale: "Custody-based prisons emphasize isolating offenders to protect society from immediate harm and maintain public safety."
+    },
+    {
+        question: "Which of the following is an advantage of rehabilitation-based prisons?",
+        choice1: "Immediate reduction in crime rates",
+        choice2: "Lower cost of implementation",
+        choice3: "Long-term reduction in recidivism",
+        choice4: "Increased deterrence through stricter penalties",
+        answer: "Long-term reduction in recidivism",
+        Rationale: "Rehabilitation programs aim to address the root causes of crime, resulting in lower reoffending rates and societal benefits over time."
+    },
+    {
+        question: "What is a common disadvantage of custody-based prisons?",
+        choice1: "Overemphasis on prisoner reintegration",
+        choice2: "High costs and overcrowding",
+        choice3: "Excessive focus on vocational training",
+        choice4: "Limited focus on public safety",
+        answer: "High costs and overcrowding",
+        Rationale: "Custody-based prisons are often criticized for their high operational costs and overcrowding issues, which affect prison effectiveness."
+    },
+    {
+        question: "Which of the following best describes the philosophy of rehabilitation-based prisons?",
+        choice1: "Punishment and deterrence",
+        choice2: "Reform through skill development",
+        choice3: "Isolation of offenders from society",
+        choice4: "Maximizing security measures",
+        answer: "Reform through skill development",
+        Rationale: "Rehabilitation-based prisons focus on reforming offenders by addressing the root causes of criminal behavior, such as lack of skills or education."
+    },
+    {
+        question: "What is a major criticism of rehabilitation-based prisons?",
+        choice1: "They are too punitive in nature",
+        choice2: "They fail to provide public safety",
+        choice3: "They are resource-intensive and expensive",
+        choice4: "They discourage community engagement",
+        answer: "They are resource-intensive and expensive",
+        Rationale: "Rehabilitation-based systems require significant funding for training, education, and therapy programs, making them more expensive to sustain."
+    },
+    {
+        question: "Which of the following is NOT a goal of custody-based prisons?",
+        choice1: "Ensuring public safety",
+        choice2: "Deterring future crimes",
+        choice3: "Promoting societal reintegration",
+        choice4: "Maintaining strict discipline",
+        answer: "Promoting societal reintegration",
+        Rationale: "Custody-based prisons focus on containment, discipline, and deterrence, while societal reintegration is a goal of rehabilitation-based systems."
+    },
+    {
+        question: "How do custody-based prisons typically achieve their goals?",
+        choice1: "By reducing sentences for good behavior",
+        choice2: "Through strict surveillance and control",
+        choice3: "By offering community service alternatives",
+        choice4: "Through therapy and mental health programs",
+        answer: "Through strict surveillance and control",
+         Rationale: "Custody-based systems rely on tight surveillance and control to ensure inmates remain contained and deterred from reoffending."
+    },
+    {
+        question: "What is one advantage of custody-based prisons?",
+        choice1: "Quick isolation of offenders from society",
+        choice2: "Focus on reducing prison overcrowding",
+        choice3: "Emphasis on inmate rehabilitation",
+        choice4: "Provision of community-based services",
+        answer: "Quick isolation of offenders from society",
+        Rationale: "Custody-based systems provide immediate public safety by isolating offenders from the community."
+    },
+    {
+        question: "Which system is more likely to focus on reintegration programs?",
+        choice1: "Custody-based system",
+        choice2: "Rehabilitation-based system",
+        choice3: "Both systems equally",
+        choice4: "Neither system",
+        answer: "Rehabilitation-based system",
+         Rationale: "Rehabilitation-based prisons aim to prepare inmates for reentry into society by offering reintegration programs."
+    },
+    {
+        question: "What is the primary disadvantage of custody-based prisons in addressing long-term crime rates?",
+        choice1: "They provide insufficient security measures",
+        choice2: "They lack programs to address the root causes of crime",
+        choice3: "They are too lenient on offenders",
+        choice4: "They discourage public trust in law enforcement",
+        answer: "They lack programs to address the root causes of crime",
+        Rationale: "Custody-based prisons focus on punishment and isolation, often neglecting the factors that contribute to reoffending."
+    },
+    {
+        question: "How do rehabilitation-based prisons benefit society in the long term?",
+        choice1: "By increasing the length of prison sentences",
+        choice2: "By ensuring inmates remain isolated",
+        choice3: "By reducing recidivism rates",
+        choice4: "By prioritizing public safety over inmate rights",
+        answer: "By reducing recidivism rates",
+        Rationale: "Rehabilitation programs reduce reoffending by equipping inmates with skills, education, and mental health support."
+    },
+    {
+        question: "What is a notable difference between custody-based and rehabilitation-based prisons?",
+        choice1: "Focus on long-term crime reduction",
+        choice2: "Level of security measures in place",
+        choice3: "Approach to addressing offender behavior",
+        choice4: "Severity of punishment for offenders",
+        answer: "Approach to addressing offender behavior",
+        Rationale: "Custody-based systems focus on punishment, while rehabilitation-based systems focus on addressing and changing offender behavior."
+    },
+    {
+        question: "Why might a government opt for rehabilitation-based prisons over custody-based prisons?",
+        choice1: "To immediately reduce crime rates",
+        choice2: "To address systemic issues leading to crime",
+        choice3: "To save costs on prison operations",
+        choice4: "To increase the deterrent effect of incarceration",
+        answer: "To address systemic issues leading to crime",
+        Rationale: "Rehabilitation-based prisons aim to address societal and individual factors, such as poverty or lack of education, that contribute to criminal activity."
+    },
+    {
+        question: "Which system is more effective at reducing prison overcrowding in the short term?",
+        choice1: "Custody-based system",
+        choice2: "Rehabilitation-based system",
+        choice3: "Both systems equally",
+        choice4: "Neither system",
+        answer: "Custody-based system",
+        Rationale: "Custody-based systems focus on removing offenders from society, often leading to overcrowded prisons without reducing crime rates long-term."
+    },
+    {
+        question: "Which system offers therapy as a core part of its approach?",
+        choice1: "Custody-based system",
+        choice2: "Rehabilitation-based system",
+        choice3: "Both systems equally",
+        choice4: "Neither system",
+        answer: "Rehabilitation-based system",
+        Rationale: "Rehabilitation-based prisons emphasize therapy and mental health support to address underlying issues contributing to criminal behavior."
+    },
+    {
+        question: "What is an advantage of rehabilitation-based systems in terms of offender outcomes?",
+        choice1: "Reinforces punitive justice",
+        choice2: "Improves reentry preparedness",
+        choice3: "Ensures offenders are physically secured",
+        choice4: "Reduces the need for judicial oversight",
+        answer: "Improves reentry preparedness",
+        Rationale: "Rehabilitation programs focus on preparing inmates for a productive and law-abiding life post-incarceration."
+    },
+    {
+      question: "What is the primary goal of diversion programs in the criminal justice system?",
+      choice1: "To punish offenders for their actions",
+      choice2: "To divert offenders away from formal incarceration by offering rehabilitation services",
+      choice3: "To provide financial support to offenders",
+      choice4: "To ensure all offenders face a trial before punishment",
+      answer: "To divert offenders away from formal incarceration by offering rehabilitation services"
+    },
+    {
+      question: "Diversion programs are most commonly used for which group of offenders?",
+      choice1: "Repeat Offenders",
+      choice2: "Violent Offenders",
+      choice3: "First-time or low-risk offenders",
+      choice4: "Offenders with serious criminal histories",
+      answer: "First-time or low-risk offenders"
+    },
+    {
+      question: "Which philosophy is most closely associated with diversion programs",
+      choice1: "Deterrence",
+      choice2: "Retribution",
+      choice3: "Restorative Justice",
+      choice4: "Utilitarianism",
+      answer: "Restorative Justice"
+    },
+    {
+      question: "Which of the following diversion strategies would likely be used for a defendant with a substance abuse problem",
+      choice1: "Probation with regular drug testing",
+      choice2: "Pretrial detention in jail",
+      choice3: "Restitution payments to the victim",
+      choice4: "Banishment from the community",
+      answer: "Probation with regular drug testing"
+    },
+    {
+      question: "Which of the following is NOT a fomr of pre-trial release",
+      choice1: "Bail",
+      choice2: "Release on own recognizance (ROR)",
+      choice3: "Incarceration until trial",
+      choice4: "House arrest with electronic monitoring",
+      answer: "Incarceration until trial"
+    },
+    {
+      question: "Which factor is NOT typically considered when determining pre-trial release?",
+      choice1: "The defendants's flight risk",
+      choice2: "The defendant's family background",
+      choice3: "The defendant's criminal history",
+      choice4: "The severity of the alleged crime",
+      answer: "The defendant's family background"
+    },
+    {
+      question: "What is the purpose of electronic monitoring (e.g ankle bracelets) as a condition of pre-trial release?",
+      choice1: "To monitor the defendant's daily activities in real-time",
+      choice2: "To allow the defendant to continue the criminal activities",
+      choice3: "To allow the defendant to leave the jurisdiction",
+      choice4: "To ensure the defendant's complete freedom",
+      answer: "To monitor the defendant's daily activities in real-time"
+    },
+    {
+      question: "Which of the following distinguishes diversion programs from pre-trial release?",
+      choice1: "Diversion programs focus on rehabilitation, while pre-trial release focuses on ensuring court attendance",
+      choice2: "Diversion programs guarantee a conviction, while pre-trial release does not",
+      choice3: "DIversion programs are for violent offenders only, while pre-trial release is for all offenders",
+      choice4: "There is no distinction between the two",
+      answer:  "Diversion programs focus on rehabilitation, while pre-trial release focuses on ensuring court attendance"
+    },
+    {
+      question: "In what way are diversion programs and pre-trial release similar?",
+      choice1: "Both focus on immediate incarceration",
+      choice2: "Both aim to reduce recidivism and provide alternatives to prison",
+      choice3: "Both require defendants to plead guilty before participation",
+      choice4: "Both focus on punishing offenders",
+      answer: "Both aim to reduce recidivism and provide alternatives to prison"
+    },
+    {
+      question: "Which of the following would most likely be eligible for a diversion program?",
+      choice1: "A first-time offender charged with shoplifting",
+      choice2: "A defendant with a long criminal history",
+      choice3: "A person charged with a violent crime",
+      choice4: "A defendant who has failed to appear in court",
+      answer: "A first-time offender charged with shoplifting"
+    },
+    {
+      question: "Which of the following is a characteristic of pre-trial release programs?",
+      choice1: "They focus on providing rehabilitation and treatment",
+      choice2: "They are designed to ensure the defendant remains free until their trial",
+      choice3: "THey are only available to juveniles",
+      choice4: "They require the defendant to serve a sentence before trial",
+      answer: "They are designed to ensure the defendant remains free until their trial"
+    },
+    {
+      question: "Which of the following is true about the impact of diversion programs and pre-trial release on prison overcrowding?",
+      choice1: "Both help reduce the number of individuals incarcerated before trial",
+      choice2: "Both contribute to increased prison population",
+      choice3: "Diversion programs increase overcrowding, while pre-trial release does not",
+      choice4: "Educating citizens on British Values",
+      answer: "Both help reduce the number of individuals incarcerated before trial"
+    },
+    {
+      question: "Which is the primary purpose of pre-trial release?",
+      choice1: "To impose punishment before trial",
+      choice2: "To allow defendants to remain free while awaiting trial under certain conditions",
+      choice3: "To immediately incarcerate defendants before their trial",
+      choice4: "To provide bail funds for all defendants",
+      answer: "To allow defendants to remain free while awaiting trial under certain conditions"
+    },
+    {
+      question: "Which of the following diversion strategies would most likely used for a juvenile caught shoplifting?",
+      choice1: "Fines amd imprisonment",
+      choice2: "Community service and mentorship",
+      choice3: "Electronic monitoring",
+      choice4: "Immediate trial and sentencing",
+      answer: "Community service and mentorship"
+    }
 ];
 /*const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 4;
