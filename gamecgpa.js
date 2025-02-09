@@ -623,7 +623,7 @@ choices.forEach(choice => {
   });
 });
 
-let durationInMinutes = 25;
+let durationInMinutes = 30;
 let timeInSeconds = durationInMinutes * 60;
 const timerDisplay = document.getElementById("timer");
 
