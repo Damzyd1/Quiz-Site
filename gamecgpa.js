@@ -8,7 +8,7 @@ document.addEventListener("keydown", e => {
   }
 });
 
-const topic = "CSS 307 Exam Simulation";
+const topic = "GNS 311 Exam Simulation";
 const topicId = document.getElementById("topic");
 topicId.innerHTML = topic;
 setTimeout(disappear, 500000);
