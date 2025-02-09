@@ -19,278 +19,526 @@ let availableQuestion = [];
  
   let questions = [
     {
-        question: "What is the main philosophy of custody-based prisons?",
-        choice1: "Rehabilitation through therapy",
-        choice2: "Isolation and deterrence",
-        choice3: "Skill-building for societal reintegration",
-        choice4: "Restorative justice",
-        answer: "Isolation and deterrence"
-        // Rationale: Custody-based prisons are designed to isolate offenders from society and deter future crimes through strict confinement and punitive measures.
+        question: "Chemical preservatives are used in food preservation primarily to:",
+        choice1: "Enhance food color",
+        choice2: "Increase food moisture",
+        choice3: "Inhibit microbial growth",
+        choice4: "Improve food texture",
+        answer: "Inhibit microbial growth"
     },
     {
-        question: "Which of the following is a key feature of rehabilitation-based prisons?",
-        choice1: "Focus on retributive punishment",
-        choice2: "Educational and vocational training programs",
-        choice3: "Increased solitary confinement",
-        choice4: "Strict surveillance and monitoring",
-        answer: "Educational and vocational training programs",
-         Rationale: "Rehabilitation-based prisons focus on equipping inmates with education and vocational skills to reintegrate successfully into society."
+        question: "Which method of food preservation involves the use of salt or sugar to remove water from food?",
+        choice1: "Canning",
+        choice2: "Freezing",
+        choice3: "Dehydration",
+        choice4: "Refrigeration",
+        answer: "Dehydration"
     },
     {
-        question: "What is the primary goal of custody-based prisons?",
-        choice1: "Ensuring public safety through isolation",
-        choice2: "Reducing recidivism rates",
-        choice3: "Promoting psychological rehabilitation",
-        choice4: "Creating a community-based justice system",
-        answer: "Ensuring public safety through isolation",
-         Rationale: "Custody-based prisons emphasize isolating offenders to protect society from immediate harm and maintain public safety."
+        question: "What is the temperature range typically used for water blanching in food preservation?",
+        choice1: "50-60°C",
+        choice2: "80-90°C",
+        choice3: "100-110°C",
+        choice4: "120-130°C",
+        answer: "80-90°C"
     },
     {
-        question: "Which of the following is an advantage of rehabilitation-based prisons?",
-        choice1: "Immediate reduction in crime rates",
-        choice2: "Lower cost of implementation",
-        choice3: "Long-term reduction in recidivism",
-        choice4: "Increased deterrence through stricter penalties",
-        answer: "Long-term reduction in recidivism",
-        Rationale: "Rehabilitation programs aim to address the root causes of crime, resulting in lower reoffending rates and societal benefits over time."
+        question: "What is the primary aim of controlled reduction in moisture content in food preservation?",
+        choice1: "To increase food moisture",
+        choice2: "To enhance food flavor",
+        choice3: "To decrease microbial growth",
+        choice4: "To improve food texture",
+        answer: "To decrease microbial growth"
     },
     {
-        question: "What is a common disadvantage of custody-based prisons?",
-        choice1: "Overemphasis on prisoner reintegration",
-        choice2: "High costs and overcrowding",
-        choice3: "Excessive focus on vocational training",
-        choice4: "Limited focus on public safety",
-        answer: "High costs and overcrowding",
-        Rationale: "Custody-based prisons are often criticized for their high operational costs and overcrowding issues, which affect prison effectiveness."
+        question: "What is the purpose of establishing wild nurseries for medicinal plants?",
+        choice1: "To increase habitat destruction",
+        choice2: "To encourage invasive species",
+        choice3: "To facilitate in-situ conservation",
+        choice4: "To promote industrialization",
+        answer: "To facilitate in-situ conservation"
     },
     {
-        question: "Which of the following best describes the philosophy of rehabilitation-based prisons?",
-        choice1: "Punishment and deterrence",
-        choice2: "Reform through skill development",
-        choice3: "Isolation of offenders from society",
-        choice4: "Maximizing security measures",
-        answer: "Reform through skill development",
-        Rationale: "Rehabilitation-based prisons focus on reforming offenders by addressing the root causes of criminal behavior, such as lack of skills or education."
+        question: "Which of the following is not a threat faced by medicinal plants?",
+        choice1: "Increased spread of diseases",
+        choice2: "Industrialization",
+        choice3: "Decreased demand for herbal medicine",
+        choice4: "Over-exploitation",
+        answer: "Decreased demand for herbal medicine"
     },
     {
-        question: "What is a major criticism of rehabilitation-based prisons?",
-        choice1: "They are too punitive in nature",
-        choice2: "They fail to provide public safety",
-        choice3: "They are resource-intensive and expensive",
-        choice4: "They discourage community engagement",
-        answer: "They are resource-intensive and expensive",
-        Rationale: "Rehabilitation-based systems require significant funding for training, education, and therapy programs, making them more expensive to sustain."
+        question: "What is the primary focus of the module 'Philosophical Problems and Scientific Explanations'?",
+        choice1: "Exploring historical events",
+        choice2: "Understanding philosophical questions in science",
+        choice3: "Studying literary works",
+        choice4: "Analyzing political theories",
+        answer: "Understanding philosophical questions in science"
     },
     {
-        question: "Which of the following is NOT a goal of custody-based prisons?",
-        choice1: "Ensuring public safety",
-        choice2: "Deterring future crimes",
-        choice3: "Promoting societal reintegration",
-        choice4: "Maintaining strict discipline",
-        answer: "Promoting societal reintegration",
-        Rationale: "Custody-based prisons focus on containment, discipline, and deterrence, while societal reintegration is a goal of rehabilitation-based systems."
+        question: "Which of the following is not considered a major reservoir of microbes?",
+        choice1: "Water",
+        choice2: "Soil",
+        choice3: "Atmosphere",
+        choice4: "Concrete",
+        answer: "Concrete",
+        rationale: "Concrete is not a natural environment for microbial growth, unlike water, soil, and the atmosphere."
     },
     {
-        question: "How do custody-based prisons typically achieve their goals?",
-        choice1: "By reducing sentences for good behavior",
-        choice2: "Through strict surveillance and control",
-        choice3: "By offering community service alternatives",
-        choice4: "Through therapy and mental health programs",
-        answer: "Through strict surveillance and control",
-         Rationale: "Custody-based systems rely on tight surveillance and control to ensure inmates remain contained and deterred from reoffending."
+        question: "What is the meaning of P value?",
+        choice1: "A probability of error in measurement",
+        choice2: "A statistical measure that helps determine the significance of results in hypothesis testing",
+        choice3: "A percentage of uncertainty in research",
+        choice4: "A measure of correlation strength",
+        answer: "A statistical measure that helps determine the significance of results in hypothesis testing",
+        rationale: "P value is a statistical measure that helps determine the significance of results in hypothesis testing."
     },
     {
-        question: "What is one advantage of custody-based prisons?",
-        choice1: "Quick isolation of offenders from society",
-        choice2: "Focus on reducing prison overcrowding",
-        choice3: "Emphasis on inmate rehabilitation",
-        choice4: "Provision of community-based services",
-        answer: "Quick isolation of offenders from society",
-        Rationale: "Custody-based systems provide immediate public safety by isolating offenders from the community."
+        question: "What happens to the energy of a bullet shot from a gun?",
+        choice1: "It remains constant",
+        choice2: "It disappears over time",
+        choice3: "It transforms primarily into kinetic energy as it moves through the air and upon impact",
+        choice4: "It increases continuously",
+        answer: "It transforms primarily into kinetic energy as it moves through the air and upon impact",
+        rationale: "The bullet's energy is converted primarily into kinetic energy as it travels and transfers upon impact."
     },
     {
-        question: "Which system is more likely to focus on reintegration programs?",
-        choice1: "Custody-based system",
-        choice2: "Rehabilitation-based system",
-        choice3: "Both systems equally",
-        choice4: "Neither system",
-        answer: "Rehabilitation-based system",
-         Rationale: "Rehabilitation-based prisons aim to prepare inmates for reentry into society by offering reintegration programs."
+        question: "What's the Igbo name for tea bush?",
+        choice1: "Ocha",
+        choice2: "Akwukwo",
+        choice3: "Utaba",
+        choice4: "Mkpuru mmiri",
+        answer: "Ocha",
+        rationale: "In Igbo, the name for tea bush is 'Ocha'."
     },
     {
-        question: "What is the primary disadvantage of custody-based prisons in addressing long-term crime rates?",
-        choice1: "They provide insufficient security measures",
-        choice2: "They lack programs to address the root causes of crime",
-        choice3: "They are too lenient on offenders",
-        choice4: "They discourage public trust in law enforcement",
-        answer: "They lack programs to address the root causes of crime",
-        Rationale: "Custody-based prisons focus on punishment and isolation, often neglecting the factors that contribute to reoffending."
+        question: "Pathogens may take advantage of the interaction between blood-sucking parasites and humans in which mode of transmission?",
+        choice1: "Inoculation through the skin",
+        choice2: "Direct contact transmission",
+        choice3: "Respiratory transmission",
+        choice4: "Vector-borne transmission",
+        answer: "Vector-borne transmission",
+        rationale: "Vector-borne transmission occurs when pathogens are carried by blood-sucking insects like mosquitoes or ticks."
     },
     {
-        question: "How do rehabilitation-based prisons benefit society in the long term?",
-        choice1: "By increasing the length of prison sentences",
-        choice2: "By ensuring inmates remain isolated",
-        choice3: "By reducing recidivism rates",
-        choice4: "By prioritizing public safety over inmate rights",
-        answer: "By reducing recidivism rates",
-        Rationale: "Rehabilitation programs reduce reoffending by equipping inmates with skills, education, and mental health support."
+        question: "What term is used to describe alterations in the host's system initiated by microbial activities?",
+        choice1: "Pathogenicity",
+        choice2: "Virulence",
+        choice3: "Resistance",
+        choice4: "Immunity",
+        answer: "Pathogenicity",
+        rationale: "Pathogenicity refers to a microbe’s ability to cause disease by altering the host system."
     },
     {
-        question: "What is a notable difference between custody-based and rehabilitation-based prisons?",
-        choice1: "Focus on long-term crime reduction",
-        choice2: "Level of security measures in place",
-        choice3: "Approach to addressing offender behavior",
-        choice4: "Severity of punishment for offenders",
-        answer: "Approach to addressing offender behavior",
-        Rationale: "Custody-based systems focus on punishment, while rehabilitation-based systems focus on addressing and changing offender behavior."
+        question: "Which microbe is mentioned as causing sexually transmitted disease by adhering to the inner lining of the urinogenital tract?",
+        choice1: "Neisseria gonorrhea",
+        choice2: "Escherichia coli",
+        choice3: "Staphylococcus aureus",
+        choice4: "Streptococcus pyogenes",
+        answer: "Neisseria gonorrhea",
+        rationale: "Neisseria gonorrhea is the bacteria responsible for gonorrhea, an STD that affects the urinogenital tract."
     },
     {
-        question: "Why might a government opt for rehabilitation-based prisons over custody-based prisons?",
-        choice1: "To immediately reduce crime rates",
-        choice2: "To address systemic issues leading to crime",
-        choice3: "To save costs on prison operations",
-        choice4: "To increase the deterrent effect of incarceration",
-        answer: "To address systemic issues leading to crime",
-        Rationale: "Rehabilitation-based prisons aim to address societal and individual factors, such as poverty or lack of education, that contribute to criminal activity."
+        question: "Which of the following is not considered a microbe?",
+        choice1: "Bacteria",
+        choice2: "Fungi",
+        choice3: "Algae",
+        choice4: "Plant",
+        answer: "Plant",
+        rationale: "Plants are multicellular organisms and not classified as microbes, unlike bacteria, fungi, and algae."
     },
     {
-        question: "Which system is more effective at reducing prison overcrowding in the short term?",
-        choice1: "Custody-based system",
-        choice2: "Rehabilitation-based system",
-        choice3: "Both systems equally",
-        choice4: "Neither system",
-        answer: "Custody-based system",
-        Rationale: "Custody-based systems focus on removing offenders from society, often leading to overcrowded prisons without reducing crime rates long-term."
+        question: "Who coined the term 'microbe'?",
+        choice1: "Louis Pasteur",
+        choice2: "Robert Koch",
+        choice3: "Antonie van Leeuwenhoek",
+        choice4: "A.T. Andes",
+        answer: "A.T. Andes",
+        rationale: "A.T. Andes is credited with coining the term 'microbe'."
     },
     {
-        question: "Which system offers therapy as a core part of its approach?",
-        choice1: "Custody-based system",
-        choice2: "Rehabilitation-based system",
-        choice3: "Both systems equally",
-        choice4: "Neither system",
-        answer: "Rehabilitation-based system",
-        Rationale: "Rehabilitation-based prisons emphasize therapy and mental health support to address underlying issues contributing to criminal behavior."
+        question: "At what age are chicks typically vaccinated against Newcastle disease?",
+        choice1: "Day 1",
+        choice2: "Day 3",
+        choice3: "Day 7",
+        choice4: "Day 10",
+        answer: "Day 3",
+        rationale: "Chicks are usually vaccinated against Newcastle disease on Day 3 for early protection."
     },
     {
-        question: "What is an advantage of rehabilitation-based systems in terms of offender outcomes?",
-        choice1: "Reinforces punitive justice",
-        choice2: "Improves reentry preparedness",
-        choice3: "Ensures offenders are physically secured",
-        choice4: "Reduces the need for judicial oversight",
-        answer: "Improves reentry preparedness",
-        Rationale: "Rehabilitation programs focus on preparing inmates for a productive and law-abiding life post-incarceration."
+        question: "What is the purpose of using anti-stress medication during vaccination in poultry?",
+        choice1: "To improve taste",
+        choice2: "To reduce vaccination costs",
+        choice3: "To minimize stress-related mortality",
+        choice4: "To increase egg size",
+        answer: "To minimize stress-related mortality",
+        rationale: "Anti-stress medication helps minimize stress-related mortality in poultry during vaccination."
     },
     {
-      question: "What is the primary goal of diversion programs in the criminal justice system?",
-      choice1: "To punish offenders for their actions",
-      choice2: "To divert offenders away from formal incarceration by offering rehabilitation services",
-      choice3: "To provide financial support to offenders",
-      choice4: "To ensure all offenders face a trial before punishment",
-      answer: "To divert offenders away from formal incarceration by offering rehabilitation services"
+        question: "When should Gumboro vaccine be administered to poultry?",
+        choice1: "Day 3",
+        choice2: "Day 10",
+        choice3: "Day 15",
+        choice4: "Day 24",
+        answer: "Day 10",
+        rationale: "Gumboro vaccine is typically administered on Day 10 to protect poultry from Infectious Bursal Disease."
     },
     {
-      question: "Diversion programs are most commonly used for which group of offenders?",
-      choice1: "Repeat Offenders",
-      choice2: "Violent Offenders",
-      choice3: "First-time or low-risk offenders",
-      choice4: "Offenders with serious criminal histories",
-      answer: "First-time or low-risk offenders"
+        question: "What is the main symptom of coccidiosis in poultry?",
+        choice1: "Respiratory distress",
+        choice2: "Diarrhea with blood-stained feces",
+        choice3: "Neck twisting",
+        choice4: "Wattle lesions",
+        answer: "Diarrhea with blood-stained feces",
+        rationale: "Coccidiosis primarily causes diarrhea with blood-stained feces due to intestinal damage."
     },
     {
-      question: "Which philosophy is most closely associated with diversion programs",
-      choice1: "Deterrence",
-      choice2: "Retribution",
-      choice3: "Restorative Justice",
-      choice4: "Utilitarianism",
-      answer: "Restorative Justice"
+        question: "How often should poultry houses be cleaned to prevent disease transmission?",
+        choice1: "Once a month",
+        choice2: "Once a week",
+        choice3: "Once every three months",
+        choice4: "Once a year",
+        answer: "Once a week",
+        rationale: "Weekly cleaning helps reduce disease risks and maintain hygiene in poultry houses."
     },
     {
-      question: "Which of the following diversion strategies would likely be used for a defendant with a substance abuse problem",
-      choice1: "Probation with regular drug testing",
-      choice2: "Pretrial detention in jail",
-      choice3: "Restitution payments to the victim",
-      choice4: "Banishment from the community",
-      answer: "Probation with regular drug testing"
+        question: "Which disease is commonly prevented by administering the Lasota vaccine to poultry?",
+        choice1: "Fowl pox",
+        choice2: "Newcastle disease",
+        choice3: "Coccidiosis",
+        choice4: "Marek's disease",
+        answer: "Newcastle disease",
+        rationale: "Lasota vaccine is used to prevent Newcastle disease, a highly contagious viral infection in poultry."
     },
     {
-      question: "Which of the following is NOT a fomr of pre-trial release",
-      choice1: "Bail",
-      choice2: "Release on own recognizance (ROR)",
-      choice3: "Incarceration until trial",
-      choice4: "House arrest with electronic monitoring",
-      answer: "Incarceration until trial"
+        question: "Which vaccine is typically administered to day-old chicks to prevent Marek's disease?",
+        choice1: "Newcastle disease vaccine",
+        choice2: "Gumboro vaccine",
+        choice3: "Marek's disease vaccine",
+        choice4: "Fowl pox vaccine",
+        answer: "Marek's disease vaccine",
+        rationale: "Day-old chicks receive Marek’s disease vaccine to prevent this viral condition affecting their nervous system."
     },
     {
-      question: "Which factor is NOT typically considered when determining pre-trial release?",
-      choice1: "The defendants's flight risk",
-      choice2: "The defendant's family background",
-      choice3: "The defendant's criminal history",
-      choice4: "The severity of the alleged crime",
-      answer: "The defendant's family background"
+        question: "What is the primary role of protein-rich ingredients in poultry feed production?",
+        choice1: "To provide energy",
+        choice2: "To improve taste",
+        choice3: "To build muscle and tissue",
+        choice4: "To enhance color",
+        answer: "To build muscle and tissue",
+        rationale: "Protein is essential for muscle and tissue development in poultry."
     },
     {
-      question: "What is the purpose of electronic monitoring (e.g ankle bracelets) as a condition of pre-trial release?",
-      choice1: "To monitor the defendant's daily activities in real-time",
-      choice2: "To allow the defendant to continue the criminal activities",
-      choice3: "To allow the defendant to leave the jurisdiction",
-      choice4: "To ensure the defendant's complete freedom",
-      answer: "To monitor the defendant's daily activities in real-time"
+        question: "Which feed ingredient group provides mainly energy in poultry diets?",
+        choice1: "Protein-rich ingredients",
+        choice2: "Cereal and cereal-by-products",
+        choice3: "Mineral and vitamin supplements",
+        choice4: "Animal protein sources",
+        answer: "Cereal and cereal-by-products",
+        rationale: "Cereals and cereal-by-products are the primary sources of energy in poultry diets."
     },
     {
-      question: "Which of the following distinguishes diversion programs from pre-trial release?",
-      choice1: "Diversion programs focus on rehabilitation, while pre-trial release focuses on ensuring court attendance",
-      choice2: "Diversion programs guarantee a conviction, while pre-trial release does not",
-      choice3: "DIversion programs are for violent offenders only, while pre-trial release is for all offenders",
-      choice4: "There is no distinction between the two",
-      answer:  "Diversion programs focus on rehabilitation, while pre-trial release focuses on ensuring court attendance"
+        question: "Which nutrient is responsible for providing the majority of the energy content in poultry feed?",
+        choice1: "Protein",
+        choice2: "Fat",
+        choice3: "Carbohydrates",
+        choice4: "Vitamins",
+        answer: "Carbohydrates",
+        rationale: "Carbohydrates are the main energy-providing nutrient in poultry feed."
     },
     {
-      question: "In what way are diversion programs and pre-trial release similar?",
-      choice1: "Both focus on immediate incarceration",
-      choice2: "Both aim to reduce recidivism and provide alternatives to prison",
-      choice3: "Both require defendants to plead guilty before participation",
-      choice4: "Both focus on punishing offenders",
-      answer: "Both aim to reduce recidivism and provide alternatives to prison"
+        question: "Which of the following ingredients is NOT typically used for energy in poultry feed?",
+        choice1: "Maize",
+        choice2: "Wheat",
+        choice3: "Soybean",
+        choice4: "Palm oil",
+        answer: "Soybean",
+        rationale: "Soybean is primarily a protein source rather than an energy ingredient in poultry feed."
     },
     {
-      question: "Which of the following would most likely be eligible for a diversion program?",
-      choice1: "A first-time offender charged with shoplifting",
-      choice2: "A defendant with a long criminal history",
-      choice3: "A person charged with a violent crime",
-      choice4: "A defendant who has failed to appear in court",
-      answer: "A first-time offender charged with shoplifting"
+        question: "Phytochemicals can be found in which of the following?",
+        choice1: "Animals",
+        choice2: "Plants",
+        choice3: "Oceans",
+        choice4: "Fungi",
+        answer: "Plants",
+        rationale: "Phytochemicals are naturally occurring compounds found in plants that contribute to their color, taste, and resistance to diseases."
     },
     {
-      question: "Which of the following is a characteristic of pre-trial release programs?",
-      choice1: "They focus on providing rehabilitation and treatment",
-      choice2: "They are designed to ensure the defendant remains free until their trial",
-      choice3: "THey are only available to juveniles",
-      choice4: "They require the defendant to serve a sentence before trial",
-      answer: "They are designed to ensure the defendant remains free until their trial"
+        question: "Traditional herbs can also be used for surgical dressings.",
+        choice1: "True",
+        choice2: "False",
+        answer: "True",
+        rationale: "Certain traditional herbs have antiseptic and wound-healing properties, making them suitable for surgical dressings."
     },
     {
-      question: "Which of the following is true about the impact of diversion programs and pre-trial release on prison overcrowding?",
-      choice1: "Both help reduce the number of individuals incarcerated before trial",
-      choice2: "Both contribute to increased prison population",
-      choice3: "Diversion programs increase overcrowding, while pre-trial release does not",
-      choice4: "Educating citizens on British Values",
-      answer: "Both help reduce the number of individuals incarcerated before trial"
+        question: "Carica papaya can be used to treat:",
+        choice1: "Erectile dysfunction",
+        choice2: "Mild convulsion",
+        choice3: "Headache",
+        choice4: "Coughs",
+        answer: "Mild convulsion",
+        rationale: "Carica papaya contains bioactive compounds that have been used in traditional medicine to treat mild convulsions."
     },
     {
-      question: "Which is the primary purpose of pre-trial release?",
-      choice1: "To impose punishment before trial",
-      choice2: "To allow defendants to remain free while awaiting trial under certain conditions",
-      choice3: "To immediately incarcerate defendants before their trial",
-      choice4: "To provide bail funds for all defendants",
-      answer: "To allow defendants to remain free while awaiting trial under certain conditions"
+        question: "The word 'Kinetic' stands for:",
+        choice1: "Metabolism",
+        choice2: "Respiration",
+        choice3: "Motion",
+        choice4: "Growth",
+        answer: "Motion",
+        rationale: "'Kinetic' is derived from the Greek word for motion, describing movement-related energy."
     },
     {
-      question: "Which of the following diversion strategies would most likely used for a juvenile caught shoplifting?",
-      choice1: "Fines amd imprisonment",
-      choice2: "Community service and mentorship",
-      choice3: "Electronic monitoring",
-      choice4: "Immediate trial and sentencing",
-      answer: "Community service and mentorship"
+        question: "Which of these is the correct order in the scientific method of developing the concept of matter?",
+        choice1: "Hypothesis, Law, and Theory",
+        choice2: "Theory, Hypothesis, and Law",
+        choice3: "Theory, Hypothesis, and Law",
+        choice4: "Hypothesis, Theory, and Law",
+        answer: "Hypothesis, Theory, and Law",
+        rationale: "Scientific inquiry begins with a hypothesis, which is tested and refined into a theory, eventually leading to a scientific law."
+    },
+    {
+        question: "Which of the following diseases is NOT caused by insect bites?",
+        choice1: "Malaria fever",
+        choice2: "Dengue fever",
+        choice3: "Trypanosomiasis",
+        choice4: "Polio",
+        answer: "Polio",
+        rationale: "Polio is a viral disease spread through contaminated water and food, not through insect bites."
+    },
+    {
+        question: "Which of the following actions will NOT change the state of matter?",
+        choice1: "Temperature",
+        choice2: "Heat",
+        choice3: "Crushing a crystal",
+        choice4: "Pressure",
+        answer: "Crushing a crystal",
+        rationale: "Crushing a crystal alters its shape but does not change its state (solid, liquid, or gas)."
+    },
+    {
+        question: "Which of the following is NOT a viral disease?",
+        choice1: "Smallpox",
+        choice2: "Dysentery",
+        choice3: "Polio",
+        choice4: "Yellow fever",
+        answer: "Dysentery",
+        rationale: "Dysentery is caused by bacteria or parasites, whereas smallpox, polio, and yellow fever are viral diseases."
+    },
+    {
+        question: "Which of the three states of matter has both definite volume and definite shape?",
+        choice1: "Solid",
+        choice2: "Plasma",
+        choice3: "Liquid",
+        choice4: "Gas",
+        answer:  "Solid",
+        rationale: "Solids have both a definite shape and volume due to tightly packed particles."
+    },
+    {
+        question: "Which is NOT an example of renewable energy?",
+        choice1: "Solar panels",
+        choice2: "Wind turbines",
+        choice3: "Natural Gas",
+        choice4: "Geothermal",
+        answer: "Natural Gas",
+        rationale: "Natural gas is a fossil fuel and is non-renewable, unlike solar, wind, and geothermal energy sources."
+    },
+    {
+        question: "Which disease is caused by the bacterium Mycobacterium tuberculosis?",
+        choice1: "Cholera",
+        choice2: "Tuberculosis",
+        choice3: "Syphilis",
+        choice4: "Leprosy",
+        answer: "Tuberculosis",
+        rationale: "Mycobacterium tuberculosis is the causative agent of tuberculosis, primarily affecting the lungs."
+    },
+    {
+        question: "What part of the body does leprosy primarily affect?",
+        choice1: "Skin",
+        choice2: "Lungs",
+        choice3: "Reproductive organs",
+        choice4: "Nervous system",
+        answer: "Skin",
+        rationale: "Leprosy mainly affects the skin, leading to lesions and nerve damage."
+    },
+    {
+        question: "What are the clinical manifestations of tetanus?",
+        choice1: "Mental impairment and skin blisters",
+        choice2: "Chest pain and high fever",
+        choice3: "Lockjaw spasm",
+        choice4: "Difficulty in urination and sterility",
+        answer: "Lockjaw spasm",
+        rationale: "Tetanus causes muscle stiffness and lockjaw due to neurotoxin production."
+    },
+    {
+        question: "What are the primary concerns of the philosophy of psychology?",
+        choice1: "Ethics and metaphysics",
+        choice2: "Epistemology and ethics",
+        choice3: "Metaphysics and ontology",
+        choice4: "Ontology and epistemology",
+        answer: "Ontology and epistemology",
+        rationale: "Ontology and epistemology are central to understanding the nature and knowledge of psychological phenomena."
+    },
+    {
+        question: "What distinguishes the Deductive Nomological (D-N) Model from the Inductive Statistical (IS) Model of scientific explanation?",
+        choice1: "The D-N model involves statistical analysis, while the IS model involves deductive reasoning.",
+        choice2: "The D-N model involves inductive reasoning, while the IS model involves deductive reasoning.",
+        choice3: "The D-N model focuses on specific instances, while the IS model focuses on general laws.",
+        choice4: "The D-N model focuses on general laws, while the IS model focuses on specific instances.",
+        answer: "The D-N model focuses on general laws, while the IS model focuses on specific instances.",
+        rationale: "The D-N model emphasizes general laws, while the IS model explains specific instances through statistical reasoning."
+    },
+    {
+        question: "What is the etymological origin of the word 'science'?",
+        choice1: "Greek",
+        choice2: "Latin",
+        choice3: "Sanskrit",
+        choice4: "Arabic",
+        answer: "Latin",
+        rationale: "The word 'science' comes from the Latin word 'scientia,' meaning knowledge."
+    },
+    {
+        question: "How does the concept of 'philosophy of science' differ from the practice of science itself?",
+        choice1: "Philosophy of science focuses on empirical observation, while science is concerned with abstract reasoning.",
+        choice2: "Philosophy of science deals with the assumptions, foundations, methods, and implications of science, while science is primarily concerned with empirical investigation and experimentation.",
+        choice3: "Philosophy of science relies on mathematical models, while science relies on qualitative analysis.",
+        choice4: "Philosophy of science is concerned with practical applications, while science is concerned with theoretical frameworks.",
+        answer: "Philosophy of science deals with the assumptions, foundations, methods, and implications of science, while science is primarily concerned with empirical investigation and experimentation.",
+        rationale: "Philosophy of science examines the foundational principles and methodology behind scientific inquiry."
+    },
+    {
+        question: "What does the term 'scientia' mean in Latin, from which the word 'science' is derived?",
+        choice1: "Art",
+        choice2: "Knowledge",
+        choice3: "Wisdom",
+        choice4: "Faith",
+        answer: "Knowledge",
+        rationale: "'Scientia' translates to 'knowledge' in Latin, forming the root of the modern term 'science.'"
+    },
+    {
+        question: "Which of the following statements best describes the relationship between philosophy and science?",
+        choice1: "Science is a branch of philosophy, focusing specifically on the study of natural phenomena.",
+        choice2: "Philosophy and science are entirely separate disciplines with no overlap in their methodologies or objectives.",
+        choice3: "Science provides empirical evidence to support philosophical claims, thereby validating philosophical theories.",
+        choice4: "Philosophy is the foundation of science, providing the principles upon which scientific inquiry is based.",
+        answer: "Philosophy is the foundation of science, providing the principles upon which scientific inquiry is based.",
+        rationale: "Philosophy lays the groundwork for scientific inquiry by establishing foundational principles and methodologies."
+    },
+    {
+        question: "Which of the following is NOT a characteristic of living matter?",
+        choice1: "Respiration",
+        choice2: "Reproduction",
+        choice3: "Metabolism",
+        choice4: "Magnetism",
+        answer: "Magnetism",
+        rationale: "Living organisms exhibit respiration, reproduction, and metabolism, but magnetism is not a defining characteristic."
+    },
+    {
+        question: "How many kinds of matter exist in the world according to the module?",
+        choice1: "One",
+        choice2: "Two",
+        choice3: "Three",
+        choice4: "Four",
+        answer: "Two",
+        rationale: "The module classifies matter into two primary kinds, based on fundamental properties."
+    },
+    {
+        question: "Which disease is caused by the bacterium Neisseria gonorrhoeae?",
+        choice1: "Cholera",
+        choice2: "Gonorrhea",
+        choice3: "Tuberculosis",
+        choice4: "Tetanus",
+        answer: "Gonorrhea",
+        rationale: "Neisseria gonorrhoeae is the bacterium responsible for gonorrhea, a sexually transmitted infection."
+    },
+    {
+        question: "Which disease is caused by the Plasmodium parasite?",
+        choice1: "Malaria",
+        choice2: "Gonorrhea",
+        choice3: "Tetanus",
+        choice4: "Leprosy",
+        answer: "Malaria",
+        rationale: "Malaria is caused by the Plasmodium parasite, which is transmitted through mosquito bites."
+    },
+    {
+        question: "What is the recommended energy level for layers' diets?",
+        choice1: "2500-2700 kcal/kg",
+        choice2: "2800-2850 kcal/kg",
+        choice3: "3000-3200 kcal/kg",
+        choice4: "3500-3700 kcal/kg",
+        answer: "2800-2850 kcal/kg",
+        rationale: "The optimal energy level for layers is 2800-2850 kcal/kg to maintain productivity and health."
+    },
+    {
+        question: "Which of the following ingredients is NOT typically used for energy in poultry feed?",
+        choice1: "Maize",
+        choice2: "Wheat",
+        choice3: "Soybean",
+        choice4: "Palm oil",
+        answer: "Soybean",
+        rationale: "Soybean is primarily a protein source, not an energy source, in poultry feed."
+    },
+    {
+        question: "How often should birds be vaccinated with Lasota to prevent Newcastle disease?",
+        choice1: "Every week",
+        choice2: "Every 4-6 weeks",
+        choice3: "Every month",
+        choice4: "Every three months",
+        answer: "Every 4-6 weeks",
+        rationale: "Lasota vaccination is recommended every 4-6 weeks to ensure continued immunity against Newcastle disease."
+    },
+    {
+        question: "Which of the following is a water-soluble vitamin commonly added to poultry feed?",
+        choice1: "Vitamin A",
+        choice2: "Vitamin D",
+        choice3: "Vitamin E",
+        choice4: "Vitamin C",
+        answer: "Vitamin C",
+        rationale: "Vitamin C is water-soluble, unlike Vitamins A, D, and E, which are fat-soluble."
+    },
+    {
+        question: "Which vaccination is administered on Day 24 of the program?",
+        choice1: "Newcastle disease vaccine",
+        choice2: "Fowl pox vaccine",
+        choice3: "Gumboro vaccine",
+        choice4: "Lasota vaccine",
+        answer: "Lasota vaccine",
+        rationale: "Lasota vaccine is typically given on Day 24 to boost immunity against Newcastle disease."
+    },
+    {
+        question: "At what age do birds typically start laying eggs?",
+        choice1: "10 weeks",
+        choice2: "16 weeks",
+        choice3: "18 weeks",
+        choice4: "24 weeks",
+        answer: "18 weeks",
+        rationale: "Laying hens usually begin laying eggs around 18 weeks of age."
+    },
+    {
+        question: "What are the two types of management systems mentioned under intensive management?",
+        choice1: "Cage and deep litter",
+        choice2: "Free range and semi-intensive",
+        choice3: "Battery cage and semi-intensive",
+        choice4: "Confined and extensive",
+        answer: "Cage and deep litter",
+        rationale: "Under intensive management, poultry is housed in either cage systems or deep litter systems."
+    },
+    {
+        question: "Which management system is characterized by a fixed house with access to a fenced pasture?",
+        choice1: "Free range",
+        choice2: "Intensive",
+        choice3: "Semi-intensive",
+        choice4: "Confined",
+        answer: "Semi-intensive",
+        rationale: "The semi-intensive system allows birds some outdoor access while maintaining shelter."
+    },
+    {
+        question: "Which of the following birds is considered a domesticated poultry species?",
+        choice1: "Ostrich",
+        choice2: "Goose",
+        choice3: "Quail",
+        choice4: "Pheasant",
+        answer: "Quail",
+        rationale: "Quails are widely farmed as poultry, unlike ostriches and pheasants, which are not commonly domesticated for large-scale poultry farming."
     }
 ];
 /*const CORRECT_BONUS = 10;
