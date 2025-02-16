@@ -18,390 +18,258 @@ let availableQuestion = [];
 */
  
   let questions = [
+    // Knowledge-based question
     {
-      question: "What is the primary goal of prosecution in a criminal trial?",
-      choice1: "To defend the accused",
-      choice2: "To investigate crimes",
-      choice3: "To prove the accused guilty beyond reasonable doubt",
-      choice4: "To enforce civil penalties",
-      answer: "To prove the accused guilty beyond reasonable doubt"
+        question: "According to feminist criminology, what has traditional criminology often failed to address about female offenders?",
+        choice1: "Their biological predispositions to crime",
+        choice2: "The unique social and cultural factors influencing their behavior",
+        choice3: "The severity of punishment they receive",
+        choice4: "The lack of male offenders in similar circumstances",
+        answer: "The unique social and cultural factors influencing their behavior"
     },
+    // Application-based question
     {
-      question: "Which of the following is NOT a purpose of prosecution?",
-      choice1: "Upholding the rule of law",
-      choice2: "Protecting society",
-      choice3: "Imposing arbitrary punishments",
-      choice4: "Deterring potential offenders",
-      answer: "Imposing arbitrary punishments"
+        question: "A study finds that most women who commit crimes have experienced poverty and abuse. Which feminist criminological theory explains this pathway?",
+        choice1: "Strain theory",
+        choice2: "Pathways theory",
+        choice3: "Routine activities theory",
+        choice4: "Labeling theory",
+        answer: "Pathways theory"
     },
+    // Evaluation-based question
     {
-      question: "Actors of Prosecution who represents the state or government in criminal cases is called?",
-      choice1: "Defense counsel",
-      choice2: "Prosecutor",
-      choice3: "Jury",
-      choice4: "Victim",
-      answer: "Prosecutor"
+        question: "Feminist criminology suggests that harsh punishments for female offenders who defy gender norms reinforce what societal issue?",
+        choice1: "Patriarchal power structures",
+        choice2: "Gender neutrality in law enforcement",
+        choice3: "Overrepresentation of women in prisons",
+        choice4: "Economic inequality",
+        answer: "Patriarchal power structures"
     },
+    // Knowledge-based question
     {
-      question: "Which actor ensures the trial adheres to legal standards?",
-      choice1: "Jury",
-      choice2: "Judge",
-      choice3: "Law enforcement officer",
-      choice4: "Witness",
-      answer: "Judge"
+        question: "Which scholar argued that female criminality is shaped by patriarchal systems and societal expectations?",
+        choice1: "Carol Smart",
+        choice2: "Kathleen Daly",
+        choice3: "Freda Adler",
+        choice4: "Émile Durkheim",
+        answer: "Carol Smart"
     },
+    // Application-based question
     {
-      question: "What is the role of witnesses in a crimninal prosecution?",
-      choice1: "Deliberate on the case",
-      choice2: "Investigate the crime",
-      choice3: "Provide testimony supporting or refuting the case",
-      choice4: "Represent the accused",
-      answer: "Provide testimony supporting or refuting the case"
+        question: "When female victims of domestic violence retaliate against their abusers and are prosecuted harshly, this reflects which feminist criminological critique of justice systems?",
+        choice1: "Intersectionality of gender and race",
+        choice2: "Double deviance theory",
+        choice3: "Chivalry hypothesis",
+        choice4: "Routine activities theory",
+        answer: "Double deviance theory"
     },
+    // Knowledge-based question
     {
-      question: "At which stage are charges filed in a court of law?",
-      choice1: "Investigation",
-      choice2: "Pretrial proceedings",
-      choice3: "Filing of charges",
-      choice4: "Sentencing",
-      answer: "Filing of charges"
+        question: "According to feminist criminology, why are women considered a socially disadvantaged sex?",
+        choice1: "Due to their biological vulnerability",
+        choice2: "Because of systemic inequalities and patriarchal norms",
+        choice3: "Because they commit fewer crimes than men",
+        choice4: "Due to their emotional instability",
+        answer: "Because of systemic inequalities and patriarchal norms"
     },
+    // Application-based question
     {
-      question: "What is the primary focus during the trial stage of prosecution?",
-      choice1: "Filing motions",
-      choice2: "Gathering evidence",
-      choice3: "Presenting arguments and evidence in court",
-      choice4: "Determing the sentence",
-      answer: "Presenting arguments and evidence in court"
+        question: "A woman commits theft to provide for her children after experiencing domestic violence and unemployment. Which feminist criminological concept explains her actions?",
+        choice1: "Pathways theory",
+        choice2: "Strain theory",
+        choice3: "Double deviance",
+        choice4: "Rational choice theory",
+        answer: "Pathways theory"
     },
+    // Evaluation-based question
     {
-      question: "What typically happens after a guilty verdict is given?",
-      choice1: "Pretrial motions",
-      choice2: "Sentencing",
-      choice3: "Arraignment",
-      choice4: "Discovery phase",
-      answer: "Sentencing"
+        question: "When female offenders are punished harshly for defying gender norms, which societal issue does feminist criminology argue is being reinforced?",
+        choice1: "Economic inequality",
+        choice2: "Patriarchal power structures",
+        choice3: "Overrepresentation of women in prison",
+        choice4: "Gender equality",
+        answer: "Patriarchal power structures"
     },
+    // Knowledge-based question
     {
-      question: "Which of the following principles of sentencing aims to reform the offender for reintegration into society?",
-      choice1: "Retribution",
-      choice2: "Deterrence",
-      choice3: "Rehabilitation",
-      choice4: "Proportionality",
-      answer: "Rehabilitation"
+        question: "What is the main focus of feminist criminology regarding female victimization?",
+        choice1: "Exploring gendered power imbalances in crimes like domestic violence",
+        choice2: "Studying the biological causes of victimization",
+        choice3: "Analyzing psychological differences between male and female victims",
+        choice4: "Examining financial restitution for victims",
+        answer: "Exploring gendered power imbalances in crimes like domestic violence"
     },
+    // Application-based question
     {
-      question: "The principle of proportionality ensures?",
-      choice1: "The punishment fits the crime's severity",
-      choice2: "Consistency with similar cases",
-      choice3: "Public protection from dangerous individuals",
-      choice4: "Restoring harm caused to victims",
-      answer: "The punishment fits the crime's severity"
+        question: "A woman retaliates against her abusive partner and faces severe legal penalties. This reflects which feminist criminological critique of justice systems?",
+        choice1: "Intersectionality",
+        choice2: "Pathways theory",
+        choice3: "Double deviance",
+        choice4: "Chivalry hypothesis",
+        answer: "Double deviance"
     },
+    // Knowledge-based question
     {
-      question: "Specific deterrence focuses on?",
-      choice1: "Deterring the general public from committing crimes",
-      choice2: "Removing the offender from society permanently",
-      choice3: "Preventing the convicted offender from re-offending",
-      choice4: "Ensuring fairness in sentencing",
-      answer: "Preventing the convicted offender from re-offending"
+        question: "What does pathways theory suggest about female criminal behavior?",
+        choice1: "It results from innate biological traits.",
+        choice2: "It is often a response to trauma and socio-economic challenges.",
+        choice3: "It is primarily motivated by greed.",
+        choice4: "It mirrors male criminal behavior.",
+        answer: "It is often a response to trauma and socio-economic challenges."
     },
+    // Application-based question
     {
-        question: "What is the first stage in the criminal prosecution process?",
-        choice1: "Trial",
-        choice2: "Arraignment",
-        choice3: "Investigation",
-        choice4: "Sentencing",
-        answer: "Investigation",
-        rationale: "The prosecution process begins with an investigation to gather evidence and ascertain the facts of the case."
+        question: "A woman steals food to feed her children after leaving an abusive relationship. Which feminist criminological concept explains this behavior?",
+        choice1: "Double deviance",
+        choice2: "Pathways theory",
+        choice3: "Routine activities theory",
+        choice4: "Biological determinism",
+        answer: "Pathways theory"
     },
+    // Evaluation-based question
     {
-        question: "What is the primary purpose of the arraignment stage?",
-        choice1: "To determine guilt",
-        choice2: "To inform the accused of the charges and take their plea",
-        choice3: "To sentence the accused",
-        choice4: "To call witnesses to testify",
-        answer: "To inform the accused of the charges and take their plea",
-        rationale: "The arraignment is where the accused is formally charged and asked to plead guilty or not guilty."
+        question: "Why does feminist criminology critique the justice system’s treatment of female offenders?",
+        choice1: "It focuses too much on leniency for women.",
+        choice2: "It often ignores the socio-economic and victimization factors driving female criminality.",
+        choice3: "It is too harsh on all offenders, regardless of gender.",
+        choice4: "It overemphasizes psychological theories of crime.",
+        answer: "It often ignores the socio-economic and victimization factors driving female criminality."
     },
+    [4:32 am, 28/01/2025] Ayomide Partner: let questions = [
+    // Knowledge-based question
     {
-        question: "Which of the following occurs during the trial stage?",
-        choice1: "Charges are formally filed against the accused",
-        choice2: "The accused presents evidence for their defense",
-        choice3: "The judge determines the punishment",
-        choice4: "The prosecutor conducts investigations",
-        answer: "The accused presents evidence for their defense",
-        rationale: "The trial stage involves presenting evidence from both the prosecution and defense to establish the facts."
+        question: "What does the concept of 'double deviance' refer to in feminist criminology?",
+        choice1: "Women committing crimes in pairs",
+        choice2: "Women being punished for both breaking the law and violating gender norms",
+        choice3: "The dual roles of women as victims and offenders",
+        choice4: "The tendency of women to reoffend",
+        answer: "Women being punished for both breaking the law and violating gender norms"
     },
+    // Application-based question
     {
-        question: "What happens during the judgment stage?",
-        choice1: "The case is sent back for investigation",
-        choice2: "The court delivers its verdict based on the trial proceedings",
-        choice3: "The prosecutor decides on the sentence",
-        choice4: "Witnesses are cross-examined",
-        answer: "The court delivers its verdict based on the trial proceedings",
-        rationale: "This is the stage where the court decides whether the accused is guilty or not guilty."
+        question: "A woman is punished more harshly for a violent crime because she does not conform to societal expectations of femininity. What feminist criminological concept explains this phenomenon?",
+        choice1: "Chivalry hypothesis",
+        choice2: "Double deviance",
+        choice3: "Routine activities theory",
+        choice4: "Pathways theory",
+        answer: "Double deviance"
     },
+    // Evaluation-based question
     {
-        question: "What is the purpose of the sentencing stage?",
-        choice1: "To determine the admissibility of evidence",
-        choice2: "To punish the accused if found guilty",
-        choice3: "To review the charges against the accused",
-        choice4: "To acquit the accused",
-        answer: "To punish the accused if found guilty",
-        rationale: "The sentencing stage involves determining the appropriate punishment for the convicted individual."
+        question: "Why does feminist criminology critique the legal system’s handling of female victimization?",
+        choice1: "It tends to ignore crimes against men.",
+        choice2: "It often blames female victims and minimizes their experiences.",
+        choice3: "It focuses excessively on women’s psychological conditions.",
+        choice4: "It imposes harsher punishments on female offenders.",
+        answer: "It often blames female victims and minimizes their experiences."
     },
+    // Knowledge-based question
     {
-        question: "Which stage in prosecution involves the prosecution presenting its case and evidence?",
-        choice1: "Investigation",
-        choice2: "Trial",
-        choice3: "Sentencing",
-        choice4: "Plea bargaining",
-        answer: "Trial",
-        rationale: "During the trial stage, the prosecution calls witnesses and presents evidence to prove the accused’s guilt."
+        question: "What is the primary goal of feminist criminology regarding discrimination against women?",
+        choice1: "To increase incarceration rates for female offenders",
+        choice2: "To expose and address systemic inequalities affecting women in the justice system",
+        choice3: "To advocate for harsher punishments for male offenders",
+        choice4: "To eliminate all gender distinctions in criminal law",
+        answer: "To expose and address systemic inequalities affecting women in the justice system"
     },
+    // Application-based question
     {
-        question: "What role does the preliminary hearing serve in prosecution?",
-        choice1: "To convict the accused",
-        choice2: "To determine if there is sufficient evidence to proceed to trial",
-        choice3: "To sentence the accused",
-        choice4: "To take the accused’s plea",
-        answer: "To determine if there is sufficient evidence to proceed to trial",
-        rationale: "Preliminary hearings assess whether the evidence is strong enough to warrant a trial."
+        question: "A female victim of domestic violence is hesitant to report her abuser due to societal stigma and victim-blaming attitudes. What feminist criminological critique does this scenario illustrate?",
+        choice1: "The chivalry hypothesis",
+        choice2: "The normalization of violence against women",
+        choice3: "The overrepresentation of women in prisons",
+        choice4: "The biological determinism of victimization",
+        answer: "The normalization of violence against women"
     },
+    // Knowledge-based question
     {
-        question: "Which stage allows the accused to plead guilty or not guilty?",
-        choice1: "Investigation",
-        choice2: "Trial",
-        choice3: "Arraignment",
-        choice4: "Judgment",
-        answer: "Arraignment",
-        rationale: "Arraignment is the stage where the accused is asked to enter a plea."
+        question: "What does the concept of 'double deviance' in feminist criminology refer to?",
+        choice1: "Women who commit crimes with male partners",
+        choice2: "Women being judged for both criminal behavior and violating gender norms",
+        choice3: "The tendency of women to reoffend",
+        choice4: "The intersection of criminality and victimization in women",
+        answer: "Women being judged for both criminal behavior and violating gender norms"
     },
+    // Application-based question
     {
-        question: "What is the main focus of the prosecution during the pre-trial stage?",
-        choice1: "Presenting evidence in court",
-        choice2: "Filing charges and preparing the case",
-        choice3: "Cross-examining the accused",
-        choice4: "Delivering the verdict",
-        answer: "Filing charges and preparing the case",
-        rationale: "During the pre-trial stage, the prosecution prepares its case and files the necessary charges."
+        question: "A woman of color from a low-income background is harshly sentenced for a minor offense. Which feminist concept explains her experience?",
+        choice1: "Pathways theory",
+        choice2: "Chivalry hypothesis",
+        choice3: "Intersectionality",
+        choice4: "Double deviance",
+        answer: "Intersectionality"
     },
+    // Evaluation-based question
     {
-        question: "At what stage can the accused file a preliminary objection?",
-        choice1: "Judgment stage",
-        choice2: "Arraignment stage",
-        choice3: "Investigation stage",
-        choice4: "Trial stage",
-        answer: "Arraignment stage",
-        rationale: "Preliminary objections are raised at the arraignment to challenge the charges or jurisdiction."
+        question: "Why do feminist theories critique traditional criminology?",
+        choice1: "For focusing too much on female offenders",
+        choice2: "For applying male-centered theories to explain female criminality",
+        choice3: "For ignoring crimes committed by men",
+        choice4: "For prioritizing victimology over criminology",
+        answer: "For applying male-centered theories to explain female criminality"
     },
+    // Knowledge-based question
     {
-        question: "What does a 'no case submission' mean in a criminal trial?",
-        choice1: "The defendant pleads guilty to the charges",
-        choice2: "The defense argues that the prosecution has not provided enough evidence to continue the trial",
-        choice3: "The defendant refuses to testify in court",
-        choice4: "The judge dismisses the case without hearing the defense",
-        answer: "The defense argues that the prosecution has not provided enough evidence to continue the trial",
-        rationale: "A 'no case submission' is when the defense argues that the prosecution has failed to establish a prima facie case, and thus, the trial should not proceed."
+        question: "Which feminist criminological theory examines how trauma and abuse influence women’s pathways into crime?",
+        choice1: "Strain theory",
+        choice2: "Pathways theory",
+        choice3: "Routine activities theory",
+        choice4: "Biological determinism",
+        answer: "Pathways theory"
     },
+    // Application-based question
     {
-        question: "When a defendant chooses to 'rest their case on the prosecution,' what does it mean?",
-        choice1: "The defendant admits guilt",
-        choice2: "The defense relies entirely on the weaknesses in the prosecution’s case without presenting their own evidence",
-        choice3: "The prosecution is given additional time to present evidence",
-        choice4: "The defense calls additional witnesses to support their case",
-        answer: "The defense relies entirely on the weaknesses in the prosecution’s case without presenting their own evidence",
-        rationale: "Resting the case on the prosecution means the defense chooses not to present any evidence, relying instead on the argument that the prosecution has not proven guilt beyond a reasonable doubt."
+        question: "A woman who has been trafficked commits a crime while trying to escape her abuser. How would feminist criminology explain her actions?",
+        choice1: "As a result of innate criminal tendencies",
+        choice2: "As a coping mechanism shaped by victimization and survival",
+        choice3: "As a random act of violence",
+        choice4: "As an outcome of economic opportunity",
+        answer: "As a coping mechanism shaped by victimization and survival"
     },
+    // Knowledge-based question
     {
-        question: "What is the primary objective of the defense during trial?",
-        choice1: "To discredit the prosecution’s evidence and prove the defendant’s innocence",
-        choice2: "To delay the trial proceedings",
-        choice3: "To negotiate a plea bargain",
-        choice4: "To determine the sentencing of the accused",
-        answer: "To discredit the prosecution’s evidence and prove the defendant’s innocence",
-        rationale: "The defense’s role in trial is to challenge the prosecution’s evidence and establish reasonable doubt in the case."
+        question: "Which feminist criminological theory focuses on achieving gender equality by addressing disparities in opportunities and treatment?",
+        choice1: "Liberal feminist theory",
+        choice2: "Radical feminist theory",
+        choice3: "Postmodern feminist theory",
+        choice4: "Pathways theory",
+        answer: "Liberal feminist theory"
     },
+    // Application-based question
     {
-        question: "What is the difference between consecutive and concurrent sentencing?",
-        choice1: "Consecutive sentences run at the same time, while concurrent sentences run one after another",
-        choice2: "Consecutive sentences are shorter than concurrent sentences",
-        choice3: "Concurrent sentences run at the same time, while consecutive sentences are served one after another",
-        choice4: "Consecutive sentences only apply to minor offenses",
-        answer: "Concurrent sentences run at the same time, while consecutive sentences are served one after another",
-        rationale: "In consecutive sentencing, the offender serves each sentence one after another, while in concurrent sentencing, multiple sentences are served simultaneously."
+        question: "A woman engages in theft due to economic hardship in a patriarchal and capitalist society. Which feminist theory explains this behavior?",
+        choice1: "Marxist and socialist feminism",
+        choice2: "Radical feminist theory",
+        choice3: "Postmodern feminist theory",
+        choice4: "Critical race feminism",
+        answer: "A woman engages in theft due to economic hardship in a patriarchal and capitalist society. Which feminist theory explains this behavior?"
     },
+    // Evaluation-based question
     {
-        question: "Which of the following is true about the death penalty?",
-        choice1: "It is always applied to any serious crime",
-        choice2: "It is a form of capital punishment reserved for the most serious offenses",
-        choice3: "It can be given for minor crimes like theft",
-        choice4: "It is only applied in military courts",
-        answer: "It is a form of capital punishment reserved for the most serious offenses",
-        rationale: "The death penalty, or capital punishment, is reserved for crimes considered extremely serious, such as murder and treason, depending on the jurisdiction."
+        question: "How does radical feminist theory explain women’s pathways into crime?",
+        choice1: "As a result of innate biological differences",
+        choice2: "As an outcome of efforts to survive or escape patriarchal control",
+        choice3: "As an intersection of race and economic factors",
+        choice4: "As a result of inadequate education systems",
+        answer: "As an outcome of efforts to survive or escape patriarchal control"
     },
+    // Knowledge-based question
     {
-        question: "Which of the following is an example of a fine as a form of punishment?",
-        choice1: "An offender is sentenced to life in prison",
-        choice2: "An offender is required to pay a specific sum of money as punishment",
-        choice3: "An offender is sentenced to community service",
-        choice4: "An offender is given probation instead of prison time",
-        answer: "An offender is required to pay a specific sum of money as punishment",
-        rationale: "A fine is a monetary penalty imposed by the court as punishment for an offense."
+        question: "Which feminist criminological theory emphasizes intersectionality and diverse experiences over universal narratives?",
+        choice1: "Liberal feminist theory",
+        choice2: "Postmodern feminist theory",
+        choice3: "Critical race feminism",
+        choice4: "Radical feminist theory",
+        answer: "Postmodern feminist theory"
     },
+    // Application-based question
     {
-        question: "Hadd (Haddi) flogging is primarily associated with which legal system?",
-        choice1: "Common law",
-        choice2: "Islamic law (Sharia)",
-        choice3: "Civil law",
-        choice4: "Military law",
-        answer: "Islamic law (Sharia)",
-        rationale: "Hadd (Haddi) flogging is a form of corporal punishment under Islamic law, prescribed for specific offenses such as theft and adultery."
-    },
-    {
-        question: "Which of the following is a key feature of Hadd (Haddi) punishments?",
-        choice1: "They are discretionary and vary based on the judge’s ruling",
-        choice2: "They are fixed punishments prescribed by Islamic law for certain offenses",
-        choice3: "They only involve imprisonment without physical punishment",
-        choice4: "They are reserved for cases involving financial crimes only",
-        answer: "They are fixed punishments prescribed by Islamic law for certain offenses",
-        rationale: "Hadd punishments are fixed under Islamic law for specific crimes and include penalties such as flogging and amputation."
-    },
-    {
-        question: "Which of the following is a criticism of the death penalty?",
-        choice1: "It does not serve as a deterrent to crime",
-        choice2: "It is more cost-effective than life imprisonment",
-        choice3: "It provides justice to victims without controversy",
-        choice4: "It is the most humane form of punishment",
-        answer: "It does not serve as a deterrent to crime",
-        rationale: "One of the major criticisms of the death penalty is that it does not necessarily deter crime, and there is a risk of wrongful executions."
-    },
-    {
-        question: "What is one potential issue with imposing fines as a punishment?",
-        choice1: "They disproportionately affect low-income offenders",
-        choice2: "They are only used for serious crimes",
-        choice3: "They are impossible to enforce",
-        choice4: "They replace all other forms of punishment",
-        answer: "They disproportionately affect low-income offenders",
-        rationale: "Fines can disproportionately impact low-income offenders, as they may struggle to pay, leading to further legal consequences."
-    },
-    {
-        question: "Which of the following best describes a ‘no case submission’ by the defense?",
-        choice1: "A motion arguing that the prosecution has not presented enough evidence for a conviction",
-        choice2: "An admission of guilt by the defendant",
-        choice3: "A request for a lighter sentence due to lack of evidence",
-        choice4: "An appeal to a higher court before the trial concludes",
-        answer: "A motion arguing that the prosecution has not presented enough evidence for a conviction",
-        rationale: "A 'no case submission' is made when the defense argues that the prosecution has not provided sufficient evidence to justify continuing the trial."
-    },
-    {
-        question: "If a defendant rests their case on the prosecution, what does it imply?",
-        choice1: "They accept the prosecution’s arguments as valid",
-        choice2: "They rely on the prosecution’s failure to prove guilt and do not present a defense",
-        choice3: "They challenge the prosecution’s witnesses through additional cross-examination",
-        choice4: "They automatically receive a reduced sentence",
-        answer: "They rely on the prosecution’s failure to prove guilt and do not present a defense",
-        rationale: "Resting the case on the prosecution means the defense does not present evidence, arguing that the prosecution’s case is weak enough that no defense is necessary."
-    },
-    {
-        question: "Which of the following is a key characteristic of a defense on trial?",
-        choice1: "The prosecution is required to prove the innocence of the defendant",
-        choice2: "The defense presents evidence and witnesses to counter the prosecution's case",
-        choice3: "The defendant is not allowed to testify in court",
-        choice4: "The judge directly determines guilt without considering the defense’s case",
-        answer: "The defense presents evidence and witnesses to counter the prosecution's case",
-        rationale: "A defense on trial involves presenting evidence, witnesses, and arguments to refute the prosecution's claims and establish reasonable doubt."
-    },
-    {
-        question: "Which statement is true about consecutive sentencing?",
-        choice1: "All sentences are served at the same time",
-        choice2: "The defendant serves each sentence separately, one after another",
-        choice3: "The sentence is determined by the judge’s discretion only",
-        choice4: "It only applies to crimes involving violence",
-        answer: "The defendant serves each sentence separately, one after another",
-        rationale: "Consecutive sentences require a convicted person to serve each sentence separately, unlike concurrent sentences, which run simultaneously."
-    },
-    {
-        question: "In a concurrent sentence, how are the prison terms served?",
-        choice1: "One after the other",
-        choice2: "Only the longest sentence is served",
-        choice3: "All sentences run at the same time",
-        choice4: "Sentences are automatically reduced",
-        answer: "All sentences run at the same time",
-        rationale: "Concurrent sentencing allows multiple sentences to be served at the same time, reducing the overall time spent in prison."
-    },
-    {
-        question: "Which of the following is NOT a common justification for the death penalty?",
-        choice1: "Deterrence of serious crimes",
-        choice2: "Retribution for heinous offenses",
-        choice3: "Reducing overcrowding in prisons",
-        choice4: "Providing justice for victims’ families",
-        answer: "Reducing overcrowding in prisons",
-        rationale: "While the death penalty is often justified by deterrence and retribution, it is not primarily used as a solution for prison overcrowding."
-    },
-    {
-        question: "What is the primary criticism of the death penalty?",
-        choice1: "It is an inexpensive method of punishment",
-        choice2: "It prevents rehabilitation of offenders",
-        choice3: "It ensures that no innocent person is ever punished",
-        choice4: "It is the only effective deterrent to crime",
-        answer: "It prevents rehabilitation of offenders",
-        rationale: "Critics argue that the death penalty removes the possibility of rehabilitation and poses the risk of executing innocent individuals."
-    },
-    {
-        question: "Which of the following factors can influence a judge's decision to impose a fine as punishment?",
-        choice1: "The financial status of the offender",
-        choice2: "The emotional state of the victim",
-        choice3: "The defendant’s religious beliefs",
-        choice4: "The level of public interest in the case",
-        answer: "The financial status of the offender",
-        rationale: "Judges consider the offender’s financial ability to pay when imposing fines, ensuring that the punishment is effective without being overly punitive."
-    },
-    {
-        question: "Which of the following best describes Hadd (Haddi) flogging?",
-        choice1: "A discretionary punishment decided by the judge",
-        choice2: "A fixed punishment under Islamic law for specific crimes",
-        choice3: "A form of execution used in military courts",
-        choice4: "A rare practice no longer used in any legal system",
-        answer: "A fixed punishment under Islamic law for specific crimes",
-        rationale: "Hadd punishments, including flogging, are prescribed punishments in Islamic law for offenses like theft, adultery, and false accusations."
-    },
-    {
-        question: "Which of the following is a crime that can attract Hadd (Haddi) flogging under Islamic law?",
-        choice1: "Murder",
-        choice2: "Theft",
-        choice3: "Tax evasion",
-        choice4: "Forgery",
-        answer: "Theft",
-        rationale: "Theft is one of the crimes for which Hadd punishments, such as flogging or amputation, can be applied under Islamic law."
-    },
-    {
-        question: "Which factor determines whether a crime receives a Hadd punishment?",
-        choice1: "The presence of clear and specific evidence",
-        choice2: "The personal feelings of the judge",
-        choice3: "The wealth of the accused",
-        choice4: "The number of witnesses in court",
-        answer: "The presence of clear and specific evidence",
-        rationale: "Hadd punishments require strong and specific evidence, such as witnesses or confessions, before they can be applied."
-    },
-    {
-        question: "What is a key difference between Hadd punishments and Ta’zir punishments under Islamic law?",
-        choice1: "Hadd punishments are fixed, while Ta’zir punishments are discretionary",
-        choice2: "Ta’zir punishments are always harsher than Hadd punishments",
-        choice3: "Hadd punishments only apply to financial crimes",
-        choice4: "Ta’zir punishments require approval from religious authorities",
-        answer: "Hadd punishments are fixed, while Ta’zir punishments are discretionary",
-        rationale: "Hadd punishments are strictly defined by Islamic law, whereas Ta’zir punishments are left to judicial discretion based on the circumstances of the case."
-    },
-    {
-        question: "Which of the following is a major concern with imposing excessive fines?",
-        choice1: "They are too lenient on offenders",
-        choice2: "They may disproportionately punish poorer individuals",
-        choice3: "They do not generate revenue for the government",
-        choice4: "They are only applicable in capital offenses",
-        answer: "They may disproportionately punish poorer individuals",
-        rationale: "Excessive fines can unfairly impact lower-income offenders, making them an issue of economic inequality in justice systems."
+        question: "A justice system that criminalizes survival behaviors like prostitution in economically disadvantaged women aligns with which feminist critique?",
+        choice1: "Liberal feminism",
+        choice2: "Marxist and socialist feminism",
+        choice3: "Pathways theory",
+        choice4: "Radical feminism",
+        answer: "Pathways theory"
     }
 ];
 /*const CORRECT_BONUS = 10;
